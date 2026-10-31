@@ -1,0 +1,9 @@
+{
+  "actual_runs": 168,
+  "seconds": 186.52814429090358,
+  "model_sha256": "44cedf73590afaef3bf7cf3350b78e5736e33a120309db506d111af93065de30",
+  "collisions": 0,
+  "teleports": 0,
+  "census_max": 0,
+  "residence_max": 0.0
+}

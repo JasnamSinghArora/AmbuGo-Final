@@ -1,0 +1,133 @@
+# Joint selective routing with a causal progress guard
+
+The following pseudocode defines the executed heuristic. ETA and burden scores are approximate forecasts. Finite enumeration makes selection reproducible within the declared candidate set; it does not establish exact future traffic prediction, global route optimality or a bound on realized ambulance travel. The selective-mode predicted-time band and the progress trigger have different meanings: ε restricts candidate forecast scores, whereas γ triggers irreversible escalation from observed executed progress.
+
+Algorithm inputs
+Public directed graph with lengths L_e, free-flow speeds v_e, aggregate storage K_e and assumed saturation flow s_e; historical mean ordinary flows λ̄_e; mean PCU p̄; nominal signal design X_e; received noisy counts n̂_e; current signal automata; current ambulance regular edge, longitudinal position and desired dispatch. The selected parameters are B=10000 vehicle-seconds, ε=0 and γ=20 s, with action library {(0,0),(30,60)} seconds. Physical dynamics use 0.5 s steps; controller decisions occur each second.
+
+State for each ambulance a
+Executed previous regular edge; completed regular-edge free-flow credit F_a; irreversible escalation flag z_a=0; last planned regular edge; selected local action; active leases indexed by (ambulance,edge); and a set of expired leases that cannot renew on the same edge. State is keyed by ambulance ID. Updating one ambulance's mode never mutates another's controller mode.
+
+At integer decision time t
+    Assimilate observations whose receipt time equals t.
+    Generate the next count samples only at scheduled five-second opportunities;
+        retain missing records and queue nonzero-delay samples until receipt.
+    Obtain each active ambulance's current link and longitudinal position.
+    Process ambulances by increasing (desired dispatch, ambulance ID).
+
+    For each ambulance a
+        If its reported link is internal or absent, skip this decision for a.
+        Let e be its current regular edge and x its current longitudinal position.
+        If e differs from its previously observed regular edge:
+            add the previous executed edge's L/v to F_a;
+            set its previous regular edge to e.
+        Compute P_a = F_a + max(0,x)/v_e.
+        Compute D_a = max(0,t − desired_dispatch_a − P_a).
+        If a is selective, has not escalated, and D_a > γ:
+            set z_a=1 irreversibly;
+            clear only a's active lease;
+            record trigger time, delay proxy, progress and ambulance ID;
+            mark a for immediate replanning, including within its current link.
+
+        Set local mode to P2 if z_a=1, otherwise its original policy.
+        If this is a regular-edge entry or an escalation event:
+            form up to four loopless continuations to BE1 within 1.5 times
+                minimum continuation free-flow time, excluding immediate U-turns;
+            retain the incumbent continuation, replacing candidate 4 if necessary;
+            choose actions {(0,0),(30,60)} in selective mode,
+                {(30,60)} in P2/P1, or {(0,0)} in P0;
+            for each route and action, obtain ETA T̂ and burden Ĉ using SCORE;
+            in selective mode:
+                let T̂_min be the minimum over this entire route–action domain;
+                retain candidates with T̂ <= T̂_min + ε;
+                initially choose minimum (Ĉ,T̂,route identifier,action identifier);
+            otherwise:
+                initially choose minimum (T̂,Ĉ,route identifier);
+            if the proposed route changes and its predicted improvement over
+                the incumbent's best action is no greater than 10 s:
+                prefer an incumbent action only if it satisfies the original
+                    global predicted-time cap in selective mode;
+                among eligible incumbent actions, prefer minimum burden then ETA;
+            install the chosen route continuation and store its local action.
+            Keep this action until the next regular-edge entry or escalation.
+
+        If local mode is P0 or the stored action is (0,0), emit no request.
+        If e does not lead to a controlled junction, emit no request.
+        Let (h,l) be the stored action and q̂ the count-derived queue proxy.
+        Let d̂=q̂/max(s_e/p̄,0.1), and ETA_ff=(L_e−x)/v_e.
+        Retrieve a's existing selective lease before checking a new trigger.
+        If no active lease and ETA_ff > h+d̂, emit no request.
+
+        In selective mode:
+            if this (a,e) lease previously expired, emit no request;
+            if a lease exists:
+                on first observation of its own approach green, set its expiry
+                    from remaining selected green allowance l−elapsed_green;
+                terminate it if that expiry is reached,120 s has elapsed since
+                    admission, or observed downstream headroom is inadequate;
+                mark a terminated lease as nonrenewable on this edge;
+                otherwise forward the committed request without reapplying a
+                    benefit gate that would cancel its own successful green;
+            if no lease exists:
+                compute benefit, pulse feasibility, downstream headroom and
+                    burden using SCORE's local formulas;
+                admit only if benefit>=5 s, burden<=B and headroom holds;
+                create a bounded lease on admission.
+        In P1 or P2 mode:
+            request aggressive preemption after the ETA trigger;
+            physical receiving capacity and the common signal guard still apply.
+
+        Submit at most one request per junction, retaining the first request
+            in dispatch order. Losing requests do not alter another's mode.
+
+    For each junction
+        Apply its common observed service-age guard before discretionary priority.
+        Complete any started amber 3 s, all-red 2 s or pedestrian opportunity 25 s.
+        Never truncate green before 8 s.
+        On legal stage choice, serve the guard target, then the winning request,
+            then the declared base rule.
+        Synchronize cyclic continuation to the approach actually served.
+        Requested holding is bounded by the stored request allowance; an already
+            longer nominal green may continue under normal base control.
+
+    Advance SUMO through two 0.5 s steps.
+    At each physical step, collect ordinary-only counts on 59 regular links,
+        one internal-junction group and eight uninserted origin queues.
+    Audit sum(counts)=desired ordinary releases−ordinary completions.
+    Retain all incomplete ordinary trips and all ambulance nonarrivals.
+
+Procedure SCORE(route r, action a=(h,l), local mode)
+    Set elapsed forecast T̂=0 and ordinary-burden forecast Ĉ=0.
+    For successive regular edges e on r:
+        Add remaining current-edge or full later-edge free-flow time.
+        Set q̂_e=max(0,n̂_e−λ̄_e L_e/v_e).
+        Add d̂_e=q̂_e/max(s_e/p̄,0.1).
+        Forecast nominal cyclic residual wait w_e at the current arrival offset.
+        If mode is P0/P1, add w_e and continue.
+        Determine earliest legal switch delay δ_e from the current stage:
+            own green 0; conflicting green remaining minimum+5;
+            remaining amber+2; remaining all-red; or remaining pedestrian time.
+        Require predicted crossing [h+d̂_e−δ_e]_+ + d̂_e +2 <= l.
+        Require downstream received count <0.85 times declared storage.
+        If both hold, set b_e=[w_e−[δ_e−arrival_offset]_+]_+; otherwise b_e=0.
+        Set estimated lost-green pulse D=min(l,max(5,h+d̂_e)).
+        Set Ĉ_e=sum over conflicting approaches j of
+            q̂_j D + λ̄_j D²/[2max(1−X_j,0.05)].
+        In selective mode, admit benefit only if b_e>=5 and Ĉ_e<=B.
+        In aggressive forecast mode, receiving headroom is the admission gate.
+        Add max(0,w_e−admitted benefit) to T̂.
+        Add Ĉ_e to Ĉ only when the pulse is admitted.
+    Return T̂,Ĉ.
+
+Accounting at the common horizon
+For each ordinary ID, compute restricted residence R_i=[min(a_i,H)−max(d_i,W)]_+.
+Reconcile J=sum_i R_i with physical-step integration of the exhaustive census.
+Against the identical-input P0 episode, report signed ΔJ, positive spatial exposure
+A=Δt sum_t,g[N_g−N_g^0]_+, and secondary positive individual residence
+H_ind=sum_i[R_i−R_i^0]_+. Report censored ambulance missions separately.
+
+Implementation scope
+The progress trigger is evaluated only on regular-edge observations. Connector time receives no free-flow allowance; insertion waiting enters through the desired-dispatch clock. An executed detour can accumulate free-flow credit without a large progress penalty. These properties prevent γ from being interpreted as an upper bound on final delay or on the difference from P2. After escalation, the ε assertion no longer applies because the ambulance uses the P2 comparator. Neither a finite route library nor the burden denominator floor establishes network stability, calibrated safety, recursive feasibility or minimum eventual congestion. Those claims require separate evidence.
+
+Frozen executable SHA256
+471a22911a2de9773fcd839872b3ba1ec5e00412c0ecc79142503e72f41cecf2

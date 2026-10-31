@@ -1,0 +1,103 @@
+{
+  "T1a_identical_rerun": {
+    "passed": true,
+    "hash": "723f095d44308025"
+  },
+  "T1b_namespace_independence": {
+    "passed": true
+  },
+  "T1c_replications_differ": {
+    "passed": true
+  },
+  "T2_runtime_invariants": {
+    "passed": true,
+    "runs": 24,
+    "audited_ticks": 43200,
+    "violation_kinds": [],
+    "checked": [
+      "exact vehicle conservation every tick",
+      "PCU occupancy bookkeeping",
+      "link storage never exceeded",
+      "ambulance never discharged outside green/amber",
+      "minimum green 8 s at every green start",
+      "no green longer than 90 s",
+      "single active stage per junction (by construction)"
+    ]
+  },
+  "T3_webster_validation": {
+    "passed": true,
+    "tolerance": "15%",
+    "rows": [
+      {
+        "X": 0.5,
+        "cycle": 70,
+        "sim_delay_s": 15.12,
+        "webster_s": 15.59,
+        "rel_err": -0.03
+      },
+      {
+        "X": 0.7,
+        "cycle": 70,
+        "sim_delay_s": 18.28,
+        "webster_s": 18.95,
+        "rel_err": -0.035
+      },
+      {
+        "X": 0.85,
+        "cycle": 70,
+        "sim_delay_s": 27.84,
+        "webster_s": 26.11,
+        "rel_err": 0.066
+      }
+    ]
+  },
+  "T4_priority_cost_vs_fluid_model": {
+    "passed": true,
+    "tolerance": "20%",
+    "rows": [
+      {
+        "X": 0.5,
+        "sim_extra_veh_s": 62,
+        "fluid_extra_veh_s": 75.8,
+        "closed_form_veh_s": 97.6,
+        "rel_err_vs_fluid": -0.182
+      },
+      {
+        "X": 0.7,
+        "sim_extra_veh_s": 135,
+        "fluid_extra_veh_s": 123.1,
+        "closed_form_veh_s": 162.6,
+        "rel_err_vs_fluid": 0.097
+      },
+      {
+        "X": 0.8,
+        "sim_extra_veh_s": 148,
+        "fluid_extra_veh_s": 152.9,
+        "closed_form_veh_s": 243.9,
+        "rel_err_vs_fluid": -0.032
+      },
+      {
+        "X": 0.9,
+        "sim_extra_veh_s": 329,
+        "fluid_extra_veh_s": 312.1,
+        "closed_form_veh_s": 487.8,
+        "rel_err_vs_fluid": 0.054
+      }
+    ]
+  },
+  "T5_inverse_one_minus_X_law": {
+    "passed": true,
+    "scaled_values": [
+      37.9,
+      36.9,
+      30.6,
+      31.2
+    ],
+    "relative_spread": 0.214
+  },
+  "T6_public_files_independent_of_plant_truth": {
+    "passed": true,
+    "public_files": 9
+  },
+  "_runtime_s": 12.2
+}

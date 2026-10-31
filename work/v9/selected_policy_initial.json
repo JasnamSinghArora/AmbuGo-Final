@@ -1,0 +1,158 @@
+{
+  "rule": "Among candidates with training episode-mean ambulance time no more than20s aboveP2, choose minimum mean positive68-group spatial occupancy exposure; if none qualify choose least time increase and declare failure of training constraint.",
+  "training_scenarios": 12,
+  "selected_configuration": {
+    "harm_budget": 10000,
+    "epsilon": 0,
+    "action_mode": "strong"
+  },
+  "selected_label": "P3_b10000_e0_strong",
+  "training_constraint_satisfied": false,
+  "locked_before_main_unix": 1792943380.247232,
+  "rows": [
+    {
+      "label": "P3_b10000_e0_multi",
+      "delta_ambulance_s": 52.270833333333336,
+      "mean_positive_exposure_vehicle_s": 224353.125,
+      "mean_signed_residence_vehicle_s": -5199.541666666667,
+      "eligible": false,
+      "configuration": {
+        "harm_budget": 10000,
+        "epsilon": 0,
+        "action_mode": "multi"
+      }
+    },
+    {
+      "label": "P3_b10000_e0_strong",
+      "delta_ambulance_s": 41.1875,
+      "mean_positive_exposure_vehicle_s": 242783.79166666666,
+      "mean_signed_residence_vehicle_s": 2718.8333333333335,
+      "eligible": false,
+      "configuration": {
+        "harm_budget": 10000,
+        "epsilon": 0,
+        "action_mode": "strong"
+      }
+    },
+    {
+      "label": "P3_b10000_e10_multi",
+      "delta_ambulance_s": 54.197916666666664,
+      "mean_positive_exposure_vehicle_s": 217848.25,
+      "mean_signed_residence_vehicle_s": -5182.25,
+      "eligible": false,
+      "configuration": {
+        "harm_budget": 10000,
+        "epsilon": 10,
+        "action_mode": "multi"
+      }
+    },
+    {
+      "label": "P3_b10000_e10_strong",
+      "delta_ambulance_s": 41.635416666666664,
+      "mean_positive_exposure_vehicle_s": 233192.95833333334,
+      "mean_signed_residence_vehicle_s": 2940.0416666666665,
+      "eligible": false,
+      "configuration": {
+        "harm_budget": 10000,
+        "epsilon": 10,
+        "action_mode": "strong"
+      }
+    },
+    {
+      "label": "P3_b2400_e0_multi",
+      "delta_ambulance_s": 52.270833333333336,
+      "mean_positive_exposure_vehicle_s": 224353.125,
+      "mean_signed_residence_vehicle_s": -5199.541666666667,
+      "eligible": false,
+      "configuration": {
+        "harm_budget": 2400,
+        "epsilon": 0,
+        "action_mode": "multi"
+      }
+    },
+    {
+      "label": "P3_b2400_e0_strong",
+      "delta_ambulance_s": 41.208333333333336,
+      "mean_positive_exposure_vehicle_s": 242904.33333333334,
+      "mean_signed_residence_vehicle_s": 2452.2916666666665,
+      "eligible": false,
+      "configuration": {
+        "harm_budget": 2400,
+        "epsilon": 0,
+        "action_mode": "strong"
+      }
+    },
+    {
+      "label": "P3_b2400_e10_multi",
+      "delta_ambulance_s": 54.197916666666664,
+      "mean_positive_exposure_vehicle_s": 217848.25,
+      "mean_signed_residence_vehicle_s": -5182.25,
+      "eligible": false,
+      "configuration": {
+        "harm_budget": 2400,
+        "epsilon": 10,
+        "action_mode": "multi"
+      }
+    },
+    {
+      "label": "P3_b2400_e10_strong",
+      "delta_ambulance_s": 41.65625,
+      "mean_positive_exposure_vehicle_s": 233313.5,
+      "mean_signed_residence_vehicle_s": 2673.5,
+      "eligible": false,
+      "configuration": {
+        "harm_budget": 2400,
+        "epsilon": 10,
+        "action_mode": "strong"
+      }
+    },
+    {
+      "label": "P3_b600_e0_multi",
+      "delta_ambulance_s": 71.6875,
+      "mean_positive_exposure_vehicle_s": 210157.54166666666,
+      "mean_signed_residence_vehicle_s": -5283.958333333333,
+      "eligible": false,
+      "configuration": {
+        "harm_budget": 600,
+        "epsilon": 0,
+        "action_mode": "multi"
+      }
+    },
+    {
+      "label": "P3_b600_e0_strong",
+      "delta_ambulance_s": 99.66666666666667,
+      "mean_positive_exposure_vehicle_s": 178969.95833333334,
+      "mean_signed_residence_vehicle_s": -7611.041666666667,
+      "eligible": false,
+      "configuration": {
+        "harm_budget": 600,
+        "epsilon": 0,
+        "action_mode": "strong"
+      }
+    },
+    {
+      "label": "P3_b600_e10_multi",
+      "delta_ambulance_s": 76.15625,
+      "mean_positive_exposure_vehicle_s": 199627.08333333334,
+      "mean_signed_residence_vehicle_s": -7080.083333333333,
+      "eligible": false,
+      "configuration": {
+        "harm_budget": 600,
+        "epsilon": 10,
+        "action_mode": "multi"
+      }
+    },
+    {
+      "label": "P3_b600_e10_strong",
+      "delta_ambulance_s": 102.69791666666667,
+      "mean_positive_exposure_vehicle_s": 167702.25,
+      "mean_signed_residence_vehicle_s": -6457.916666666667,
+      "eligible": false,
+      "configuration": {
+        "harm_budget": 600,
+        "epsilon": 10,
+        "action_mode": "strong"
+      }
+    }
+  ]
+}

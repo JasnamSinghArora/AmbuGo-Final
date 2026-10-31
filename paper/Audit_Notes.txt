@@ -1,0 +1,62 @@
+AMBUGO — FINAL MANUSCRIPT AUDIT
+31 October 2026
+
+Scope
+The supplied “AmbuGo joint ambulance routing and selective signal priority.docx” was checked against the retained implementations, raw episode records, analysis outputs and cited literature. The final manuscript was rewritten and formatted to match the supplied IRIS paper: Letter pages, two columns, a full-width title and abstract, numbered equations, compact tables, numbered references and no author block. The original file was not overwritten.
+
+This was an editorial and scientific-consistency audit of the completed synthetic study. It did not rerun the full simulation experiment or replace the tested controller with an untested improvement. Statements in the paper about earlier reproduction and corrected simulation runs describe the retained experimental record.
+
+Verification outcome
+All 268 numerical entries in the supplied manuscript’s tables matched the retained analysis to the displayed precision. Independent calculations also confirmed the principal balanced effects, the eight secondary design/load contrasts, mission completion and threshold counts, and the escalation rate. The supplied paper’s main numerical results did not require replacement.
+
+The corrected manuscript retains 14,400 corrected mesoscopic policy runs and 1,728 primary microscopic policy runs, while separately identifying development and sensitivity experiments. The primary microscopic batch contains 48 seed blocks across nine conditions and four policies. Its 8,640 scheduled mission evaluations are correlated within scenarios and policy replays; they are not 8,640 independent observations.
+
+The exported Episode_Reliability.csv contains all 36 load/dose/policy cells, episode-level exact binomial intervals, and scheduled/completed mission counts. Its denominator is 48 episodes per cell. These intervals must not be replaced by mission-level binomial intervals that ignore dependence.
+
+Substantive corrections
+1. Mission dispatch spacing: restored the missing 3600/M multiplier in the one-hour mission schedule. Without it, the printed equation places missions only seconds apart and does not describe the implemented experiment.
+
+2. Queue and burden equations: repaired the location of the discharge-rate floor, restored the green-hold symbol ell in place of a literal digit, and corrected the squared displaced-service duration. Units and the roles of the fixed floors are now stated.
+
+3. Progress escalation: moved the current-link progress term outside the sum over completed links. The equation now matches the implemented credit and deficit calculation, including repeated completed traversals.
+
+4. Native equation structure: rebuilt the equations as editable Word mathematics. The original file contained genuine fraction, exponent and integral-scope defects, rather than only PDF/text-extraction errors. The revised paper separates residence identities, spatial exposure and individual residence changes and states their assumptions and limitations.
+
+5. Priority lease semantics: clarified that expiry is an absolute clock set on the first observed own-green interval. It does not pause during interruptions. The 120 s admission-age cap is unconditional. Expiry/headroom termination and regular-link departure have different consequences for later readmission; the pseudocode now preserves that distinction.
+
+6. Scoring and execution: added the terminal unsignalized-link and no-priority-action branches. Clarified that aggressive candidate scoring checks observed receiving headroom, while actual aggressive requests bypass that admission gate. Physical receiving constraints remain in force. The incumbent route’s exception to the free-flow admissibility filter is explicit.
+
+7. Time-step sensitivity: corrected the claim that the smaller simulation step isolates integration error. With SUMO’s default action interval, it also changes driver decision timing. The experiment is now described as a combined physical-step and driver-update sensitivity.
+
+8. Statistical interpretation: qualified the unsupported implication of complete prospective prespecification. Development-based parameter selection and held-out evaluation remain distinct, but the full reporting/decision procedure is not presented as a preregistered design. Seed-block inference, balanced weighting, correlated mission counts and approximate bootstrap coverage are explained.
+
+9. Related work and novelty: added close integrated routing/priority predecessors, EMVLight and the bi-level connected-vehicle routing/preemption study. Corrected the characterization of emergency-vehicle MPC, whose published framework includes an uncontrolled-inflow extension. Added Webster attribution for the modified nominal cycle rule. The bibliography now contains 21 references in citation order. The manuscript makes no unsupported superiority claim against those methods.
+
+10. Presentation: removed duplicated captions and repeated arguments, consolidated results into 11 tables and two figures, and retained the formal method, proofs, experimental history, full microscopic results and reproduction details in a 14-page manuscript. Every final rendered page was visually checked. Equations remain editable in the DOCX.
+
+What the evidence supports
+The tested selective controller trades approximately 11.10 s of balanced mean restricted ambulance duration for 3.84 vehicle-hours less positive spatial exposure than the aggressive joint controller. Its balanced mean duration is 222.29 s, compared with 401.57 s for routing alone and 211.19 s for aggressive joint control. These are synthetic experimental results. They are not measured citywide response-time improvements.
+
+The positive spatial exposure measure, signed residence difference and positive individual residence increase answer different questions. A reduction relative to aggressive control does not establish zero ordinary-traffic cost, and a difference between baseline-relative positive measures is not itself the positive harm of directly switching policies.
+
+Remaining limitations requiring new research
+Critical — External validity. Neither traffic model is calibrated to an observed city. Real deployment claims require measured geometry, turning flows, queues, signal histories, travel times and emergency behavior, followed by validation on held-out periods and intervention responses. Nominal loading is not a measured congestion or saturation state.
+
+Critical — Mission reliability. JSEL escalated 1,114 of 2,160 missions (51.6%). Two completed journeys lasted 1,812.5 and 2,050 s, and its balanced fraction exceeding 300 s was higher than JFAST’s. Mean improvements cannot substitute for a reliability constraint. New stalled-link replanning and receiving-space prediction should be developed and then tested on fresh evaluation scenarios.
+
+High — Optimality and novelty. Selection is optimal only over the evaluated finite candidate set under its approximate score. The paper does not establish a globally optimal route/control policy or a new general congestion theorem. Its defensible contribution is the tested integration, explicit execution rules, paired accounting and documented failure cases. Strong claims of algorithmic superiority require matched optimization/MPC and other appropriate baselines under comparable information and control authority.
+
+High — Generalization and robustness. One generated district, a common destination, one-hour scheduled mission windows, at most four simultaneously active ambulances, and modest sensitivity samples leave substantial uncertainty. Additional geometries, destinations, asymmetric demand, incidents, observation faults and heavier overlapping emergency demand are needed. High-load sensitivity intervals are too wide to establish numerical equivalence or broad robustness.
+
+High — Urban behavior and safety. Heterogeneous vehicle dimensions and PCU factors do not validate weak lane discipline, rescue-lane formation or emergency yielding. Pedestrian reservation opportunities are not simulated pedestrian trajectories. Zero recorded simulation collisions or timing violations are software diagnostics, not an operational road-safety guarantee.
+
+Moderate — Reproducibility and submission readiness. The retained archive supports internal reproduction. Before public submission, publish the frozen source, fixtures, raw results, analysis commands and dependency pins in a stable repository with an archival identifier; state the computation hardware for timing comparisons. Add the requested venue’s author information, declarations and any page-limit adjustments at that stage.
+
+Academic assessment
+The revised document is a substantive, reproducible synthetic simulation paper with careful accounting and a transparent controller. Its theoretical results are useful consistency properties under stated assumptions, rather than major new mathematical theorems. The remaining barriers to a strong transportation/control publication are principally empirical validation, severe-delay reliability and comparison with strong matched methods. Formatting and corrected prose do not resolve those research gaps.
+
+Files
+AmbuGo_Audited_Research_Paper.pdf — fixed-layout reading copy.
+AmbuGo_Audited_Research_Paper.docx — editable manuscript with native equations.
+Episode_Reliability.csv — complete cell-level rare-event accounting supplement.
+Audit_Notes.txt — this change record and remaining limitations.

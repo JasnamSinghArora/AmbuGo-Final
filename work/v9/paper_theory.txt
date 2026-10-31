@@ -1,0 +1,87 @@
+# Related work and theoretical framework
+
+## Emergency control in a finite urban network
+
+Emergency-vehicle routing and signal control form a coupled decision problem. A route that is shortest under an unchanged signal plan can be inferior after the controller is allowed to modify signals, while a locally favorable green can transfer queues to conflicting approaches or fill downstream storage. Hosseinzadeh and colleagues formulate emergency-centered multi-intersection control using model predictive control and a network traffic model [R1]. Their centralized and decentralized formulations establish that the general combination of emergency passage and network control is already a research topic. The contribution investigated here is therefore a particular causal implementation and its measured tradeoff between ambulance travel and displaced congestion, rather than a claim that joint routing and priority are themselves new.
+
+Queue-based signal control provides a second foundation. Max-pressure control uses differences between upstream and downstream queues to select service, with stability results established for a specified store-and-forward network [R3]. Capacity-aware back-pressure addresses the consequences of finite storage and congestion propagation [R2]. These results motivate considering receiving conditions when granting priority, but their assumptions must remain explicit. Minimum greens, clearance intervals, finite physical storage and microscopic vehicle interactions change the admissible service process. Recent work specifically examines how practical signal constraints alter idealized max-pressure stability [R14]. Accordingly, a longest-queue comparison in this study is identified by its implemented rule; it does not inherit a max-pressure throughput theorem.
+
+Conservation and receiving constraints are central to established traffic-flow models, including the cell transmission model [R15]. At a junction, a green indication permits service but cannot supply missing downstream space. Microscopic simulation adds vehicle dimensions, car following, lane assignment and internal junction movements. SUMO provides this experimental representation and an interface for external signal control [R4,R5]. Direct signal-state commands leave the control application responsible for lawful transitions [R5]. Neither the use of SUMO nor agreement with a simpler queue model establishes accuracy in a particular city. Software verification checks the implemented rules and accounting; physical validation tests whether model outputs and intervention responses agree with independent observations. FHWA guidance treats calibration and alternatives analysis as distinct stages requiring observed traffic conditions, repeated simulations and sensitivity analysis [R6,R7].
+
+Urban traffic also requires spatial interpretation. Empirical macroscopic fundamental diagrams relate regional accumulation to production under particular measurement and aggregation conditions [R8]. Network capacity and critical accumulation vary with network structure and operating conditions [R9]. A single background-load label therefore cannot replace local receiving space, queue heterogeneity or route redundancy. The present framework measures spatially displaced occupancy as well as the signed network total. For mixed traffic, vehicle-class conversion into passenger-car units is a capacity approximation. Width-sensitive lateral interaction and weak lane discipline require additional behavior models and data [R16]. Heterogeneous vehicle dimensions alone do not calibrate real emergency yielding.
+
+## Causal control and the joint objective
+
+Let a directed network contain legal lane connections, finite road space and signal automata. The complete state includes vehicle positions, speeds, routes and classes; source waiting; signal stages and elapsed times; and pending commands. At simulation step k, the state evolves according to
+
+$$X_{k+1}=F(X_k,U_k,Z_k).$$
+
+Here Z_k contains external innovations and U_k is a lawful command. A causal controller chooses U_k from information received by that decision time, including current ambulance telemetry, delayed traffic observations, public geometry and its previous commands. Reproducibility of the experimental scenario does not authorize access to its future realized arrivals or disruptions. The paired no-priority trajectory is used for evaluation and is not a future-information source for control.
+
+The operational objective is to reduce ambulance travel while limiting congestion aftereffects. At each decision snapshot, route continuations and bounded priority settings are evaluated jointly by a declared forecast. This coupling differs from selecting a route under nominal operation and subsequently applying a fixed priority rule. However, finite candidate selection remains an approximation to the complete uncertain control problem. A shortest path under frozen additive edge weights is optimal for those weights; it is not necessarily optimal when its own signal changes alter queues and receiving conditions. The admissible route library, forecast, information set and control authority define the scope of every optimization claim.
+
+Ambulance travel begins at desired dispatch, including insertion waiting. Nonarrival is retained in the mission ledger. A common absolute experiment end produces restricted follow-up durations that depend on dispatch time; these are distinguished from a separately defined fixed mission deadline. Several ambulances share queues and signal opportunities, so their outcomes within one experimental episode are dependent. A deterministic conflict rule resolves simultaneous priority requests, and all comparators obey the same signal legality.
+
+## Finite horizon residence and spatial aftereffects
+
+Fix an ordinary-vehicle cohort with desired release times a_i and a follow-up interval from t_0 to H. Under policy pi, vehicle i exits at e_i^pi, taking an infinite exit time for an unfinished trip. A released vehicle waiting outside the simulated network remains in the cohort. Define its presence indicator and ordinary accumulation by
+
+$$I_i^{\pi}(t)=\mathbf{1}\{a_i\leq t<e_i^{\pi}\},\qquad N^{\pi}(t)=\sum_i I_i^{\pi}(t).$$
+
+Proposition 1. Restricted ordinary residence equals the sum of the individual residence intervals intersecting the observation window:
+
+$$J_H^{\pi}=\int_{t_0}^{H}N^{\pi}(t)\,dt=\sum_i\left[\min(e_i^{\pi},H)-\max(a_i,t_0)\right]_+.$$
+
+Proof. Substitute the indicator representation of N into the integral and interchange the finite sum and integration. Each indicator integrates to the length of the intersection of its residence interval with the observation window. This establishes the identity without stationarity, complete trip completion or a queue-distribution assumption.
+
+The paired effect is the difference between this residence and that under a persistent no-priority baseline exposed to the same ordinary desired releases and external scenario. It has units of vehicle-seconds. It is not an application of Little's law. Calling it a difference in delay additionally requires a precisely specified policy-invariant free-flow reference whose subtraction cancels under the cohort and censoring convention. The residence label preserves the exact meaning when some trips remain unfinished. A discrete implementation uses the same sampling convention for its population integral and its independent vehicle-event ledger, including source waiting and vehicles on internal junction connectors.
+
+A signed total can conceal where occupancy increases. Fix an exhaustive partition of regular links, internal junction regions and source queues, with every ordinary vehicle assigned once at each time. For group b, let d_b(t) be the policy occupancy minus baseline occupancy. Define positive and negative spatial exposure by
+
+$$A_H^{\pi}=\int_{t_0}^{H}\sum_b[d_b(t)]_+\,dt,\qquad B_H^{\pi}=\int_{t_0}^{H}\sum_b[-d_b(t)]_+\,dt.$$
+
+Proposition 2. The signed residence difference satisfies
+
+$$\Delta J_H=A_H^{\pi}-B_H^{\pi},\qquad A_H^{\pi}\geq\max(\Delta J_H,0).$$
+
+Proof. For each real difference d, the identity d=[d]_+-[-d]_+ holds. Sum over the exhaustive partition and integrate. The partition sum equals the network accumulation difference, yielding the result.
+
+Positive spatial exposure prevents reductions elsewhere from canceling a local occupancy increase. It does not identify individual traveler delay: different ordering and location of the same travelers can change paired occupancy. Its spatial resolution must also remain fixed across methods. For any merged collection of groups,
+
+$$\left[\sum_b d_b\right]_+\leq\sum_b[d_b]_+.$$
+
+Applying this inequality at each time proves that coarsening the partition cannot increase positive exposure. A controller comparison that changes the partition would therefore confound policy effects with aggregation. For fixed trajectories and partition, positive exposure is nondecreasing with the follow-up horizon. Signed residence difference need not be: later negative occupancy differences can reduce the cumulative signed effect. Unresolved recovery at H does not automatically make the signed estimate a lower bound on eventual cost.
+
+## A conditional theory of congestion recovery
+
+An isolated fluid queue clarifies why low spare capacity can amplify a short interruption. Suppose the queue is initially empty, arrivals occur at constant rate lambda, and service has constant rate mu greater than lambda. The baseline serves arrivals immediately. An intervention removes service for a duration Delta and then restores it. During interruption the queue is lambda times elapsed time. Afterwards it decreases at rate mu minus lambda until empty. The clearing time after restoration is
+
+$$t_{\mathrm{clear}}=\frac{\lambda\Delta}{\mu-\lambda}.$$
+
+The extra queue area is the sum of the growth and recovery triangles:
+
+$$C=\frac{\lambda\Delta^2}{2}+\frac{(\lambda\Delta)^2}{2(\mu-\lambda)}.$$
+
+Writing X=lambda/mu gives the equivalent form
+
+$$C=\frac{\mu\Delta^2}{2}\frac{X}{1-X}.$$
+
+This is an exact result for the stated isolated queue. It motivates an inverse-slack term in a ranking surrogate, but it is not a universal network law. A signalized baseline may already queue and discharge at saturation; receiving restrictions can alter inflow; offsets and multiple missions can alter later service. In particular, the relative difference between two saturated queues need not decrease at mu minus lambda. An empirical inverse-slack fit must therefore be assessed as a conditional approximation rather than treated as a theorem about every urban network.
+
+A more general recovery bound follows directly from paired conservation. Let d(t) be the difference between comparable intervention and baseline accumulations, with positive initial excess D. If relative net depletion is bounded above by a nonnegative function r, then integration of the balance equation gives
+
+$$[d(t_0+s)]_+\geq\left[D-\int_0^s r(t_0+v)\,dv\right]_+.$$
+
+For constant positive r, return to zero cannot occur before D/r, and post-interruption positive area is at least D squared divided by twice r. These statements require a valid bound on relative depletion, including inflow changes. They do not justify replacing that bound with nominal spare saturation capacity in an arbitrary paired network.
+
+## The scope of the computed time band
+
+At one decision snapshot before an ambulance has escalated from selective mode, let the finite candidate set contain route and priority pairs c. The algorithm computes a predicted travel value and a burden-ranking value for each candidate. Let the smallest predicted travel value be T_min and let epsilon be the allowed forecast tolerance. The initially eligible set contains candidates whose computed travel values do not exceed T_min plus epsilon. A burden preference selects within this set. Route hysteresis can retain an incumbent continuation only if its selected action remains in the same global eligible set.
+
+Proposition 3. Every implemented planning call in selective mode before progress-triggered fallback preserves the global computed time band at its frozen decision snapshot.
+
+Proof. The initial choice belongs to the eligible set by construction. The only subsequent replacement, an incumbent-route action retained by hysteresis, is explicitly filtered by the identical global cap. Thus either branch returns an eligible candidate. A runtime assertion checks the corresponding floating-point comparison.
+
+This proposition concerns the values actually computed for a fixed finite domain while the ambulance remains in selective mode. After progress-triggered escalation, the ambulance uses the aggressive comparator mode and the selective-mode assertion no longer applies. The proposition does not bound forecast error or realized ambulance regret, establish recursive feasibility after replanning, or certify global routing optimality. Hysteresis may retain an eligible incumbent with a larger burden-ranking value than the initial global minimum; final selection is consequently a time-band-preserving burden preference with hysteresis. The local admission threshold likewise limits a queue-inspired score for one prospective pulse, not the realized citywide spatial exposure or total mission cost. Physical and statistical evaluation must determine whether these approximations produce a useful operational tradeoff.
+
+Inference respects the same separation of claims. Whole episodes supply independent paired differences, and seed-level resampling preserves dependence among missions sharing traffic. Bootstrap intervals approximate sampling uncertainty [R10]; exact binomial intervals require independent Bernoulli trials [R12]. Holm adjustment requires valid constituent tests [R11], and a Monte Carlo plus-one correction does not itself justify sign exchangeability [R13]. Numerical verification, finite-candidate algebra and statistical precision therefore support distinct conclusions. None replaces observed corridor calibration or a measured intervention response.

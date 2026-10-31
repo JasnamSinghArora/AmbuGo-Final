@@ -1,0 +1,27 @@
+name: Reproducibility checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-checks.txt
+      - name: Install check dependencies
+        run: python -m pip install --only-binary=:all: -r requirements-checks.txt
+      - name: Verify retained evidence and numerical checks
+        run: python scripts/check.py

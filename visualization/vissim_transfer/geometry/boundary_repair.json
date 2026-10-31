@@ -1,0 +1,92 @@
+{
+  "changes": [
+    {
+      "road": "2799",
+      "source_edge": "-1306065343",
+      "removed_predecessor_junction": "50",
+      "source_boundary_node": "12096321280",
+      "source_incoming_connections": 0
+    },
+    {
+      "road": "2813",
+      "source_edge": "-490901542",
+      "removed_predecessor_junction": "70",
+      "source_boundary_node": "4830766378",
+      "source_incoming_connections": 0
+    },
+    {
+      "road": "2953",
+      "source_edge": "129020477#0",
+      "removed_predecessor_junction": "161",
+      "source_boundary_node": "1424350867",
+      "source_incoming_connections": 0
+    },
+    {
+      "road": "2961",
+      "source_edge": "129029774#0",
+      "removed_predecessor_junction": "162",
+      "source_boundary_node": "10116438746",
+      "source_incoming_connections": 0
+    },
+    {
+      "road": "2962",
+      "source_edge": "129029789#0",
+      "removed_predecessor_junction": "163",
+      "source_boundary_node": "11836592888",
+      "source_incoming_connections": 0
+    },
+    {
+      "road": "2965",
+      "source_edge": "129040918#2",
+      "removed_predecessor_junction": "164",
+      "source_boundary_node": "6330030041",
+      "source_incoming_connections": 0
+    },
+    {
+      "road": "3011",
+      "source_edge": "129130409",
+      "removed_predecessor_junction": "180",
+      "source_boundary_node": "1425319839",
+      "source_incoming_connections": 0
+    },
+    {
+      "road": "3028",
+      "source_edge": "1306065344",
+      "removed_predecessor_junction": "184",
+      "source_boundary_node": "3896678421",
+      "source_incoming_connections": 0
+    },
+    {
+      "road": "3071",
+      "source_edge": "322624067#0",
+      "removed_predecessor_junction": "201",
+      "source_boundary_node": "3293919974",
+      "source_incoming_connections": 0
+    },
+    {
+      "road": "3161",
+      "source_edge": "490901547",
+      "removed_predecessor_junction": "225",
+      "source_boundary_node": "4830766383",
+      "source_incoming_connections": 0
+    },
+    {
+      "road": "3200",
+      "source_edge": "675952797",
+      "removed_predecessor_junction": "229",
+      "source_boundary_node": "6330369911",
+      "source_incoming_connections": 0
+    },
+    {
+      "road": "3219",
+      "source_edge": "790981496#0",
+      "removed_predecessor_junction": "232",
+      "source_boundary_node": "7264299939",
+      "source_incoming_connections": 0
+    }
+  ],
+  "remaining_missing_references": 0,
+  "geometry_and_lane_elements_unchanged": true,
+  "native_vissim_tested": false,
+  "output_sha256": "e92804589617bae1d8d8d670c667b7bef7f4e4f253420a0239a2a73f163f38a4"
+}

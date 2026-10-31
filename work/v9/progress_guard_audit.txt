@@ -1,0 +1,30 @@
+Read-only mathematical audit of the causal progress guard
+25 October 2026
+
+Reviewed source
+work/v9/sumo_study.py, SHA256471a22911a2de9773fcd839872b3ba1ec5e00412c0ecc79142503e72f41cecf2, and work/v9/sumo_progress_methods.txt. The original simulator was not edited. The focused check record progress_guard_checks.json was inspected as implementation evidence; this reviewer independently inspected the code paths rather than rerunning the full experiment.
+
+Finding
+No blocking causality, per-ambulance mode-isolation or algebra-versus-implementation mismatch was identified for the declared progress proxy. This conclusion is a source review, not a proof of physical accuracy or successful ambulance performance. The supplied method text correctly denies a final relative-time guarantee.
+
+Executed progress
+Controller.progress_mode creates a separate record for each ambulance containing last_regular and completed_freeflow. When the next observed regular edge differs, it adds only the previous observed regular edge's stored free-flow time. It then credits current nonnegative longitudinal position divided by that regular edge's speed. Candidate future edges and future route lengths are excluded. Updating the route while traversing the same edge does not change this completed-edge credit. A later re-entry to an edge would be another executed traversal, rather than a forecast traversal. The network's regular links take much longer than one control tick, so the one-second observation schedule does not skip complete regular links under the current parameter bounds.
+
+The delay proxy is max(0,t-desired_dispatch-executed_freeflow_progress). Desired dispatch rather than observed insertion starts the clock. Thus insertion waiting is included when the ambulance first becomes observable. Internal junction connectors earn no free-flow credit, so their elapsed time contributes to the proxy at the next regular-edge evaluation. The function is not called while an ambulance has not inserted or is reported on an internal edge: a crossing cannot trigger escalation until a subsequent regular-edge observation. The method explicitly states this evaluation scope. The current name 'executed free-flow progress proxy' is accurate; calling it exact control delay or delay relative to the P2 counterfactual would be false.
+
+Causality
+The inputs are current regular edge, current lane position, current decision time, desired dispatch and public speed/length data. No future demand, future incident, future ambulance route or P2 shadow trajectory is used. The rule does not need access to the actual baseline's prospective completion time. The threshold is selected from development episodes; held-out evaluation must use the frozen threshold. Its mathematical causality is unaffected by development selection, but claims of confirmatory performance require that separation of episodes.
+
+Per-ambulance isolation
+fallback_ids is a set indexed by ambulance ID. A threshold crossing adds only the triggering ID and removes only leases with a matching ambulance ID. self.policy is not mutated. requests_at passes the local mode to plan; plan passes it to estimate; estimate passes it to pulse; actual admission and lease forwarding use that same local mode. A different ambulance therefore retains its own selective or escalated mode. All ambulances still share the physical network, service-age guard and junction request arbitration, so statistical or physical independence between them is neither implied nor desirable.
+
+Irreversibility and immediate response
+Once an ID enters fallback_ids, progress_mode returns P2 for that ID on all subsequent regular-edge observations. There is no code path removing that ID before mission completion. The just_triggered flag forces replanning even if the ambulance has not changed regular edges. The P2 action and scoring rule are therefore applied on the trigger tick, subject to the shared legal signal automaton and request ordering. Existing requests or signal targets can still have physical consequences already committed by the common automaton; escalation cannot rewind earlier interventions.
+
+Guarantee scope
+The P3 global predicted-time-band assertion applies only to plan calls whose local policy remains P3. After escalation the corresponding local call is P2 and has its own aggressive action/route calculation. Every theorem and caption about the P3 epsilon band must state this selective-mode condition. The new guard does not strengthen that forecast theorem into a bound on realized travel.
+
+Threshold gamma bounds neither actual total trip delay nor the final difference from P2. In particular, (1) the guard is checked only at regular-edge observations, (2) subsequent queues and red intervals can add delay after escalation, (3) P2 faces its own altered traffic history and may pre-clear intersections sooner, and (4) executed free-flow credit includes any detour actually followed, so a longer free-flow route can accumulate travel without a large proxy penalty. These are properties of the declared heuristic, not hidden failures of an asserted guarantee. The method text acknowledges the essential comparator-history issue and correctly calls the trigger measurable rather than a relative-time guarantee.
+
+Research interpretation
+The progress fallback is a reasonable explicit response to forecast misspecification: it trades some remaining selectivity for a stronger intervention mode when realized progress is poor. Its incremental value must be measured against unguarded selectivity and always-aggressive P2 on the same held-out seeds, with fallback counts and trigger logs retained. A useful result may include failure to meet the desired ambulance margin; the study must not redefine that margin using the observed held-out outcomes. The existence of a causal fallback does not establish hard aftereffect control, recursive feasibility, clinical urgency calibration, real-world safety or global city-route optimality.

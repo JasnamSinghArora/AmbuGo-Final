@@ -1,0 +1,33 @@
+Independent focused release audit of AmbuGo SUMO study
+25 October 2026
+
+Audited source
+work/v9/sumo_study.py
+SHA256 44cedf73590afaef3bf7cf3350b78e5736e33a120309db506d111af93065de30
+This finding applies to that exact source state. No runtime source was edited by this auditor.
+
+Release conclusion
+The three reported blocking counterexamples have been repaired in this source state. Focused executable checks pass. Training can proceed, followed by evaluation after the selected configuration is frozen. The result is a code-level audit of defined contracts; it is not field calibration, independent reimplementation of SUMO, or proof that the heuristic forecast is accurate.
+
+1 Predicted near-fastest band and route hysteresis
+The prior route-hysteresis branch could replace a globally eligible action with a current-route action outside the original minimum-plus-epsilon band. The repaired code includes the legal incumbent continuation in the same candidate domain, filters every hysteresis replacement by the ORIGINAL global predicted-time cap, and asserts the cap on the final chosen action. In the adversarial example, route A has (T=100,A=5) and (T=108,A=0), while incumbent route B has (T=118,A=7) and (T=128,A=0), with epsilon=10. The repaired method selects route A with T=108 and recorded global minimum 100; the forbidden T=128 replacement is not selected. This supports the stated finite-library predicted-time-band property. It does not imply a real travel-time or global road-network optimality guarantee.
+
+2 Post-jump signal continuation
+Previously the nominal-wait predictor followed actual stage order while the controller resumed a different stored nominal index after a priority jump. A three-arm test produced a 70 s forecast versus 20 s executed wait. The repaired controller synchronizes baseindex with each actual entered approach or pedestrian stage. A real request-triggered jump to arm C now leaves stage=baseindex=2. The resulting wait forecast for arm B is 74 s and the executed no-further-request wait is 75 s. The remaining one-tick difference is the elapsed-clock convention; the old whole-stage mismatch is removed. Signal waits remain surrogate predictions because future observed queues, guards and interacting requests can change the continuation.
+
+3 Zero-delay observation delivery
+Previously an observation sampled with delay zero was appended after pending[t] had already been popped, so it was never assimilated. The repaired code delivers delay-zero samples immediately. In the focused deterministic-noise case, 57 available sensor samples with true count 10 are immediately observed as 10, and no stale pending timestamp remains. The other sensors are unavailable under the declared dropout process. Zero sensor delay alone does not imply continuously observed perfect state: sampling interval, dropout and noise configuration still matter.
+
+Evidence
+work/v9/sumo_release_regressions.json stores the exact source hash and executable-test outputs.
+
+Accounting and causal-visibility inspection
+The current run loop uses desired-release source queues plus regular-edge and internal-edge residual populations, excluding ambulances. It checks that the exhaustive partition equals generated ordinary cohort minus completed ordinary trips. Direct individual restricted residence is also computed and checked against its population integral. Grid-rounded desired releases, left-endpoint census and actual substep completion times make that discrete identity well defined. External insertion waiting and unfinished ordinary trips are retained. Pending future scenario data is not used in Controller.plan: the controller accesses ex ante design rates, current delayed observations, known own routes/GPS and signal state; requests are built only for currently active ambulances. Full future schedules remain in the scenario object for experimental execution, so later controller changes should retain this access discipline.
+
+Clearance inspection
+Controller commands progress through approach green, three-second amber, two-second all-red and an uninterruptible 25-second pedestrian reservation. Requests can truncate a green only after the eight-second minimum. Jump targets take effect after all-red. Completed phase intervals are checked for declared minimum/maximum durations. These are model timing checks. They do not establish pedestrian crossing safety or guarantee every individual vehicle's waiting time. The class designated ambulance is physically a normal passenger vehicle in the microscopic model, with source insertion, car following and receiving occupancy handled by SUMO; the v8 ambulance-specific capacity/storage bypass is absent.
+
+Study-comparison conditions to preserve
+All policies within a paired cell must use the identical generated route schedule/hash, physical network, signal authority, observed data law and ambulance missions. Episode-level statistics must retain all missions, including censored failures, and aggregate interacting missions before uncertainty estimation. Record the frozen source/configuration hash and selected training parameters. Keep training and held-out seeds disjoint. The longest_queue baseline is correctly named; it is not downstream max-pressure. The X design axis is an ex ante capacity surrogate and not measured microscopic saturation. The microscopic study does not inherit the original v8 yielding, incident or person-occupancy claims unless those mechanisms are separately implemented and tested. No harmonized-input quantitative agreement between this SUMO model and the mesoscopic model is asserted by the present audit.
+
+No further blocking code change requested in this focused release audit.

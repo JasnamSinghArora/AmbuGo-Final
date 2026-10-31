@@ -1,0 +1,176 @@
+# Reproducing the study
+
+The Git repository contains source code, input fixtures, experiment protocols,
+scalar run records, statistical summaries, figures, and the final paper. These
+files support analysis regeneration without rerunning the traffic simulations.
+
+The full research archive is the
+[`AmbuGo_First_Draft_Reproducibility_v9.zip` release asset](https://github.com/JasnamSinghArora/AmbuGo-Final/releases/download/v1.0.0/AmbuGo_First_Draft_Reproducibility_v9.zip)
+on [release v1.0.0](https://github.com/JasnamSinghArora/AmbuGo-Final/releases/tag/v1.0.0).
+It also retains per-run population traces, ordinary-vehicle event files,
+archived scenario inputs, the file manifest, and the portable path index.
+The archive keeps its original package name and historical paper sources;
+the current manuscript and its builder are in this repository's `paper/` folder.
+
+There are 1,728 primary microscopic policy runs, 264 microscopic secondary runs,
+and 14,400 mechanically corrected mesoscopic policy runs. Development records
+are separate. These are policy-run counts, not counts of independent seeds or
+ambulances. The inputs are synthetic; the package contains no measured-city
+calibration dataset.
+
+## Install the runtime
+
+Run commands from the repository root, or from the full archive's extracted
+root when working with its retained traces. Preserve the relative `work/` and
+`outputs/` layout. Python 3.12 and platform-compatible SUMO wheels are recommended.
+The commands below use a POSIX shell.
+
+```sh
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install --target work/v9/vendor -r requirements.txt
+export PYTHONPATH="$PWD/work/v9/vendor${PYTHONPATH:+:$PYTHONPATH}"
+export MPLCONFIGDIR="$PWD/work/v9/mpl_cache"
+```
+
+The target installation is required: the frozen source expects `sumo` and
+`netconvert` under `work/v9/vendor/sumo/bin/`. Installing only into the virtual
+environment's ordinary site-packages does not populate these paths. The
+repository and archive exclude runtime binaries. Availability of compatible
+wheels must be checked for the intended platform.
+
+## Regenerate analyses from the records in Git
+
+After installing the runtime:
+
+```sh
+python work/v9/analysis.py --self-check
+python work/v9/meso_checks.py --out meso_verification_rerun.json
+python work/v9/audit_v8_statistics.py
+python work/v9/analyze_corrected.py
+python work/v9/analyze_sumo.py
+python work/v9/make_base_figures.py
+```
+
+These commands regenerate analysis outputs from retained scalar records. The
+mesoscopic checks execute small synthetic verification cases. They do not
+rerun the comparative traffic study. The microscopic analysis resamples whole
+seed blocks; multiple missions and conditions within a seed are not treated
+as independent replicates.
+
+Regeneration writes output files. Use a separate checkout or extraction to
+preserve the supplied outputs unchanged. Runtime measurements and numerical
+details can vary across machines and dependency versions.
+
+## Rebuild the current paper and results figure
+
+Use the Git repository root for these commands:
+
+```sh
+python paper/plot_results.py --output /tmp/ambugo-primary-effects.png
+python -m pip install --target work/v9/vendor -r requirements-document.txt
+python paper/build.py
+```
+
+The first command produces a preview without changing the published image.
+It plots the nine stored JSEL-minus-JFAST paired means and marginal 95%
+seed-bootstrap intervals from `work/v9/sumo_analysis.json`. Duration is in
+seconds; positive spatial exposure is in vehicle-hours. The dashed line is
+the evaluated 20-second mean-duration tolerance. Spatial exposure for each
+policy is measured relative to the same S0 baseline before forming the
+JSEL-minus-JFAST contrast.
+
+To replace the figure asset after reviewing the preview, run
+`python paper/plot_results.py` and then `python paper/build.py`.
+The builder reads `paper/manuscript.txt`, `paper/references.json`, the local
+figure assets, and retained numerical summaries. It writes the DOCX and
+`Episode_Reliability.csv` into `paper/`. Export the DOCX with a Word-compatible
+processor to make a PDF. Exact pagination can vary with fonts and applications.
+The supplied final PDF can be read without an authoring environment.
+
+`work/v9/build_paper.py` builds the historical v9 draft; it does not build the
+current paper.
+
+## Download, verify, and extract the full archive
+
+Download the ZIP from release v1.0.0. The verifier uses only the Python standard
+library and checks every manifested file's SHA-256 and byte count. For example,
+with the ZIP in the current directory:
+
+```sh
+python3 verify_zip.py AmbuGo_First_Draft_Reproducibility_v9.zip --extract archive-extraction
+cd archive-extraction/AmbuGo_First_Draft_Reproducibility_v9
+python3 verify_zip.py --directory .
+```
+
+The extraction destination must be new or empty. The directory-verification
+command applies to the extracted archive, which contains `MANIFEST.json`,
+not to the smaller Git checkout. Verify the archive before running analyses
+that overwrite its outputs.
+
+Raw records retain original absolute trace paths. Use
+`PORTABLE_PATH_INDEX.json` to find the corresponding archive-relative files.
+The active `work/v9/scenarios/` cache is deliberately absent because cached
+scenario JSON contains absolute route paths. Let the generator create a local
+cache; do not copy archived scenario JSON into the active cache unchanged.
+
+After installing dependencies inside the extracted archive, an optional short
+numerical smoke check is available:
+
+```sh
+python verify_zip.py --directory . --smoke
+```
+
+This is a 180-second software and path check. It is not another effectiveness
+experiment, and an ambulance need not finish within that horizon.
+
+## Rerun the microscopic evaluations
+
+Use a separate checkout or extraction for expensive reruns. Keep the archived
+`selected_policy.json`; do not retune before reproducing the evaluation.
+
+```sh
+python work/v9/run_sumo_batch.py main --workers 4
+python work/v9/run_sumo_batch.py sensitivity --workers 4
+python work/v9/run_sumo_batch.py ablation --workers 4
+python work/v9/run_sumo_robustness.py adaptive_base --workers 4
+python work/v9/run_sumo_robustness.py exact_counts --workers 4
+python work/v9/analyze_sumo.py
+```
+
+The main batch contains 1,728 runs. The smaller-step, progress-escalation
+ablation, adaptive-baseline, and noiseless-count batches contain 72, 48, 72,
+and 72 runs respectively. The smaller physical step also changes SUMO's
+default vehicle decision interval. The adaptive baseline selects the largest
+observed approach vehicle count, including moving vehicles. The noiseless-count
+condition retains the specified availability mechanism.
+
+The four required fixture CSVs are in `outputs/AmbuGo_v7_Synthetic_Data/`.
+The exported v8 CSVs have different schemas and cannot replace them. Reruns
+create local network/scenario files and per-run traces and event records.
+
+## Rerun the mesoscopic checks and evaluation
+
+```sh
+python work/v9/teammate_v8/ambugo_v8/tests/run_tests.py
+python work/v9/v8_regression_checks.py
+python work/v9/reproduce_v8.py
+python work/v9/v8_corrected/tests/mechanical_checks.py
+python work/v9/v8_corrected/scripts/run_experiments.py E --reps 200 --procs 4
+python work/v9/analyze_corrected.py
+```
+
+The adversarial regression program is expected to detect the documented
+original storage/capacity exceptions and incomplete wait measurement.
+`reproduce_v8.py` reruns 216 original-model cases. The corrected evaluation
+contains 14,400 policy runs and retains the original parameter choices.
+Run original and corrected models in separate processes because both use
+the Python package name `ambugo`. Their policy keys also differ in meaning
+from identically numbered microscopic policies.
+
+For the optional development replay and the historical archive-build procedure,
+see [`work/v9/README_reproducibility.txt`](../work/v9/README_reproducibility.txt).
+Building the complete archive requires its per-run trace/event files and
+scenario inputs, or regenerated equivalents; the scalar records in Git alone
+are insufficient.

@@ -1,0 +1,524 @@
+{
+  "scope": "Independent synthetic numerical verification only; no observed-city validation",
+  "checks_passed": 24,
+  "checks": [
+    {
+      "check": "fluid_pulse_exact_X_0.5",
+      "passed": true,
+      "detail": {
+        "error_vehicle_s": 0.0
+      }
+    },
+    {
+      "check": "packet_refinement_convergence_X_0.5",
+      "passed": true,
+      "detail": {
+        "absolute_errors_vehicle_s": [
+          3.624999999999801,
+          1.4799999999996771,
+          0.3737500000015537,
+          0.07494999999594398
+        ]
+      }
+    },
+    {
+      "check": "fine_packet_error_under_0point5percent_X_0.5",
+      "passed": true,
+      "detail": {
+        "relative_error": 0.0029979999998377594
+      }
+    },
+    {
+      "check": "fluid_pulse_exact_X_0.7",
+      "passed": true,
+      "detail": {
+        "error_vehicle_s": -1.4921397450962104e-13
+      }
+    },
+    {
+      "check": "packet_refinement_convergence_X_0.7",
+      "passed": true,
+      "detail": {
+        "absolute_errors_vehicle_s": [
+          6.989583333332959,
+          2.848333333333187,
+          0.7186458333358203,
+          0.1440808333276138
+        ]
+      }
+    },
+    {
+      "check": "fine_packet_error_under_0point5percent_X_0.7",
+      "passed": true,
+      "detail": {
+        "relative_error": 0.002469957142759094
+      }
+    },
+    {
+      "check": "fluid_pulse_exact_X_0.85",
+      "passed": true,
+      "detail": {
+        "error_vehicle_s": -3.126388037344441e-13
+      }
+    },
+    {
+      "check": "packet_refinement_convergence_X_0.85",
+      "passed": true,
+      "detail": {
+        "absolute_errors_vehicle_s": [
+          15.316666666667956,
+          6.230666666665371,
+          1.5706666666470142,
+          0.3148266667016628
+        ]
+      }
+    },
+    {
+      "check": "fine_packet_error_under_0point5percent_X_0.85",
+      "passed": true,
+      "detail": {
+        "relative_error": 0.002222305882599973
+      }
+    },
+    {
+      "check": "fluid_pulse_exact_X_0.9",
+      "passed": true,
+      "detail": {
+        "error_vehicle_s": 2.8990143619012088e-12
+      }
+    },
+    {
+      "check": "packet_refinement_convergence_X_0.9",
+      "passed": true,
+      "detail": {
+        "absolute_errors_vehicle_s": [
+          23.60000000000406,
+          9.596000000006256,
+          2.418499999979133,
+          0.4847400000557798
+        ]
+      }
+    },
+    {
+      "check": "fine_packet_error_under_0point5percent_X_0.9",
+      "passed": true,
+      "detail": {
+        "relative_error": 0.0021544000002479097
+      }
+    },
+    {
+      "check": "fluid_shape_X_over_one_minus_X",
+      "passed": true,
+      "detail": {
+        "scaled_areas": [
+          25.0,
+          25.0,
+          25.0,
+          25.0
+        ],
+        "theoretical_value": 25.0
+      }
+    },
+    {
+      "check": "receiving_reservation_blocks_spillback",
+      "passed": true,
+      "detail": {
+        "upstream": 1,
+        "downstream": 1
+      }
+    },
+    {
+      "check": "denied_credit_does_not_accumulate_unbounded",
+      "passed": true,
+      "detail": {
+        "credit": 1.0,
+        "head_pcu": 1.0
+      }
+    },
+    {
+      "check": "physical_storage_separate_from_pcu",
+      "passed": true,
+      "detail": {
+        "pcu_remaining": 99.0,
+        "metres_remaining": 0.0
+      }
+    },
+    {
+      "check": "fractional_service_credit_preserved",
+      "passed": true,
+      "detail": {
+        "credit": 0.050000000000000044
+      }
+    },
+    {
+      "check": "preemption_retains_amber_and_all_red",
+      "passed": true,
+      "detail": {
+        "states": [
+          "amber",
+          "amber",
+          "amber",
+          "allred",
+          "allred"
+        ]
+      }
+    },
+    {
+      "check": "preemption_targets_requested_approach_after_clearance",
+      "passed": true,
+      "detail": {
+        "active": "B"
+      }
+    },
+    {
+      "check": "preemption_does_not_interrupt_pedestrian_reservation",
+      "passed": true,
+      "detail": {
+        "stage": "pedestrian"
+      }
+    },
+    {
+      "check": "network_cohort_area_identity",
+      "passed": true,
+      "detail": {
+        "max_absolute_error": 0.0
+      }
+    },
+    {
+      "check": "stress_creates_external_queue_without_dropping_vehicles",
+      "passed": true,
+      "detail": {
+        "external": 1424
+      }
+    },
+    {
+      "check": "bit_reproducible_network_run",
+      "passed": true,
+      "detail": {
+        "seed": 1
+      }
+    },
+    {
+      "check": "paired_generated_cohort_identical",
+      "passed": true,
+      "detail": {
+        "generated_pairs": [
+          [
+            236,
+            236
+          ],
+          [
+            1060,
+            1060
+          ],
+          [
+            2645,
+            2645
+          ]
+        ]
+      }
+    }
+  ],
+  "fluid_pulse": [
+    {
+      "X": 0.5,
+      "recovery_s": 20.0,
+      "area_vehicle_s": 25.0,
+      "peak_queue": 2.5,
+      "numerical_area_vehicle_s": 25.0,
+      "error_vehicle_s": 0.0
+    },
+    {
+      "X": 0.7,
+      "recovery_s": 33.33333333333333,
+      "area_vehicle_s": 58.33333333333332,
+      "peak_queue": 3.5,
+      "numerical_area_vehicle_s": 58.33333333333317,
+      "error_vehicle_s": -1.4921397450962104e-13
+    },
+    {
+      "X": 0.85,
+      "recovery_s": 66.66666666666666,
+      "area_vehicle_s": 141.66666666666666,
+      "peak_queue": 4.25,
+      "numerical_area_vehicle_s": 141.66666666666634,
+      "error_vehicle_s": -3.126388037344441e-13
+    },
+    {
+      "X": 0.9,
+      "recovery_s": 100.00000000000003,
+      "area_vehicle_s": 225.00000000000006,
+      "peak_queue": 4.5,
+      "numerical_area_vehicle_s": 225.00000000000296,
+      "error_vehicle_s": 2.8990143619012088e-12
+    }
+  ],
+  "packet_refinement": [
+    {
+      "X": 0.5,
+      "packet_mass": 0.25,
+      "dt": 0.025,
+      "area_vehicle_s": 21.3750000000002,
+      "fluid_area_vehicle_s": 25.0,
+      "error_vehicle_s": -3.624999999999801,
+      "final_packet_count": 0,
+      "horizon_s": 25.0
+    },
+    {
+      "X": 0.5,
+      "packet_mass": 0.1,
+      "dt": 0.01,
+      "area_vehicle_s": 23.520000000000323,
+      "fluid_area_vehicle_s": 25.0,
+      "error_vehicle_s": -1.4799999999996771,
+      "final_packet_count": 0,
+      "horizon_s": 25.0
+    },
+    {
+      "X": 0.5,
+      "packet_mass": 0.025,
+      "dt": 0.0025,
+      "area_vehicle_s": 24.626249999998446,
+      "fluid_area_vehicle_s": 25.0,
+      "error_vehicle_s": -0.3737500000015537,
+      "final_packet_count": 0,
+      "horizon_s": 25.0
+    },
+    {
+      "X": 0.5,
+      "packet_mass": 0.005,
+      "dt": 0.0005,
+      "area_vehicle_s": 24.925050000004056,
+      "fluid_area_vehicle_s": 25.0,
+      "error_vehicle_s": -0.07494999999594398,
+      "final_packet_count": 0,
+      "horizon_s": 25.0
+    },
+    {
+      "X": 0.7,
+      "packet_mass": 0.25,
+      "dt": 0.025,
+      "area_vehicle_s": 51.34375000000036,
+      "fluid_area_vehicle_s": 58.33333333333332,
+      "error_vehicle_s": -6.989583333332959,
+      "final_packet_count": 1,
+      "horizon_s": 38.35
+    },
+    {
+      "X": 0.7,
+      "packet_mass": 0.1,
+      "dt": 0.01,
+      "area_vehicle_s": 55.485000000000134,
+      "fluid_area_vehicle_s": 58.33333333333332,
+      "error_vehicle_s": -2.848333333333187,
+      "final_packet_count": 1,
+      "horizon_s": 38.34
+    },
+    {
+      "X": 0.7,
+      "packet_mass": 0.025,
+      "dt": 0.0025,
+      "area_vehicle_s": 57.6146874999975,
+      "fluid_area_vehicle_s": 58.33333333333332,
+      "error_vehicle_s": -0.7186458333358203,
+      "final_packet_count": 1,
+      "horizon_s": 38.335
+    },
+    {
+      "X": 0.7,
+      "packet_mass": 0.005,
+      "dt": 0.0005,
+      "area_vehicle_s": 58.18925250000571,
+      "fluid_area_vehicle_s": 58.33333333333332,
+      "error_vehicle_s": -0.1440808333276138,
+      "final_packet_count": 1,
+      "horizon_s": 38.3335
+    },
+    {
+      "X": 0.85,
+      "packet_mass": 0.25,
+      "dt": 0.025,
+      "area_vehicle_s": 126.3499999999987,
+      "fluid_area_vehicle_s": 141.66666666666666,
+      "error_vehicle_s": -15.316666666667956,
+      "final_packet_count": 1,
+      "horizon_s": 71.675
+    },
+    {
+      "X": 0.85,
+      "packet_mass": 0.1,
+      "dt": 0.01,
+      "area_vehicle_s": 135.4360000000013,
+      "fluid_area_vehicle_s": 141.66666666666666,
+      "error_vehicle_s": -6.230666666665371,
+      "final_packet_count": 1,
+      "horizon_s": 71.67
+    },
+    {
+      "X": 0.85,
+      "packet_mass": 0.025,
+      "dt": 0.0025,
+      "area_vehicle_s": 140.09600000001964,
+      "fluid_area_vehicle_s": 141.66666666666666,
+      "error_vehicle_s": -1.5706666666470142,
+      "final_packet_count": 1,
+      "horizon_s": 71.6675
+    },
+    {
+      "X": 0.85,
+      "packet_mass": 0.005,
+      "dt": 0.0005,
+      "area_vehicle_s": 141.351839999965,
+      "fluid_area_vehicle_s": 141.66666666666666,
+      "error_vehicle_s": -0.3148266667016628,
+      "final_packet_count": 1,
+      "horizon_s": 71.667
+    },
+    {
+      "X": 0.9,
+      "packet_mass": 0.25,
+      "dt": 0.025,
+      "area_vehicle_s": 201.399999999996,
+      "fluid_area_vehicle_s": 225.00000000000006,
+      "error_vehicle_s": -23.60000000000406,
+      "final_packet_count": 1,
+      "horizon_s": 105.025
+    },
+    {
+      "X": 0.9,
+      "packet_mass": 0.1,
+      "dt": 0.01,
+      "area_vehicle_s": 215.4039999999938,
+      "fluid_area_vehicle_s": 225.00000000000006,
+      "error_vehicle_s": -9.596000000006256,
+      "final_packet_count": 1,
+      "horizon_s": 105.01
+    },
+    {
+      "X": 0.9,
+      "packet_mass": 0.025,
+      "dt": 0.0025,
+      "area_vehicle_s": 222.58150000002092,
+      "fluid_area_vehicle_s": 225.00000000000006,
+      "error_vehicle_s": -2.418499999979133,
+      "final_packet_count": 1,
+      "horizon_s": 105.0025
+    },
+    {
+      "X": 0.9,
+      "packet_mass": 0.005,
+      "dt": 0.0005,
+      "area_vehicle_s": 224.51525999994428,
+      "fluid_area_vehicle_s": 225.00000000000006,
+      "error_vehicle_s": -0.4847400000557798,
+      "final_packet_count": 1,
+      "horizon_s": 105.0005
+    }
+  ],
+  "network_reference_runs": [
+    {
+      "ordinary_residence_s": 65376.0,
+      "total_residence_s": 65854.25,
+      "generated": 236,
+      "completed": 151,
+      "external": 0,
+      "ambulance_travel_s": [
+        478.25
+      ],
+      "audited_ticks": 4800,
+      "area_identity_error": 0.0,
+      "seed": 1,
+      "demand_scale": 1.0,
+      "policy": "nominal",
+      "dt": 0.25
+    },
+    {
+      "ordinary_residence_s": 65291.5,
+      "total_residence_s": 65502.75,
+      "generated": 236,
+      "completed": 153,
+      "external": 0,
+      "ambulance_travel_s": [
+        211.25
+      ],
+      "audited_ticks": 4800,
+      "area_identity_error": 0.0,
+      "seed": 1,
+      "demand_scale": 1.0,
+      "policy": "preempt",
+      "dt": 0.25
+    },
+    {
+      "ordinary_residence_s": 447147.75,
+      "total_residence_s": 447635.25,
+      "generated": 1060,
+      "completed": 500,
+      "external": 64,
+      "ambulance_travel_s": [],
+      "audited_ticks": 4800,
+      "area_identity_error": 0.0,
+      "seed": 2,
+      "demand_scale": 4.0,
+      "policy": "nominal",
+      "dt": 0.25
+    },
+    {
+      "ordinary_residence_s": 446190.0,
+      "total_residence_s": 446503.0,
+      "generated": 1060,
+      "completed": 512,
+      "external": 70,
+      "ambulance_travel_s": [
+        220.25
+      ],
+      "audited_ticks": 4800,
+      "area_identity_error": 0.0,
+      "seed": 2,
+      "demand_scale": 4.0,
+      "policy": "preempt",
+      "dt": 0.25
+    },
+    {
+      "ordinary_residence_s": 1387716.0,
+      "total_residence_s": 1389840.5,
+      "generated": 2645,
+      "completed": 548,
+      "external": 1424,
+      "ambulance_travel_s": [],
+      "audited_ticks": 4800,
+      "area_identity_error": 0.0,
+      "seed": 3,
+      "demand_scale": 12.0,
+      "policy": "nominal",
+      "dt": 0.25
+    },
+    {
+      "ordinary_residence_s": 1387716.0,
+      "total_residence_s": 1389840.5,
+      "generated": 2645,
+      "completed": 548,
+      "external": 1424,
+      "ambulance_travel_s": [],
+      "audited_ticks": 4800,
+      "area_identity_error": 0.0,
+      "seed": 3,
+      "demand_scale": 12.0,
+      "policy": "preempt",
+      "dt": 0.25
+    }
+  ],
+  "audited_network_ticks": 33600,
+  "seconds": 2.466193375061266,
+  "formula": {
+    "area": "lambda*c*Delta^2/(2*(c-lambda))",
+    "recovery_from_pulse_start": "c*Delta/(c-lambda)",
+    "assumptions": "initially empty isolated constant-arrival fluid queue; baseline constant service c; treated service zero for Delta then c; lambda<c"
+  },
+  "limitations": [
+    "No cyclic-signal analytic validity inferred",
+    "No claim of Webster empirical calibration",
+    "No physical lane-changing or emergency-yielding validation",
+    "Secondary network scaffold uses fixed 24-second approach greens, not the main experimental control design",
+    "Meso network performance is not intended as headline study evidence"
+  ]
+}

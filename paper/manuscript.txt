@@ -1,0 +1,378 @@
+@TITLE Congestion-Aware Joint Ambulance Routing and Selective Traffic Signal Priority
+@SUBTITLE A Reproducible Simulation Study
+@ABSTRACT Ambulance signal priority can shorten emergency journeys while delaying traffic on conflicting approaches. We study joint route selection and selective priority using a finite route–action library, a queue-based burden score, and a progress-triggered switch to aggressive control. Ordinary-traffic effects are measured through restricted vehicle residence, positive spatial occupancy exposure, and positive individual residence increases, including source waiting and unfinished trips. The evaluation combines 14,400 mechanically corrected mesoscopic policy runs with 1,728 held-out primary microscopic runs in Eclipse SUMO. In the microscopic study, balanced mean restricted ambulance duration was 401.57 s with routing alone, 211.19 s with aggressive joint control, and 222.29 s with selective joint control. Selective-minus-aggressive duration was 11.10 s (95% seed-block bootstrap interval: 9.47–12.94 s), while positive spatial exposure decreased by 3.84 vehicle-hours (interval for the signed difference: −4.73 to −2.95). These estimates support the evaluated mean-duration tolerance of 20 s with lower spatial exposure. Reliability remains a concern: 51.6% of selective-policy missions escalated, the fraction exceeding 300 s increased by 2.55 percentage points, and two journeys exceeded 30 min. The results establish a synthetic time–congestion trade-off, not globally optimal routing or field-validated performance.
+@KEYWORDS Ambulance routing; traffic signal priority; congestion aftereffects; microscopic simulation; finite-horizon accounting; paired experiments.
+
+# Introduction
+Signal priority changes the traffic conditions through which an ambulance must travel. Extending a green or advancing a phase may clear the ambulance's approach, but it also postpones service elsewhere. The resulting queues can outlast the intervention and restrict downstream movement. Route choice and signal control therefore belong in the same decision problem: the best route under ordinary signal operation need not remain the best route when priority is available.
+
+This coupling creates a practical difficulty. A controller needs enough predictive detail to compare route–priority combinations, yet it must act before its observations become stale. It must also decide when an intervention is worth the delay imposed on ordinary traffic. Minimizing ambulance travel in isolation favors aggressive priority; minimizing ordinary-traffic disturbance can leave the ambulance waiting. A useful evaluation must expose this trade-off rather than hide it in one weighted score.
+
+We investigate a selective joint controller, JSEL, that evaluates a small library of route continuations and priority settings. It first restricts candidates to a computed ambulance-time band and then prefers lower predicted burden. Requests pass through minimum-green, clearance, receiving-space, and competing-service constraints. An irreversible progress rule switches an individual ambulance to aggressive joint control when its executed movement falls sufficiently behind free-flow progress. JSEL is consequently a hybrid selective–aggressive policy, not a purely selective controller.
+
+The study asks whether this policy preserves most of the mean ambulance-time benefit of aggressive joint control while reducing ordinary-traffic aftereffects. We distinguish three outcomes: signed change in restricted ordinary-vehicle residence, positive spatial occupancy exposure, and positive individual residence increase. These measures use the same desired-trip cohort and horizon. A vehicle held outside the simulated network remains in the accounting, as does a journey unfinished at the endpoint.
+
+Two computational studies support the analysis. We first reproduce an existing mesoscopic experiment and correct ambulance-specific exceptions in admission, storage, and discharge. We then evaluate a separately specified microscopic implementation on the same synthetic district geometry. The latter compares routing alone, sequential routing and priority, aggressive joint control, and JSEL under repeated missions and imperfect observations. Neither model is calibrated to an observed city.
+
+The contribution is the executable integration of joint candidate selection, selective request execution, progress-based escalation, and auditable aftereffect accounting. The accounting identities and computed-time property are elementary results used to delimit what the implementation guarantees. The empirical findings concern the tested controller and scenario generator; they do not establish a new general law of congestion, a globally fastest ambulance route, or an operational safety guarantee.
+
+# Related Work
+## Integrated emergency control
+Hosseinzadeh et al. [R1] formulate emergency-vehicle-centered model predictive control for multi-intersection networks. Their framework considers signal decisions and inlet-flow regulation, and also describes an extension for uncontrolled inflows. It therefore provides a precedent for coordinated emergency traffic control rather than a contrast that can be dismissed solely on the basis of inlet gating. Our controller differs in its finite route–action library, approximate forecasts, bounded priority execution, and progress-based fallback. A direct performance comparison would require matched information, control authority, and computational limits.
+
+Joint emergency routing and signal control have also been studied through decentralized reinforcement learning and hierarchical road- and lane-level MPC. EMVLight coordinates emergency routing and signal preemption while considering ordinary traffic [R18]. Dai et al. couple dynamic road/lane routing with preemption in a partially connected environment [R19]. The present experiment does not establish superiority over these published controllers.
+
+Varaiya [R3] establishes max-pressure stability results for an idealized store-and-forward traffic network. Gregoire et al. [R2] address finite-capacity shortcomings of conventional backpressure, including non-work-conserving service and congestion propagation. Signal constraints matter as well: Zoabi et al. [R14] examine stability under restrictions on decentralized max-pressure operation. These results motivate attention to downstream receiving space and executable phases. Our burden score is not a pressure objective, and the longest-count sensitivity controller does not inherit max-pressure stability guarantees.
+
+## Traffic representation and urban validation
+Conservation and sending–receiving constraints underpin the cell transmission model [R15]. Microscopic simulation adds individual vehicle dimensions, following, lane changes, and junction connections. SUMO supplies these mechanisms and external control interfaces [R4]. Direct signal-state commands leave the controlling application responsible for the transitions it requests [R5], [R17]. Software consistency is therefore separate from physical validity: passing a census or signal-timing check does not establish that the model predicts an observed corridor. FHWA guidance treats calibration and alternatives analysis as distinct tasks [R6], [R7].
+
+Urban-scale accumulation and production relationships also depend on spatial structure and measurement. Geroliminis and Daganzo [R8] report empirical macroscopic fundamental diagrams, while Loder et al. [R9] examine how urban network properties relate to capacity. Neither result makes a nominal demand label a substitute for observed queues, receiving space, or spillback. For heterogeneous traffic, Kanagaraj and Treiber [R16] show the importance of width-sensitive lateral interactions. Passenger-car-unit factors and heterogeneous vehicle sizes alone do not reproduce weak lane discipline or emergency yielding in a particular Indian city.
+
+## Evaluation and contribution
+Bootstrap inference must respect the unit of replication [R10]. Ambulances within one episode share queues and signals; episodes generated with the same seed across conditions are also retained together in aggregate resampling. Exact binomial intervals require independent Bernoulli trials [R12]. Holm adjustment [R11] does not repair invalid component tests, and the Monte Carlo correction discussed by Phipson and Smyth [R13] does not establish sign exchangeability. We report paired effect sizes and uncertainty intervals while keeping their scope conditional on the scenario generator.
+
+Joint routing, priority, queue-based rules, and finite-horizon accounting are established ideas. The present research examines their particular combination and its failure cases. Its novelty is methodological and empirical: a reproducible controller with explicitly limited guarantees, matched cross-resolution experiments, and separate spatial and traveler-level measures of the traffic consequences.
+
+# Problem Formulation and Traffic Accounting
+## Information and control objective
+Let $G=(V,E)$ be a directed road network with legal turning connections, finite road storage, and signal automata. The full state $X_k$ contains physical traffic, source queues, signal stages, and pending requests. At physical step $k$,
+
+$$X_{k+1}=F(X_k,U_k,Z_k).$$
+
+Here $Z_k$ contains exogenous scenario innovations. A causal controller chooses $U_k=\pi_k(\mathcal I_k)$ from commands admissible under its information history $\mathcal I_k$. This history includes public geometry and nominal signals, received noisy traffic counts, current ambulance telemetry, and previous commands. It excludes future realized demand and the counterfactual baseline trajectory used later for evaluation.
+
+For a mission dispatched at $d_a$, let $e_a^{\pi}$ be its arrival time, with infinity assigned to nonarrival. Its common-horizon restricted duration is
+
+$$T_a^{\pi}=\min(e_a^{\pi},H)-d_a.$$
+
+All scheduled dispatches precede $H$. Duration includes insertion waiting; completion status is retained separately. Write $\bar T^{\pi}$ for the episode mean. Over an admissible causal policy class $\Pi$, the ideal time-first objective is
+
+$$T^*=\inf_{\pi\in\Pi}\mathbb{E}[\bar T^{\pi}].$$
+
+An ideal secondary problem minimizes expected positive spatial exposure among policies within an allowance $\delta$:
+
+$$\min_{\pi\in\Pi}\mathbb{E}[A_H^{\pi}],\quad \mathbb{E}[\bar T^{\pi}]\leq T^*+\delta.$$
+
+This formulation states the intended trade-off; neither $T^*$ nor the global policy optimum is computed. An operational formulation would also need a justified reliability constraint. The experiment measures nonarrival and threshold exceedance, but does not assign an unsupported clinical deadline. The practical planner instead searches a finite candidate set and uses a forecast tolerance $\epsilon$, which is distinct from $\delta$ and from the empirical 20 s evaluation tolerance.
+
+## Restricted ordinary-vehicle residence
+Fix an ordinary-vehicle cohort $\mathcal C$, desired release times $d_i$, and an observation interval $[W,H]$. Let $e_i^{\pi}$ be the exit time under policy $\pi$, or infinity for an unfinished trip. Define
+
+$$I_i^{\pi}(t)=\mathbf{1}\{d_i\leq t<e_i^{\pi}\},$$
+$$N^{\pi}(t)=\sum_{i\in\mathcal C} I_i^{\pi}(t).$$
+
+A desired but uninserted vehicle counts as present. For $[x]_+=\max(x,0)$, define its restricted residence as
+
+$$j_i^{\pi}=[\min(e_i^{\pi},H)-\max(d_i,W)]_+.$$
+
+**Proposition 1.** The aggregate residence identity is
+
+$$J_H^{\pi}=\int_W^H N^{\pi}(t)\,dt=\sum_{i\in\mathcal C}j_i^{\pi}.$$
+
+**Proof.** Substitute the finite sum of indicators into the integral and interchange summation and integration. Each indicator integrates to the length of its residence interval intersected with $[W,H]$. No stationarity or completion assumption is required.
+
+Measured in vehicle-seconds, the signed baseline-relative effect is $\Delta J_H^{\pi}=J_H^{\pi}-J_H^0$. This is a finite-horizon residence identity, not Little's law. Calling the difference total delay would additionally require a consistent policy-invariant free-flow reference and a compatible treatment of unfinished trips. Starting the clock at desired release prevents a policy from appearing beneficial merely by moving waiting traffic outside the physical network.
+
+## Spatial and individual aftereffects
+Fix an exhaustive, policy-invariant spatial partition $\mathcal B$. Every present ordinary vehicle belongs to exactly one group, including internal junction regions and external origin queues. Set $z_b^{\pi}(t)=N_b^{\pi}(t)-N_b^0(t)$ and define
+
+$$A_H^{\pi}=\int_W^H\sum_{b\in\mathcal B}[z_b^{\pi}(t)]_+\,dt,$$
+$$B_H^{-,\pi}=\int_W^H\sum_{b\in\mathcal B}[-z_b^{\pi}(t)]_+\,dt.$$
+
+**Proposition 2.** For the same cohort, partition, and horizon,
+
+$$\Delta J_H^{\pi}=A_H^{\pi}-B_H^{-,\pi},$$
+$$A_H^{\pi}\geq[\Delta J_H^{\pi}]_+.$$
+
+**Proof.** Apply $x=[x]_+-[-x]_+$ to each group's occupancy difference, sum over the exhaustive partition, and integrate. The second statement follows because negative exposure is nonnegative.
+
+Positive spatial exposure prevents occupancy reductions elsewhere from canceling an increase in a particular group. It includes moving vehicles and does not identify individual journey loss. It also depends on reporting resolution:
+
+$$\left[\sum_b z_b\right]_+\leq\sum_b[z_b]_+.$$
+
+Thus merging groups cannot increase exposure for fixed trajectories. Every policy comparison must retain the same partition. Extending $H$ cannot decrease positive exposure, but can increase or decrease the signed residence difference. Unresolved recovery does not make the signed finite-horizon estimate a guaranteed lower bound on eventual traffic cost.
+
+Matched vehicle identities yield complementary traveler-level measures:
+
+$$D_H^{+,\pi}=\sum_i[j_i^{\pi}-j_i^0]_+,$$
+$$D_H^{-,\pi}=\sum_i[j_i^0-j_i^{\pi}]_+.$$
+
+**Proposition 3.** The individual decomposition satisfies
+
+$$\Delta J_H^{\pi}=D_H^{+,\pi}-D_H^{-,\pi},$$
+$$D_H^{+,\pi}\geq[\Delta J_H^{\pi}]_+.$$
+
+**Proof.** Apply the positive–negative decomposition to each paired residence difference and sum over the common cohort.
+
+Neither $A_H^{\pi}$ nor $D_H^{+,\pi}$ generally orders the other. Vehicles can exchange spatial positions without changing their completion times; conversely, increases for some travelers can be canceled in contemporaneous group totals by improvements for others. Both dominate the positive network-accumulation area
+
+$$C_H^{+,\pi}=\int_W^H[N^{\pi}(t)-N^0(t)]_+\,dt.$$
+
+For spatial exposure this follows from the aggregation inequality. For individual residence, paired presence indicators share the same release time, so their difference has a constant sign wherever it is nonzero. Summing positive individual differences before aggregation gives the second bound. Also $0\leq A_H^{\pi},D_H^{+,\pi}\leq J_H^{\pi}$. These are consistency checks, not equivalences between the measures. Complete-trip duration differences are recovered only when the observation window includes both complete residence intervals, or the omitted common prefix cancels.
+
+## A conditional recovery calculation
+Consider an initially empty fluid queue with constant arrival rate $\lambda>0$ and service rate $\mu>\lambda$. The baseline serves arrivals immediately. Removing all service for $\Delta$ seconds creates a queue of $\lambda\Delta$ vehicles; after service resumes, it clears at rate $\mu-\lambda$. Consequently,
+
+$$t_{\mathrm{clear}}=\frac{\lambda\Delta}{\mu-\lambda},$$
+$$C=\frac{\lambda\Delta^2}{2}+\frac{(\lambda\Delta)^2}{2(\mu-\lambda)}$$
+$$C=\frac{\mu\Delta^2}{2}\frac{\rho}{1-\rho},\quad\rho=\frac{\lambda}{\mu}.$$
+
+These expressions are exact only for the stated isolated queue. They motivate an inverse-slack term in the burden score. They do not establish a network recovery law under cyclic service, pre-existing queues, spillback, turning interactions, or repeated priority. The experimental nominal load is not a measured value of $\rho$.
+
+More generally, suppose an absolutely continuous paired accumulation difference $z(t)$ starts at $z(W)=Q>0$ and satisfies $z'(t)\geq-r(t)$ almost everywhere for a nonnegative integrable depletion bound $r$. Integration gives
+
+$$[z(W+s)]_+\geq\left[Q-\int_0^s r(W+u)\,du\right]_+.$$
+
+For constant $r>0$, recovery cannot occur before $Q/r$, and positive residence over an interval covering that recovery is at least $Q^2/(2r)$. A shorter observation interval requires integrating the truncated lower envelope instead. The bound concerns relative depletion, including changed inflows; substituting nominal spare capacity without justification would be invalid.
+
+# Microscopic Joint Controller
+## Physical model and observations
+The microscopic implementation uses Eclipse SUMO 1.28.0 through libsumo. The synthetic district has 16 signalized junctions, eight boundary nodes, and 59 directed links. Link lengths are approximately 260–472 m, with one or two 3.2 m lanes and speeds of 8.33 or 11.11 m/s. Internal connections are retained and turnarounds excluded. The district is shared with the mesoscopic study, but the demand, vehicle dynamics, and controller are separately specified.
+
+@FIG network.png|Synthetic district used in both model layers. BE1 is the destination boundary. The network is generated, not a calibrated reconstruction of a city.
+
+Ordinary classes are cars, motorcycles, autorickshaws, buses, and goods vehicles, with probabilities 0.53, 0.30, 0.10, 0.04, and 0.03. Their PCU factors are 1, 0.5, 1, 3, and 2.5. Vehicle dimensions, gaps, acceleration, deceleration, and headways are supplied in the fixture. SUMO's standard car-following and lane-changing mechanisms are retained, with imperfection set to zero and a fixed speed factor of one. Ambulances are signal-obeying passenger-class vehicles: length 5 m, width 2 m, gap 2 m, headway 1.3 s, acceleration 2 m/s², and deceleration 4.5 m/s². There is no speed privilege, red-light bypass, rescue-lane device, or sublane filtering. Physical pedestrian trajectories and incidents are not included in this microscopic experiment.
+
+Physical dynamics advance every 0.5 s and control updates every second. Episodes start empty, end at 7,200 s, and schedule missions during 1,800–5,400 s. Ordinary demand continues to the endpoint. The first 1,800 s is an initialization interval, not evidence of equilibrium. Appendix A specifies demand generation and nominal loading.
+
+Traffic counts are sampled every 5 s and received after 2 s. Additive errors are −2, −1, 0, 1, or 2 vehicles, with probability 3/7 at zero and 1/7 otherwise; negative reports are clipped. At each sampling opportunity, availability changes from available to missing with probability 0.015 and back with probability 0.25. The most recent report is held during dropout. Matched policies share error draws, applied to their own physical counts. Ambulance link and longitudinal position are assumed exact at decision times.
+
+Let $\widehat n_e$ be the received count, $\bar\lambda_e$ the historical arrival rate in vehicles/s, $s_e$ saturation flow in PCU/s, and $\bar p$ mean PCU per ordinary vehicle. The queue and discharge proxies are
+
+$$\widehat q_e=[\widehat n_e-\bar\lambda_e L_e/v_e]_+,$$
+$$\widehat d_e=\frac{\widehat q_e}{\max(s_e/\bar p,0.1)}.$$
+
+The discharge floor is 0.1 vehicles/s. Counts include moving traffic and may be stale, so these are approximate state proxies rather than measured queues or guaranteed clearance times.
+
+## Route and action scoring
+On entry to a regular link, up to four loop-free downstream continuations to BE1 are generated within 1.5 times the shortest downstream free-flow continuation, excluding the common current-link remainder. Immediate U-turns are excluded. A legal incumbent replaces the fourth candidate when necessary, as an explicit exception to the 1.5 filter. An action $a=(h,\ell)$ specifies trigger look-ahead and requested green hold. Development considered the library {(0, 0), (10, 20), (20, 40), (30, 60)} s and its strong subset {(0, 0), (30, 60)} s.
+
+Let $w_e(\tau)$ be residual nominal signal wait at predicted arrival offset $\tau$. Forecasts start from the current stage and assume subsequent nominal cyclic progression. The legal-switch delay $\delta_e$ is zero for the ambulance's green; remaining mandatory green plus 5 s for a conflicting green; remaining amber plus 2 s during amber; remaining clearance during all-red; or remaining pedestrian reservation. Downstream forecasts reuse this current-state approximation rather than simulating future signal decisions.
+
+For a nonzero action, the feasibility proxy and receiving condition are
+
+$$[h+\widehat d_e-\delta_e]_++\widehat d_e+2\leq\ell,$$
+$$\widehat n_{\mathrm{out}}<0.85K_{\mathrm{out}}.$$
+
+The two seconds are a start-up allowance, and $K_{\mathrm{out}}$ is the declared aggregate receiving-storage count. If both checks pass, predicted benefit is
+
+$$b_e=[w_e(\tau)-[\delta_e-\tau]_+]_+.$$
+
+Otherwise it is zero. This observed-headroom check applies to aggressive scoring as well. Actual aggressive requests bypass that admission gate; physical receiving constraints remain binding. The no-priority action always has zero benefit. The displaced-service duration and local burden are
+
+$$D_e=\min\{\ell,\max(5,h+\widehat d_e)\},$$
+$$\widehat C_e=\sum_{j\ne e}\left(\widehat q_jD_e+\frac{\bar\lambda_jD_e^2}{2\max(1-X_j,0.05)}\right).$$
+
+The five-second lower duration and dimensionless 0.05 slack floor are fixed design constants. The sum covers conflicting approaches. $X_j$ is the nominal design loading index. The score has units of vehicle-seconds; its floor limits numerical growth near nominal saturation. It ranks prospective local interventions but does not bound realized network exposure. Selective admission requires benefit at least 5 s, burden no greater than $B_{\mathrm{adm}}$, and the feasibility and receiving checks.
+
+A link ending at an unsignalized node has zero signal wait and zero priority burden. For action (0, 0), a signalized link contributes nominal wait without a priority benefit. Otherwise, candidate ETA accumulates remaining free-flow travel on the current link, full free-flow travel on later links, discharge proxies, and residual signal waits less admitted benefit. Candidate burden sums admitted local scores. For the nonempty evaluated domain $\mathcal C_k$, set
+
+$$\widehat T_{k,\min}=\min_{c\in\mathcal C_k}\widehat T_k(c),$$
+$$\mathcal E_k=\{c\in\mathcal C_k:\widehat T_k(c)\leq\widehat T_{k,\min}+\epsilon\}.$$
+
+Initial selection minimizes the tuple (burden, ETA, route identifier, action identifier) over $\mathcal E_k$. A 10 s switching preference may retain the incumbent when its best ETA exceeds the proposed ETA by no more than 10 s. In selective mode, retention is allowed only for an incumbent action that remains in the original global eligible set; the least-burden eligible incumbent action is then preferred.
+
+**Proposition 4.** Every completed selective-mode planning call preserves $\widehat T_k(c_k)\leq\widehat T_{k,\min}+\epsilon$, provided each selection and hysteresis branch enforces that same global cap.
+
+**Proof.** The initial choice belongs to $\mathcal E_k$. The only permitted replacement is an incumbent action filtered by the identical cap. Either branch therefore returns an eligible candidate.
+
+This is a property of computed values at one snapshot. It gives no bound on forecast error, realized regret, recursive feasibility, or global route optimality. Hysteresis can retain a candidate with larger burden than the initial minimum. The local admission threshold also does not bound mission-wide or citywide aftereffects.
+
+## Request execution and competing missions
+A request is considered when remaining-distance free-flow ETA is at most $h+\widehat d_e$. For JSEL, the benefit and burden gates apply to a new request. Once admitted, a bounded lease keeps it active even if successful service removes its estimated benefit. On the first observed own-green stage, the lease fixes an absolute expiry at the current time plus the nonnegative difference between the requested hold and the already elapsed green. That expiry clock does not pause during later interruptions. Release occurs at this expiry, at 120 s after admission regardless of service status, or when observed receiving headroom fails. Expiry and headroom termination mark that ambulance–approach pair nonrenewable; leaving the link merely removes its lease, so a later physical revisit can be reconsidered. The cap limits discretionary holding, not an otherwise longer nominal green.
+
+Conflicting ambulance requests are ordered by scheduled dispatch and identifier. The oldest eligible mission supplies the junction request. This rule is deterministic but does not optimize a fleet-wide schedule. Each junction serves one protected incoming approach at a time, with minimum green 8 s, amber 3 s, and all-red 2 s. A started 25 s pedestrian opportunity is completed; it is an all-red reservation rather than a physical pedestrian simulation. The cyclic pointer is synchronized to the served approach.
+
+A service-age guard gives precedence to an observed occupied approach, or pedestrian opportunity, aged at least 150 s; the most overdue wins. This is a service opportunity rule, not a bound on each vehicle's wait. The longest-count sensitivity rule instead chooses the largest observed approach count at discretionary selections. It does not compute upstream–downstream pressure.
+
+## Observed-progress escalation
+Let $\mathcal L_a(t)$ be the sequence of completed regular-link traversals for ambulance $a$, preserving repeated traversals. On its current regular link $e$, let $x_a(t)$ be longitudinal position. Executed free-flow credit is
+
+$$P_a(t)=\sum_{f\in\mathcal L_a(t)}\frac{L_f}{v_f}+\frac{\max(0,x_a(t))}{v_e},$$
+$$D_a(t)=[t-d_a-P_a(t)]_+.$$
+
+The current-link term lies outside the completed-link sum. Evaluation occurs at one-second observations on regular links, not before insertion or on internal connectors. Connectors earn no separate free-flow credit; their elapsed time contributes at the next regular-link observation. Insertion waiting similarly enters when the ambulance first becomes observable.
+
+If $D_a(t)>\gamma$, the mission's escalation flag is set irreversibly, its selective lease is cleared, and it replans immediately, including mid-link. It then uses aggressive joint scoring and the (30, 60) s request for the rest of the mission. Other missions keep their own flags. Receiving constraints, arbitration, clearances, and service-age protection remain common. Completed detours earn free-flow credit, and the aggressive comparator may have cleared a junction earlier; $\gamma$ is therefore not a bound on final extra journey time. The selective forecast-band assertion stops applying after escalation.
+
+## Comparator policies and development
+S0 uses traffic-aware routing without discretionary priority. SEQ selects routes without anticipating priority, then applies aggressive requests. JFAST anticipates those requests during time-oriented route selection. JSEL uses the selective rule and progress switch above. SEQ and JFAST use 30 s look-ahead, 60 s holds, and 10 s route hysteresis. All share the physical plant and signal constraints.
+
+Development used seeds 5001–5006 at nominal loads 0.7 and 0.9 with four missions. The initial grid contained 12 unguarded selective configurations and two reference controllers, totaling 168 runs. None met the development margin of 20 s mean duration above JFAST. A second grid added progress escalation and tested nine combinations of $B_{\mathrm{adm}}$ in {600, 2400, 10000} vehicle-seconds and $\gamma$ in {5, 10, 20} s, plus the two references, totaling 132 runs. The strong library and $\epsilon=0$ were used.
+
+Among configurations meeting the development margin, selection minimized mean positive spatial exposure. The chosen values were $B_{\mathrm{adm}}=10000$ vehicle-seconds, $\gamma=20$ s, and $\epsilon=0$. Development differences from JFAST were +17.5625 s in duration and −3810.875 vehicle-seconds in exposure. The 2400 threshold tied on these scores; deterministic label order selected 10000. These are tuning statistics. Development was adaptive, not preregistered. The final implementation and selected parameters were frozen for evaluation on separate seeds.
+
+The one-second execution order is: assimilate available observations; update mission progress and escalation; replan on regular-link entry or escalation; maintain admitted leases and generate new requests; arbitrate conflicts; apply the signal automata; take the left-endpoint census before each physical half-step; advance the plant; and collect entry/exit events for reconciliation. Baseline trajectories are used only after paired runs. The detailed scoring and execution procedure is provided in Appendix B.
+
+# Experimental Design
+## Main evaluation and accounting
+The main microscopic grid contains 48 seeds, three nominal loads {0.60, 0.80, 0.95}, three mission doses {1, 4, 10}, and four policies: 1,728 policy runs in 432 matched scenario groups. Ordinary desired releases, vehicle classes, fixed routes, and mission schedules are identical within each group. Seeds recur across load–dose conditions. The independent unit for balanced aggregate inference is therefore the complete seed block, not an ambulance or individual policy replay.
+
+Ordinary residence is measured from $W=1800$ to $H=7200$ s. The exhaustive partition has 59 regular links, one aggregate internal-junction group, and eight origin queues of desired but uninserted vehicles. Ambulances are excluded. At each physical step, counts must equal desired ordinary releases minus ordinary completions. Left-endpoint integration is reconciled against the individual event ledger. Positive spatial exposure includes moving as well as stopped vehicles. Positive individual residence is a secondary endpoint and was not used for controller selection.
+
+Teleportation is disabled. Collision events, attempted teleport starts, completed signal intervals, route changes, requests, lease expiries, and observation availability are logged. Exceptions remain failures rather than being converted to successful censored journeys. Common-horizon restricted ambulance means, completion counts, a fixed 600 s restriction, and exceedance of 300 and 600 s are reported separately. These thresholds are experimental summaries, not clinical standards.
+
+## Estimation and uncertainty
+For seed $r$ and condition $s$, the primary paired differences are $\Delta T_{rs}=\bar T_{rs}^{\mathrm{JSEL}}-\bar T_{rs}^{\mathrm{JFAST}}$ and $\Delta A_{rs}=A_{H,rs}^{\mathrm{JSEL}}-A_{H,rs}^{\mathrm{JFAST}}$. With nine equally weighted conditions,
+
+$$\theta_T=\frac{1}{9}\sum_s\mathbb E_r[\Delta T_{rs}],\quad\theta_A=\frac{1}{9}\sum_s\mathbb E_r[\Delta A_{rs}].$$
+
+The evaluated joint target is $\theta_T\leq20$ s and $\theta_A<0$. The 20 s tolerance originates in development. We do not describe the complete inferential rule as prospectively registered: the retained protocol documents the controller freeze and evaluation design, but does not establish a dated preregistration of every analysis choice.
+
+Two-sided 95% percentile-bootstrap intervals use 10,000 resamples. For aggregate inference, each seed's paired differences are first averaged over conditions, then whole seed vectors are resampled. Within-condition intervals resample the 48 paired seeds. The target is assessed using the upper endpoints of the duration and exposure intervals. This is an approximate bootstrap assessment of a directional mean trade-off, not a per-mission guarantee. Condition-specific intervals are marginal, not simultaneous bands.
+
+Equal condition weighting is not a city-frequency weighting. Episode means give a one-mission and a ten-mission condition equal influence, unlike pooling all missions. Sampling intervals reflect the synthetic generator and the finite seed sample, not uncertainty from calibration, alternative cities, or omitted behaviors. Contrasts of positive baseline-relative outcomes also differ from directly taking the positive part of JSEL-minus-JFAST trajectories.
+
+## Secondary experiments
+Four sensitivity designs use seeds 0–11 at loads 0.60 and 0.95 with four missions: a 0.25 s physical step (72 runs), removal of progress escalation with its baseline (48), longest-count base signals (72), and noiseless counts sampled each second with zero receipt delay and retained dropout (72). The total is 264 runs. Physical-step sensitivity retains one-second signal control and the desired-release grid, but also changes SUMO's default vehicle decision interval. Because no separate action-step interval is configured, this is a combined physical-step and driver-update sensitivity, not an isolated integration-refinement experiment [R20].
+
+The observation experiment changes noise, sampling, delay, and dropout duration in physical time together, because the same transition probabilities apply more frequently. It retains the count-to-queue approximation and is not a perfect-state oracle. The first, third, and fourth experiments compare changes in JSEL-minus-JFAST contrasts. The ablation directly compares unguarded and guarded JSEL. An interval spanning zero does not establish equivalence.
+
+@TABLE inventory
+
+# Mesoscopic Verification and Reanalysis
+The mesoscopic study supplies a complementary check on modeling mechanics. Its 16-junction district uses finite PCU storage, pooled FIFO approach queues, discharge credit, and nominal signals. One or two deque heads may discharge according to lane count, but lane assignment and lateral movement are not physically resolved. Exit links are unbounded free-flow transport delays; vehicles remain in the completion ledger until exit. Appendix C records the demand, observation, incident, and yielding assumptions.
+
+The six policies are M0 (no priority), M1 (limited extension/truncation), M2 (phase skipping and holding), MQ (queue-triggered longer holds), MC (service-deficit compensation), and MR (queue-aware rerouting). They correspond to archived labels P0, P1, P2, P3, P3C, and P4. They are distinct from the microscopic policy family. The evaluation spans six nominal loads, two yielding settings, six policies, and 200 seeds per cell, totaling 14,400 runs.
+
+Source inspection found three ambulance exceptions: entry despite full receiving storage, crossing without sufficient discharge credit or credit consumption, and origin insertion 20 m downstream without source admission. Adversarial checks reproduced full-link over-admission and discharge with zero available capacity. A separate blocked-link test showed 348 s of unfinished stop-line waiting while the maximum completed-wait statistic remained zero. The latter is a censoring limitation, not evidence of no delay.
+
+The corrected implementation inserts the ambulance through the source FIFO at position zero, enforces strict storage, and requires the same PCU discharge accounting as ordinary vehicles. Travel time starts at desired dispatch. Policy logic, nominal signal design, ordinary-demand generation, and the remaining model approximations are retained. Eighteen focused and stress checks passed before all 14,400 corrected runs were completed.
+
+Independently rerunning six policies for seeds 0, 37, and 199 in every original load–yield cell produced 216 verification runs. Checked outputs agreed within absolute tolerance $10^{-9}$ and relative tolerance $10^{-12}$. All 72 summary rows and 48 contrast rows were reconstructed to reported precision. This verifies a subset of archived outputs and their calculations, not the original model's physical validity. Archived sign-flip and Holm calculations are reproducible, but exact sign-flip inference would require assumptions not established merely by common random numbers.
+
+Without abstract yielding, corrected M2 mean ambulance duration was 204.17 s versus M0's 357.61 s at load 0.60, 252.81 versus 433.35 s at 0.80, and 312.89 versus 478.03 s at 0.90. Across the six loading targets, M2 reduced the mean by approximately 34–43%. Its M0-relative ordinary-residence effect rose from −0.025 vehicle-hours [−0.116, 0.065] at load 0.60 to 1.349 [0.857, 1.873] at 0.90 and 1.663 [1.108, 2.259] at 0.95. Brackets denote 95% paired bootstrap intervals.
+
+Mechanical correction changed both baseline and intervention trajectories. At load 0.90, M2 duration increased from 291.57 to 312.89 s and its baseline-relative residence effect from 0.964 to 1.349 vehicle-hours. The paired change in the M2-minus-M0 effect was +0.384 [0.125, 0.646] vehicle-hours. This is a difference of baseline-paired effects, not a raw M2 residence change.
+
+At load 0.80, M2 reduced duration relative to M1 by 86.49 s [77.17, 95.88], while the ordinary-residence difference was +0.088 [−0.176, 0.350] vehicle-hours. At 0.90, MQ-minus-M2 duration was +1.49 [−4.38, 7.48] s and residence +0.438 [0.141, 0.754] vehicle-hours. MQ changes both triggering and hold capacity, so the contrast does not isolate queue awareness. MR-minus-MC at the same load was −10.15 [−18.39, −3.50] s and −0.261 [−0.526, −0.031] vehicle-hours.
+
+Mean improvements did not remove tail risk. Under M2, the fractions exceeding 300 s were 0%, 22.5%, 41.0%, and 42.5% at loads 0.60, 0.80, 0.90, and 0.95. With zero exceedances in 200 independent single-mission scenarios, the two-sided 95% exact binomial upper endpoint is still about 1.83%. These results motivate congestion-aware joint control without establishing a transferable loading threshold.
+
+The isolated fluid calculation was also checked independently. At service 0.5 vehicles/s and a 10 s interruption, additional queue residence was 25.00, 58.33, 141.67, and 225.00 vehicle-seconds at utilization 0.50, 0.70, 0.85, and 0.90. Piecewise-linear integration differed by less than $3\times10^{-12}$ vehicle-seconds. A deterministic packet reference converged under refinement. These checks verify the isolated calculation, not its quantitative accuracy for the network.
+
+# Microscopic Results
+## Verification and balanced outcomes
+All 1,728 primary runs completed. Scenario schedules matched across policies, and maximum census and individual-residence discrepancies were zero. No collision events, teleport starts, or completed signal-timing violations were recorded across 19,299,062 completed signal intervals. These are monitored model diagnostics, not estimates of road safety. The maximum service age was 258 s, confirming that the 150 s intervention threshold is not a hard bound.
+
+The batch contains 8,640 scheduled mission evaluations across policy replays, with up to four ambulances active simultaneously. Across runs, 82–852 ordinary vehicles remained unfinished at the endpoint, and the largest terminal external source queue was 49 vehicles. The analysis neither empties the network artificially nor deletes incomplete trips.
+
+@TABLE aggregate
+
+Balanced mean restricted ambulance durations were 401.57 s (S0), 214.68 s (SEQ), 211.19 s (JFAST), and 222.29 s (JSEL). JSEL-minus-S0 was −179.28 s [−189.46, −169.57], equivalent to a 44.6% reduction in balanced synthetic means. This is not a field response-time reduction. Anticipating priority in route selection gave JFAST-minus-SEQ a smaller benefit of −3.49 s [−4.87, −1.97], conditional on the same finite candidate library and forecasts.
+
+The main JSEL-minus-JFAST contrast was +11.10 s [9.47, 12.94] in duration and −3.84 [−4.73, −2.95] vehicle-hours in positive spatial exposure. Both upper endpoints satisfy the evaluated aggregate criterion. Positive individual baseline-relative residence changed by −1.64 [−2.14, −1.16] vehicle-hours, and signed residence by −1.26 [−1.94, −0.63]. These are differences of outcomes computed against the same S0 baseline. They do not equal positive direct harm from switching an individual traveler from JFAST to JSEL.
+
+JSEL still imposed +2.63 vehicle-hours of signed ordinary residence relative to S0. Reduced exposure relative to aggressive priority is therefore not elimination of ordinary-traffic cost.
+
+## Escalation and reliability
+JSEL escalated 1,114 of 2,160 scheduled missions, or 51.6%, to aggressive control. Its favorable mean cannot be attributed entirely to selective withholding or to minimal signal changes. The ablation below confirms that fallback materially contributes to time performance.
+
+Aggregate results also conceal difficult conditions. At load 0.95 with one mission, JSEL-minus-JFAST was +17.80 [9.74, 27.17] s and spatial exposure −1.27 [−3.04, 0.52] vehicle-hours. With four missions at the same load, duration increased by 16.17 [10.83, 22.84] s. Thus the joint criterion is not established separately in every cell. Appendix D reports all condition means and contrasts.
+
+@FIG primary_effects.png|Paired JSEL-minus-JFAST effects by nominal load and scheduled missions. Bars are marginal 95% seed-bootstrap intervals from 48 paired seeds. The dashed 20 s line is the research tolerance. Spatial exposure is separately measured against the same S0 baseline.
+
+S0 and SEQ each left one of 2,160 missions unfinished, in the same seed-2, load-0.95, ten-mission scenario. That mission was followed for 2,579 s. JFAST and JSEL completed all missions. The numbers exceeding 600 s, including unfinished trips, were 106, 4, 5, and 2 for S0, SEQ, JFAST, and JSEL. These are descriptive counts of correlated missions under heterogeneous conditions, not independent binomial observations. Even zero late episodes among 48 independent episodes in one fixed condition would have a two-sided 95% binomial upper endpoint of about 7.4%.
+
+The two JSEL journeys above 600 s lasted 1,812.5 and 2,050 s. Both occurred at load 0.95 in seed 2, at doses four and ten. Their insertion delays were 0.5 s. In the first, escalation occurred at model time 3,476 s, followed by a 1,589 s gap between regular-link entry records. At the start of that gap, predicted remaining time was 276.8 s, compared with 1,718.5 s realized. The traces establish a large forecast error and prolonged on-network delay, but not a unique physical cause.
+
+After the one escalation-triggered replan, the controller normally replans only at another regular-link entry. A stalled ambulance can therefore retain an outdated continuation. Periodic stalled-link replanning and explicit receiving-space prediction warrant testing on new data; adding them after seeing these failures would create a new controller requiring fresh evaluation.
+
+The balanced fraction exceeding 300 s was 2.55 percentage points higher under JSEL than JFAST [1.42, 3.77]. At 600 s, the difference was approximately −0.069 percentage points [−0.185, 0.000], based on few extreme events. The evidence does not support a general reliability improvement. Fixed 600 s restricted means were 390.98, 213.73, 210.12, and 221.25 s for the four policies. Restriction limits numerical influence without removing operational consequences.
+
+## Sensitivity and computation
+At load 0.60, halving the physical step changed the JSEL-minus-JFAST duration contrast by +0.30 [−0.06, 0.74] s. At 0.95, the change was −23.27 [−79.12, 7.76] s. High-load intervals are too wide to establish numerical equivalence. Disabling escalation increased JSEL duration by 4.32 [0.65, 8.92] s at load 0.60 and 38.82 [23.64, 55.36] s at 0.95. Its corresponding spatial changes were −0.43 [−0.92, 0.01] and −17.65 [−49.90, 0.28] vehicle-hours.
+
+With longest-count base signals, the duration contrast changed by −2.70 [−7.46, 2.05] s at load 0.60 and −8.07 [−31.39, 10.28] s at 0.95. At high load, the spatial contrast changed by +10.19 [−0.21, 22.84] vehicle-hours. More frequent noiseless observations changed the duration contrast by +4.25 [1.83, 6.81] s at 0.60 and −38.10 [−128.70, 12.08] s at 0.95. The latter spatial change was −18.21 [−56.57, 2.88] vehicle-hours. Broad intervals and simultaneous observation changes prevent a strong robustness claim. All secondary estimates use 12 paired seed blocks per load.
+
+A leave-one-seed-out diagnostic gave aggregate duration contrasts from +10.61 to +11.40 s, spatial contrasts from −4.04 to −3.67 vehicle-hours, and individual-residence contrasts from −1.72 to −1.53. No seed was omitted from the main estimates. These ranges are influence summaries, not confidence intervals.
+
+Median simulator-loop time was 4.82 s per two-hour episode, with 95th percentile 7.54 s under the recorded concurrent workload. Planning and signal updates averaged 0.0308 ms per one-second tick; the 95th percentile of episode-average cost was 0.0423 ms. These are amortized costs, excluding input generation, network compilation, and trace export. They do not measure worst-case active-planning latency or demonstrate city-scale real-time performance.
+
+# Discussion and Limitations
+The results support a limited but useful conclusion: within the tested synthetic grid, selective joint control traded about 11 s of mean ambulance duration for lower spatial exposure than aggressive joint control. Relative to routing alone, it retained a large mean time benefit. The net ordinary-traffic effect remained positive, and the increased 300 s exceedance rate shows why the mean trade-off cannot serve as a mission-level reliability guarantee.
+
+The observed mechanism is hybrid. More than half of JSEL missions used aggressive fallback. With the selected $\epsilon=0$, burden ranking distinguishes only candidates tied at the minimum computed ETA before hysteresis. The time–congestion trade-off therefore depends strongly on selective admission, forecasts, and escalation, rather than a wide set of slower but less disruptive routes. A richer uncertainty model could be useful, but its value must be demonstrated against this transparent baseline.
+
+Graph neural networks could eventually improve link-state forecasting if calibrated data cover varying demand and interventions. Bayesian state estimation could express uncertainty in queues and receiving space. Markov models could describe temporal observation or traffic-state evolution. None is implemented as a performance-enhancing component here, and none can make an inaccurate traffic model reliable by its label alone. A learned predictor would require held-out forecast calibration and closed-loop control evaluation; a probabilistic withholding rule would need tests of both ambulance reliability and traffic cost.
+
+The most immediate algorithmic comparison is a receding-horizon joint optimizer with the same observations, legal phases, storage conditions, and computation budget. A true pressure-based comparator would need downstream turn-weighted queues and a stated finite-storage treatment. Multi-ambulance dispatch-order arbitration should also be compared with a joint scheduling rule. No such comparison is claimed in this study.
+
+External validity is the main empirical limitation. Both traffic layers use one synthetic district, share geometry, and use fixed ordinary routes. The microscopic plant omits incident dynamics, physical pedestrians, calibrated emergency yielding, and weak lane discipline. PCU loading is a design index rather than a measured SUMO capacity ratio. Initialization does not establish stationarity, and ongoing demand leaves residual traffic at the endpoint. The two layers provide complementary modeling evidence, not independent city validation.
+
+The mathematical results have similarly bounded scope. Residence and exposure identities verify accounting; the fluid result applies to an isolated queue; and the eligibility proposition concerns internal forecasts. None proves stability, traffic safety, recursive feasibility, minimum eventual congestion, or accurate route prediction. A lawful transition within the declared automaton is not a certification of a field signal plan.
+
+Field evaluation should begin with surveyed geometry and turns, signal-state logs, approach counts, discharge headways, observed queues and spillback, travel-time trajectories, and ambulance dispatch-to-arrival records. Demand and behavior should be calibrated on one set of days and validated on held-out periods using multiple outputs, including intervention response. Matching mean speed alone is insufficient. A distinct corridor or network is then needed to test transfer. Production latency, missing-data behavior, communications failure, and operational authorization remain separate requirements.
+
+# Conclusion
+Joint route selection and selective signal priority can be evaluated without treating congestion as a single interchangeable quantity. The proposed controller couples finite route–action scoring, bounded priority execution, and observed-progress escalation with common-cohort aftereffect accounting. Mechanical reanalysis shows why admission, storage, and discharge assumptions must be checked before interpreting emergency gains.
+
+The microscopic results support the evaluated balanced mean-time tolerance with lower spatial exposure than aggressive joint control. They also expose reliance on escalation, high-load sensitivity, substantial forecast errors, and two selective-policy journeys longer than 30 min. The present contribution is a reproducible synthetic study with explicit failure cases. Progress toward an operational system requires stronger stalled-route handling, matched optimizer benchmarks, and calibration and intervention-response validation on observed corridors.
+
+@REFERENCES
+
+@APPENDIX A|Demand and Nominal Signal Design
+For each ordinary OD pair, up to four loop-free routes within 1.35 times the shortest free-flow time are assigned probabilities proportional to exp(−0.05 times excess free-flow seconds). Assigned ordinary routes remain fixed. The historical flows used by the controller follow from these public assignments.
+
+Let $f_e$ be assigned PCU flow under reference origin rate 0.1 vehicles/s, $s_e$ saturation flow, and $\kappa$ the common demand multiplier. At junction $j$ with $m_j$ approaches, define $y_e=\kappa f_e/s_e$ and $Y_j=\sum_{e\to j}y_e$. The Webster-inspired design [R21] is
+
+$$L_j=25+7m_j,$$
+$$C_j^*=\min\{150,\max(60,c_j,25+13m_j)\},$$
+$$c_j=\frac{1.5L_j+5}{\max(1-Y_j,0.05)}.$$
+
+The 25 s term reserves pedestrian service; five seconds per approach cover amber and all-red, and two add a start-up allowance. Each approach receives an 8 s minimum green plus a demand-proportional share of the remaining green. Bisection selects $\kappa$ so that the largest continuous-design ratio reaches the target:
+
+$$X_e=\frac{\kappa f_e}{s_e(g_e/C_j^*)}.$$
+
+Greens are rounded to integer seconds and the executable cycle recomputed. The target precedes rounding and does not calibrate physical saturation in SUMO.
+
+Minute shocks follow $Z_m=0.75Z_{m-1}+\eta_m$, with independent Gaussian innovation standard deviation 0.18 and stationary initialization. Origin intensities are $0.1\kappa\exp[Z_m-\operatorname{Var}(Z_m)/2]$. Poisson release times are rounded upward to integer seconds. Separate namespaced streams generate destination, class, route, observations, and missions.
+
+For $M$ missions during the one-hour interval, mission $k=0,\ldots,M-1$ is dispatched at
+
+$$d_k=\left\lceil1800+\frac{3600}{M}(k+0.15+0.70U_k)\right\rceil,$$
+
+where $U_k$ is uniform on $[0,1)$. Origins are sampled from six boundaries and the common destination is BE1. This is jittered scheduled spacing, not a Poisson mission-arrival process. Missions can overlap. Controller inputs exclude future realized demand and the undispatched mission array.
+
+@APPENDIX B|Executable Controller Procedure
+The procedure below describes the frozen policy, not an improved controller retrospectively substituted for the reported runs. Model identity is given in the reproducibility archive. The simulator owns the future scenario schedule; only dispatched missions and received observations are exposed to control.
+
+@ALGORITHM
+
+Selective scoring treats non-admitted interventions as zero benefit and adds their full nominal residual wait. Aggressive scoring uses its own time-oriented mode with receiving headroom as the admission gate. Both estimates remain approximate; neither rolls forward the complete future signal automaton and traffic state. An active selective lease is processed before new benefit tests so that successful green service does not immediately cancel its own request. Route-installation failures and physical simulation exceptions remain explicit failures.
+
+The completed-link progress register counts actual regular-link traversals, including a repeated link if the ambulance physically returns to it. Internal-connector time earns no separate free-flow credit. The 20 s switch threshold is therefore a diagnostic of observed progress under this accounting convention, not a counterfactual bound against JFAST.
+
+@APPENDIX C|Mesoscopic Inputs and Reproduction Scope
+The mesoscopic district shares the network geometry, class probabilities, and PCU factors stated in the main text. Saturation assumptions are 0.40–0.48 PCU/s/lane. Storage is the integer part of 0.16 times lane count times usable length after a 5 m stop-line buffer. The pooled-head approximation, unbounded exit-link transport, and abstract yielding are retained after mechanical correction.
+
+One incoming approach is protected at a time, followed by 3 s amber and 2 s all-red. The pedestrian reservation comprises 7 s walk, 16 s clearance, and 2 s all-red. Discharge begins after 2 s start-up loss and continues through amber, giving effective green $g+1$ s under this model's convention. Webster-inspired nominal cycles are constrained to 60–150 s and green splits to 8–60 s. Integer timing gives maximum design load 0.79499 for target 0.80; other target deviations are below 0.0002. Guards and interventions subsequently change service, so this remains a nominal index.
+
+Origin weights drawn uniformly from 230–390 vehicles/h are scaled together. A common stationary AR(1) lognormal multiplier has coefficient 0.75, log standard deviation 0.18, and unit expectation. Conditional releases are uniform within the minute. Poisson sampling is exact below mean 30, with a rounded-normal approximation above; the approximation was inactive in the evaluation, whose largest origin-minute mean was 14.608. Destination weights combine exp(−distance/2200 m) with attraction 1.6 for BE1, 1.2 for BE2 and BS1, and 1 otherwise. At most four ordinary routes within a free-flow factor of 1.25 use logit sensitivity 0.05 per second.
+
+An incident occurs with probability 0.5 on a random two-lane non-exit link, starts from 180 s before to 120 s after dispatch, and lasts 240–480 s. One lane retains 45–65% discharge capacity, giving aggregate multiplier 0.725–0.825. Speed multipliers 0.75–0.90 affect new link-entry readiness clocks; previously assigned clocks are retained.
+
+Camera samples arrive every 5 s without added delay. Count noise and per-sample availability transitions match the declared probabilities in the main text. With probability 0.5, a further outage lasting 180–420 s affects approaches within 800 m Manhattan distance of a sampled junction. Abstract yielding reorders queued vehicles ahead of an ambulance with class probabilities $y$ times (0.6, 1.0, 0.8, 0.2, 0.2). It conserves occupancy but does not establish a feasible rescue lane. Policy-dependent encounters consume yielding draws sequentially, so identical seeds do not ensure identical vehicle-specific yielding decisions.
+
+M1 extends green by at most 10 s or truncates to the 8 s minimum without phase skipping. M2 permits phase skipping after clearance and holds up to 60 s, using 30 s look-ahead. MQ uses the inherited 15 s queue-aware trigger, a 10 s margin, and a 90 s hold cap. MC compensates nominal service-share deficits within guard slack; MR adds link-entry rerouting when estimated improvement exceeds 10 s. A started pedestrian reservation is not interrupted. All policies have a stage-selection deadline guard; priority modes additionally have per-tick protection during priority and for two nominal cycles after release. These are service protections, not individual waiting guarantees.
+
+Evaluation uses nominal loads 0.60, 0.70, 0.80, 0.85, 0.90, and 0.95; yielding parameters 0 and 0.5; and 200 seeds per condition. One ambulance departs from one of six boundary origins at integer time 1,800–2,100 s and heads to BE1. The episode ends at 4,200 s. The retained tuning used seeds 5000–5039 at loads 0.80 and 0.90 under both yielding settings. Corrected reruns preserve these selections and are a matched mechanical sensitivity study, not a preregistered new-policy trial.
+
+@APPENDIX D|Full Microscopic Results
+Table values are computed from the retained analysis, rather than transcribed from figure images. Every cell contains 48 paired scenario seeds. Ordinary-traffic outcomes are relative to the matching S0 episode. The confidence intervals below are marginal seed-block intervals, not simultaneous bands.
+
+@TABLE full_results
+
+@TABLE full_contrasts
+
+@TABLE sensitivities
+
+Episode-level rare-event uncertainty is reported separately from bootstrap mission fractions. The event is at least one mission exceeding 600 s in a fixed load–dose episode, including noncompletion. The denominator is 48 independent episodes per cell. Exact binomial intervals do not treat all missions or signal intervals as independent trials. The accompanying CSV provides all policies; the compact table reports JSEL.
+
+@TABLE rare_events
+
+@APPENDIX E|Reproducibility
+The retained computational package contains original and corrected mesoscopic sources, frozen microscopic implementations, input fixtures, policy selections, protocols, episode summaries, population traces, individual event records, and statistical scripts. It distinguishes development runs from held-out evaluation and stops on execution exceptions instead of silently dropping failed episodes. The frozen microscopic source SHA-256 is 471a22911a2de9773fcd839872b3ba1ec5e00412c0ecc79142503e72f41cecf2. A hash identifies a file; it does not validate its model.
+
+Population histories and ordinary event records support reconstruction of the residence identities. The same S0 history supplies the reference for each intervention policy in a scenario group. Physical-step sensitivity holds integer-second desired releases and one-second decisions fixed. With the default vehicle action interval, changing the physical step also changes driver decision timing and may change lane order and trajectories; exact trajectory convergence is not assumed. The manuscript's empirical claims refer to the frozen implementations. Editorial corrections to equations and pseudocode do not constitute a new simulation experiment.

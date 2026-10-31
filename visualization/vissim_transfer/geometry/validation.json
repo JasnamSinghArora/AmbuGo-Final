@@ -1,0 +1,161 @@
+{
+  "status": "PREPARATION_ONLY_NOT_TESTED_IN_VISSIM",
+  "xml_well_formed": true,
+  "opendrive_version": {
+    "revMajor": "1",
+    "revMinor": "4",
+    "name": "",
+    "version": "1.00",
+    "date": "Wed Oct 28 16:26:12 2026",
+    "north": "5246.98000000",
+    "south": "0.00000000",
+    "east": "6071.55000000",
+    "west": "0.00000000"
+  },
+  "unique_road_ids": true,
+  "unique_junction_ids": true,
+  "all_source_road_ids_preserved": true,
+  "source_regular_roads": 479,
+  "source_regular_lanes": 556,
+  "exported_regular_roads": 479,
+  "exported_regular_lanes": 556,
+  "exported_junction_connecting_roads": 805,
+  "exported_junctions": 220,
+  "exported_signals": 0,
+  "exported_controllers": 0,
+  "removed_export_control_placeholders": {
+    "controller": 11,
+    "signals": 1284
+  },
+  "schema_validation_performed": false,
+  "vissim_import_or_execution_performed": false,
+  "sumo_diagnostic_roundtrip": {
+    "converter_exit_code": 0,
+    "regular_roads": 479,
+    "regular_lanes": 556,
+    "direction_preservation_with_lefthand_import": {
+      "consistent_endpoint_direction": 479,
+      "opposite_endpoint_direction": 0
+    },
+    "mean_per_road_average_lane0_endpoint_difference_m": 4.706274801645794,
+    "maximum_per_road_average_lane0_endpoint_difference_m": 12.69533362014006,
+    "interpretation": "These are discrepancies after export AND SUMO reimport with left-hand reconstruction, not isolated exporter errors or Vissim measurements. Conversion is not lossless.",
+    "note": "Diagnostic performed before the boundary-reference repair. Shape and lane elements were unchanged by repair."
+  },
+  "rejected_variant": {
+    "variant": "positive-index left-lane export",
+    "reason": "SUMO1.28 diagnostic reimport reversed endpoint direction for all479 regular roads. Kept only in work audit folder, not in this delivery."
+  },
+  "export_warning_count": 17,
+  "export_warnings": [
+    "Warning: Found sharp turn with radius 6.13125044 at the end of edge '1449576999#1'.",
+    "Warning: Found sharp turn with radius 8.07142037 at the end of edge '1449576999#4'.",
+    "Warning: Intersecting left turns at junction 'cluster_1424351293_1424351307_1424351309_1424351313_#3more' from lane '576509526#4_0' and lane '305664097#2_0' (increase junction radius to avoid this).",
+    "Warning: Intersecting left turns at junction 'cluster_1424395831_1832906027_1835405429_3842301654' from lane '335061218_0' and lane '172380615#1_0' (increase junction radius to avoid this).",
+    "Warning: Intersecting left turns at junction 'cluster_1424395831_1832906027_1835405429_3842301654' from lane '172660580#0_0' and lane '172382686#4_0' (increase junction radius to avoid this).",
+    "Warning: Intersecting left turns at junction 'cluster_1425255383_3867205572_3869445914_3869445916' from lane '383448410#0_0' and lane '129126367#6_0' (increase junction radius to avoid this).",
+    "Warning: Intersecting left turns at junction 'cluster_1425255383_3867205572_3869445914_3869445916' from lane '502070672_0' and lane '383634126#1_0' (increase junction radius to avoid this).",
+    "Warning: Intersecting left turns at junction 'cluster_3103290538_3900345759_3900345760_4834302558' from lane '305664129#1_0' and lane '1215822556#1_0' (increase junction radius to avoid this).",
+    "Warning: Intersecting left turns at junction 'cluster_3103290538_3900345759_3900345760_4834302558' from lane '386680469#0_0' and lane '1103097010#1_0' (increase junction radius to avoid this).",
+    "Warning: Uneven stop line at lane '1215818939#0_1' (dist=0.42982232) cannot be represented in OpenDRIVE.",
+    "Warning: Uneven stop line at lane '1215818940#0_1' (dist=1.00460200) cannot be represented in OpenDRIVE.",
+    "Warning: Uneven stop line at lane '1215818940#1_1' (dist=1.34634465) cannot be represented in OpenDRIVE.",
+    "Warning: Uneven stop line at lane '1215818941_1' (dist=0.29649045) cannot be represented in OpenDRIVE.",
+    "Warning: Uneven stop line at lane '1216496542_1' (dist=0.37666271) cannot be represented in OpenDRIVE.",
+    "Warning: Could not compute smooth shape from lane '502070674#2_0' to lane '129130434_0'. Use option 'junctions.scurve-stretch' or increase radius of junction '1425319614' to fix this.",
+    "Warning: Could not compute smooth shape from lane '1215822550_0' to lane '1215822559#0_0'. Use option 'junctions.scurve-stretch' or increase radius of junction '3867217332' to fix this.",
+    "Warning: Could not compute smooth shape from lane '129126240#7_0' to lane '129126240#8_0'. Use option 'junctions.scurve-stretch' or increase radius of junction '3867217356' to fix this."
+  ],
+  "source_network_sha256": "bde374f42e5a34567bd053eefb0f9d39cd1702c651da2e50aae2a1346cecd917",
+  "source_network_unchanged": true,
+  "delivered_geometry_sha256": "e92804589617bae1d8d8d670c667b7bef7f4e4f253420a0239a2a73f163f38a4",
+  "import_readiness": "STRUCTURAL_REFERENCE_CHECK_PASSED_NATIVE_VISSIM_VALIDATION_PENDING",
+  "original_export_invalid_references": [
+    {
+      "road": "2799",
+      "link": {
+        "elementType": "junction",
+        "elementId": "50"
+      }
+    },
+    {
+      "road": "2813",
+      "link": {
+        "elementType": "junction",
+        "elementId": "70"
+      }
+    },
+    {
+      "road": "2953",
+      "link": {
+        "elementType": "junction",
+        "elementId": "161"
+      }
+    },
+    {
+      "road": "2961",
+      "link": {
+        "elementType": "junction",
+        "elementId": "162"
+      }
+    },
+    {
+      "road": "2962",
+      "link": {
+        "elementType": "junction",
+        "elementId": "163"
+      }
+    },
+    {
+      "road": "2965",
+      "link": {
+        "elementType": "junction",
+        "elementId": "164"
+      }
+    },
+    {
+      "road": "3011",
+      "link": {
+        "elementType": "junction",
+        "elementId": "180"
+      }
+    },
+    {
+      "road": "3028",
+      "link": {
+        "elementType": "junction",
+        "elementId": "184"
+      }
+    },
+    {
+      "road": "3071",
+      "link": {
+        "elementType": "junction",
+        "elementId": "201"
+      }
+    },
+    {
+      "road": "3161",
+      "link": {
+        "elementType": "junction",
+        "elementId": "225"
+      }
+    },
+    {
+      "road": "3200",
+      "link": {
+        "elementType": "junction",
+        "elementId": "229"
+      }
+    },
+    {
+      "road": "3219",
+      "link": {
+        "elementType": "junction",
+        "elementId": "232"
+      }
+    }
+  ],
+  "invalid_road_junction_references": [],
+  "boundary_repair": "All12 dangling predecessors referenced source dead-end boundaries with no incoming connection. Removed only those invalid references; lane/road geometry unchanged. See boundary_repair.json."
+}

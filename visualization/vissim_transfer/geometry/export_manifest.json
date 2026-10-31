@@ -1,0 +1,29 @@
+{
+  "status": "PREPARATION_ONLY",
+  "converter": "Eclipse SUMO netconvert1.28.0, native macOS arm64",
+  "source_network_original_relative_path": "work/punjab/sim/mohali_urban.net.xml",
+  "source_sha256": "bde374f42e5a34567bd053eefb0f9d39cd1702c651da2e50aae2a1346cecd917",
+  "output_sha256": "e92804589617bae1d8d8d670c667b7bef7f4e4f253420a0239a2a73f163f38a4",
+  "options": [
+    "--sumo-net-file SOURCE",
+    "--opendrive-output RAW",
+    "--output.original-names true",
+    "--output.street-names true",
+    "--lefthand true",
+    "--opendrive-output.lefthand-left false",
+    "--junctions.scurve-stretch 0",
+    "--geometry.remove false",
+    "--precision 8",
+    "--xml-validation always",
+    "--aggregate-warnings -1"
+  ],
+  "postprocessing": "Remove every signals and controller element, including duplicate joined-controller placeholders. No road/lane geometry or connectivity edited after export. Then remove12 dangling predecessor references only after verifying unconnected source dead-end boundaries. Geometry and lane elements unchanged; no valid connection removed. See tools/repair_boundary_refs.py and boundary_repair.json.",
+  "source_docs": [
+    "https://sumo.dlr.de/docs/Networks/Export.html",
+    "https://eclipse.dev/sumo/docs/netconvert.html",
+    "https://cgi.ptvgroup.com/vision-help/VISSIM_2026_EN-DE/en-us/Content/5_Netzbearbeiten/Import_openDRIVE-elem.htm"
+  ],
+  "original_input_modified": false,
+  "limitations": "Not an INPX project. No Vissim import, simulator run, calibration, control parity or trajectory equality is claimed.",
+  "pre_boundary_repair_output_sha256": "605f0f80f9c83a80830ed6d461cb539066554cbf0888ccc3430988d35218c5b6"
+}

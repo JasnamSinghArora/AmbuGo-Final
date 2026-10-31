@@ -1,0 +1,23 @@
+{
+  "video_time_s": [
+    0.0,
+    3.0,
+    5.5,
+    9.5,
+    14.0,
+    16.5,
+    20.0
+  ],
+  "simulation_time_s": [
+    761.5,
+    778.0,
+    792.0,
+    804.0,
+    1048.0,
+    1083.5,
+    1125.0
+  ],
+  "interpolation": "piecewise_linear",
+  "duration_s": 20,
+  "fps": 30
+}

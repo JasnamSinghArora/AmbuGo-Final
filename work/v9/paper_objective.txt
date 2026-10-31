@@ -1,0 +1,19 @@
+## The ideal control problem and its implemented approximation
+
+Let Π denote causal policies that jointly choose ambulance route continuations and legal signal commands from the received information history. The population of ordinary desired trips is fixed exogenously for the paired experiment. Let T̄^π be episode-mean ambulance travel restricted at the common end, with nonarrival recorded separately. A precise time-first ideal is
+
+$$T^*=\inf_{\pi\in\Pi}\mathbb E[\bar T^{\pi}].$$
+
+Among policies within an allowed time slack, an aftereffect objective can be written as
+
+$$\min_{\pi\in\Pi}\mathbb E[A_H^{\pi}]\quad\mathrm{s.t.}\quad\mathbb E[\bar T^{\pi}]\leq T^*+\varepsilon.$$
+
+Positive individual residence and signed residence remain separate outcomes because a smaller spatial disturbance does not imply a smaller traveler penalty. An operational formulation would additionally require an externally specified nonarrival or deadline-risk constraint; the present experiment reports those risks without inventing a medical threshold. This formulation describes the intended research problem. It is not solved exactly by the implementation, and neither the value of T* nor the complete causal policy space is enumerated.
+
+The implemented planner replaces this ideal with finite route–action scores at the current observation snapshot. It obtains the smallest computed ETA, admits candidates within a forecast tolerance and prefers smaller local burden scores, subject to qualified route hysteresis. Its execution layer handles legal switching, bounded request commitments and competing missions. Observed progress can trigger a switch to the aggressive joint controller when the selective approximation is no longer trusted. The local burden cap B is distinct from a constraint on expected network exposure, and the forecast tolerance ε is distinct from a realized travel-time tolerance.
+
+The empirical question uses an observable comparator instead of the unknown global optimum. Define the balanced evaluation differences between JSEL and JFAST by
+
+$$\theta_T=\mathbb E[\bar T^{\mathrm{JSEL}}-\bar T^{\mathrm{JFAST}}],\qquad\theta_A=\mathbb E[A_H^{\mathrm{JSEL}}-A_H^{\mathrm{JFAST}}].$$
+
+The declared target is θ_T≤20 s together with θ_A<0 over the equal-weighted evaluation grid. This tests a particular operating trade-off relative to a strong implemented heuristic. It cannot establish optimality relative to every feasible controller. The two-sided 95 percent upper interval endpoints are used conservatively to assess the two directional requirements. A pooled result does not establish the same tolerance for every loading condition or every individual mission.

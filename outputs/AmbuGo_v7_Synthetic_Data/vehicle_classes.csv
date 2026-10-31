@@ -1,0 +1,6 @@
+provenance,class_id,probability,length_m,width_m,min_gap_m,desired_headway_s,accel_mps2,decel_mps2
+synthetic_design_not_measured,car,0.53,4.5,1.8,2.0,1.3,2.0,4.5
+synthetic_design_not_measured,motorcycle,0.3,2.1,0.8,1.0,1.0,2.5,4.0
+synthetic_design_not_measured,autorickshaw,0.1,2.8,1.3,1.5,1.3,1.6,3.5
+synthetic_design_not_measured,bus,0.04,11.5,2.5,2.5,1.8,1.0,3.0
+synthetic_design_not_measured,goods,0.03,7.0,2.4,2.5,1.7,1.1,3.0

@@ -1,0 +1,9 @@
+{
+  "per_mission_isolation": true,
+  "irreversible_mode": true,
+  "insertion_wait_included": true,
+  "controller_state_sanitized": true,
+  "guard_none_reproduces_original_training_pilot": true,
+  "source_sha256": "471a22911a2de9773fcd839872b3ba1ec5e00412c0ecc79142503e72f41cecf2",
+  "pilot": "pilot_progress_guard_summary.json"
+}

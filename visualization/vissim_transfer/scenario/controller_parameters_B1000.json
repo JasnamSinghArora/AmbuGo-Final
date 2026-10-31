@@ -1,0 +1,18 @@
+{
+  "step": 0.5,
+  "warmup": 300,
+  "horizon": 1800,
+  "mission_end": 5400,
+  "epsilon": 0.0,
+  "harm_budget": 1000.0,
+  "headroom": 0.85,
+  "trigger": 30.0,
+  "hold": 60.0,
+  "sensor_period": 5,
+  "sensor_delay": 2,
+  "sensor_noise": true,
+  "base": "fixed",
+  "action_mode": "strong",
+  "progress_guard_s": 20.0,
+  "save_trace": true
+}

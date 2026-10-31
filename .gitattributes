@@ -1,0 +1,7 @@
+# Preserve the recorded byte-level hashes of source and experiment evidence.
+* -text
+*.pdf binary
+*.docx binary
+*.png binary
+*.npz binary
+*.csv whitespace=cr-at-eol

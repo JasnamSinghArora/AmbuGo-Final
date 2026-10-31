@@ -1,0 +1,9 @@
+# Exact simulation versions used for the recorded trajectories.
+# Tested with CPython 3.12.14, macOS 26.5.2, Apple Silicon.
+numpy==2.5.4
+networkx==3.7
+libsumo==1.28.0
+sumolib==1.28.0
+traci==1.28.0
+sumo-data==1.28.0
+eclipse-sumo==1.28.0

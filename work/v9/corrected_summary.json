@@ -1,0 +1,6276 @@
+{
+  "n_runs": 14400,
+  "n_cells": 72,
+  "independent_seeds_per_cell": 200,
+  "analysis": "Matched mechanical sensitivity with original tuning fixed; not a new preregistered confirmatory experiment",
+  "cells": [
+    {
+      "X": 0.6,
+      "rho": 0.0,
+      "policy": "P0",
+      "n": 200,
+      "ambulance_mean": 357.6075202520253,
+      "ambulance_median": 347.20252025202535,
+      "ambulance_p90": 453.3025202520254,
+      "ambulance_cvar90": 512.2025202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 155,
+        "independent_trials": 200,
+        "estimate": 0.775,
+        "ci_low": 0.7107603940312353,
+        "ci_high": 0.8308974528701735,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 0.045,
+      "unfinished_mean": 105.91
+    },
+    {
+      "X": 0.6,
+      "rho": 0.0,
+      "policy": "P1",
+      "n": 200,
+      "ambulance_mean": 309.72252025202533,
+      "ambulance_median": 316.20252025202535,
+      "ambulance_p90": 372.40252025202534,
+      "ambulance_cvar90": 414.25252025202536,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -47.885,
+        "sd": 59.48228717389056,
+        "se": 4.206032862114362,
+        "ci_low": -56.190124999999995,
+        "ci_high": -39.92475,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.01402638888888889,
+        "sd": 0.40288189801284546,
+        "se": 0.028488052210219005,
+        "ci_low": -0.04158635416666665,
+        "ci_high": 0.06897347222222218,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 123,
+        "independent_trials": 200,
+        "estimate": 0.615,
+        "ci_low": 0.5437613072168549,
+        "ci_high": 0.6827754746371324,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 0.055,
+      "unfinished_mean": 105.875
+    },
+    {
+      "X": 0.6,
+      "rho": 0.0,
+      "policy": "P2",
+      "n": 200,
+      "ambulance_mean": 204.17252025202532,
+      "ambulance_median": 216.70252025202535,
+      "ambulance_p90": 239.20252025202535,
+      "ambulance_cvar90": 243.50252025202536,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -153.43500000000003,
+        "sd": 63.15630904240126,
+        "se": 4.46582543985952,
+        "ci_low": -162.215625,
+        "ci_high": -144.959875,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.02540555555555557,
+        "sd": 0.6557835835185511,
+        "se": 0.04637090188967821,
+        "ci_low": -0.11640576388888887,
+        "ci_high": 0.06483083333333334,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 0,
+        "independent_trials": 200,
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.01827534035513624,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 0.065,
+      "unfinished_mean": 106.45
+    },
+    {
+      "X": 0.6,
+      "rho": 0.0,
+      "policy": "P3",
+      "n": 200,
+      "ambulance_mean": 204.4975202520253,
+      "ambulance_median": 217.70252025202524,
+      "ambulance_p90": 239.20252025202535,
+      "ambulance_cvar90": 244.80252025202535,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -153.11000000000004,
+        "sd": 63.192995445435514,
+        "se": 4.468419560295806,
+        "ci_low": -161.890125,
+        "ci_high": -144.58987500000003,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.026045833333333338,
+        "sd": 0.6585951967714457,
+        "se": 0.04656971296939779,
+        "ci_low": -0.1168404861111111,
+        "ci_high": 0.06461305555555555,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 0,
+        "independent_trials": 200,
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.01827534035513624,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 0.065,
+      "unfinished_mean": 106.52
+    },
+    {
+      "X": 0.6,
+      "rho": 0.0,
+      "policy": "P3C",
+      "n": 200,
+      "ambulance_mean": 204.4975202520253,
+      "ambulance_median": 217.70252025202524,
+      "ambulance_p90": 239.20252025202535,
+      "ambulance_cvar90": 244.80252025202535,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -153.11000000000004,
+        "sd": 63.192995445435514,
+        "se": 4.468419560295806,
+        "ci_low": -161.890125,
+        "ci_high": -144.58987500000003,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.020777777777777784,
+        "sd": 0.686666015599987,
+        "se": 0.04855461960410984,
+        "ci_low": -0.07622725694444443,
+        "ci_high": 0.11433097222222217,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 0,
+        "independent_trials": 200,
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.01827534035513624,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 0.05,
+      "unfinished_mean": 106.785
+    },
+    {
+      "X": 0.6,
+      "rho": 0.0,
+      "policy": "P4",
+      "n": 200,
+      "ambulance_mean": 204.6325202520253,
+      "ambulance_median": 217.70252025202524,
+      "ambulance_p90": 240.20252025202535,
+      "ambulance_cvar90": 246.00252025202536,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -152.97500000000002,
+        "sd": 63.12502052340578,
+        "se": 4.463613007464021,
+        "ci_low": -161.75025000000002,
+        "ci_high": -144.46487500000003,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.025851388888888886,
+        "sd": 0.675970963847419,
+        "se": 0.047798365242171646,
+        "ci_low": -0.0699788888888889,
+        "ci_high": 0.11799486111111109,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 0,
+        "independent_trials": 200,
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.01827534035513624,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 0.05,
+      "unfinished_mean": 106.865
+    },
+    {
+      "X": 0.6,
+      "rho": 0.5,
+      "policy": "P0",
+      "n": 200,
+      "ambulance_mean": 347.9875202520254,
+      "ambulance_median": 341.70252025202535,
+      "ambulance_p90": 439.3025202520254,
+      "ambulance_cvar90": 494.15252025202534,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 150,
+        "independent_trials": 200,
+        "estimate": 0.75,
+        "ci_low": 0.684037166670131,
+        "ci_high": 0.8083928303774125,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 0.075,
+      "unfinished_mean": 105.945
+    },
+    {
+      "X": 0.6,
+      "rho": 0.5,
+      "policy": "P1",
+      "n": 200,
+      "ambulance_mean": 304.6725202520254,
+      "ambulance_median": 311.20252025202535,
+      "ambulance_p90": 367.5025202520253,
+      "ambulance_cvar90": 401.8025202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -43.315,
+        "sd": 55.8638489822853,
+        "se": 3.950170643855514,
+        "ci_low": -51.240125,
+        "ci_high": -35.90475000000001,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.004168055555555554,
+        "sd": 0.37826036040738054,
+        "se": 0.026747046589812622,
+        "ci_low": -0.05707565972222221,
+        "ci_high": 0.048315277777777776,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 114,
+        "independent_trials": 200,
+        "estimate": 0.57,
+        "ci_low": 0.49827915282842195,
+        "ci_high": 0.6396144081730113,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 0.055,
+      "unfinished_mean": 105.88
+    },
+    {
+      "X": 0.6,
+      "rho": 0.5,
+      "policy": "P2",
+      "n": 200,
+      "ambulance_mean": 203.9725202520253,
+      "ambulance_median": 214.70252025202535,
+      "ambulance_p90": 239.20252025202535,
+      "ambulance_cvar90": 242.90252025202534,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -144.01500000000004,
+        "sd": 58.992161773864225,
+        "se": 4.171375762715322,
+        "ci_low": -152.37012500000003,
+        "ci_high": -135.95487500000004,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.037083333333333336,
+        "sd": 0.6719914438595077,
+        "se": 0.047516970685239704,
+        "ci_low": -0.12946624999999998,
+        "ci_high": 0.05483083333333331,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 0,
+        "independent_trials": 200,
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.01827534035513624,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 0.065,
+      "unfinished_mean": 106.445
+    },
+    {
+      "X": 0.6,
+      "rho": 0.5,
+      "policy": "P3",
+      "n": 200,
+      "ambulance_mean": 204.1825202520253,
+      "ambulance_median": 217.70252025202524,
+      "ambulance_p90": 239.20252025202535,
+      "ambulance_cvar90": 243.00252025202536,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -143.80500000000004,
+        "sd": 59.19066352256245,
+        "se": 4.185411955973513,
+        "ci_low": -152.16012500000005,
+        "ci_high": -135.74500000000003,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.04076805555555557,
+        "sd": 0.6712618467833573,
+        "se": 0.04746538038123172,
+        "ci_low": -0.13309479166666668,
+        "ci_high": 0.05150576388888884,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 0,
+        "independent_trials": 200,
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.01827534035513624,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 0.065,
+      "unfinished_mean": 106.545
+    },
+    {
+      "X": 0.6,
+      "rho": 0.5,
+      "policy": "P3C",
+      "n": 200,
+      "ambulance_mean": 204.1825202520253,
+      "ambulance_median": 217.70252025202524,
+      "ambulance_p90": 239.20252025202535,
+      "ambulance_cvar90": 243.00252025202536,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -143.80500000000004,
+        "sd": 59.19066352256245,
+        "se": 4.185411955973513,
+        "ci_low": -152.16012500000005,
+        "ci_high": -135.74500000000003,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.012076388888888876,
+        "sd": 0.6952213375940728,
+        "se": 0.04915957222383509,
+        "ci_low": -0.08528225694444441,
+        "ci_high": 0.10762420138888878,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 0,
+        "independent_trials": 200,
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.01827534035513624,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 0.05,
+      "unfinished_mean": 106.77
+    },
+    {
+      "X": 0.6,
+      "rho": 0.5,
+      "policy": "P4",
+      "n": 200,
+      "ambulance_mean": 204.29752025202532,
+      "ambulance_median": 217.70252025202524,
+      "ambulance_p90": 239.30252025202535,
+      "ambulance_cvar90": 244.05252025202535,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -143.69000000000003,
+        "sd": 59.10797461693796,
+        "se": 4.179564967383915,
+        "ci_low": -152.02512500000006,
+        "ci_high": -135.62987500000003,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.016437499999999994,
+        "sd": 0.6841918892728708,
+        "se": 0.04837967245376824,
+        "ci_low": -0.07946135416666665,
+        "ci_high": 0.11053923611111109,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 0,
+        "independent_trials": 200,
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.01827534035513624,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 0.05,
+      "unfinished_mean": 106.87
+    },
+    {
+      "X": 0.7,
+      "rho": 0.0,
+      "policy": "P0",
+      "n": 200,
+      "ambulance_mean": 381.40752025202534,
+      "ambulance_median": 371.20252025202535,
+      "ambulance_p90": 498.9025202520253,
+      "ambulance_cvar90": 577.0525202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 166,
+        "independent_trials": 200,
+        "estimate": 0.83,
+        "ci_low": 0.7706283996061137,
+        "ci_high": 0.8793043767637826,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 1.015,
+      "unfinished_mean": 176.435
+    },
+    {
+      "X": 0.7,
+      "rho": 0.0,
+      "policy": "P1",
+      "n": 200,
+      "ambulance_mean": 304.9275202520254,
+      "ambulance_median": 305.20252025202535,
+      "ambulance_p90": 382.5025202520253,
+      "ambulance_cvar90": 431.3025202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -76.48,
+        "sd": 69.32075037217069,
+        "se": 4.901717266510178,
+        "ci_low": -86.07,
+        "ci_high": -67.085,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.11574861111111112,
+        "sd": 0.7978137391391865,
+        "se": 0.056413950506911406,
+        "ci_low": 0.007513576388888939,
+        "ci_high": 0.22700326388888886,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 106,
+        "independent_trials": 200,
+        "estimate": 0.53,
+        "ci_low": 0.45833050041147505,
+        "ci_high": 0.6007670588028855,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 1.055,
+      "unfinished_mean": 176.27
+    },
+    {
+      "X": 0.7,
+      "rho": 0.0,
+      "policy": "P2",
+      "n": 200,
+      "ambulance_mean": 209.2175202520253,
+      "ambulance_median": 218.20252025202535,
+      "ambulance_p90": 253.20252025202535,
+      "ambulance_cvar90": 263.60252025202533,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -172.19,
+        "sd": 77.06587862498685,
+        "se": 5.44938053738276,
+        "ci_low": -182.91525,
+        "ci_high": -161.64425000000006,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.04474166666666666,
+        "sd": 0.9477625047248416,
+        "se": 0.06701692940452827,
+        "ci_low": -0.17671357638888885,
+        "ci_high": 0.08879972222222215,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 1,
+        "independent_trials": 200,
+        "estimate": 0.005,
+        "ci_low": 0.00012658102786701836,
+        "ci_high": 0.02754189845720562,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 0.975,
+      "unfinished_mean": 176.835
+    },
+    {
+      "X": 0.7,
+      "rho": 0.0,
+      "policy": "P3",
+      "n": 200,
+      "ambulance_mean": 208.10752025202532,
+      "ambulance_median": 218.20252025202535,
+      "ambulance_p90": 250.20252025202535,
+      "ambulance_cvar90": 261.50252025202536,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -173.30000000000004,
+        "sd": 77.94592894562216,
+        "se": 5.511609492333423,
+        "ci_low": -184.1005,
+        "ci_high": -162.65987500000003,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.0507,
+        "sd": 0.8990616713490176,
+        "se": 0.06357326045158014,
+        "ci_low": -0.17538770833333334,
+        "ci_high": 0.07561753472222214,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 1,
+        "independent_trials": 200,
+        "estimate": 0.005,
+        "ci_low": 0.00012658102786701836,
+        "ci_high": 0.02754189845720562,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 1.125,
+      "unfinished_mean": 176.85
+    },
+    {
+      "X": 0.7,
+      "rho": 0.0,
+      "policy": "P3C",
+      "n": 200,
+      "ambulance_mean": 208.10752025202532,
+      "ambulance_median": 218.20252025202535,
+      "ambulance_p90": 250.20252025202535,
+      "ambulance_cvar90": 261.50252025202536,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -173.30000000000004,
+        "sd": 77.94592894562216,
+        "se": 5.511609492333423,
+        "ci_low": -184.1005,
+        "ci_high": -162.65987500000003,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.050055555555555555,
+        "sd": 1.0063162400519259,
+        "se": 0.07115730373588663,
+        "ci_low": -0.1896389236111111,
+        "ci_high": 0.08763187499999955,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 1,
+        "independent_trials": 200,
+        "estimate": 0.005,
+        "ci_low": 0.00012658102786701836,
+        "ci_high": 0.02754189845720562,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 1.115,
+      "unfinished_mean": 176.885
+    },
+    {
+      "X": 0.7,
+      "rho": 0.0,
+      "policy": "P4",
+      "n": 200,
+      "ambulance_mean": 208.6325202520253,
+      "ambulance_median": 218.20252025202535,
+      "ambulance_p90": 250.20252025202535,
+      "ambulance_cvar90": 261.5525202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -172.77500000000003,
+        "sd": 78.01645474549119,
+        "se": 5.516596419467023,
+        "ci_low": -183.54562500000003,
+        "ci_high": -162.12475000000003,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.023298611111111117,
+        "sd": 1.0111423799693993,
+        "se": 0.07149856336214669,
+        "ci_low": -0.16442944444444443,
+        "ci_high": 0.11609236111111106,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 1,
+        "independent_trials": 200,
+        "estimate": 0.005,
+        "ci_low": 0.00012658102786701836,
+        "ci_high": 0.02754189845720562,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 1.095,
+      "unfinished_mean": 176.835
+    },
+    {
+      "X": 0.7,
+      "rho": 0.5,
+      "policy": "P0",
+      "n": 200,
+      "ambulance_mean": 359.10252025202533,
+      "ambulance_median": 359.70252025202535,
+      "ambulance_p90": 458.3025202520254,
+      "ambulance_cvar90": 511.45252025202535,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 161,
+        "independent_trials": 200,
+        "estimate": 0.805,
+        "ci_low": 0.7432143124734407,
+        "ci_high": 0.8575081252209411,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 1.07,
+      "unfinished_mean": 176.34
+    },
+    {
+      "X": 0.7,
+      "rho": 0.5,
+      "policy": "P1",
+      "n": 200,
+      "ambulance_mean": 293.53752025202533,
+      "ambulance_median": 292.70252025202535,
+      "ambulance_p90": 378.20252025202535,
+      "ambulance_cvar90": 408.35252025202533,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -65.565,
+        "sd": 63.79691219036487,
+        "se": 4.511122922856972,
+        "ci_low": -74.39524999999999,
+        "ci_high": -56.9,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.06644027777777776,
+        "sd": 0.8009166339993409,
+        "se": 0.05663335830660381,
+        "ci_low": -0.04218923611111113,
+        "ci_high": 0.1785475,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 91,
+        "independent_trials": 200,
+        "estimate": 0.455,
+        "ci_low": 0.38461304203891694,
+        "ci_high": 0.5267407524810116,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 1.055,
+      "unfinished_mean": 176.455
+    },
+    {
+      "X": 0.7,
+      "rho": 0.5,
+      "policy": "P2",
+      "n": 200,
+      "ambulance_mean": 207.80252025202532,
+      "ambulance_median": 218.20252025202535,
+      "ambulance_p90": 248.40252025202534,
+      "ambulance_cvar90": 259.45252025202535,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -151.30000000000004,
+        "sd": 63.95342212114239,
+        "se": 4.5221898461945536,
+        "ci_low": -160.23525,
+        "ci_high": -142.584875,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.0731486111111111,
+        "sd": 0.9166436511659408,
+        "se": 0.06481649416710329,
+        "ci_low": -0.1983311805555555,
+        "ci_high": 0.05618795138888888,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 0,
+        "independent_trials": 200,
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.01827534035513624,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 1.005,
+      "unfinished_mean": 176.86
+    },
+    {
+      "X": 0.7,
+      "rho": 0.5,
+      "policy": "P3",
+      "n": 200,
+      "ambulance_mean": 206.99252025202532,
+      "ambulance_median": 218.20252025202535,
+      "ambulance_p90": 245.30252025202535,
+      "ambulance_cvar90": 257.45252025202535,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -152.11000000000004,
+        "sd": 63.894997877524375,
+        "se": 4.518058628309754,
+        "ci_low": -161.02000000000004,
+        "ci_high": -143.43375000000006,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.06854444444444445,
+        "sd": 0.8978039863069496,
+        "se": 0.06348432868939582,
+        "ci_low": -0.19259003472222222,
+        "ci_high": 0.058123263888888874,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 0,
+        "independent_trials": 200,
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.01827534035513624,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 1.05,
+      "unfinished_mean": 177.07
+    },
+    {
+      "X": 0.7,
+      "rho": 0.5,
+      "policy": "P3C",
+      "n": 200,
+      "ambulance_mean": 206.99252025202532,
+      "ambulance_median": 218.20252025202535,
+      "ambulance_p90": 245.30252025202535,
+      "ambulance_cvar90": 257.45252025202535,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -152.11000000000004,
+        "sd": 63.894997877524375,
+        "se": 4.518058628309754,
+        "ci_low": -161.02000000000004,
+        "ci_high": -143.43375000000006,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.04128888888888889,
+        "sd": 0.982939353421409,
+        "se": 0.06950430822993987,
+        "ci_low": -0.17649656249999995,
+        "ci_high": 0.0933806944444444,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 0,
+        "independent_trials": 200,
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.01827534035513624,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 1.115,
+      "unfinished_mean": 176.98
+    },
+    {
+      "X": 0.7,
+      "rho": 0.5,
+      "policy": "P4",
+      "n": 200,
+      "ambulance_mean": 207.48252025202532,
+      "ambulance_median": 218.20252025202535,
+      "ambulance_p90": 246.20252025202535,
+      "ambulance_cvar90": 257.20252025202535,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -151.62000000000003,
+        "sd": 64.04439101201994,
+        "se": 4.5286223181562075,
+        "ci_low": -160.53037500000002,
+        "ci_high": -142.82950000000005,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.013224999999999982,
+        "sd": 0.9979879025224592,
+        "se": 0.070568401341577,
+        "ci_low": -0.15015885416666663,
+        "ci_high": 0.12481701388888886,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 0,
+        "independent_trials": 200,
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.01827534035513624,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 1.095,
+      "unfinished_mean": 176.935
+    },
+    {
+      "X": 0.8,
+      "rho": 0.0,
+      "policy": "P0",
+      "n": 200,
+      "ambulance_mean": 433.35252025202533,
+      "ambulance_median": 442.20252025202535,
+      "ambulance_p90": 594.3025202520254,
+      "ambulance_cvar90": 652.7025202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 165,
+        "independent_trials": 200,
+        "estimate": 0.825,
+        "ci_low": 0.7651160293697908,
+        "ci_high": 0.8749755892262882,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 48.865,
+      "unfinished_mean": 271.915
+    },
+    {
+      "X": 0.8,
+      "rho": 0.0,
+      "policy": "P1",
+      "n": 200,
+      "ambulance_mean": 339.2975202520254,
+      "ambulance_median": 334.20252025202535,
+      "ambulance_p90": 484.2025202520253,
+      "ambulance_cvar90": 540.8025202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -94.055,
+        "sd": 74.53812201260392,
+        "se": 5.27064115320225,
+        "ci_low": -104.49137499999998,
+        "ci_high": -83.839875,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.24466944444444444,
+        "sd": 1.82296184810457,
+        "se": 0.12890286846391025,
+        "ci_low": -0.0020443402777775782,
+        "ci_high": 0.5004825347222223,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 126,
+        "independent_trials": 200,
+        "estimate": 0.63,
+        "ci_low": 0.5590535152152594,
+        "ci_high": 0.6970301757287629,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 52.745,
+      "unfinished_mean": 270.295
+    },
+    {
+      "X": 0.8,
+      "rho": 0.0,
+      "policy": "P2",
+      "n": 200,
+      "ambulance_mean": 252.80752025202534,
+      "ambulance_median": 237.20252025202524,
+      "ambulance_p90": 373.70252025202535,
+      "ambulance_cvar90": 452.8025202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -180.545,
+        "sd": 86.00413671831906,
+        "se": 6.081410828361835,
+        "ci_low": -192.79049999999998,
+        "ci_high": -168.94862500000002,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.332675,
+        "sd": 1.9310174526092376,
+        "se": 0.13654355353295644,
+        "ci_low": 0.06010673611111109,
+        "ci_high": 0.605084861111111,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 45,
+        "independent_trials": 200,
+        "estimate": 0.225,
+        "ci_low": 0.1691025471298265,
+        "ci_high": 0.2892396059687647,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 52.075,
+      "unfinished_mean": 269.12
+    },
+    {
+      "X": 0.8,
+      "rho": 0.0,
+      "policy": "P3",
+      "n": 200,
+      "ambulance_mean": 250.69752025202536,
+      "ambulance_median": 230.20252025202535,
+      "ambulance_p90": 374.70252025202535,
+      "ambulance_cvar90": 457.90252025202534,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -182.655,
+        "sd": 88.84895417668942,
+        "se": 6.282569799966991,
+        "ci_low": -195.29512499999998,
+        "ci_high": -170.455,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.4207333333333334,
+        "sd": 2.150042529383131,
+        "se": 0.15203096523662887,
+        "ci_low": 0.1279244791666667,
+        "ci_high": 0.7181502083333331,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 44,
+        "independent_trials": 200,
+        "estimate": 0.22,
+        "ci_low": 0.16463606131178604,
+        "ci_high": 0.2838612473135076,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 52.6,
+      "unfinished_mean": 268.675
+    },
+    {
+      "X": 0.8,
+      "rho": 0.0,
+      "policy": "P3C",
+      "n": 200,
+      "ambulance_mean": 250.76252025202535,
+      "ambulance_median": 230.20252025202535,
+      "ambulance_p90": 374.70252025202535,
+      "ambulance_cvar90": 458.5525202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -182.59,
+        "sd": 88.94677929941416,
+        "se": 6.289487080731898,
+        "ci_low": -195.21525,
+        "ci_high": -170.395,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.3969013888888889,
+        "sd": 1.9874996499301663,
+        "se": 0.14053744800715098,
+        "ci_low": 0.12379187500000001,
+        "ci_high": 0.6710626041666665,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 44,
+        "independent_trials": 200,
+        "estimate": 0.22,
+        "ci_low": 0.16463606131178604,
+        "ci_high": 0.2838612473135076,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 50.935,
+      "unfinished_mean": 269.59
+    },
+    {
+      "X": 0.8,
+      "rho": 0.0,
+      "policy": "P4",
+      "n": 200,
+      "ambulance_mean": 250.36252025202535,
+      "ambulance_median": 230.20252025202535,
+      "ambulance_p90": 374.70252025202535,
+      "ambulance_cvar90": 449.65252025202534,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -182.99,
+        "sd": 90.49189919045503,
+        "se": 6.39874355600202,
+        "ci_low": -195.98037499999998,
+        "ci_high": -170.559625,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.4778958333333334,
+        "sd": 1.9646925057602538,
+        "se": 0.13892473937694655,
+        "ci_low": 0.2120409375,
+        "ci_high": 0.7520966319444443,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 42,
+        "independent_trials": 200,
+        "estimate": 0.21,
+        "ci_low": 0.15573975672412835,
+        "ci_high": 0.27306870461379884,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 50.915,
+      "unfinished_mean": 269.94
+    },
+    {
+      "X": 0.8,
+      "rho": 0.5,
+      "policy": "P0",
+      "n": 200,
+      "ambulance_mean": 403.2425202520254,
+      "ambulance_median": 419.70252025202535,
+      "ambulance_p90": 538.7025202520254,
+      "ambulance_cvar90": 584.9525202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 162,
+        "independent_trials": 200,
+        "estimate": 0.81,
+        "ci_low": 0.7486684813762559,
+        "ci_high": 0.8618968746271604,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 49.285,
+      "unfinished_mean": 271.595
+    },
+    {
+      "X": 0.8,
+      "rho": 0.5,
+      "policy": "P1",
+      "n": 200,
+      "ambulance_mean": 321.50252025202536,
+      "ambulance_median": 321.20252025202535,
+      "ambulance_p90": 439.9025202520253,
+      "ambulance_cvar90": 491.90252025202534,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -81.74,
+        "sd": 67.32880691952019,
+        "se": 4.760865594199247,
+        "ci_low": -91.245375,
+        "ci_high": -72.319875,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.29765,
+        "sd": 1.7316902455373582,
+        "se": 0.12244899155340634,
+        "ci_low": 0.05939829861111111,
+        "ci_high": 0.5363681597222222,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 115,
+        "independent_trials": 200,
+        "estimate": 0.575,
+        "ci_low": 0.5033041318348097,
+        "ci_high": 0.6444388227412944,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 52.305,
+      "unfinished_mean": 270.71
+    },
+    {
+      "X": 0.8,
+      "rho": 0.5,
+      "policy": "P2",
+      "n": 200,
+      "ambulance_mean": 245.33752025202534,
+      "ambulance_median": 230.20252025202535,
+      "ambulance_p90": 362.70252025202535,
+      "ambulance_cvar90": 421.90252025202534,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -157.90500000000003,
+        "sd": 74.03744791298074,
+        "se": 5.235238148101448,
+        "ci_low": -168.33025,
+        "ci_high": -147.80000000000004,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.2512916666666667,
+        "sd": 1.9477145826107416,
+        "se": 0.13772421891799813,
+        "ci_low": -0.017779583333333314,
+        "ci_high": 0.5192080902777777,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 42,
+        "independent_trials": 200,
+        "estimate": 0.21,
+        "ci_low": 0.15573975672412835,
+        "ci_high": 0.27306870461379884,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 51.49,
+      "unfinished_mean": 268.82
+    },
+    {
+      "X": 0.8,
+      "rho": 0.5,
+      "policy": "P3",
+      "n": 200,
+      "ambulance_mean": 245.58752025202534,
+      "ambulance_median": 226.20252025202535,
+      "ambulance_p90": 359.2025202520253,
+      "ambulance_cvar90": 435.45252025202535,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -157.65500000000003,
+        "sd": 74.91540270741439,
+        "se": 5.297318926973375,
+        "ci_low": -168.19,
+        "ci_high": -147.49475,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.4834319444444445,
+        "sd": 2.0449577006781943,
+        "se": 0.1446003457389201,
+        "ci_low": 0.20155090277777776,
+        "ci_high": 0.7668129513888887,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 41,
+        "independent_trials": 200,
+        "estimate": 0.205,
+        "ci_low": 0.15131057199551948,
+        "ci_high": 0.2676539207852852,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 52.0,
+      "unfinished_mean": 268.645
+    },
+    {
+      "X": 0.8,
+      "rho": 0.5,
+      "policy": "P3C",
+      "n": 200,
+      "ambulance_mean": 245.65252025202534,
+      "ambulance_median": 226.20252025202535,
+      "ambulance_p90": 359.2025202520253,
+      "ambulance_cvar90": 436.10252025202533,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -157.59000000000003,
+        "sd": 75.10101672792345,
+        "se": 5.310443820231901,
+        "ci_low": -168.12,
+        "ci_high": -147.42000000000004,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.37315833333333337,
+        "sd": 1.9366148417244344,
+        "se": 0.136939348712986,
+        "ci_low": 0.10656701388888888,
+        "ci_high": 0.6379207986111111,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 41,
+        "independent_trials": 200,
+        "estimate": 0.205,
+        "ci_low": 0.15131057199551948,
+        "ci_high": 0.2676539207852852,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 50.675,
+      "unfinished_mean": 269.01
+    },
+    {
+      "X": 0.8,
+      "rho": 0.5,
+      "policy": "P4",
+      "n": 200,
+      "ambulance_mean": 245.52752025202534,
+      "ambulance_median": 226.20252025202535,
+      "ambulance_p90": 359.2025202520253,
+      "ambulance_cvar90": 427.90252025202534,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -157.71500000000003,
+        "sd": 75.14838771310664,
+        "se": 5.313793454717353,
+        "ci_low": -168.2055,
+        "ci_high": -147.34500000000003,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.513926388888889,
+        "sd": 2.027779463847746,
+        "se": 0.1433856609637563,
+        "ci_low": 0.23372020833333335,
+        "ci_high": 0.7952872916666667,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 39,
+        "independent_trials": 200,
+        "estimate": 0.195,
+        "ci_low": 0.1424918747790589,
+        "ci_high": 0.2567856875265592,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 51.025,
+      "unfinished_mean": 269.405
+    },
+    {
+      "X": 0.85,
+      "rho": 0.0,
+      "policy": "P0",
+      "n": 200,
+      "ambulance_mean": 447.09252025202534,
+      "ambulance_median": 436.70252025202535,
+      "ambulance_p90": 630.3025202520254,
+      "ambulance_cvar90": 681.6525202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 177,
+        "independent_trials": 200,
+        "estimate": 0.885,
+        "ci_low": 0.8324530555177461,
+        "ci_high": 0.9256866263077029,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 118.465,
+      "unfinished_mean": 302.91
+    },
+    {
+      "X": 0.85,
+      "rho": 0.0,
+      "policy": "P1",
+      "n": 200,
+      "ambulance_mean": 356.50752025202536,
+      "ambulance_median": 340.70252025202535,
+      "ambulance_p90": 519.3025202520254,
+      "ambulance_cvar90": 586.1525202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -90.585,
+        "sd": 77.6919750678907,
+        "se": 5.493652241428169,
+        "ci_low": -101.19187499999998,
+        "ci_high": -80.174875,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.7850444444444443,
+        "sd": 2.5881333168385825,
+        "se": 0.18300866189513929,
+        "ci_low": 0.440027013888889,
+        "ci_high": 1.150535833333333,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 136,
+        "independent_trials": 200,
+        "estimate": 0.68,
+        "ci_low": 0.6105301149383419,
+        "ci_high": 0.7440388123600423,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 130.82,
+      "unfinished_mean": 303.345
+    },
+    {
+      "X": 0.85,
+      "rho": 0.0,
+      "policy": "P2",
+      "n": 200,
+      "ambulance_mean": 280.1125202520254,
+      "ambulance_median": 239.20252025202535,
+      "ambulance_p90": 467.30252025202526,
+      "ambulance_cvar90": 542.3025202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -166.98,
+        "sd": 93.28262345794086,
+        "se": 6.596077561398129,
+        "ci_low": -179.865375,
+        "ci_high": -154.20487500000002,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.6993930555555555,
+        "sd": 2.7732045640270777,
+        "se": 0.19609517528410297,
+        "ci_low": 0.32205100694444444,
+        "ci_high": 1.0842684722222222,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 59,
+        "independent_trials": 200,
+        "estimate": 0.295,
+        "ci_low": 0.2327687842231247,
+        "ci_high": 0.3634231333179104,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 129.22,
+      "unfinished_mean": 304.835
+    },
+    {
+      "X": 0.85,
+      "rho": 0.0,
+      "policy": "P3",
+      "n": 200,
+      "ambulance_mean": 279.46252025202534,
+      "ambulance_median": 240.70252025202535,
+      "ambulance_p90": 466.20252025202535,
+      "ambulance_cvar90": 569.6525202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -167.63,
+        "sd": 103.84707107499119,
+        "se": 7.343096816348765,
+        "ci_low": -181.77,
+        "ci_high": -153.57925000000003,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 1.0710027777777775,
+        "sd": 3.4699409335309115,
+        "se": 0.24536187644164867,
+        "ci_low": 0.6181880208333338,
+        "ci_high": 1.561222013888889,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 57,
+        "independent_trials": 200,
+        "estimate": 0.285,
+        "ci_low": 0.22355439801068494,
+        "ci_high": 0.35294269975153986,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 132.975,
+      "unfinished_mean": 304.835
+    },
+    {
+      "X": 0.85,
+      "rho": 0.0,
+      "policy": "P3C",
+      "n": 200,
+      "ambulance_mean": 279.50752025202536,
+      "ambulance_median": 240.70252025202535,
+      "ambulance_p90": 466.20252025202535,
+      "ambulance_cvar90": 570.1025202520253,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -167.585,
+        "sd": 103.88185585016457,
+        "se": 7.345556471389479,
+        "ci_low": -181.75,
+        "ci_high": -153.52450000000002,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.8286972222222224,
+        "sd": 3.587971331084302,
+        "se": 0.2537078858912633,
+        "ci_low": 0.3477210416666669,
+        "ci_high": 1.336218125,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 57,
+        "independent_trials": 200,
+        "estimate": 0.285,
+        "ci_low": 0.22355439801068494,
+        "ci_high": 0.35294269975153986,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 134.035,
+      "unfinished_mean": 304.015
+    },
+    {
+      "X": 0.85,
+      "rho": 0.0,
+      "policy": "P4",
+      "n": 200,
+      "ambulance_mean": 277.2425202520254,
+      "ambulance_median": 245.20252025202535,
+      "ambulance_p90": 458.3025202520254,
+      "ambulance_cvar90": 545.6525202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -169.85,
+        "sd": 100.26586517151769,
+        "se": 7.089867318431623,
+        "ci_low": -183.470375,
+        "ci_high": -156.22,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.7463652777777778,
+        "sd": 3.1214568959211637,
+        "se": 0.2207203338287366,
+        "ci_low": 0.32513923611111123,
+        "ci_high": 1.180186076388889,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 55,
+        "independent_trials": 200,
+        "estimate": 0.275,
+        "ci_low": 0.21437741524309537,
+        "ci_high": 0.34242541862375053,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 130.99,
+      "unfinished_mean": 304.41
+    },
+    {
+      "X": 0.85,
+      "rho": 0.5,
+      "policy": "P0",
+      "n": 200,
+      "ambulance_mean": 412.57252025202536,
+      "ambulance_median": 415.20252025202535,
+      "ambulance_p90": 560.3025202520254,
+      "ambulance_cvar90": 622.6025202520253,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 171,
+        "independent_trials": 200,
+        "estimate": 0.855,
+        "ci_low": 0.7984385038268202,
+        "ci_high": 0.9006913774447924,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 118.99,
+      "unfinished_mean": 302.805
+    },
+    {
+      "X": 0.85,
+      "rho": 0.5,
+      "policy": "P1",
+      "n": 200,
+      "ambulance_mean": 341.0525202520254,
+      "ambulance_median": 332.70252025202535,
+      "ambulance_p90": 497.40252025202534,
+      "ambulance_cvar90": 564.7025202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -71.52,
+        "sd": 78.68638596786244,
+        "se": 5.563967710493753,
+        "ci_low": -82.595,
+        "ci_high": -60.834875000000004,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.5616305555555555,
+        "sd": 2.391080344295787,
+        "se": 0.16907491258134158,
+        "ci_low": 0.2421175,
+        "ci_high": 0.8970999305555555,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 129,
+        "independent_trials": 200,
+        "estimate": 0.645,
+        "ci_low": 0.5744138330734203,
+        "ci_high": 0.7112162222864156,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 123.845,
+      "unfinished_mean": 302.82
+    },
+    {
+      "X": 0.85,
+      "rho": 0.5,
+      "policy": "P2",
+      "n": 200,
+      "ambulance_mean": 265.4875202520254,
+      "ambulance_median": 236.20252025202535,
+      "ambulance_p90": 416.5025202520253,
+      "ambulance_cvar90": 489.45252025202535,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -147.085,
+        "sd": 78.466955404503,
+        "se": 5.5484516265586485,
+        "ci_low": -157.935,
+        "ci_high": -136.34462500000004,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.5121777777777778,
+        "sd": 2.463140409712303,
+        "se": 0.17417032867221802,
+        "ci_low": 0.17346263888888888,
+        "ci_high": 0.861454409722222,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 54,
+        "independent_trials": 200,
+        "estimate": 0.27,
+        "ci_low": 0.20980333746614532,
+        "ci_high": 0.33715259068733056,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 127.58,
+      "unfinished_mean": 304.575
+    },
+    {
+      "X": 0.85,
+      "rho": 0.5,
+      "policy": "P3",
+      "n": 200,
+      "ambulance_mean": 264.51252025202535,
+      "ambulance_median": 238.70252025202535,
+      "ambulance_p90": 401.4025202520253,
+      "ambulance_cvar90": 492.95252025202535,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -148.06000000000003,
+        "sd": 86.97874978736397,
+        "se": 6.1503263793773035,
+        "ci_low": -160.16537499999998,
+        "ci_high": -136.10475,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.8796416666666667,
+        "sd": 2.9413236874617628,
+        "se": 0.20798299250688337,
+        "ci_low": 0.4890721180555556,
+        "ci_high": 1.2914692708333333,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 52,
+        "independent_trials": 200,
+        "estimate": 0.26,
+        "ci_low": 0.20068485487634066,
+        "ci_high": 0.32657775365713976,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 131.19,
+      "unfinished_mean": 305.01
+    },
+    {
+      "X": 0.85,
+      "rho": 0.5,
+      "policy": "P3C",
+      "n": 200,
+      "ambulance_mean": 264.51252025202535,
+      "ambulance_median": 238.70252025202535,
+      "ambulance_p90": 401.4025202520253,
+      "ambulance_cvar90": 492.95252025202535,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -148.06000000000003,
+        "sd": 86.97874978736397,
+        "se": 6.1503263793773035,
+        "ci_low": -160.16537499999998,
+        "ci_high": -136.10475,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.7317513888888888,
+        "sd": 2.9708792569384155,
+        "se": 0.2100728868667605,
+        "ci_low": 0.33166434027777786,
+        "ci_high": 1.153261319444444,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 52,
+        "independent_trials": 200,
+        "estimate": 0.26,
+        "ci_low": 0.20068485487634066,
+        "ci_high": 0.32657775365713976,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 131.87,
+      "unfinished_mean": 303.55
+    },
+    {
+      "X": 0.85,
+      "rho": 0.5,
+      "policy": "P4",
+      "n": 200,
+      "ambulance_mean": 264.60252025202533,
+      "ambulance_median": 240.20252025202535,
+      "ambulance_p90": 414.70252025202535,
+      "ambulance_cvar90": 486.65252025202534,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -147.97,
+        "sd": 87.5260139363029,
+        "se": 6.189023798458805,
+        "ci_low": -160.155125,
+        "ci_high": -135.86500000000004,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.6385097222222222,
+        "sd": 2.851081900974143,
+        "se": 0.20160193458970493,
+        "ci_low": 0.260700694444445,
+        "ci_high": 1.0368842708333332,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 49,
+        "independent_trials": 200,
+        "estimate": 0.245,
+        "ci_low": 0.1870841260760019,
+        "ci_high": 0.3106398658615988,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 128.905,
+      "unfinished_mean": 303.83
+    },
+    {
+      "X": 0.9,
+      "rho": 0.0,
+      "policy": "P0",
+      "n": 200,
+      "ambulance_mean": 478.03252025202534,
+      "ambulance_median": 457.20252025202535,
+      "ambulance_p90": 654.5025202520253,
+      "ambulance_cvar90": 730.6525202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 183,
+        "independent_trials": 200,
+        "estimate": 0.915,
+        "ci_low": 0.8673948341704476,
+        "ci_high": 0.9497040813697427,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 213.635,
+      "unfinished_mean": 339.105
+    },
+    {
+      "X": 0.9,
+      "rho": 0.0,
+      "policy": "P1",
+      "n": 200,
+      "ambulance_mean": 381.35252025202533,
+      "ambulance_median": 347.20252025202535,
+      "ambulance_p90": 542.4025202520254,
+      "ambulance_cvar90": 659.6025202520253,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -96.68,
+        "sd": 79.39316072464457,
+        "se": 5.6139442328229645,
+        "ci_low": -107.745,
+        "ci_high": -85.89437500000001,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 1.4097652777777778,
+        "sd": 3.3998624863050564,
+        "se": 0.24040658191680608,
+        "ci_low": 0.9523822569444443,
+        "ci_high": 1.895124861111111,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 141,
+        "independent_trials": 200,
+        "estimate": 0.705,
+        "ci_low": 0.6365768666820897,
+        "ci_high": 0.7672312157768753,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 232.82,
+      "unfinished_mean": 340.08
+    },
+    {
+      "X": 0.9,
+      "rho": 0.0,
+      "policy": "P2",
+      "n": 200,
+      "ambulance_mean": 312.88752025202535,
+      "ambulance_median": 265.70252025202535,
+      "ambulance_p90": 508.70252025202535,
+      "ambulance_cvar90": 591.5525202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -165.145,
+        "sd": 85.44188406609383,
+        "se": 6.041653562048977,
+        "ci_low": -177.00062499999999,
+        "ci_high": -153.57000000000005,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 1.3485597222222223,
+        "sd": 3.658379531412793,
+        "se": 0.258686497481605,
+        "ci_low": 0.8567004513888891,
+        "ci_high": 1.872729513888889,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 82,
+        "independent_trials": 200,
+        "estimate": 0.41,
+        "ci_low": 0.3411306456714678,
+        "ci_high": 0.4815784147872211,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 237.31,
+      "unfinished_mean": 339.685
+    },
+    {
+      "X": 0.9,
+      "rho": 0.0,
+      "policy": "P3",
+      "n": 200,
+      "ambulance_mean": 314.37252025202537,
+      "ambulance_median": 262.70252025202535,
+      "ambulance_p90": 514.0025202520253,
+      "ambulance_cvar90": 622.2525202520253,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -163.66,
+        "sd": 93.71084790500711,
+        "se": 6.62635760243717,
+        "ci_low": -176.53025,
+        "ci_high": -151.0345,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 1.7864569444444445,
+        "sd": 4.3759584074708195,
+        "se": 0.3094269864112902,
+        "ci_low": 1.2101240277777776,
+        "ci_high": 2.4233507638888887,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 78,
+        "independent_trials": 200,
+        "estimate": 0.39,
+        "ci_low": 0.32199106211524076,
+        "ci_high": 0.46132123254499857,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 241.34,
+      "unfinished_mean": 339.45
+    },
+    {
+      "X": 0.9,
+      "rho": 0.0,
+      "policy": "P3C",
+      "n": 200,
+      "ambulance_mean": 315.09752025202533,
+      "ambulance_median": 262.70252025202535,
+      "ambulance_p90": 522.1025202520253,
+      "ambulance_cvar90": 629.0525202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -162.935,
+        "sd": 95.6227973438306,
+        "se": 6.76155284378496,
+        "ci_low": -176.0305,
+        "ci_high": -149.87925,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 1.9790486111111114,
+        "sd": 4.4117366276953724,
+        "se": 0.31195688862524684,
+        "ci_low": 1.3908410416666668,
+        "ci_high": 2.6133200347222223,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 78,
+        "independent_trials": 200,
+        "estimate": 0.39,
+        "ci_low": 0.32199106211524076,
+        "ci_high": 0.46132123254499857,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 241.67,
+      "unfinished_mean": 339.825
+    },
+    {
+      "X": 0.9,
+      "rho": 0.0,
+      "policy": "P4",
+      "n": 200,
+      "ambulance_mean": 304.94752025202536,
+      "ambulance_median": 261.20252025202535,
+      "ambulance_p90": 498.8025202520253,
+      "ambulance_cvar90": 597.3525202520253,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -173.085,
+        "sd": 97.81177583738223,
+        "se": 6.916336997451147,
+        "ci_low": -186.68025,
+        "ci_high": -159.53,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 1.7185277777777779,
+        "sd": 4.169188426539221,
+        "se": 0.29480614084503554,
+        "ci_low": 1.1628723958333333,
+        "ci_high": 2.3096262499999995,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 73,
+        "independent_trials": 200,
+        "estimate": 0.365,
+        "ci_low": 0.29823342636701194,
+        "ci_high": 0.43583402978999725,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 235.585,
+      "unfinished_mean": 339.69
+    },
+    {
+      "X": 0.9,
+      "rho": 0.5,
+      "policy": "P0",
+      "n": 200,
+      "ambulance_mean": 440.32752025202535,
+      "ambulance_median": 427.20252025202535,
+      "ambulance_p90": 594.5025202520253,
+      "ambulance_cvar90": 644.9525202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 179,
+        "independent_trials": 200,
+        "estimate": 0.895,
+        "ci_low": 0.8439812944524971,
+        "ci_high": 0.9338187729712882,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 214.88,
+      "unfinished_mean": 339.515
+    },
+    {
+      "X": 0.9,
+      "rho": 0.5,
+      "policy": "P1",
+      "n": 200,
+      "ambulance_mean": 356.9275202520254,
+      "ambulance_median": 331.20252025202535,
+      "ambulance_p90": 513.8025202520253,
+      "ambulance_cvar90": 598.5525202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -83.4,
+        "sd": 82.34942097961826,
+        "se": 5.822983400147381,
+        "ci_low": -94.75037499999999,
+        "ci_high": -72.06450000000001,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 1.2417416666666667,
+        "sd": 3.010386385393914,
+        "se": 0.2128664627103696,
+        "ci_low": 0.8305360763888889,
+        "ci_high": 1.6639444097222222,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 128,
+        "independent_trials": 200,
+        "estimate": 0.64,
+        "ci_low": 0.5692860539812827,
+        "ci_high": 0.7064952791088333,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 229.21,
+      "unfinished_mean": 340.375
+    },
+    {
+      "X": 0.9,
+      "rho": 0.5,
+      "policy": "P2",
+      "n": 200,
+      "ambulance_mean": 292.63252025202536,
+      "ambulance_median": 260.20252025202535,
+      "ambulance_p90": 440.9025202520253,
+      "ambulance_cvar90": 534.5025202520253,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -147.695,
+        "sd": 88.44094628564022,
+        "se": 6.2537192853131405,
+        "ci_low": -160.03025,
+        "ci_high": -135.59850000000003,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 1.1180041666666667,
+        "sd": 3.183118425109881,
+        "se": 0.22508046237150403,
+        "ci_low": 0.6791140972222223,
+        "ci_high": 1.5577068055555554,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 74,
+        "independent_trials": 200,
+        "estimate": 0.37,
+        "ci_low": 0.30296982427123703,
+        "ci_high": 0.4409464847847406,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 232.265,
+      "unfinished_mean": 339.155
+    },
+    {
+      "X": 0.9,
+      "rho": 0.5,
+      "policy": "P3",
+      "n": 200,
+      "ambulance_mean": 292.2975202520254,
+      "ambulance_median": 256.70252025202535,
+      "ambulance_p90": 455.70252025202535,
+      "ambulance_cvar90": 544.0025202520253,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -148.03,
+        "sd": 88.58950049520514,
+        "se": 6.264223654208856,
+        "ci_low": -160.63025,
+        "ci_high": -135.89950000000005,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 1.4224861111111111,
+        "sd": 3.493028389717347,
+        "se": 0.24699440612462625,
+        "ci_low": 0.9418590277777782,
+        "ci_high": 1.9216612152777777,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 72,
+        "independent_trials": 200,
+        "estimate": 0.36,
+        "ci_low": 0.2935047208911668,
+        "ci_high": 0.43071394601871726,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 236.755,
+      "unfinished_mean": 339.19
+    },
+    {
+      "X": 0.9,
+      "rho": 0.5,
+      "policy": "P3C",
+      "n": 200,
+      "ambulance_mean": 292.2975202520254,
+      "ambulance_median": 256.70252025202535,
+      "ambulance_p90": 455.70252025202535,
+      "ambulance_cvar90": 544.0025202520253,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -148.03,
+        "sd": 88.58950049520514,
+        "se": 6.264223654208856,
+        "ci_low": -160.63025,
+        "ci_high": -135.89950000000005,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 1.4544583333333332,
+        "sd": 3.560165292594522,
+        "se": 0.25174170205385754,
+        "ci_low": 0.9628245833333334,
+        "ci_high": 1.95628125,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 72,
+        "independent_trials": 200,
+        "estimate": 0.36,
+        "ci_low": 0.2935047208911668,
+        "ci_high": 0.43071394601871726,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 235.99,
+      "unfinished_mean": 338.48
+    },
+    {
+      "X": 0.9,
+      "rho": 0.5,
+      "policy": "P4",
+      "n": 200,
+      "ambulance_mean": 287.35252025202533,
+      "ambulance_median": 256.20252025202535,
+      "ambulance_p90": 440.0025202520253,
+      "ambulance_cvar90": 538.2525202520253,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -152.975,
+        "sd": 90.68884555744832,
+        "se": 6.412669767165121,
+        "ci_low": -165.60562499999997,
+        "ci_high": -140.28975,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 1.2572666666666665,
+        "sd": 3.26723810406426,
+        "se": 0.23102862191349172,
+        "ci_low": 0.8165196180555558,
+        "ci_high": 1.718881145833333,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 67,
+        "independent_trials": 200,
+        "estimate": 0.335,
+        "ci_low": 0.26997915515736964,
+        "ci_high": 0.4049966413494097,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 230.65,
+      "unfinished_mean": 338.55
+    },
+    {
+      "X": 0.95,
+      "rho": 0.0,
+      "policy": "P0",
+      "n": 200,
+      "ambulance_mean": 487.46752025202534,
+      "ambulance_median": 477.70252025202535,
+      "ambulance_p90": 664.9025202520253,
+      "ambulance_cvar90": 755.1025202520253,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 182,
+        "independent_trials": 200,
+        "estimate": 0.91,
+        "ci_low": 0.8614917915261779,
+        "ci_high": 0.9457857455439036,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 364.515,
+      "unfinished_mean": 371.305
+    },
+    {
+      "X": 0.95,
+      "rho": 0.0,
+      "policy": "P1",
+      "n": 200,
+      "ambulance_mean": 393.43752025202537,
+      "ambulance_median": 368.20252025202535,
+      "ambulance_p90": 587.7025202520252,
+      "ambulance_cvar90": 665.7525202520253,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -94.03,
+        "sd": 92.25330596955081,
+        "se": 6.523293823794678,
+        "ci_low": -106.90537499999999,
+        "ci_high": -81.315,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 1.7868916666666663,
+        "sd": 4.074885906907484,
+        "se": 0.28813794573357765,
+        "ci_low": 1.2511481249999998,
+        "ci_high": 2.362678645833333,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 149,
+        "independent_trials": 200,
+        "estimate": 0.745,
+        "ci_low": 0.6787246033612794,
+        "ci_high": 0.8038591847995418,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 387.9,
+      "unfinished_mean": 373.68
+    },
+    {
+      "X": 0.95,
+      "rho": 0.0,
+      "policy": "P2",
+      "n": 200,
+      "ambulance_mean": 321.76252025202535,
+      "ambulance_median": 277.70252025202535,
+      "ambulance_p90": 511.70252025202535,
+      "ambulance_cvar90": 597.4525202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -165.705,
+        "sd": 97.9129855468286,
+        "se": 6.923493604638291,
+        "ci_low": -178.97525,
+        "ci_high": -152.089875,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 1.663254166666667,
+        "sd": 4.124793335392052,
+        "se": 0.29166693384487974,
+        "ci_low": 1.1083794791666666,
+        "ci_high": 2.2587378819444446,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 85,
+        "independent_trials": 200,
+        "estimate": 0.425,
+        "ci_low": 0.3555611772587056,
+        "ci_high": 0.49669586816519024,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 392.015,
+      "unfinished_mean": 373.84
+    },
+    {
+      "X": 0.95,
+      "rho": 0.0,
+      "policy": "P3",
+      "n": 200,
+      "ambulance_mean": 320.28752025202533,
+      "ambulance_median": 265.20252025202535,
+      "ambulance_p90": 535.7025202520254,
+      "ambulance_cvar90": 637.6025202520253,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -167.18,
+        "sd": 105.10242718893329,
+        "se": 7.431863898446009,
+        "ci_low": -181.11525,
+        "ci_high": -152.73450000000003,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 1.8639722222222221,
+        "sd": 4.723288244538449,
+        "se": 0.33398691472118414,
+        "ci_low": 1.2356622916666666,
+        "ci_high": 2.556969270833333,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 82,
+        "independent_trials": 200,
+        "estimate": 0.41,
+        "ci_low": 0.3411306456714678,
+        "ci_high": 0.4815784147872211,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 395.355,
+      "unfinished_mean": 373.585
+    },
+    {
+      "X": 0.95,
+      "rho": 0.0,
+      "policy": "P3C",
+      "n": 200,
+      "ambulance_mean": 319.94752025202536,
+      "ambulance_median": 265.20252025202535,
+      "ambulance_p90": 535.7025202520254,
+      "ambulance_cvar90": 633.7025202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -167.52,
+        "sd": 104.42698201549406,
+        "se": 7.384102712200149,
+        "ci_low": -181.4055,
+        "ci_high": -153.114875,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 1.9735069444444442,
+        "sd": 4.705841010885571,
+        "se": 0.33275320899829447,
+        "ci_low": 1.3422384722222225,
+        "ci_high": 2.6496844444444436,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 82,
+        "independent_trials": 200,
+        "estimate": 0.41,
+        "ci_low": 0.3411306456714678,
+        "ci_high": 0.4815784147872211,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 396.86,
+      "unfinished_mean": 374.74
+    },
+    {
+      "X": 0.95,
+      "rho": 0.0,
+      "policy": "P4",
+      "n": 200,
+      "ambulance_mean": 318.24752025202537,
+      "ambulance_median": 262.20252025202535,
+      "ambulance_p90": 536.3025202520254,
+      "ambulance_cvar90": 625.0025202520253,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -169.22,
+        "sd": 104.08588259112697,
+        "se": 7.359983340597269,
+        "ci_low": -183.490375,
+        "ci_high": -154.824875,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 1.7615694444444443,
+        "sd": 4.214939295094272,
+        "se": 0.2980412157850806,
+        "ci_low": 1.2077067361111111,
+        "ci_high": 2.3638057638888887,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 79,
+        "independent_trials": 200,
+        "estimate": 0.395,
+        "ci_low": 0.32676499180506335,
+        "ci_high": 0.46639642802651826,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 391.165,
+      "unfinished_mean": 374.4
+    },
+    {
+      "X": 0.95,
+      "rho": 0.5,
+      "policy": "P0",
+      "n": 200,
+      "ambulance_mean": 440.85252025202533,
+      "ambulance_median": 432.20252025202535,
+      "ambulance_p90": 599.2025202520254,
+      "ambulance_cvar90": 652.5025202520253,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 178,
+        "independent_trials": 200,
+        "estimate": 0.89,
+        "ci_low": 0.8382037844304998,
+        "ci_high": 0.9297668364707882,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 366.265,
+      "unfinished_mean": 371.595
+    },
+    {
+      "X": 0.95,
+      "rho": 0.5,
+      "policy": "P1",
+      "n": 200,
+      "ambulance_mean": 364.20252025202535,
+      "ambulance_median": 355.20252025202535,
+      "ambulance_p90": 526.3025202520254,
+      "ambulance_cvar90": 581.9525202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -76.65,
+        "sd": 90.20929043287066,
+        "se": 6.378760099110958,
+        "ci_low": -89.275125,
+        "ci_high": -64.114875,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 1.5158819444444447,
+        "sd": 3.2718343402337657,
+        "se": 0.23135362488983094,
+        "ci_low": 1.068716840277778,
+        "ci_high": 1.9787245138888885,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 135,
+        "independent_trials": 200,
+        "estimate": 0.675,
+        "ci_low": 0.6053462936951923,
+        "ci_high": 0.7393744852463847,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 387.885,
+      "unfinished_mean": 373.29
+    },
+    {
+      "X": 0.95,
+      "rho": 0.5,
+      "policy": "P2",
+      "n": 200,
+      "ambulance_mean": 301.9225202520254,
+      "ambulance_median": 266.70252025202535,
+      "ambulance_p90": 479.40252025202534,
+      "ambulance_cvar90": 530.1525202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -138.93,
+        "sd": 91.70103872101211,
+        "se": 6.484242632147783,
+        "ci_low": -151.66549999999998,
+        "ci_high": -126.05475000000003,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 1.2826541666666669,
+        "sd": 3.4056666881593185,
+        "se": 0.2408170009658585,
+        "ci_low": 0.83191,
+        "ci_high": 1.7715030902777777,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 78,
+        "independent_trials": 200,
+        "estimate": 0.39,
+        "ci_low": 0.32199106211524076,
+        "ci_high": 0.46132123254499857,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 389.67,
+      "unfinished_mean": 373.24
+    },
+    {
+      "X": 0.95,
+      "rho": 0.5,
+      "policy": "P3",
+      "n": 200,
+      "ambulance_mean": 297.6675202520253,
+      "ambulance_median": 257.20252025202535,
+      "ambulance_p90": 469.5025202520253,
+      "ambulance_cvar90": 544.2525202520253,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -143.185,
+        "sd": 92.89487642128942,
+        "se": 6.568659705498007,
+        "ci_low": -156.080125,
+        "ci_high": -130.444625,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 1.3613180555555555,
+        "sd": 3.9152496099070055,
+        "se": 0.2768499549203228,
+        "ci_low": 0.845778090277778,
+        "ci_high": 1.9253496527777778,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 75,
+        "independent_trials": 200,
+        "estimate": 0.375,
+        "ci_low": 0.3077138482176408,
+        "ci_high": 0.44605137418258545,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 390.28,
+      "unfinished_mean": 373.645
+    },
+    {
+      "X": 0.95,
+      "rho": 0.5,
+      "policy": "P3C",
+      "n": 200,
+      "ambulance_mean": 297.6675202520253,
+      "ambulance_median": 257.20252025202535,
+      "ambulance_p90": 469.5025202520253,
+      "ambulance_cvar90": 544.2525202520253,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -143.185,
+        "sd": 92.89487642128942,
+        "se": 6.568659705498007,
+        "ci_low": -156.080125,
+        "ci_high": -130.444625,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 1.5506138888888887,
+        "sd": 4.004392695954568,
+        "se": 0.28315332298433554,
+        "ci_low": 1.0264803472222221,
+        "ci_high": 2.1207040624999998,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 75,
+        "independent_trials": 200,
+        "estimate": 0.375,
+        "ci_low": 0.3077138482176408,
+        "ci_high": 0.44605137418258545,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 392.805,
+      "unfinished_mean": 374.755
+    },
+    {
+      "X": 0.95,
+      "rho": 0.5,
+      "policy": "P4",
+      "n": 200,
+      "ambulance_mean": 298.58752025202534,
+      "ambulance_median": 257.70252025202535,
+      "ambulance_p90": 462.9025202520253,
+      "ambulance_cvar90": 539.7025202520254,
+      "ambulance_difference": {
+        "n_seeds": 200,
+        "mean": -142.265,
+        "sd": 94.30877744151158,
+        "se": 6.668637605430574,
+        "ci_low": -155.41525,
+        "ci_high": -129.434875,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "delta_residence_vh": {
+        "n_seeds": 200,
+        "mean": 1.303563888888889,
+        "sd": 3.4128586948101223,
+        "se": 0.2413255526331707,
+        "ci_low": 0.8520349652777778,
+        "ci_high": 1.7857397569444444,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "late_300s": {
+        "events": 76,
+        "independent_trials": 200,
+        "estimate": 0.38,
+        "ci_low": 0.31246543517767067,
+        "ci_high": 0.4511487579165519,
+        "method": "Clopper-Pearson two-sided"
+      },
+      "wait_completed_episodes_mean": 387.24,
+      "unfinished_mean": 373.915
+    }
+  ],
+  "mechanical_changes": [
+    {
+      "X": 0.6,
+      "rho": 0.0,
+      "policy": "P0",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 32.03,
+        "sd": 46.64437359360396,
+        "se": 3.298255287223609,
+        "ci_low": 25.675,
+        "ci_high": 38.705124999999995,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.6,
+      "rho": 0.0,
+      "policy": "P1",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 13.415000000000004,
+        "sd": 28.525449714369717,
+        "se": 2.0170538929426693,
+        "ci_low": 9.589875000000003,
+        "ci_high": 17.535375,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.027726388888888884,
+        "sd": 0.2914815105543084,
+        "se": 0.020610855270344966,
+        "ci_low": -0.011901458333333328,
+        "ci_high": 0.06891833333333333,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.6,
+      "rho": 0.0,
+      "policy": "P2",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 10.42500000000001,
+        "sd": 3.8245931238256086,
+        "se": 0.27043957331365287,
+        "ci_low": 9.910000000000007,
+        "ci_high": 10.975000000000007,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.0035847222222222266,
+        "sd": 0.41155962544617697,
+        "se": 0.02910166020155873,
+        "ci_low": -0.05221260416666666,
+        "ci_high": 0.060208298611111086,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.6,
+      "rho": 0.0,
+      "policy": "P3",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 10.590000000000009,
+        "sd": 3.9087455094040684,
+        "se": 0.2763900455632083,
+        "ci_low": 10.060000000000006,
+        "ci_high": 11.155000000000008,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.015518055555555544,
+        "sd": 0.42780574106931246,
+        "se": 0.03025043405406471,
+        "ci_low": -0.0739545833333333,
+        "ci_high": 0.04464572916666666,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.6,
+      "rho": 0.0,
+      "policy": "P3C",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 10.590000000000009,
+        "sd": 3.9087455094040684,
+        "se": 0.2763900455632083,
+        "ci_low": 10.060000000000006,
+        "ci_high": 11.155000000000008,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.01881111111111111,
+        "sd": 0.4377154988124297,
+        "se": 0.030951159744072122,
+        "ci_low": -0.07933239583333332,
+        "ci_high": 0.041455694444444434,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.6,
+      "rho": 0.0,
+      "policy": "P4",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 10.680000000000009,
+        "sd": 4.048400639597507,
+        "se": 0.28626515452193535,
+        "ci_low": 10.140000000000008,
+        "ci_high": 11.260000000000002,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.02171805555555555,
+        "sd": 0.4624829865076441,
+        "se": 0.03270248559429617,
+        "ci_low": -0.08540197916666664,
+        "ci_high": 0.0431283680555555,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.6,
+      "rho": 0.5,
+      "policy": "P0",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 29.6,
+        "sd": 44.955254135327266,
+        "se": 3.1788165049054493,
+        "ci_low": 23.524874999999998,
+        "ci_high": 35.945125,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.6,
+      "rho": 0.5,
+      "policy": "P1",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 13.190000000000005,
+        "sd": 28.38153373738694,
+        "se": 2.006877496618108,
+        "ci_low": 9.434875000000007,
+        "ci_high": 17.290125000000007,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.014288888888888886,
+        "sd": 0.2908293418694017,
+        "se": 0.020564739980387464,
+        "ci_low": -0.025102951388888888,
+        "ci_high": 0.055608611111111095,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.6,
+      "rho": 0.5,
+      "policy": "P2",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 10.535000000000009,
+        "sd": 3.7320794586164947,
+        "se": 0.26389786931147424,
+        "ci_low": 10.03000000000001,
+        "ci_high": 11.065000000000008,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.013873611111111106,
+        "sd": 0.41095671248199933,
+        "se": 0.0290590278170152,
+        "ci_low": -0.06884736111111112,
+        "ci_high": 0.043511631944444434,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.6,
+      "rho": 0.5,
+      "policy": "P3",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 10.69500000000001,
+        "sd": 3.672794863663476,
+        "se": 0.25970581540035653,
+        "ci_low": 10.205000000000005,
+        "ci_high": 11.225000000000005,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.019300000000000008,
+        "sd": 0.43415127831758493,
+        "se": 0.03069913129591724,
+        "ci_low": -0.07806524305555554,
+        "ci_high": 0.042272673611111096,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.6,
+      "rho": 0.5,
+      "policy": "P3C",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 10.69500000000001,
+        "sd": 3.672794863663476,
+        "se": 0.25970581540035653,
+        "ci_low": 10.205000000000005,
+        "ci_high": 11.225000000000005,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.013876388888888886,
+        "sd": 0.4460274435607938,
+        "se": 0.03153890299371374,
+        "ci_low": -0.07488902777777778,
+        "ci_high": 0.04833465277777776,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.6,
+      "rho": 0.5,
+      "policy": "P4",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 10.76500000000001,
+        "sd": 3.767058354102857,
+        "se": 0.2663712507311565,
+        "ci_low": 10.270000000000005,
+        "ci_high": 11.30000000000001,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.017495833333333332,
+        "sd": 0.47217206722639504,
+        "se": 0.03338760706226543,
+        "ci_low": -0.08240305555555555,
+        "ci_high": 0.04942881944444442,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.7,
+      "rho": 0.0,
+      "policy": "P0",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 35.27,
+        "sd": 54.56016088483331,
+        "se": 3.8579859744294653,
+        "ci_low": 28.094625,
+        "ci_high": 43.035124999999994,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.7,
+      "rho": 0.0,
+      "policy": "P1",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 16.135000000000005,
+        "sd": 32.51589136029911,
+        "se": 2.2992207277192573,
+        "ci_low": 11.780000000000005,
+        "ci_high": 20.745000000000005,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.03894583333333333,
+        "sd": 0.5751843493322627,
+        "se": 0.040671675384521495,
+        "ci_low": -0.04104847222222219,
+        "ci_high": 0.11875756944444439,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.7,
+      "rho": 0.0,
+      "policy": "P2",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 10.485000000000012,
+        "sd": 5.92836423582111,
+        "se": 0.4191986552492912,
+        "ci_low": 9.685000000000008,
+        "ci_high": 11.310000000000011,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.043025,
+        "sd": 0.6404604071696162,
+        "se": 0.04528738969911329,
+        "ci_low": -0.13008812499999997,
+        "ci_high": 0.04701069444444443,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.7,
+      "rho": 0.0,
+      "policy": "P3",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 10.540000000000006,
+        "sd": 5.520942312694502,
+        "se": 0.3903895747846023,
+        "ci_low": 9.795000000000009,
+        "ci_high": 11.325000000000005,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.02525000000000001,
+        "sd": 0.6903895536192841,
+        "se": 0.048817913502454936,
+        "ci_low": -0.11785489583333332,
+        "ci_high": 0.07242684027777772,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.7,
+      "rho": 0.0,
+      "policy": "P3C",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 10.540000000000006,
+        "sd": 5.520942312694502,
+        "se": 0.3903895747846023,
+        "ci_low": 9.795000000000009,
+        "ci_high": 11.325000000000005,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.009229166666666679,
+        "sd": 0.7807718699758046,
+        "se": 0.05520890838195928,
+        "ci_low": -0.09532701388888887,
+        "ci_high": 0.11820357638888888,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.7,
+      "rho": 0.0,
+      "policy": "P4",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 10.290000000000004,
+        "sd": 5.953412095419689,
+        "se": 0.42096980638692755,
+        "ci_low": 9.495000000000003,
+        "ci_high": 11.140000000000004,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.03704999999999999,
+        "sd": 0.7541266918793723,
+        "se": 0.05332480977016822,
+        "ci_low": -0.13921218749999995,
+        "ci_high": 0.06993784722222222,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.7,
+      "rho": 0.5,
+      "policy": "P0",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 31.585,
+        "sd": 53.294316732461255,
+        "se": 3.7684772760227037,
+        "ci_low": 24.584875000000004,
+        "ci_high": 39.085,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.7,
+      "rho": 0.5,
+      "policy": "P1",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 12.315000000000005,
+        "sd": 31.685733438214562,
+        "se": 2.2405196981030855,
+        "ci_low": 7.999875000000003,
+        "ci_high": 16.810000000000006,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.0373875,
+        "sd": 0.5617674066637353,
+        "se": 0.03972295427015081,
+        "ci_low": -0.11638309027777777,
+        "ci_high": 0.040954444444444425,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.7,
+      "rho": 0.5,
+      "policy": "P2",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 10.580000000000009,
+        "sd": 5.295641518784804,
+        "se": 0.3744584028665763,
+        "ci_low": 9.865000000000007,
+        "ci_high": 11.320000000000011,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.048069444444444435,
+        "sd": 0.6579244164596305,
+        "se": 0.04652228163868069,
+        "ci_low": -0.13974170138888886,
+        "ci_high": 0.04509489583333331,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.7,
+      "rho": 0.5,
+      "policy": "P3",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 10.495000000000005,
+        "sd": 5.118689275537,
+        "se": 0.3619459897519069,
+        "ci_low": 9.810000000000004,
+        "ci_high": 11.220000000000004,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.036497222222222216,
+        "sd": 0.6772814168094157,
+        "se": 0.04789102825975704,
+        "ci_low": -0.13071847222222216,
+        "ci_high": 0.057870868055555545,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.7,
+      "rho": 0.5,
+      "policy": "P3C",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 10.495000000000005,
+        "sd": 5.118689275537,
+        "se": 0.3619459897519069,
+        "ci_low": 9.810000000000004,
+        "ci_high": 11.220000000000004,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.03226111111111111,
+        "sd": 0.7582098416249744,
+        "se": 0.05361353205753976,
+        "ci_low": -0.07226000000000002,
+        "ci_high": 0.13412381944444443,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.7,
+      "rho": 0.5,
+      "policy": "P4",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 10.265000000000004,
+        "sd": 5.481331954917528,
+        "se": 0.38758869952566993,
+        "ci_low": 9.525000000000004,
+        "ci_high": 11.045000000000002,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.017455555555555547,
+        "sd": 0.7311802088600659,
+        "se": 0.05170224839543487,
+        "ci_low": -0.11867243055555553,
+        "ci_high": 0.08201392361111111,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.8,
+      "rho": 0.0,
+      "policy": "P0",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 34.13,
+        "sd": 53.64646133782127,
+        "se": 3.7933776598635367,
+        "ci_low": 26.924750000000003,
+        "ci_high": 41.690124999999995,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.8,
+      "rho": 0.0,
+      "policy": "P1",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 15.650000000000004,
+        "sd": 37.25610806216477,
+        "se": 2.6344046651375512,
+        "ci_low": 10.629875000000006,
+        "ci_high": 20.955,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.056827777777777796,
+        "sd": 1.347605097458892,
+        "se": 0.09529007027747408,
+        "ci_low": -0.2465117013888889,
+        "ci_high": 0.12848871527777767,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.8,
+      "rho": 0.0,
+      "policy": "P2",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 10.380000000000006,
+        "sd": 29.58278733541962,
+        "se": 2.091818953127473,
+        "ci_low": 6.535000000000009,
+        "ci_high": 14.680125000000004,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.09939305555555554,
+        "sd": 1.5221834285827052,
+        "se": 0.10763462245606195,
+        "ci_low": -0.3104974305555555,
+        "ci_high": 0.10905284722222217,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.8,
+      "rho": 0.0,
+      "policy": "P3",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 11.395000000000008,
+        "sd": 37.961220294283955,
+        "se": 2.684263629220457,
+        "ci_low": 6.294875000000009,
+        "ci_high": 16.77000000000001,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.013823611111111163,
+        "sd": 1.4541145595792455,
+        "se": 0.10282142657005744,
+        "ci_low": -0.18479135416666667,
+        "ci_high": 0.21739277777777768,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.8,
+      "rho": 0.0,
+      "policy": "P3C",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 11.44500000000001,
+        "sd": 38.3015931153768,
+        "se": 2.7083316222130915,
+        "ci_low": 6.300000000000011,
+        "ci_high": 16.875000000000007,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.11829444444444444,
+        "sd": 1.622086430359079,
+        "se": 0.11469883145775851,
+        "ci_low": -0.1020116319444444,
+        "ci_high": 0.34586416666666664,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.8,
+      "rho": 0.0,
+      "policy": "P4",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 11.140000000000008,
+        "sd": 35.289476273790065,
+        "se": 2.495342797771873,
+        "ci_low": 6.400000000000011,
+        "ci_high": 16.180000000000003,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.09564861111111109,
+        "sd": 1.7104823156235331,
+        "se": 0.12094936444770688,
+        "ci_low": -0.13863375,
+        "ci_high": 0.3315941666666666,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.8,
+      "rho": 0.5,
+      "policy": "P0",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 24.665,
+        "sd": 52.079498324471636,
+        "se": 3.6825766426027333,
+        "ci_low": 17.529875,
+        "ci_high": 31.990374999999993,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.8,
+      "rho": 0.5,
+      "policy": "P1",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 15.650000000000004,
+        "sd": 35.19761155670201,
+        "se": 2.488846981331398,
+        "ci_low": 10.919875000000003,
+        "ci_high": 20.565125,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.023491666666666685,
+        "sd": 1.600143085486525,
+        "se": 0.11314720266162873,
+        "ci_low": -0.2470290625,
+        "ci_high": 0.19761635416666662,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.8,
+      "rho": 0.5,
+      "policy": "P2",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 12.23000000000001,
+        "sd": 36.97638931580761,
+        "se": 2.6146255629001365,
+        "ci_low": 7.380000000000008,
+        "ci_high": 17.490125,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.23140555555555553,
+        "sd": 1.6036097617003284,
+        "se": 0.11339233368752458,
+        "ci_low": -0.45390847222222225,
+        "ci_high": -0.010661076388889131,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.8,
+      "rho": 0.5,
+      "policy": "P3",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 11.37500000000001,
+        "sd": 37.75967878185066,
+        "se": 2.6700124922072397,
+        "ci_low": 6.514875000000009,
+        "ci_high": 16.67012500000001,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.09003888888888884,
+        "sd": 1.6318772367072698,
+        "se": 0.11539114601396752,
+        "ci_low": -0.3161502777777776,
+        "ci_high": 0.13641239583333326,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.8,
+      "rho": 0.5,
+      "policy": "P3C",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 11.425000000000011,
+        "sd": 38.10187844061652,
+        "se": 2.6942096621305454,
+        "ci_low": 6.530000000000012,
+        "ci_high": 16.76000000000001,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.0567,
+        "sd": 1.7813729561691396,
+        "se": 0.1259620897129525,
+        "ci_low": -0.3014034722222222,
+        "ci_high": 0.19130906250000002,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.8,
+      "rho": 0.5,
+      "policy": "P4",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 11.01500000000001,
+        "sd": 35.03945765797217,
+        "se": 2.4776638119051024,
+        "ci_low": 6.529875000000014,
+        "ci_high": 16.04000000000001,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.03484722222222221,
+        "sd": 1.9393775019411157,
+        "se": 0.13713469829031896,
+        "ci_low": -0.23810746527777774,
+        "ci_high": 0.29808388888888887,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.85,
+      "rho": 0.0,
+      "policy": "P0",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 28.335,
+        "sd": 56.736034962945574,
+        "se": 4.011843505993586,
+        "ci_low": 20.944750000000003,
+        "ci_high": 36.39,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.85,
+      "rho": 0.0,
+      "policy": "P1",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 20.09,
+        "sd": 44.06415948084984,
+        "se": 3.115806597619442,
+        "ci_low": 14.215000000000002,
+        "ci_high": 26.225,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.03597500000000001,
+        "sd": 1.9429453843034143,
+        "se": 0.13738698567160468,
+        "ci_low": -0.23247784722222223,
+        "ci_high": 0.30427795138888886,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.85,
+      "rho": 0.0,
+      "policy": "P2",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 20.615,
+        "sd": 44.10114887004976,
+        "se": 3.1184221424129634,
+        "ci_low": 14.885000000000005,
+        "ci_high": 27.155125,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.17835833333333329,
+        "sd": 1.9494510321815128,
+        "se": 0.13784700444466622,
+        "ci_low": -0.08866093749999988,
+        "ci_high": 0.4457384374999999,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.85,
+      "rho": 0.0,
+      "policy": "P3",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 20.77500000000001,
+        "sd": 50.9145937258794,
+        "se": 3.600205448492737,
+        "ci_low": 13.929750000000007,
+        "ci_high": 28.04012500000001,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.19794861111111112,
+        "sd": 2.14956257654582,
+        "se": 0.15199702744603763,
+        "ci_low": -0.09538010416666669,
+        "ci_high": 0.5011071527777776,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.85,
+      "rho": 0.0,
+      "policy": "P3C",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 20.820000000000007,
+        "sd": 50.926665177789275,
+        "se": 3.601059029043161,
+        "ci_low": 13.98962500000001,
+        "ci_high": 28.070125000000004,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.05382916666666663,
+        "sd": 2.141675738320399,
+        "se": 0.151439343766906,
+        "ci_low": -0.3516810763888888,
+        "ci_high": 0.24698482638888877,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.85,
+      "rho": 0.0,
+      "policy": "P4",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 18.63500000000001,
+        "sd": 50.288132360243885,
+        "se": 3.555907940513511,
+        "ci_low": 11.935000000000008,
+        "ci_high": 25.79512500000001,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.00021944444444441658,
+        "sd": 2.089192450461752,
+        "se": 0.1477282148925245,
+        "ci_low": -0.2899351736111111,
+        "ci_high": 0.29343100694444413,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.85,
+      "rho": 0.5,
+      "policy": "P0",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 24.145,
+        "sd": 58.312397080435055,
+        "se": 4.123309140281826,
+        "ci_low": 16.52,
+        "ci_high": 32.475,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.85,
+      "rho": 0.5,
+      "policy": "P1",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 18.85,
+        "sd": 48.23984778762122,
+        "se": 3.411072349403384,
+        "ci_low": 12.424875000000002,
+        "ci_high": 25.635125000000002,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.16423888888888885,
+        "sd": 1.9338169893591959,
+        "se": 0.1367415106749641,
+        "ci_low": -0.4240525694444444,
+        "ci_high": 0.10641451388888863,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.85,
+      "rho": 0.5,
+      "policy": "P2",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 14.305000000000005,
+        "sd": 36.652407422286004,
+        "se": 2.591716583511058,
+        "ci_low": 9.544875000000006,
+        "ci_high": 19.490000000000006,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.05057083333333336,
+        "sd": 2.0646564198171324,
+        "se": 0.14599325552730336,
+        "ci_low": -0.33461784722222215,
+        "ci_high": 0.2305433333333333,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.85,
+      "rho": 0.5,
+      "policy": "P3",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 12.865000000000007,
+        "sd": 36.04989249281778,
+        "se": 2.5491123442717467,
+        "ci_low": 8.094875000000005,
+        "ci_high": 18.080125000000006,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.09958194444444445,
+        "sd": 1.8966408797265333,
+        "se": 0.13411276275302508,
+        "ci_low": -0.16251986111111102,
+        "ci_high": 0.35557819444444444,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.85,
+      "rho": 0.5,
+      "policy": "P3C",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 12.865000000000007,
+        "sd": 36.04989249281778,
+        "se": 2.5491123442717467,
+        "ci_low": 8.094875000000005,
+        "ci_high": 18.080125000000006,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.21816388888888888,
+        "sd": 2.0334777717304364,
+        "se": 0.1437885921782702,
+        "ci_low": -0.49974013888888896,
+        "ci_high": 0.06632406249999986,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.85,
+      "rho": 0.5,
+      "policy": "P4",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 11.840000000000009,
+        "sd": 34.60523096368889,
+        "se": 2.4469593478951097,
+        "ci_low": 7.245000000000012,
+        "ci_high": 16.770125000000007,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.22902777777777777,
+        "sd": 1.9685695547869893,
+        "se": 0.1391988881427263,
+        "ci_low": -0.5017305902777778,
+        "ci_high": 0.042287222222222164,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.9,
+      "rho": 0.0,
+      "policy": "P0",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 22.63,
+        "sd": 45.745561335604435,
+        "se": 3.234699662959103,
+        "ci_low": 16.59475,
+        "ci_high": 29.190125,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.9,
+      "rho": 0.0,
+      "policy": "P1",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 18.88,
+        "sd": 47.94202529039344,
+        "se": 3.390013118665416,
+        "ci_low": 12.519875000000004,
+        "ci_high": 25.750374999999995,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.34695138888888893,
+        "sd": 1.931780004758265,
+        "se": 0.13659747411251502,
+        "ci_low": 0.0819190972222224,
+        "ci_high": 0.618764375,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.9,
+      "rho": 0.0,
+      "policy": "P2",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 21.315000000000005,
+        "sd": 52.07981673890366,
+        "se": 3.6825991579031445,
+        "ci_low": 14.480000000000002,
+        "ci_high": 28.820125000000004,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.3842069444444445,
+        "sd": 1.9063757119728517,
+        "se": 0.13480111934253358,
+        "ci_low": 0.12488041666666674,
+        "ci_high": 0.6462419444444444,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.9,
+      "rho": 0.0,
+      "policy": "P3",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 25.10000000000001,
+        "sd": 58.544661472543105,
+        "se": 4.139732712950604,
+        "ci_low": 17.434875000000005,
+        "ci_high": 33.460125,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.6391236111111112,
+        "sd": 2.0846350178963555,
+        "se": 0.1474059557453453,
+        "ci_low": 0.35135100694444454,
+        "ci_high": 0.930144375,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.9,
+      "rho": 0.0,
+      "policy": "P3C",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 25.82500000000001,
+        "sd": 60.64108409652659,
+        "se": 4.287972178315766,
+        "ci_low": 18.014625000000006,
+        "ci_high": 34.47025,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.6591416666666667,
+        "sd": 2.239399718071736,
+        "se": 0.1583494726435767,
+        "ci_low": 0.3522400347222224,
+        "ci_high": 0.9716553472222221,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.9,
+      "rho": 0.0,
+      "policy": "P4",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 25.02500000000001,
+        "sd": 57.948897735364376,
+        "se": 4.097605855096192,
+        "ci_low": 17.25975000000001,
+        "ci_high": 33.215125,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.6237347222222221,
+        "sd": 2.2009491641274486,
+        "se": 0.15563060790013825,
+        "ci_low": 0.3268185416666667,
+        "ci_high": 0.9298908680555554,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.9,
+      "rho": 0.5,
+      "policy": "P0",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 23.865,
+        "sd": 55.84910372543747,
+        "se": 3.949127996744771,
+        "ci_low": 16.344875,
+        "ci_high": 31.7,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.9,
+      "rho": 0.5,
+      "policy": "P1",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 18.115000000000002,
+        "sd": 38.86637040866717,
+        "se": 2.7482674076076723,
+        "ci_low": 12.914750000000007,
+        "ci_high": 23.735125000000007,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.2523902777777778,
+        "sd": 2.0239219512881257,
+        "se": 0.1431128936348143,
+        "ci_low": -0.024286388888888847,
+        "ci_high": 0.5361196874999999,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.9,
+      "rho": 0.5,
+      "policy": "P2",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 16.555000000000003,
+        "sd": 47.475113554737035,
+        "se": 3.3569974732155936,
+        "ci_low": 10.179875000000003,
+        "ci_high": 23.370000000000008,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.3658472222222221,
+        "sd": 2.3458521263634418,
+        "se": 0.16587679462124713,
+        "ci_low": 0.036301527777777856,
+        "ci_high": 0.6855763194444443,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.9,
+      "rho": 0.5,
+      "policy": "P3",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 18.930000000000007,
+        "sd": 50.909665785111564,
+        "se": 3.5998569904593145,
+        "ci_low": 12.254875000000006,
+        "ci_high": 26.345125000000003,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.4423708333333333,
+        "sd": 2.462732434295038,
+        "se": 0.1741414804538075,
+        "ci_low": 0.09901864583333343,
+        "ci_high": 0.7843559027777777,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.9,
+      "rho": 0.5,
+      "policy": "P3C",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 18.930000000000007,
+        "sd": 50.909665785111564,
+        "se": 3.5998569904593145,
+        "ci_low": 12.254875000000006,
+        "ci_high": 26.345125000000003,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.4955569444444444,
+        "sd": 2.4295614285841585,
+        "se": 0.17179593614611344,
+        "ci_low": 0.16647350694444465,
+        "ci_high": 0.8386441666666664,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.9,
+      "rho": 0.5,
+      "policy": "P4",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 21.60000000000001,
+        "sd": 59.2722192928483,
+        "se": 4.1911788197949145,
+        "ci_low": 13.449875000000006,
+        "ci_high": 30.095375,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.49391666666666667,
+        "sd": 2.362037197106803,
+        "se": 0.1670212519489086,
+        "ci_low": 0.16656895833333338,
+        "ci_high": 0.8199618055555555,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.95,
+      "rho": 0.0,
+      "policy": "P0",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 26.25,
+        "sd": 55.49890215764198,
+        "se": 3.9243650064077356,
+        "ci_low": 18.974625000000003,
+        "ci_high": 34.215125,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.95,
+      "rho": 0.0,
+      "policy": "P1",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 30.38,
+        "sd": 55.7349758920594,
+        "se": 3.9410579402543946,
+        "ci_low": 22.58,
+        "ci_high": 38.070125,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.31652361111111105,
+        "sd": 1.9699301870425194,
+        "se": 0.13929509937218493,
+        "ci_low": 0.0436820833333333,
+        "ci_high": 0.5934376041666665,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.95,
+      "rho": 0.0,
+      "policy": "P2",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 24.08,
+        "sd": 53.55524644804236,
+        "se": 3.7869277931527514,
+        "ci_low": 17.06,
+        "ci_high": 31.76,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.18954166666666666,
+        "sd": 2.0628787822830588,
+        "se": 0.14586755757181985,
+        "ci_low": -0.09043531249999996,
+        "ci_high": 0.4779081944444445,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.95,
+      "rho": 0.0,
+      "policy": "P3",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 18.675,
+        "sd": 63.33304626136121,
+        "se": 4.478322648460983,
+        "ci_low": 10.229875000000003,
+        "ci_high": 27.505,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.1678736111111111,
+        "sd": 2.4389640947562534,
+        "se": 0.1724608050472656,
+        "ci_low": -0.1640289236111111,
+        "ci_high": 0.5035625347222221,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.95,
+      "rho": 0.0,
+      "policy": "P3C",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 18.335000000000004,
+        "sd": 61.903984455423284,
+        "se": 4.377272719089643,
+        "ci_low": 10.040000000000001,
+        "ci_high": 27.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.17432638888888882,
+        "sd": 2.398563078527556,
+        "se": 0.16960402179305162,
+        "ci_low": -0.16695107638888879,
+        "ci_high": 0.5157721527777775,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.95,
+      "rho": 0.0,
+      "policy": "P4",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 22.165000000000006,
+        "sd": 64.43623138089987,
+        "se": 4.556329616353971,
+        "ci_low": 13.529875000000004,
+        "ci_high": 31.00575,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.18745416666666664,
+        "sd": 2.5066890115615834,
+        "se": 0.17724967984009996,
+        "ci_low": -0.1617643055555556,
+        "ci_high": 0.5363405902777778,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.95,
+      "rho": 0.5,
+      "policy": "P0",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 19.64,
+        "sd": 49.29697107109036,
+        "se": 3.4858222536325054,
+        "ci_low": 13.029875,
+        "ci_high": 26.525,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.95,
+      "rho": 0.5,
+      "policy": "P1",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 23.21,
+        "sd": 54.951471509919806,
+        "se": 3.8856558140843664,
+        "ci_low": 15.755,
+        "ci_high": 30.975125,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.025118055555555577,
+        "sd": 1.9195772857860558,
+        "se": 0.13573461157909872,
+        "ci_low": -0.24494944444444436,
+        "ci_high": 0.2892044791666667,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.95,
+      "rho": 0.5,
+      "policy": "P2",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 22.545,
+        "sd": 53.66898335043572,
+        "se": 3.794970206648101,
+        "ci_low": 15.429750000000004,
+        "ci_high": 30.245375,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": 0.11282777777777774,
+        "sd": 2.348024148270698,
+        "se": 0.16603037976319782,
+        "ci_low": -0.2080898611111111,
+        "ci_high": 0.43306434027777757,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.95,
+      "rho": 0.5,
+      "policy": "P3",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 12.065000000000007,
+        "sd": 49.90343212333639,
+        "se": 3.5287055258893747,
+        "ci_low": 4.859875000000011,
+        "ci_high": 18.755125000000007,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.16490000000000002,
+        "sd": 2.427001510378417,
+        "se": 0.17161492259385716,
+        "ci_low": -0.4979567013888887,
+        "ci_high": 0.16126795138888866,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.95,
+      "rho": 0.5,
+      "policy": "P3C",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 12.065000000000007,
+        "sd": 49.90343212333639,
+        "se": 3.5287055258893747,
+        "ci_low": 4.859875000000011,
+        "ci_high": 18.755125000000007,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.08527916666666668,
+        "sd": 2.4775061994685124,
+        "se": 0.17518614340758962,
+        "ci_low": -0.43485638888888883,
+        "ci_high": 0.2581692361111109,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.95,
+      "rho": 0.5,
+      "policy": "P4",
+      "ambulance_model_change": {
+        "n_seeds": 200,
+        "mean": 15.715000000000009,
+        "sd": 55.66341576180317,
+        "se": 3.9359978749177174,
+        "ci_low": 7.759500000000017,
+        "ci_high": 23.27000000000001,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "paired_effect_model_change": {
+        "n_seeds": 200,
+        "mean": -0.22751805555555552,
+        "sd": 2.4313914290675327,
+        "se": 0.1719253367212503,
+        "ci_low": -0.5734857986111112,
+        "ci_high": 0.10910128472222215,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    }
+  ],
+  "contrasts": [
+    {
+      "X": 0.6,
+      "rho": 0.0,
+      "contrast": "P2-P1",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -105.55000000000004,
+        "sd": 39.06967748129568,
+        "se": 2.7626433885795523,
+        "ci_low": -110.81025000000002,
+        "ci_high": -100.20500000000004,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.03943194444444444,
+        "sd": 0.6834931610155883,
+        "se": 0.04833026490487513,
+        "ci_low": -0.13384298611111106,
+        "ci_high": 0.0544797222222222,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.6,
+      "rho": 0.0,
+      "contrast": "P3-P2",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": 0.325,
+        "sd": 2.9585707197086886,
+        "se": 0.2092025418525978,
+        "ci_low": -0.09,
+        "ci_high": 0.7301249999999981,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.0006402777777777807,
+        "sd": 0.21326166708553512,
+        "se": 0.015079877096332982,
+        "ci_low": -0.027148680555555558,
+        "ci_high": 0.0316223611111111,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.6,
+      "rho": 0.0,
+      "contrast": "P3C-P3",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.04682361111111111,
+        "sd": 0.5016428533140698,
+        "se": 0.03547150633121473,
+        "ci_low": -0.0228567708333333,
+        "ci_high": 0.11527635416666665,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.6,
+      "rho": 0.0,
+      "contrast": "P4-P3C",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": 0.135,
+        "sd": 1.3325364033795313,
+        "se": 0.09422455270075993,
+        "ci_low": 0.01,
+        "ci_high": 0.355,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.005073611111111111,
+        "sd": 0.08008569568321615,
+        "se": 0.005662913849364435,
+        "ci_low": -0.00255,
+        "ci_high": 0.017462500000000002,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.6,
+      "rho": 0.5,
+      "contrast": "P2-P1",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -100.70000000000003,
+        "sd": 36.556970064565085,
+        "se": 2.584968143228759,
+        "ci_low": -105.67000000000003,
+        "ci_high": -95.74475000000004,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.032915277777777786,
+        "sd": 0.6815227985593625,
+        "se": 0.04819093923945586,
+        "ci_low": -0.12725288194444442,
+        "ci_high": 0.06083239583333332,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.6,
+      "rho": 0.5,
+      "contrast": "P3-P2",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": 0.21,
+        "sd": 2.220484803780268,
+        "se": 0.15701198622747078,
+        "ci_low": -0.115,
+        "ci_high": 0.505,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.0036847222222222238,
+        "sd": 0.20643025725812084,
+        "se": 0.014596823474930076,
+        "ci_low": -0.029005173611111105,
+        "ci_high": 0.02813746527777776,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.6,
+      "rho": 0.5,
+      "contrast": "P3C-P3",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.052844444444444444,
+        "sd": 0.49800321260435,
+        "se": 0.03521414486852218,
+        "ci_low": -0.016263368055555564,
+        "ci_high": 0.12031451388888885,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.6,
+      "rho": 0.5,
+      "contrast": "P4-P3C",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": 0.115,
+        "sd": 1.1126386763548188,
+        "se": 0.07867543530609167,
+        "ci_low": 0.01,
+        "ci_high": 0.295,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.004361111111111112,
+        "sd": 0.07912740854659159,
+        "se": 0.005595152716101328,
+        "ci_low": -0.002911111111111111,
+        "ci_high": 0.016437500000000004,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.7,
+      "rho": 0.0,
+      "contrast": "P2-P1",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -95.71000000000004,
+        "sd": 51.84297803810364,
+        "se": 3.6658521327648335,
+        "ci_low": -103.03512500000002,
+        "ci_high": -88.69475,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.1604902777777778,
+        "sd": 1.0149620785781084,
+        "se": 0.07176865684097739,
+        "ci_low": -0.2987639930555555,
+        "ci_high": -0.016933020833333357,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.7,
+      "rho": 0.0,
+      "contrast": "P3-P2",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -1.1100000000000045,
+        "sd": 4.606953451089187,
+        "se": 0.32576080258759316,
+        "ci_low": -1.7800000000000056,
+        "ci_high": -0.5000000000000068,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.005958333333333336,
+        "sd": 0.36649729789426044,
+        "se": 0.025915272462757773,
+        "ci_low": -0.05777291666666663,
+        "ci_high": 0.04360704861111111,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.7,
+      "rho": 0.0,
+      "contrast": "P3C-P3",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.0006444444444444541,
+        "sd": 0.6666628063586356,
+        "se": 0.04714017911410454,
+        "ci_low": -0.09069798611111106,
+        "ci_high": 0.09242586805555554,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.7,
+      "rho": 0.0,
+      "contrast": "P4-P3C",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": 0.525,
+        "sd": 3.0057524413519934,
+        "se": 0.2125387933848015,
+        "ci_low": 0.145,
+        "ci_high": 0.9801249999999981,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.026756944444444448,
+        "sd": 0.2686693277185265,
+        "se": 0.018997790352660093,
+        "ci_low": -0.008487847222222221,
+        "ci_high": 0.0666018055555555,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.7,
+      "rho": 0.5,
+      "contrast": "P2-P1",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -85.73500000000004,
+        "sd": 48.706636686250796,
+        "se": 3.4440793089637407,
+        "ci_low": -92.55500000000002,
+        "ci_high": -79.04987500000001,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.1395888888888889,
+        "sd": 0.9215438784396385,
+        "se": 0.06516299256056197,
+        "ci_low": -0.2684272222222222,
+        "ci_high": -0.008856180555555565,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.7,
+      "rho": 0.5,
+      "contrast": "P3-P2",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -0.8100000000000034,
+        "sd": 4.124190190039511,
+        "se": 0.2916242850279974,
+        "ci_low": -1.4050000000000045,
+        "ci_high": -0.2550000000000034,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.004604166666666664,
+        "sd": 0.3767369923403486,
+        "se": 0.02663932820076849,
+        "ci_low": -0.04868871527777777,
+        "ci_high": 0.0575541319444444,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.7,
+      "rho": 0.5,
+      "contrast": "P3C-P3",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.02725555555555556,
+        "sd": 0.6927617287788055,
+        "se": 0.048985651616600914,
+        "ci_low": -0.06720225694444444,
+        "ci_high": 0.12172184027777776,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.7,
+      "rho": 0.5,
+      "contrast": "P4-P3C",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": 0.49,
+        "sd": 3.1590819861116097,
+        "se": 0.2233808294703786,
+        "ci_low": 0.09,
+        "ci_high": 0.965,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.028063888888888888,
+        "sd": 0.2992567163079433,
+        "se": 0.02116064534169656,
+        "ci_low": -0.010376215277777765,
+        "ci_high": 0.07301059027777777,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.8,
+      "rho": 0.0,
+      "contrast": "P2-P1",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -86.49000000000004,
+        "sd": 69.2166498980959,
+        "se": 4.894356251395876,
+        "ci_low": -95.87512500000004,
+        "ci_high": -77.16987500000003,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.08800555555555555,
+        "sd": 1.9225229580249519,
+        "se": 0.13594290206062637,
+        "ci_low": -0.17615145833333337,
+        "ci_high": 0.34955555555555545,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.8,
+      "rho": 0.0,
+      "contrast": "P3-P2",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -2.11,
+        "sd": 40.62189794882588,
+        "se": 2.8724019504282685,
+        "ci_low": -7.805125000000001,
+        "ci_high": 3.445,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.08805833333333338,
+        "sd": 1.5131322198858534,
+        "se": 0.10699460535131411,
+        "ci_low": -0.11809996527777775,
+        "ci_high": 0.29797381944444434,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.8,
+      "rho": 0.0,
+      "contrast": "P3C-P3",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": 0.065,
+        "sd": 0.9192388155425115,
+        "se": 0.06499999999999997,
+        "ci_low": 0.0,
+        "ci_high": 0.195,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.023831944444444444,
+        "sd": 1.5352902788665341,
+        "se": 0.10856141672763119,
+        "ci_low": -0.2284119097222222,
+        "ci_high": 0.1879969097222222,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.8,
+      "rho": 0.0,
+      "contrast": "P4-P3C",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -0.39999999999999886,
+        "sd": 26.64054415669516,
+        "se": 1.88377094276988,
+        "ci_low": -4.51,
+        "ci_high": 2.715125000000002,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.08099444444444444,
+        "sd": 0.8149362297151773,
+        "se": 0.05762469342661999,
+        "ci_low": -0.030093715277777742,
+        "ci_high": 0.1956600694444444,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.8,
+      "rho": 0.5,
+      "contrast": "P2-P1",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -76.16500000000002,
+        "sd": 65.98277356276543,
+        "se": 4.665686662772789,
+        "ci_low": -85.26025000000001,
+        "ci_high": -67.32000000000002,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.04635833333333332,
+        "sd": 1.8873285646593916,
+        "se": 0.1334542826397729,
+        "ci_low": -0.3068105902777777,
+        "ci_high": 0.21745371527777774,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.8,
+      "rho": 0.5,
+      "contrast": "P3-P2",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": 0.2500000000000011,
+        "sd": 35.11957320513097,
+        "se": 2.483328836572548,
+        "ci_low": -4.655249999999995,
+        "ci_high": 5.125250000000001,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.2321402777777778,
+        "sd": 1.7293108957264856,
+        "se": 0.12228074611479804,
+        "ci_low": -0.0033734722222221554,
+        "ci_high": 0.4779412152777777,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.8,
+      "rho": 0.5,
+      "contrast": "P3C-P3",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": 0.065,
+        "sd": 0.9192388155425115,
+        "se": 0.06499999999999997,
+        "ci_low": 0.0,
+        "ci_high": 0.195,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.11027361111111116,
+        "sd": 1.5808060009565175,
+        "se": 0.11177986430167414,
+        "ci_low": -0.3287834375,
+        "ci_high": 0.10678687499999993,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.8,
+      "rho": 0.5,
+      "contrast": "P4-P3C",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -0.12499999999999886,
+        "sd": 26.442112273937912,
+        "se": 1.8697396897797538,
+        "ci_low": -4.205124999999999,
+        "ci_high": 2.9250000000000034,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.14076805555555555,
+        "sd": 1.057572779714122,
+        "se": 0.07478168841341624,
+        "ci_low": -0.0019115624999999927,
+        "ci_high": 0.29326819444444424,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.85,
+      "rho": 0.0,
+      "contrast": "P2-P1",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -76.39500000000001,
+        "sd": 71.0870297875787,
+        "se": 5.0266120817207,
+        "ci_low": -86.22512499999999,
+        "ci_high": -66.53450000000002,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.08565138888888889,
+        "sd": 1.9682782547852224,
+        "se": 0.1391782901220654,
+        "ci_low": -0.3577608680555555,
+        "ci_high": 0.18430239583333335,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.85,
+      "rho": 0.0,
+      "contrast": "P3-P2",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -0.6499999999999977,
+        "sd": 58.56463594110847,
+        "se": 4.14114512116792,
+        "ci_low": -8.600124999999995,
+        "ci_high": 7.225250000000002,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.3716097222222222,
+        "sd": 2.080996019654626,
+        "se": 0.147148639712,
+        "ci_low": 0.09230222222222227,
+        "ci_high": 0.6642025,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.85,
+      "rho": 0.0,
+      "contrast": "P3C-P3",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": 0.045,
+        "sd": 0.8756763358833736,
+        "se": 0.06191966752277223,
+        "ci_low": -0.065,
+        "ci_high": 0.18,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.24230555555555555,
+        "sd": 1.9476871043509825,
+        "se": 0.13772227591161704,
+        "ci_low": -0.5111312499999999,
+        "ci_high": 0.02265374999999996,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.85,
+      "rho": 0.0,
+      "contrast": "P4-P3C",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -2.265,
+        "sd": 50.78553561931491,
+        "se": 3.5910796622608525,
+        "ci_low": -9.225,
+        "ci_high": 4.77,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.08233194444444447,
+        "sd": 1.9853665522697104,
+        "se": 0.14038661522508683,
+        "ci_low": -0.3765959722222222,
+        "ci_high": 0.17469416666666662,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.85,
+      "rho": 0.5,
+      "contrast": "P2-P1",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -75.56500000000001,
+        "sd": 62.1079929553735,
+        "se": 4.391698298463092,
+        "ci_low": -84.07512500000003,
+        "ci_high": -67.10475000000002,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.04945277777777775,
+        "sd": 2.112229877071524,
+        "se": 0.14935720695021024,
+        "ci_low": -0.3456629166666666,
+        "ci_high": 0.2379678472222221,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.85,
+      "rho": 0.5,
+      "contrast": "P3-P2",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -0.975,
+        "sd": 50.21706025549005,
+        "se": 3.550882383791047,
+        "ci_low": -8.06525,
+        "ci_high": 5.850125000000001,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.36746388888888887,
+        "sd": 1.9885107910679345,
+        "se": 0.14060894648267624,
+        "ci_low": 0.10592250000000003,
+        "ci_high": 0.6449072569444442,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.85,
+      "rho": 0.5,
+      "contrast": "P3C-P3",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.14789027777777775,
+        "sd": 1.892056244549935,
+        "se": 0.13378858009076117,
+        "ci_low": -0.4078034722222222,
+        "ci_high": 0.12210631944444446,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.85,
+      "rho": 0.5,
+      "contrast": "P4-P3C",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": 0.09000000000000113,
+        "sd": 42.880011390908265,
+        "se": 3.0320746831867633,
+        "ci_low": -5.684999999999998,
+        "ci_high": 6.21,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.09324166666666667,
+        "sd": 1.5826644899059759,
+        "se": 0.11191127931556637,
+        "ci_low": -0.3228784374999999,
+        "ci_high": 0.11610559027777771,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.9,
+      "rho": 0.0,
+      "contrast": "P2-P1",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -68.465,
+        "sd": 63.81851446833219,
+        "se": 4.512650434580949,
+        "ci_low": -77.27,
+        "ci_high": -59.859750000000005,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.06120555555555551,
+        "sd": 2.3383867969692727,
+        "se": 0.16534891611740632,
+        "ci_low": -0.38269857638888866,
+        "ci_high": 0.2610453472222222,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.9,
+      "rho": 0.0,
+      "contrast": "P3-P2",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": 1.4849999999999965,
+        "sd": 43.63334872093839,
+        "se": 3.085343676645291,
+        "ci_low": -4.380250000000005,
+        "ci_high": 7.475124999999993,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.43789722222222216,
+        "sd": 2.2217851951111633,
+        "se": 0.15710393778029802,
+        "ci_low": 0.14122434027777783,
+        "ci_high": 0.7544019791666665,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.9,
+      "rho": 0.0,
+      "contrast": "P3C-P3",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": 0.725,
+        "sd": 8.604041062957878,
+        "se": 0.6083975781225025,
+        "ci_low": 0.0,
+        "ci_high": 2.045,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.19259166666666666,
+        "sd": 1.7719240224200625,
+        "se": 0.12529394920005701,
+        "ci_low": -0.051836493055555356,
+        "ci_high": 0.43617322916666657,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.9,
+      "rho": 0.0,
+      "contrast": "P4-P3C",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -10.149999999999999,
+        "sd": 54.075951611724484,
+        "se": 3.8237472083765995,
+        "ci_low": -18.385374999999993,
+        "ci_high": -3.504999999999999,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.26052083333333337,
+        "sd": 1.805590118626687,
+        "se": 0.1276745016924353,
+        "ci_low": -0.5261624305555554,
+        "ci_high": -0.03103072916666665,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.9,
+      "rho": 0.5,
+      "contrast": "P2-P1",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -64.29500000000002,
+        "sd": 63.82693288737166,
+        "se": 4.513245706699917,
+        "ci_low": -73.05024999999999,
+        "ci_high": -55.70962500000001,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.12373750000000003,
+        "sd": 2.3517761279536584,
+        "se": 0.16629568479086734,
+        "ci_low": -0.44385881944444433,
+        "ci_high": 0.19656010416666617,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.9,
+      "rho": 0.5,
+      "contrast": "P3-P2",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -0.3350000000000023,
+        "sd": 47.52045605545672,
+        "se": 3.360203672189078,
+        "ci_low": -6.8250000000000055,
+        "ci_high": 6.135249999999995,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.3044819444444445,
+        "sd": 2.0259860116352466,
+        "se": 0.14325884474163705,
+        "ci_low": 0.0426927777777779,
+        "ci_high": 0.5920811805555555,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.9,
+      "rho": 0.5,
+      "contrast": "P3C-P3",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.031972222222222194,
+        "sd": 1.6973153227089317,
+        "se": 0.12001831744993188,
+        "ci_low": -0.2029331944444444,
+        "ci_high": 0.261756597222222,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.9,
+      "rho": 0.5,
+      "contrast": "P4-P3C",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -4.945,
+        "sd": 40.25561510818949,
+        "se": 2.846501842383642,
+        "ci_low": -10.750624999999994,
+        "ci_high": 0.30012499999999925,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.19719166666666665,
+        "sd": 1.669479652419871,
+        "se": 0.1180500383279051,
+        "ci_low": -0.4392573611111111,
+        "ci_high": 0.020216562499999917,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.95,
+      "rho": 0.0,
+      "contrast": "P2-P1",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -71.675,
+        "sd": 71.23151704197028,
+        "se": 5.036828873458231,
+        "ci_low": -81.375125,
+        "ci_high": -61.705,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.1236375,
+        "sd": 2.615358663954801,
+        "se": 0.18493378465174287,
+        "ci_low": -0.47455184027777775,
+        "ci_high": 0.24879503472222222,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.95,
+      "rho": 0.0,
+      "contrast": "P3-P2",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -1.4750000000000012,
+        "sd": 72.76857634664559,
+        "se": 5.145515379200409,
+        "ci_low": -11.365374999999998,
+        "ci_high": 8.255249999999997,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.20071805555555555,
+        "sd": 3.1302998311271133,
+        "se": 0.22134562377370862,
+        "ci_low": -0.23894809027777772,
+        "ci_high": 0.6340076736111107,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.95,
+      "rho": 0.0,
+      "contrast": "P3C-P3",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -0.34,
+        "sd": 5.706771081873228,
+        "se": 0.40352965306718497,
+        "ci_low": -1.2,
+        "ci_high": 0.15,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.10953472222222224,
+        "sd": 1.9235814298732863,
+        "se": 0.1360177473227916,
+        "ci_low": -0.1558152777777778,
+        "ci_high": 0.37314624999999996,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.95,
+      "rho": 0.0,
+      "contrast": "P4-P3C",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -1.6999999999999988,
+        "sd": 49.42157891358346,
+        "se": 3.4946333586740947,
+        "ci_low": -8.700249999999997,
+        "ci_high": 5.12,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.2119375,
+        "sd": 2.548990891628267,
+        "se": 0.18024087446530918,
+        "ci_low": -0.5940661111111112,
+        "ci_high": 0.11450131944444443,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.95,
+      "rho": 0.5,
+      "contrast": "P2-P1",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -62.28000000000001,
+        "sd": 66.41321537073324,
+        "se": 4.696123494904812,
+        "ci_low": -71.53062500000001,
+        "ci_high": -52.96462500000002,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.2332277777777778,
+        "sd": 2.3359231925618795,
+        "se": 0.16517471297914343,
+        "ci_low": -0.5532404861111111,
+        "ci_high": 0.09232020833333326,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.95,
+      "rho": 0.5,
+      "contrast": "P3-P2",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": -4.255000000000001,
+        "sd": 57.451311918928624,
+        "se": 4.062421224593795,
+        "ci_low": -12.245249999999997,
+        "ci_high": 3.195,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.07866388888888888,
+        "sd": 2.581130639580788,
+        "se": 0.18251349783759455,
+        "ci_low": -0.27615906249999994,
+        "ci_high": 0.4363997222222221,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.95,
+      "rho": 0.5,
+      "contrast": "P3C-P3",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": 0.0,
+        "sd": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": 0.18929583333333333,
+        "sd": 1.742105867173198,
+        "se": 0.12318548722230391,
+        "ci_low": -0.05125406249999999,
+        "ci_high": 0.43206329861111104,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    },
+    {
+      "X": 0.95,
+      "rho": 0.5,
+      "contrast": "P4-P3C",
+      "ambulance": {
+        "n_seeds": 200,
+        "mean": 0.9200000000000012,
+        "sd": 34.2330704959092,
+        "se": 2.4206436288494526,
+        "ci_low": -3.8451249999999955,
+        "ci_high": 5.61,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      },
+      "residence_vh": {
+        "n_seeds": 200,
+        "mean": -0.24705000000000002,
+        "sd": 2.311492126490639,
+        "se": 0.16344717573008438,
+        "ci_low": -0.6012054166666666,
+        "ci_high": 0.03472503472222214,
+        "confidence": 0.95,
+        "resamples": 10000,
+        "method": "paired scenario-level percentile bootstrap; approximate coverage"
+      }
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+--- original/ambugo/sim.py
++++ corrected/ambugo/sim.py
+@@ -15,8 +15,9 @@
+ * Boundary demand waits in an unbounded external queue and is admitted at the
+   entry-link saturation flow when storage allows.  Time in the external queue
+   counts as delay.
+-* Ambulance: obeys the executed signal, no speed privilege, enters at the
+-  dispatch time 20 m downstream of the origin link start.  Optional yielding:
++* Ambulance: obeys the executed signal, no speed privilege. At desired dispatch
++  it joins the origin source queue, pays shared PCU admission service and enters
++  at position zero when strict receiving storage permits.  Optional yielding:
+   when it reaches a queue each vehicle ahead independently pulls aside with
+   probability rho * w_class (motorcycles most, buses least).
+ * Sensors: per approach link count camera every 5 s, bounded integer noise
+@@ -103,6 +104,8 @@
+         self.ycls.append(0.0); self.pos.append(0); self.ready.append(0.0); self.done.append(None)
+         self.amb_dispatch = a["dispatch"]
+         self.amb_in = False
++        self.amb_release_requested = False
++        self.amb_insert_t = None
+         self.amb_arrival = None
+         self.amb_cross = {}
+         self.amb_yield_done = set()
+@@ -161,6 +164,8 @@
+         return tt
+ 
+     def enter(self, vid, e, t, offset_m=0.0):
++        if not self.has_space(e, vid):
++            raise RuntimeError(("receiving_storage_exceeded", t, e, vid))
+         self.dq[e].append(vid)
+         self.occ[e] += self.pcu[vid]
+         edge = self.net.edges[e]
+@@ -185,7 +190,7 @@
+ 
+     def has_space(self, e, vid):
+         edge = self.net.edges[e]
+-        return edge["is_exit"] or vid == self.amb or self.occ[e] + self.pcu[vid] <= edge["storage"] + 1e-9
++        return edge["is_exit"] or self.occ[e] + self.pcu[vid] <= edge["storage"] + 1e-9
+ 
+     def head_wait_start(self, e, t):
+         """Time since which the first queued (non-ambulance) vehicle on approach e has
+@@ -240,9 +245,13 @@
+                 self.released += 1
+                 self.released_persons += self.occp[v]
+                 ptr += 1
+-            if not self.amb_in and t >= self.amb_dispatch:
+-                self.amb_in = True
+-                self.enter(self.amb, self.amb_route[0], t, offset_m=self.sc["amb"]["insert_pos_m"])
++            if not self.amb_release_requested and t >= self.amb_dispatch:
++                # Mechanical correction: desired dispatch enters the same physical
++                # origin queue as ordinary releases. It pays source insertion wait,
++                # source PCU service and receiving storage, starting at position 0.
++                self.amb_release_requested = True
++                o = edges[self.amb_route[0]]["u"]
++                self.ext[o].append(self.amb)
+             # sensors
+             if t % SENSOR_PERIOD == 0:
+                 self._sense(t)
+@@ -295,10 +304,9 @@
+                             credit[arm] = min(credit[arm], s)
+                             break
+                         v = q[cand]
+-                        if credit[arm] < pcu[v] and v != self.amb:
++                        if credit[arm] < pcu[v]:
+                             break
+-                        if v != self.amb:
+-                            credit[arm] -= pcu[v]
++                        credit[arm] -= pcu[v]
+                         del q[cand]
+                         if v != self.amb:
+                             w = t - ready[v]
+@@ -333,6 +341,9 @@
+                         break
+                     self.ext_credit[o] -= pcu[v]
+                     xq.popleft()
++                    if v == self.amb:
++                        self.amb_in = True
++                        self.amb_insert_t = t
+                     self.enter(v, e0, t)
+                     moves += 1
+                 if xq:
+@@ -340,7 +351,7 @@
+             # bookkeeping
+             completed += self.completions[t]
+             persons_done += self.comp_persons[t]
+-            n_sys = self.released - completed + (1 if self.amb_in and self.amb_arrival is None else 0)
++            n_sys = self.released - completed + (1 if self.amb_release_requested and self.amb_arrival is None else 0)
+             self.N[t] = self.released - completed
+             self.P[t] = self.released_persons - persons_done
+             if self.audit:
+@@ -406,17 +417,17 @@
+             occ = sum(self.pcu[v] for v in q)
+             if abs(occ - self.occ[e]) > 1e-6:
+                 self.violations.append(("occ_mismatch", t, e))
+-            amb_here = self.amb in q
+-            if occ > edges[e]["storage"] + (self.pcu[self.amb] if amb_here else 0) + 1e-6:
++            if occ > edges[e]["storage"] + 1e-6:
+                 self.violations.append(("storage", t, e))
+         in_links = sum(len(q) for q in self.dq)
+         in_ext = sum(len(q) for q in self.ext.values())
+         amb_links = 1 if any(self.amb in q for q in self.dq) else 0
++        amb_external = 1 if any(self.amb in q for q in self.ext.values()) else 0
+         n = len(self.done) - 1
+         completed = sum(1 for i in range(n) if self.done[i] is not None and int(self.done[i]) + 1 <= t)
+         in_transit = sum(1 for i in range(n) if self.done[i] is not None and int(self.done[i]) + 1 > t)
+         # exact conservation: released = on links + external queues + on exit links + completed
+-        if self.released != in_links - amb_links + in_ext + in_transit + completed:
++        if self.released != in_links - amb_links + in_ext - amb_external + in_transit + completed:
+             self.violations.append(("conservation", t, self.released, in_links - amb_links, in_ext, in_transit, completed))
+         if self.N[t] != self.released - completed:
+             self.violations.append(("N_bookkeeping", t))
+@@ -433,6 +444,9 @@
+         return dict(
+             amb_tt=(self.amb_arrival - self.amb_dispatch) if self.amb_arrival is not None else None,
+             amb_arrival=self.amb_arrival, dispatch=self.amb_dispatch,
++            amb_insertion=self.amb_insert_t,
++            amb_source_wait=(self.amb_insert_t-self.amb_dispatch) if self.amb_insert_t is not None else None,
++            mechanical_corrections="shared source queue and PCU service, position-zero insertion, strict receiving storage",
+             N=self.N, P=self.P,
+             max_red=max(max(J.max_red.values()) for J in juncs),
+             max_ped_wait=max(J.max_ped_wait for J in juncs),

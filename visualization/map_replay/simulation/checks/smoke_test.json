@@ -1,0 +1,31 @@
+{
+  "test": "10-second in-process simulator and controller smoke test",
+  "passed": true,
+  "simulated_seconds": 10.0,
+  "collisions": 0,
+  "network_edges": 479,
+  "controllers": 7,
+  "sumo_version": [
+    22,
+    "SUMO 1.28.0"
+  ],
+  "coordinate_conversion_example_lonlat": [
+    76.7128882907488,
+    30.71057382068164
+  ],
+  "demand_sha256": "574223d825fdba35922d91a00e5efa5ff0877ccd14f6a66720935679bf606c09",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "packages": {
+      "numpy": "2.5.4",
+      "networkx": "3.7",
+      "libsumo": "1.28.0",
+      "sumolib": "1.28.0",
+      "traci": "1.28.0",
+      "sumo-data": "1.28.0",
+      "eclipse-sumo": "1.28.0"
+    },
+    "exact_pinned_versions": true
+  }
+}

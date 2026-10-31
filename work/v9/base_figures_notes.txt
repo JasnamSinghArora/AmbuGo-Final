@@ -1,0 +1,75 @@
+Static figure source and numeric readouts
+25 October 2026
+
+All outcomes below are from completed corrected_summary.json. Original values are reconstructed only as corrected mean minus its reported matched mechanical-change mean. Confidence intervals are reported paired scenario-level percentile bootstrap intervals (10000 resamples, n=200 per cell); no unavailable absolute-mean confidence interval was fabricated. The mechanical comparison retains original tuning and is a sensitivity analysis, not a newly preregistered confirmatory experiment.
+
+Figure network. Actual v7 synthetic geometry: 16 signalized junctions, 8 boundary nodes, 59 directed links. Arrows indicate link direction. Hospital destination BE1 is a model boundary. Road coordinates and layout are synthetic, not a real urban map.
+
+Figure meso_results. Mechanically corrected mesoscopic outcomes without driver yielding (rho=0), across six nominal critical-load targets. Panel a shows mean ambulance travel for M0, M1, M2 and MR. Panel b shows signed extra restricted-horizon ordinary residence versus the corresponding corrected M0, with 95% paired bootstrap intervals. Intervals containing zero do not establish equivalence or no cost. The mesoscopic labels M0, M1, M2 and MR correspond to executable data keys P0, P1, P2 and P4, respectively; these are distinct from the microscopic controller labels.
+
+M0  no priority (executable key P0)
+X=0.60; ambulance mean=357.607520 s; paired ambulance effect=0.000000 [0.000000,0.000000] s; ordinary extra residence=0.000000000 [0.000000000,0.000000000] vehicle-h
+X=0.70; ambulance mean=381.407520 s; paired ambulance effect=0.000000 [0.000000,0.000000] s; ordinary extra residence=0.000000000 [0.000000000,0.000000000] vehicle-h
+X=0.80; ambulance mean=433.352520 s; paired ambulance effect=0.000000 [0.000000,0.000000] s; ordinary extra residence=0.000000000 [0.000000000,0.000000000] vehicle-h
+X=0.85; ambulance mean=447.092520 s; paired ambulance effect=0.000000 [0.000000,0.000000] s; ordinary extra residence=0.000000000 [0.000000000,0.000000000] vehicle-h
+X=0.90; ambulance mean=478.032520 s; paired ambulance effect=0.000000 [0.000000,0.000000] s; ordinary extra residence=0.000000000 [0.000000000,0.000000000] vehicle-h
+X=0.95; ambulance mean=487.467520 s; paired ambulance effect=0.000000 [0.000000,0.000000] s; ordinary extra residence=0.000000000 [0.000000000,0.000000000] vehicle-h
+M1  no phase skip (executable key P1)
+X=0.60; ambulance mean=309.722520 s; paired ambulance effect=-47.885000 [-56.190125,-39.924750] s; ordinary extra residence=0.014026389 [-0.041586354,0.068973472] vehicle-h
+X=0.70; ambulance mean=304.927520 s; paired ambulance effect=-76.480000 [-86.070000,-67.085000] s; ordinary extra residence=0.115748611 [0.007513576,0.227003264] vehicle-h
+X=0.80; ambulance mean=339.297520 s; paired ambulance effect=-94.055000 [-104.491375,-83.839875] s; ordinary extra residence=0.244669444 [-0.002044340,0.500482535] vehicle-h
+X=0.85; ambulance mean=356.507520 s; paired ambulance effect=-90.585000 [-101.191875,-80.174875] s; ordinary extra residence=0.785044444 [0.440027014,1.150535833] vehicle-h
+X=0.90; ambulance mean=381.352520 s; paired ambulance effect=-96.680000 [-107.745000,-85.894375] s; ordinary extra residence=1.409765278 [0.952382257,1.895124861] vehicle-h
+X=0.95; ambulance mean=393.437520 s; paired ambulance effect=-94.030000 [-106.905375,-81.315000] s; ordinary extra residence=1.786891667 [1.251148125,2.362678646] vehicle-h
+M2  phase skip (executable key P2)
+X=0.60; ambulance mean=204.172520 s; paired ambulance effect=-153.435000 [-162.215625,-144.959875] s; ordinary extra residence=-0.025405556 [-0.116405764,0.064830833] vehicle-h
+X=0.70; ambulance mean=209.217520 s; paired ambulance effect=-172.190000 [-182.915250,-161.644250] s; ordinary extra residence=-0.044741667 [-0.176713576,0.088799722] vehicle-h
+X=0.80; ambulance mean=252.807520 s; paired ambulance effect=-180.545000 [-192.790500,-168.948625] s; ordinary extra residence=0.332675000 [0.060106736,0.605084861] vehicle-h
+X=0.85; ambulance mean=280.112520 s; paired ambulance effect=-166.980000 [-179.865375,-154.204875] s; ordinary extra residence=0.699393056 [0.322051007,1.084268472] vehicle-h
+X=0.90; ambulance mean=312.887520 s; paired ambulance effect=-165.145000 [-177.000625,-153.570000] s; ordinary extra residence=1.348559722 [0.856700451,1.872729514] vehicle-h
+X=0.95; ambulance mean=321.762520 s; paired ambulance effect=-165.705000 [-178.975250,-152.089875] s; ordinary extra residence=1.663254167 [1.108379479,2.258737882] vehicle-h
+MR  queue and route rules (executable key P4)
+X=0.60; ambulance mean=204.632520 s; paired ambulance effect=-152.975000 [-161.750250,-144.464875] s; ordinary extra residence=0.025851389 [-0.069978889,0.117994861] vehicle-h
+X=0.70; ambulance mean=208.632520 s; paired ambulance effect=-172.775000 [-183.545625,-162.124750] s; ordinary extra residence=-0.023298611 [-0.164429444,0.116092361] vehicle-h
+X=0.80; ambulance mean=250.362520 s; paired ambulance effect=-182.990000 [-195.980375,-170.559625] s; ordinary extra residence=0.477895833 [0.212040937,0.752096632] vehicle-h
+X=0.85; ambulance mean=277.242520 s; paired ambulance effect=-169.850000 [-183.470375,-156.220000] s; ordinary extra residence=0.746365278 [0.325139236,1.180186076] vehicle-h
+X=0.90; ambulance mean=304.947520 s; paired ambulance effect=-173.085000 [-186.680250,-159.530000] s; ordinary extra residence=1.718527778 [1.162872396,2.309626250] vehicle-h
+X=0.95; ambulance mean=318.247520 s; paired ambulance effect=-169.220000 [-183.490375,-154.824875] s; ordinary extra residence=1.761569444 [1.207706736,2.363805764] vehicle-h
+
+Figure mechanical_change. Paired sensitivity to replacing ambulance source insertion, discharge and storage exceptions with shared-capacity, strict-storage mechanics. Panel a reports corrected minus original ambulance travel for M0 and M2. Panel b reports the difference of ordinary residence effects, (corrected M2-corrected M0)-(original M2-original M0), not the raw change of the M2 trajectory alone. Both panels use rho=0 and 95% paired bootstrap intervals.
+
+M0 (executable key P0), X=0.60; original ambulance mean=325.577520 s; corrected ambulance mean=357.607520 s; change=32.030000 [25.675000,38.705125] s; original paired ordinary effect=0.000000000; corrected effect=0.000000000; paired-effect change=0.000000000 [0.000000000,0.000000000] vehicle-h
+M0 (executable key P0), X=0.70; original ambulance mean=346.137520 s; corrected ambulance mean=381.407520 s; change=35.270000 [28.094625,43.035125] s; original paired ordinary effect=0.000000000; corrected effect=0.000000000; paired-effect change=0.000000000 [0.000000000,0.000000000] vehicle-h
+M0 (executable key P0), X=0.80; original ambulance mean=399.222520 s; corrected ambulance mean=433.352520 s; change=34.130000 [26.924750,41.690125] s; original paired ordinary effect=0.000000000; corrected effect=0.000000000; paired-effect change=0.000000000 [0.000000000,0.000000000] vehicle-h
+M0 (executable key P0), X=0.85; original ambulance mean=418.757520 s; corrected ambulance mean=447.092520 s; change=28.335000 [20.944750,36.390000] s; original paired ordinary effect=0.000000000; corrected effect=0.000000000; paired-effect change=0.000000000 [0.000000000,0.000000000] vehicle-h
+M0 (executable key P0), X=0.90; original ambulance mean=455.402520 s; corrected ambulance mean=478.032520 s; change=22.630000 [16.594750,29.190125] s; original paired ordinary effect=0.000000000; corrected effect=0.000000000; paired-effect change=0.000000000 [0.000000000,0.000000000] vehicle-h
+M0 (executable key P0), X=0.95; original ambulance mean=461.217520 s; corrected ambulance mean=487.467520 s; change=26.250000 [18.974625,34.215125] s; original paired ordinary effect=0.000000000; corrected effect=0.000000000; paired-effect change=0.000000000 [0.000000000,0.000000000] vehicle-h
+M2 (executable key P2), X=0.60; original ambulance mean=193.747520 s; corrected ambulance mean=204.172520 s; change=10.425000 [9.910000,10.975000] s; original paired ordinary effect=-0.028990278; corrected effect=-0.025405556; paired-effect change=0.003584722 [-0.052212604,0.060208299] vehicle-h
+M2 (executable key P2), X=0.70; original ambulance mean=198.732520 s; corrected ambulance mean=209.217520 s; change=10.485000 [9.685000,11.310000] s; original paired ordinary effect=-0.001716667; corrected effect=-0.044741667; paired-effect change=-0.043025000 [-0.130088125,0.047010694] vehicle-h
+M2 (executable key P2), X=0.80; original ambulance mean=242.427520 s; corrected ambulance mean=252.807520 s; change=10.380000 [6.535000,14.680125] s; original paired ordinary effect=0.432068056; corrected effect=0.332675000; paired-effect change=-0.099393056 [-0.310497431,0.109052847] vehicle-h
+M2 (executable key P2), X=0.85; original ambulance mean=259.497520 s; corrected ambulance mean=280.112520 s; change=20.615000 [14.885000,27.155125] s; original paired ordinary effect=0.521034722; corrected effect=0.699393056; paired-effect change=0.178358333 [-0.088660937,0.445738437] vehicle-h
+M2 (executable key P2), X=0.90; original ambulance mean=291.572520 s; corrected ambulance mean=312.887520 s; change=21.315000 [14.480000,28.820125] s; original paired ordinary effect=0.964352778; corrected effect=1.348559722; paired-effect change=0.384206944 [0.124880417,0.646241944] vehicle-h
+M2 (executable key P2), X=0.95; original ambulance mean=297.682520 s; corrected ambulance mean=321.762520 s; change=24.080000 [17.060000,31.760000] s; original paired ordinary effect=1.473712500; corrected effect=1.663254167; paired-effect change=0.189541667 [-0.090435312,0.477908194] vehicle-h
+
+Figure analytic_pulse. Independent verification of a single initially empty queue with constant arrival lambda<c, complete service blackout Delta, and constant restored service c. The exact excess residence is c*Delta^2*X/[2*(1-X)], X=lambda/c. Panel a contrasts that analytic curve with independently integrated numerical points; panel b shows actual deterministic fine-packet convergence. Packet mass is a numerical discretization in vehicle-equivalents, not fractional real vehicles. These results establish this toy calculation only; they do not validate a universal urban traffic law.
+
+Fluid X=0.50; exact area=25.000000000000; ODE area=25.000000000000; discrepancy=0 vehicle-s
+Fluid X=0.70; exact area=58.333333333333; ODE area=58.333333333333; discrepancy=-1.492e-13 vehicle-s
+Fluid X=0.85; exact area=141.666666666667; ODE area=141.666666666666; discrepancy=-3.126e-13 vehicle-s
+Fluid X=0.90; exact area=225.000000000000; ODE area=225.000000000003; discrepancy=2.899e-12 vehicle-s
+Packet X=0.50; mass=0.25; absolute relative area error=14.500000000%
+Packet X=0.50; mass=0.1; absolute relative area error=5.920000000%
+Packet X=0.50; mass=0.025; absolute relative area error=1.495000000%
+Packet X=0.50; mass=0.005; absolute relative area error=0.299800000%
+Packet X=0.70; mass=0.25; absolute relative area error=11.982142857%
+Packet X=0.70; mass=0.1; absolute relative area error=4.882857143%
+Packet X=0.70; mass=0.025; absolute relative area error=1.231964286%
+Packet X=0.70; mass=0.005; absolute relative area error=0.246995714%
+Packet X=0.85; mass=0.25; absolute relative area error=10.811764706%
+Packet X=0.85; mass=0.1; absolute relative area error=4.398117647%
+Packet X=0.85; mass=0.025; absolute relative area error=1.108705882%
+Packet X=0.85; mass=0.005; absolute relative area error=0.222230588%
+Packet X=0.90; mass=0.25; absolute relative area error=10.488888889%
+Packet X=0.90; mass=0.1; absolute relative area error=4.264888889%
+Packet X=0.90; mass=0.025; absolute relative area error=1.074888889%
+Packet X=0.90; mass=0.005; absolute relative area error=0.215440000%

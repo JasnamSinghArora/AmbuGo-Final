@@ -1,0 +1,12 @@
+{
+  "analysis_file": "/Users/jasnamsingharora/Documents/Codex/2026-10-22/p/work/v9/sumo_analysis.json",
+  "analysis_sha256": "89805f2bea30bf2d426ccbf40a7186f6e86eaff7b1cb6904f337e4c5805682f7",
+  "figure_width_inches": 6.7,
+  "main_seed_count": 48,
+  "files": {
+    "sumo_time": 165436,
+    "sumo_effects": 178683,
+    "sumo_burden": 195972,
+    "sumo_sensitivity": 183051
+  }
+}

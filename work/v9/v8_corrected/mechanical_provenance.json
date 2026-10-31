@@ -1,0 +1,11 @@
+{
+  "original_sim_sha256": "ec9268558a31c7aa4f84c736448876204aaa5bd51c2f9ca8c3350c26929f974f",
+  "corrected_sim_sha256": "49b3bf5b89231cb4bf1d00ee5b82fa99689d4db4a1e2f4c1cf0fc8d5973d5639",
+  "changed_runtime_file": "ambugo/sim.py",
+  "unchanged_parts": [
+    "ambugo/policies.py",
+    "ambugo/design.py",
+    "ambugo/network.py",
+    "ambugo/scenario.py"
+  ]
+}

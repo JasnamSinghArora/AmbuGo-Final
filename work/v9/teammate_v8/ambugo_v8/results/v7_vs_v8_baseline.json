@@ -1,0 +1,38 @@
+{
+  "v7_random_plan": {
+    "max_X": 1.319,
+    "n_X_over_1": 4,
+    "mean_N_1800_3600": 302.1,
+    "mean_N_5400_7200": 294.6,
+    "growth_veh_per_h_after_warmup": -7.5,
+    "external_queue_at_end": 1.2,
+    "mean_stopline_wait_s": 66.7
+  },
+  "v8_webster_plan": {
+    "max_X": 0.785,
+    "n_X_over_1": 0,
+    "mean_N_1800_3600": 263.1,
+    "mean_N_5400_7200": 252.4,
+    "growth_veh_per_h_after_warmup": -10.7,
+    "external_queue_at_end": 1.2,
+    "mean_stopline_wait_s": 51.4
+  },
+  "v7_random_plan_pure_fixed_time": {
+    "max_X": 1.319,
+    "n_X_over_1": 4,
+    "mean_N_1800_3600": 444.7,
+    "mean_N_5400_7200": 719.3,
+    "growth_veh_per_h_after_warmup": 274.6,
+    "external_queue_at_end": 282.8,
+    "mean_stopline_wait_s": 124.0
+  },
+  "v8_webster_plan_pure_fixed_time": {
+    "max_X": 0.785,
+    "n_X_over_1": 0,
+    "mean_N_1800_3600": 267.4,
+    "mean_N_5400_7200": 258.1,
+    "growth_veh_per_h_after_warmup": -9.3,
+    "external_queue_at_end": 1.2,
+    "mean_stopline_wait_s": 53.6
+  }
+}

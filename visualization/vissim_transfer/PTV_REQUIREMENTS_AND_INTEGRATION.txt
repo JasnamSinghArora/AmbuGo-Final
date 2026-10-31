@@ -1,0 +1,95 @@
+AMBUGO — READINESS FOR A GENUINE PTV VISSIM EXPERIMENT
+Checked 28 October 2026. Official PTV sources only.
+
+STATUS AND RECOMMENDED HOST
+The existing AmbuGo films and trajectories are SUMO-based. Preparing OpenDRIVE
+geometry does not make them Vissim results. The project has not yet been imported,
+executed or recorded in Vissim. No working Vissim desktop installation is currently
+available to this task.
+
+For the chosen closed-loop COM controller plus native 3D-film workflow, use an
+accessible, licensed Windows desktop Vissim installation with the COM entitlement.
+Record its exact version and service pack. A Windows x64 research workstation is
+the practical host recommendation; this is not a verified claim that Windows on
+ARM, an Apple Silicon virtual machine or macOS is supported. Those alternatives
+require explicit PTV compatibility confirmation and an actual installation test.
+
+The current 2026 technical manual points to the live PTV system-requirements page.
+That page's hardware table was not exposed by the text retrieval available here,
+so a current ARM/CPU/Windows-version compatibility table has NOT been verified.
+Do not present the older August-2022 table for Vissim 2020–2023 as a 2026 requirement.
+The 2026 manual itself states a minimum of 4 GB RAM, potentially much more for large
+networks, and OpenGL 3.0 support when that graphics driver is selected. These are
+minimum documentation facts, not a sizing recommendation for this urban study.
+[1] https://cgi.ptvgroup.com/vision-help/VISSIM_2026_EN-DE/en-us/Content/1_Einfuehrung/TechnischeInformationen.htm
+[2] https://cgi.ptvgroup.com/vision-help/SystemRequirements/en-us/index.htm
+
+LICENSE AND CONTROL INTERFACES — VERIFIED
+The 2026 scripting documentation identifies COM as an add-on, supports custom
+control algorithms and network-object attribute access, and distinguishes external
+Windows processes from internal scripts. External Python scripts may use Python
+3.9 or newer in 64-bit form; PTV's examples use pywin32. Attribute reads use AttValue;
+writes depend on the attribute's Editable entry in the installed COM Help. This
+does not establish that any particular route or signal attribute can be changed
+at an arbitrary simulation instant. Check the installed COM API reference and
+examples before implementing the adapter; this note supplies no guessed methods.
+[3] https://cgi.ptvgroup.com/vision-help/VISSIM_2026_EN-DE/en-us/Content/15_Schnittstellen/Scripting.htm
+
+Not all API modules are included with every license. A separate external signal
+controller integration is documented through C/C++ control and dialog DLLs using
+SignalControl.DLL and SignalGUI.DLL. That is an alternative implementation path,
+not a claim that such a controller has been written or licensed for this project.
+[4] https://cgi.ptvgroup.com/vision-help/VISSIM_2026_EN-DE/en-us/Content/15_Schnittstellen/VissimProgrammierschnittstellen.htm
+[5] https://cgi.ptvgroup.com/vision-help/VISSIM_2026_EN-DE/en-us/Content/15_Schnittstellen/ExterneLSASteuerungsverfahren.htm
+
+Demo mode disables COM, saving, evaluations and AVI export; it limits simulations
+to 1800 s. It is insufficient for the requested reproducible controlled experiment.
+Vissim Kernel supports Windows/Linux, but has no GUI and no COM. It requires a
+license per instance and is not a drop-in replacement for this desktop workflow.
+[6] https://cgi.ptvgroup.com/vision-help/LicenseMgt_ENG/Content/License-mgt/Demo-version-info.htm
+[7] https://cgi.ptvgroup.com/vision-help/VISSIM_2026_EN-DE/en-us/Content/1_Einfuehrung/Vissim_Sim_Engine_verw.htm
+
+OPENDRIVE HANDOFF — VERIFIED CAPABILITY, UNVALIDATED PROJECT IMPORT
+Vissim 2026 documents ASAM OpenDRIVE 1.8.0 support. It derives links/connectors from
+reference lines, lane sections and junction information and imports geoReference
+projection information. Import explicitly permits left-hand traffic, appropriate
+for Mohali, and instructs the user to check the resulting network attributes.
+Some elements can fail import. Lane-change rules, lane closures and all speed-limit
+types are not fully transferred. Geometry, connectivity and restrictions need a
+native Vissim audit, especially the reconstructed roundabout and hospital approach.
+
+Critically, OpenDRIVE has no signal timing information. Supported signal semantics
+can create Fixed time(simple) controllers with 90 s cycles and equally allocated
+green periods. Those generated timings are defaults, not Mohali observations and
+not AmbuGo's controller. Demand, vehicle composition, behavioral assumptions and
+priority logic must be configured and validated separately.
+[8] https://cgi.ptvgroup.com/vision-help/VISSIM_2026_EN-DE/en-us/Content/5_Netzbearbeiten/Import_openDRIVE-elem.htm
+[9] https://cgi.ptvgroup.com/vision-help/VISSIM_2026_EN-DE/en-us/Content/5_Netzbearbeiten/Import_openDRIVE-imp.htm
+
+PROPOSED CLOSED-LOOP IMPLEMENTATION — REQUIRES VISSIM VALIDATION
+1. Import the georeferenced Mohali network; choose left-hand traffic; inspect every
+   mission route, lane connection, conflict area, signal head and road restriction.
+   Save a native .inpx project only after inspecting the import warnings.
+2. Configure explicit synthetic demand, vehicle mix, ordinary signals and ambulance
+   dispatches. Validate a short baseline for connectivity, queues, safety and flow.
+   Retain the declaration that this scenario is illustrative, not field calibrated.
+3. Build a step-synchronous adapter against the installed COM Help. Read actual
+   Vissim vehicle/queue/signal observations; run AmbuGo; apply supported route and
+   signal actions; advance Vissim; log observations, decisions and realized states.
+   Demonstrate route reassignment of an already moving ambulance in a small test
+   before claiming dynamic rerouting. Predeclared routes alone do not prove it.
+4. Keep a separate signal safety state machine: minimum green, amber, all-red,
+   conflict exclusion and ordinary-service restoration. A priority request is not
+   immediate green. Verify request-withheld and request-granted cases in Vissim.
+5. Run paired baseline/aggressive/selective scenarios with documented seeds and
+   demand, a recovery observation window and repeated runs for statistical claims.
+   Reassess forecast calibration under Vissim; SUMO calibration is not transferable
+   merely because the physical network is similar. Log any unresolved aftereffects.
+6. Record the actual Vissim simulation and its synchronized outputs. Keep raw native
+   project, logs, software version, licenses/modules used and video provenance.
+   Do not composite existing SUMO motion into Vissim imagery and call it a new run.
+
+Acceptance gate: native import passes; COM entitlement is confirmed; observed
+state/control round-trip works; moving-ambulance reroute works; safe signal changes
+are logged; actual native recording is saved. Until then, the transfer files and
+controller design are preparation artifacts, not a functioning Vissim integration.

@@ -1,0 +1,104 @@
+[
+  {
+    "name": "far",
+    "source_url": "https://www.google.com/maps/@30.7042347,76.7226514,14z",
+    "lon": 76.7226514,
+    "lat": 30.7042347,
+    "zoom": 14,
+    "capture_size": [
+      1280,
+      720
+    ],
+    "capture_center_pixel": [
+      640,
+      360
+    ],
+    "mercator_metres_per_pixel": 9.554628535647032,
+    "sha256": "7d83ddf465db75952e5869aca423562417003c10a38ce717a3c7d9c027cf3ec6"
+  },
+  {
+    "name": "wide",
+    "source_url": "https://www.google.com/maps/@30.7042347,76.7226514,15z",
+    "lon": 76.7226514,
+    "lat": 30.7042347,
+    "zoom": 15,
+    "capture_size": [
+      1280,
+      720
+    ],
+    "capture_center_pixel": [
+      640,
+      360
+    ],
+    "mercator_metres_per_pixel": 4.777314267823516,
+    "sha256": "a5ed75b5696e6bb09a4adba0aaf7452f4d8ae89a3f00a1b63cac84c928c92bf1"
+  },
+  {
+    "name": "middle",
+    "source_url": "https://www.google.com/maps/@30.7065,76.7245,16z",
+    "lon": 76.7245,
+    "lat": 30.7065,
+    "zoom": 16,
+    "capture_size": [
+      1280,
+      720
+    ],
+    "capture_center_pixel": [
+      640,
+      360
+    ],
+    "mercator_metres_per_pixel": 2.388657133911758,
+    "sha256": "2cdfb93d9f6151ff1d9fd228780ae4b1d958bcc13273b0d1187d45130205a219"
+  },
+  {
+    "name": "junction_mid",
+    "source_url": "https://www.google.com/maps/@30.71042,76.7129,17z",
+    "lon": 76.7129,
+    "lat": 30.71042,
+    "zoom": 17,
+    "capture_size": [
+      1280,
+      720
+    ],
+    "capture_center_pixel": [
+      640,
+      360
+    ],
+    "mercator_metres_per_pixel": 1.194328566955879,
+    "sha256": "0a81386cc7e9fc51169f72f75a4998742750d8ecb40fe5e9d8d230e77b54bdae"
+  },
+  {
+    "name": "hospital",
+    "source_url": "https://www.google.com/maps/@30.6951,76.73105,17z",
+    "lon": 76.73105,
+    "lat": 30.6951,
+    "zoom": 17,
+    "capture_size": [
+      1280,
+      720
+    ],
+    "capture_center_pixel": [
+      640,
+      360
+    ],
+    "mercator_metres_per_pixel": 1.194328566955879,
+    "sha256": "efe4d2f5ade06eb0650014540f885b1ad8eb15e357667bfc3bc4ec43e5c8ef3f"
+  },
+  {
+    "name": "junction",
+    "source_url": "https://www.google.com/maps/@30.71042,76.7129,18z",
+    "lon": 76.7129,
+    "lat": 30.71042,
+    "zoom": 18,
+    "capture_size": [
+      1280,
+      720
+    ],
+    "capture_center_pixel": [
+      640,
+      360
+    ],
+    "mercator_metres_per_pixel": 0.5971642834779395,
+    "sha256": "9d9af4cd5dc25425071fca49ba74d5abb6be7aeb669b05d3e6d36ad062789e4b"
+  }
+]

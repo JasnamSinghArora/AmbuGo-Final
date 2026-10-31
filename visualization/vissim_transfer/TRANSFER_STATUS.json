@@ -1,0 +1,21 @@
+{
+  "status": "PREPARATION_ONLY_NOT_RUN_IN_VISSIM",
+  "host_os": "macOS on ARM64",
+  "vissim_found_in_checked_application_folders": false,
+  "vissim_project_found": false,
+  "desired_ordinary_vehicles": 411,
+  "desired_ambulances": 3,
+  "needs": [
+    "A supported Windows machine with PTV Vissim and suitable license/modules",
+    "Actual import and topology/lane validation in Vissim",
+    "Rebuild signal groups, phases and intergreen constraints",
+    "Map source edges to imported Vissim links; configure demand and vehicle behavior",
+    "Implement and validate the closed-loop AmbuGo interface against installed COM documentation",
+    "Run matched baseline and AmbuGo experiments and export new trajectories"
+  ],
+  "not_transferred_automatically": [
+    "SUMO car-following and lane-changing behavior",
+    "Custom Python signal controller",
+    "Exact SUMO priority decisions, delays or travel-time results"
+  ]
+}

@@ -1,0 +1,5 @@
+# Tested rendering environment (Python 3.12). Simulator extras are separate.
+numpy==2.5.4
+Pillow==13.0.0
+matplotlib==3.11.2
+imageio-ffmpeg==0.6.0

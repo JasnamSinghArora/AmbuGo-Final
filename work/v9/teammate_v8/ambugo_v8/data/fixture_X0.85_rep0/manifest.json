@@ -1,0 +1,82 @@
+{
+  "provenance": "synthetic_design_not_measured",
+  "design_seed": 20261024,
+  "target_X": 0.85,
+  "realised_X_max": 0.85,
+  "kappa": 1.088685,
+  "replication": 0,
+  "warmup_s": 1800,
+  "files": [
+    {
+      "file": "hidden/ambulance_mission.csv",
+      "sha256": "90512b12d9c6b47f85bb150880cf6d1f6b72ce5d3f4b07a7d966e95532ba4f7b",
+      "rows": 1
+    },
+    {
+      "file": "hidden/desired_departures.csv",
+      "sha256": "16be8eee4e863a359b15cc0e75e1f09501d1e91e86011edc7c7ec205400be67d",
+      "rows": 2964
+    },
+    {
+      "file": "hidden/incidents.csv",
+      "sha256": "66c8e449350faaf3888bf17cc8c523a1143546ca4444fe5251e3d08e88ab001c",
+      "rows": 1
+    },
+    {
+      "file": "hidden/latent_shock.csv",
+      "sha256": "b441ab8df0249fb7e60775347f7fd250736988ab1a064cabbe26e371f5e4f3b2",
+      "rows": 70
+    },
+    {
+      "file": "hidden/state_at_dispatch.csv",
+      "sha256": "f09792b60e0a2b5144a0e5e9382cfd441643773d99c954fe2fb6f19abad7ac9d",
+      "rows": 189
+    },
+    {
+      "file": "public/edges.csv",
+      "sha256": "131c5ff92085e151dceca52becada0700b9e36262ff1d3c815cadd4dfa481036",
+      "rows": 59
+    },
+    {
+      "file": "public/mission_template.csv",
+      "sha256": "688f8e424179f8d3af27802637f1afedcd0786792e04c5c39598c29012a41888",
+      "rows": 1
+    },
+    {
+      "file": "public/nodes.csv",
+      "sha256": "900313668c37dc68122436f8c51835ccff240d75b89965e1c6ce3181c0714337",
+      "rows": 24
+    },
+    {
+      "file": "public/od_probabilities.csv",
+      "sha256": "f12f83e9865740cc7613bbbbd0ac46b5afa4d12af9e193f20d817145e13a4098",
+      "rows": 56
+    },
+    {
+      "file": "public/origin_rates.csv",
+      "sha256": "c0018a37b0f768c2273092d4c4a20025495f6a049e3d0770fb9924e1109fb686",
+      "rows": 8
+    },
+    {
+      "file": "public/route_sets.csv",
+      "sha256": "4ce8db2e783753165fb3c722a4b3426ecf31ae14cffa621030aca9bf682ab535",
+      "rows": 119
+    },
+    {
+      "file": "public/sensors.csv",
+      "sha256": "9d0cf1f0238a3187a61c8ebadb80d526f29fc921ba19e7702af461d6b020f51f",
+      "rows": 51
+    },
+    {
+      "file": "public/signal_plans.csv",
+      "sha256": "6d1a1a87f4dc0501b8a6b5decb207c86917fd977ffdbc8f3796772071d3231e3",
+      "rows": 16
+    },
+    {
+      "file": "public/vehicle_classes.csv",
+      "sha256": "16818baef38e929f7339ee6b9cc2d3d7a76bc56cf445a91826caeaff53dd2184",
+      "rows": 5
+    }
+  ],
+  "information_boundary": "controller may read public/ and live sensor feeds only; hidden/ is plant/evaluator truth"
+}

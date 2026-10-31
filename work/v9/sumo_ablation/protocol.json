@@ -1,0 +1,52 @@
+{
+  "phase": "ablation",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "loads": [
+    0.6,
+    0.95
+  ],
+  "missions_per_hour": [
+    4
+  ],
+  "configurations": [
+    {
+      "policy": "P0",
+      "label": "P0"
+    },
+    {
+      "policy": "P3",
+      "label": "P3_no_progress",
+      "harm_budget": 10000,
+      "epsilon": 0,
+      "action_mode": "strong",
+      "progress_guard_s": null
+    }
+  ],
+  "common": {
+    "step": 0.5,
+    "warmup": 1800,
+    "horizon": 7200,
+    "mission_end": 5400,
+    "save_trace": true
+  },
+  "model_sha256": "471a22911a2de9773fcd839872b3ba1ec5e00412c0ecc79142503e72f41cecf2",
+  "runner_sha256": "46fcfbbef3bb981624100df8035c35254a156f41cdcbbf379f30be9174dfa1f2",
+  "locked_at_unix": 1792945253.835744,
+  "expected_runs": 48,
+  "inference_unit": "scenario seed; missions clustered within each episode",
+  "primary_comparison": "P3 minus P2; ambulance mean and positive spatial occupancy exposure",
+  "scope": "synthetic microscopic simulation; no field calibration"
+}

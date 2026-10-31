@@ -1,0 +1,34 @@
+THIRD-PARTY CONTENT AND SOFTWARE
+
+GOOGLE MAPS
+The six files in assets/maps/ are fixed captures of Google Maps through its
+normal user interface, used as attributed backdrops in this educational
+simulation illustration. They are not a live traffic feed. The native Google
+Maps logo and Map data ©2026 Google credit are preserved in the map film.
+Google and its providers retain their rights; project code does not license
+these captures as freely reusable map imagery. Retain all attribution and
+review the applicable guidance for any different use or publication:
+https://about.google/brand-resource-center/products-and-services/geo-guidelines/
+The capture manifest records the exact viewing URLs, centers, zoom levels,
+pixel transform convention and file checksums. Rendering itself is offline.
+
+OPENSTREETMAP
+The modeled road network is derived from OpenStreetMap data, with project
+corrections and synthetic signal/controller assumptions. Attribution:
+© OpenStreetMap contributors. Data available under the Open Database License
+(ODbL)1.0. This applies to OSM-derived data, not to the Google screenshots.
+https://www.openstreetmap.org/copyright
+https://opendatacommons.org/licenses/odbl/1-0/
+The included corrected network is a frozen input to this demonstration, not a
+claim of current survey-grade geometry, lane permissions or signal plans.
+
+FONTS
+No Arial or other proprietary system font files are included. The map discovers
+an installed Arial font or uses DejaVu Sans from Matplotlib. The graph uses
+DejaVu Sans. Font and library licensing remains with their respective projects.
+
+SOFTWARE
+NumPy, Pillow, Matplotlib, imageio-ffmpeg, SUMO/libsumo, sumolib, TraCI and
+NetworkX are third-party dependencies installed separately. Their upstream
+licenses apply. No platform-specific binary, private access key, account token,
+or local Python environment is included in this archive.

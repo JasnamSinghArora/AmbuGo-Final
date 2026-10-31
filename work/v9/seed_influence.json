@@ -1,0 +1,23 @@
+{
+  "ambulance_mean_s": {
+    "full": 11.102141203703704,
+    "leave_one_seed_out_min": 10.61063829787234,
+    "leave_one_seed_out_max": 11.396099290780143,
+    "min_excluded": 2,
+    "max_excluded": 6
+  },
+  "positive_spatial_vehicle_s": {
+    "full": -3.8436773405349793,
+    "leave_one_seed_out_min": -4.042375229839769,
+    "leave_one_seed_out_max": -3.6666085500394012,
+    "min_excluded": 24,
+    "max_excluded": 33
+  },
+  "positive_individual_residence_vehicle_s": {
+    "full": -1.6399762088477365,
+    "leave_one_seed_out_min": -1.7247415944313107,
+    "leave_one_seed_out_max": -1.5304472025216707,
+    "min_excluded": 24,
+    "max_excluded": 2
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "connection_keys": 878,
+  "connector_options": 955,
+  "preserves_xml_option_order": true,
+  "simulation_advanced": false,
+  "exact_geometry_and_option_lists_equal": true,
+  "sumo_version": [
+    22,
+    "SUMO 1.28.0"
+  ]
+}

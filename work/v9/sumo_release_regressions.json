@@ -1,0 +1,27 @@
+{
+  "source_sha256": "44cedf73590afaef3bf7cf3350b78e5736e33a120309db506d111af93065de30",
+  "post_jump_index_sync": true,
+  "post_jump_forecast_wait_s": 74,
+  "post_jump_executed_wait_s": 75,
+  "forecast_tick_error": 1,
+  "zero_delay_samples_received": 57,
+  "zero_delay_past_pending_absent": true,
+  "global_time_band_result": {
+    "t": 0,
+    "ambulance": "ambulance",
+    "edge": "E",
+    "T": 108.0,
+    "global_min_T": 100.0,
+    "A": 0.0,
+    "action": [
+      10.0,
+      20.0
+    ],
+    "route": [
+      "E",
+      "A"
+    ],
+    "candidate_count": 8
+  },
+  "all_three_repairs_pass": true
+}

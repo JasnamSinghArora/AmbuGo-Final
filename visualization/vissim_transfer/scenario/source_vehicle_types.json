@@ -1,0 +1,67 @@
+[
+  {
+    "id": "car",
+    "vClass": "passenger",
+    "length": "4.5",
+    "width": "1.8",
+    "minGap": "2",
+    "tau": "1.2",
+    "accel": "2.4",
+    "decel": "4.5",
+    "sigma": "0",
+    "speedFactor": "1",
+    "speedDev": "0"
+  },
+  {
+    "id": "motorcycle",
+    "vClass": "passenger",
+    "length": "2.1",
+    "width": "0.8",
+    "minGap": "1",
+    "tau": "0.9",
+    "accel": "2.8",
+    "decel": "5",
+    "sigma": "0",
+    "speedFactor": "1",
+    "speedDev": "0"
+  },
+  {
+    "id": "bus",
+    "vClass": "passenger",
+    "length": "12",
+    "width": "2.5",
+    "minGap": "2.5",
+    "tau": "1.8",
+    "accel": "1.2",
+    "decel": "4",
+    "sigma": "0",
+    "speedFactor": "1",
+    "speedDev": "0"
+  },
+  {
+    "id": "goods",
+    "vClass": "passenger",
+    "length": "8",
+    "width": "2.3",
+    "minGap": "2.5",
+    "tau": "1.6",
+    "accel": "1.6",
+    "decel": "4",
+    "sigma": "0",
+    "speedFactor": "1",
+    "speedDev": "0"
+  },
+  {
+    "id": "ambulance",
+    "vClass": "passenger",
+    "length": "5",
+    "width": "2",
+    "minGap": "2",
+    "tau": "1.3",
+    "accel": "2",
+    "decel": "4.5",
+    "sigma": "0",
+    "speedFactor": "1",
+    "speedDev": "0"
+  }
+]

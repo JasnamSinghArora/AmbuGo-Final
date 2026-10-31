@@ -1,0 +1,55 @@
+{
+  "status": "PREPARATION_ONLY",
+  "source_sumo_location": {
+    "netOffset": "-661613.76,-3394640.60",
+    "convBoundary": "0.00,0.00,6071.55,5246.98",
+    "origBoundary": "76.687427,30.658634,76.772914,30.741703",
+    "projParameter": "+proj=utm +zone=43 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"
+  },
+  "opendrive_geoReference": "+proj=utm +zone=43 +ellps=WGS84 +datum=WGS84 +units=m +no_defs",
+  "opendrive_offset": {
+    "x": "661613.76000000",
+    "y": "3394640.60000000",
+    "z": "-0.00000000",
+    "hdg": "0"
+  },
+  "crs": "WGS84 / UTM zone43N; EPSG32643",
+  "source_local_to_utm": {
+    "easting": "local_x +661613.76",
+    "northing": "local_y +3394640.60"
+  },
+  "coordinates_unit": "meters",
+  "offset_note": "The OpenDRIVE header carries the positive UTM offset. Check that the native importer respects both geoReference and offset; otherwise apply the documented translation exactly once. No Vissim georeferencing has been verified.",
+  "reference_points": [
+    {
+      "name": "PCL controlled-junction reference point",
+      "local_xy": [
+        2412.505,
+        4138.7475
+      ],
+      "utm_xy": [
+        664026.265,
+        3398779.3475
+      ],
+      "lonlat": [
+        76.7128882907488,
+        30.71057382068164
+      ]
+    },
+    {
+      "name": "Fortis hospital mapped polygon centroid, not emergency entrance",
+      "local_xy": [
+        4169.893150962074,
+        2409.163383226376
+      ],
+      "utm_xy": [
+        665783.6531509621,
+        3397049.7633832265
+      ],
+      "lonlat": [
+        76.73095468333334,
+        30.69473045
+      ]
+    }
+  ]
+}

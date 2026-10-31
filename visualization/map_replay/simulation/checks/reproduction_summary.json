@@ -1,0 +1,387 @@
+{
+  "passed": true,
+  "reports": [
+    {
+      "case": "P0",
+      "policy": "P0",
+      "fields": {
+        "missions": true,
+        "plans": true,
+        "progress_guard_log": true,
+        "route_changes": true,
+        "priority_phase_admissions": true,
+        "signal_timing_violations": true,
+        "collision_events": true,
+        "teleport_events": true,
+        "schedule_sha256": true,
+        "ordinary_completed": true,
+        "ordinary_scheduled": true,
+        "net_sha256": true,
+        "edge_ids": true,
+        "junction_ids": true,
+        "routes": true,
+        "frozen_controller_sha256": true
+      },
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-26.5.2-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.5.4",
+          "networkx": "3.7",
+          "libsumo": "1.28.0",
+          "sumolib": "1.28.0",
+          "traci": "1.28.0",
+          "sumo-data": "1.28.0",
+          "eclipse-sumo": "1.28.0"
+        },
+        "exact_pinned_versions": true
+      },
+      "all_arrays_equal": true,
+      "arrays": {
+        "ambulance_lat": {
+          "equal": true,
+          "shape": [
+            3001,
+            3
+          ],
+          "dtype": "float64"
+        },
+        "ambulance_lon": {
+          "equal": true,
+          "shape": [
+            3001,
+            3
+          ],
+          "dtype": "float64"
+        },
+        "ambulance_route": {
+          "equal": true,
+          "shape": [
+            3001,
+            3
+          ],
+          "dtype": "int16"
+        },
+        "angle": {
+          "equal": true,
+          "shape": [
+            270248
+          ],
+          "dtype": "float32"
+        },
+        "edge": {
+          "equal": true,
+          "shape": [
+            270248
+          ],
+          "dtype": "int16"
+        },
+        "edge_halts": {
+          "equal": true,
+          "shape": [
+            3001,
+            479
+          ],
+          "dtype": "int16"
+        },
+        "fallback": {
+          "equal": true,
+          "shape": [
+            3001,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "lat": {
+          "equal": true,
+          "shape": [
+            270248
+          ],
+          "dtype": "float64"
+        },
+        "lon": {
+          "equal": true,
+          "shape": [
+            270248
+          ],
+          "dtype": "float64"
+        },
+        "offsets": {
+          "equal": true,
+          "shape": [
+            3002
+          ],
+          "dtype": "int64"
+        },
+        "ordinary_edge_counts": {
+          "equal": true,
+          "shape": [
+            3001,
+            479
+          ],
+          "dtype": "int16"
+        },
+        "ordinary_population": {
+          "equal": true,
+          "shape": [
+            3600
+          ],
+          "dtype": "int32"
+        },
+        "signal_edge": {
+          "equal": true,
+          "shape": [
+            3001,
+            7
+          ],
+          "dtype": "int16"
+        },
+        "signal_mode": {
+          "equal": true,
+          "shape": [
+            3001,
+            7
+          ],
+          "dtype": "uint8"
+        },
+        "signal_request": {
+          "equal": true,
+          "shape": [
+            3001,
+            7
+          ],
+          "dtype": "int16"
+        },
+        "speed": {
+          "equal": true,
+          "shape": [
+            270248
+          ],
+          "dtype": "float32"
+        },
+        "t": {
+          "equal": true,
+          "shape": [
+            3001
+          ],
+          "dtype": "float64"
+        },
+        "vehicle": {
+          "equal": true,
+          "shape": [
+            270248
+          ],
+          "dtype": "int32"
+        },
+        "x": {
+          "equal": true,
+          "shape": [
+            270248
+          ],
+          "dtype": "float32"
+        },
+        "y": {
+          "equal": true,
+          "shape": [
+            270248
+          ],
+          "dtype": "float32"
+        }
+      },
+      "ordinary_event_records_equal": true,
+      "passed": true
+    },
+    {
+      "case": "B1000",
+      "policy": "P3",
+      "fields": {
+        "missions": true,
+        "plans": true,
+        "progress_guard_log": true,
+        "route_changes": true,
+        "priority_phase_admissions": true,
+        "signal_timing_violations": true,
+        "collision_events": true,
+        "teleport_events": true,
+        "schedule_sha256": true,
+        "ordinary_completed": true,
+        "ordinary_scheduled": true,
+        "net_sha256": true,
+        "edge_ids": true,
+        "junction_ids": true,
+        "routes": true,
+        "frozen_controller_sha256": true
+      },
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-26.5.2-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.5.4",
+          "networkx": "3.7",
+          "libsumo": "1.28.0",
+          "sumolib": "1.28.0",
+          "traci": "1.28.0",
+          "sumo-data": "1.28.0",
+          "eclipse-sumo": "1.28.0"
+        },
+        "exact_pinned_versions": true
+      },
+      "all_arrays_equal": true,
+      "arrays": {
+        "ambulance_lat": {
+          "equal": true,
+          "shape": [
+            3001,
+            3
+          ],
+          "dtype": "float64"
+        },
+        "ambulance_lon": {
+          "equal": true,
+          "shape": [
+            3001,
+            3
+          ],
+          "dtype": "float64"
+        },
+        "ambulance_route": {
+          "equal": true,
+          "shape": [
+            3001,
+            3
+          ],
+          "dtype": "int16"
+        },
+        "angle": {
+          "equal": true,
+          "shape": [
+            270919
+          ],
+          "dtype": "float32"
+        },
+        "edge": {
+          "equal": true,
+          "shape": [
+            270919
+          ],
+          "dtype": "int16"
+        },
+        "edge_halts": {
+          "equal": true,
+          "shape": [
+            3001,
+            479
+          ],
+          "dtype": "int16"
+        },
+        "fallback": {
+          "equal": true,
+          "shape": [
+            3001,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "lat": {
+          "equal": true,
+          "shape": [
+            270919
+          ],
+          "dtype": "float64"
+        },
+        "lon": {
+          "equal": true,
+          "shape": [
+            270919
+          ],
+          "dtype": "float64"
+        },
+        "offsets": {
+          "equal": true,
+          "shape": [
+            3002
+          ],
+          "dtype": "int64"
+        },
+        "ordinary_edge_counts": {
+          "equal": true,
+          "shape": [
+            3001,
+            479
+          ],
+          "dtype": "int16"
+        },
+        "ordinary_population": {
+          "equal": true,
+          "shape": [
+            3600
+          ],
+          "dtype": "int32"
+        },
+        "signal_edge": {
+          "equal": true,
+          "shape": [
+            3001,
+            7
+          ],
+          "dtype": "int16"
+        },
+        "signal_mode": {
+          "equal": true,
+          "shape": [
+            3001,
+            7
+          ],
+          "dtype": "uint8"
+        },
+        "signal_request": {
+          "equal": true,
+          "shape": [
+            3001,
+            7
+          ],
+          "dtype": "int16"
+        },
+        "speed": {
+          "equal": true,
+          "shape": [
+            270919
+          ],
+          "dtype": "float32"
+        },
+        "t": {
+          "equal": true,
+          "shape": [
+            3001
+          ],
+          "dtype": "float64"
+        },
+        "vehicle": {
+          "equal": true,
+          "shape": [
+            270919
+          ],
+          "dtype": "int32"
+        },
+        "x": {
+          "equal": true,
+          "shape": [
+            270919
+          ],
+          "dtype": "float32"
+        },
+        "y": {
+          "equal": true,
+          "shape": [
+            270919
+          ],
+          "dtype": "float32"
+        }
+      },
+      "ordinary_event_records_equal": true,
+      "decision_records_equal": true,
+      "request_event_records_equal": true,
+      "passed": true
+    }
+  ]
+}

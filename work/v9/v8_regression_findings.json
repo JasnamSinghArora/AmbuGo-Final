@@ -1,0 +1,55 @@
+{
+  "source": "unmodified teammate v8",
+  "findings": [
+    {
+      "name": "ambulance_exceeds_full_link_storage",
+      "counterexample_observed": true,
+      "excess_events": [
+        {
+          "t": 10,
+          "edge": "A",
+          "occupancy_pcu": 3.5,
+          "storage_pcu": 2.0
+        }
+      ],
+      "audit_violations": []
+    },
+    {
+      "name": "ambulance_crosses_zero_discharge_capacity",
+      "counterexample_observed": true,
+      "discharges": [
+        {
+          "t": 48,
+          "edge": "A",
+          "capacity": 0.0,
+          "credit_after_discharge": 0.0,
+          "ambulance_pcu": 1.5
+        }
+      ],
+      "ambulance_arrival": 98.0,
+      "audit_violations": []
+    },
+    {
+      "name": "ambulance_discharged_without_pcu_credit_consumption",
+      "counterexample_observed": true,
+      "discharges": [
+        {
+          "t": 48,
+          "edge": "A",
+          "capacity": 0.5,
+          "credit_after_discharge": 1.0,
+          "ambulance_pcu": 1.5
+        }
+      ],
+      "audit_violations": []
+    },
+    {
+      "name": "unfinished_over_cap_wait_omitted_from_wait_metrics",
+      "counterexample_observed": true,
+      "unfinished_vehicle_wait_at_last_tick_s": 348.0,
+      "reported_max_wait_s": 0.0,
+      "reported_n_wait_over": 0,
+      "audit_violations": []
+    }
+  ]
+}

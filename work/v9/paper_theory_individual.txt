@@ -1,0 +1,27 @@
+## Individual ordinary traveler effects
+
+Spatial exposure can reflect changed location or ordering even when a traveler completes at the same time. We therefore prespecify an additional traveler-level outcome from the paired individual-event ledgers. The ordinary cohort, desired release times and observation window are identical across policies. For vehicle i, define its restricted residence under policy pi by
+
+$$j_i^{\pi}=\left[\min(e_i^{\pi},H)-\max(a_i,W)\right]_+.$$
+
+An unfinished vehicle has infinite exit time and therefore contributes through H. Define positive and negative individual effects as
+
+$$D_H^+=\sum_i[j_i^{\pi}-j_i^0]_+,\qquad D_H^-=\sum_i[j_i^0-j_i^{\pi}]_+.$$
+
+These quantities use vehicle-seconds and retain traveler identity. A reduction for one traveler cannot cancel an increase for another within D_H^+, although cancellation remains visible in the signed net effect.
+
+Proposition. For the common cohort and window,
+
+$$\Delta J_H=D_H^+-D_H^-,\qquad D_H^+\geq\max(\Delta J_H,0).$$
+
+Proof. Apply x=[x]_+-[-x]_+ to each individual residence difference and sum. The cohort accounting identity gives the sum of those differences as Delta J_H. Nonnegativity of D_H^- establishes the inequality. This result requires neither completed trips nor stationarity.
+
+There is no universal ordering between D_H^+ and fixed-partition spatial exposure A_H. For example, consider two ordinary vehicles released together and a two-unit observation window. Baseline exit times are one and two, while policy exit times are two and one. If both reside in the same spatial reporting group, network occupancy is unchanged at every time, so A_H is zero; one vehicle nevertheless gains one unit of residence and D_H^+ equals one. Conversely, a vehicle can use different spatial groups during the same residence interval and exit at the same time under both policies. Its individual residence effect is zero, while positive spatial exposure is nonzero. Thus spatial and individual outcomes answer different questions.
+
+Both quantities exceed the positive network-accumulation area
+
+$$C_H^+=\int_W^H[N^{\pi}(t)-N^0(t)]_+\,dt.$$
+
+For A_H this follows from the positive-part inequality under spatial aggregation. For D_H^+, note that common release times make each vehicle's presence-indicator difference have a constant sign: only the interval between its two exit times can differ. Consequently individual positive residence equals integrated positive individual presence; summing before taking the positive part can only reduce that value. Both outcomes also lie between zero and J_H^pi. These bounds provide additional ledger checks without equating their interpretations.
+
+D_H^+ measures additional residence observed within the window. It is not automatically full-trip delay: a trip can be unfinished at H or partially excluded before W. If releases occur within the window and both paired trips finish by H, each individual difference equals the difference in complete travel times from the common desired departure. Interpreting that difference as additional delay further requires a common free-flow reference whose subtraction cancels. We report the restricted traveler outcome as secondary; the policy-development criterion based on spatial exposure remains unchanged.

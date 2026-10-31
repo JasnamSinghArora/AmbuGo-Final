@@ -1,0 +1,167 @@
+{
+  "scope": "minimal corrected v8 mechanics, not recalibration or full microsimulation validation",
+  "checks_passed": 18,
+  "checks": [
+    {
+      "name": "strict_storage_even_with_ambulance",
+      "passed": true,
+      "max_excess": 0.0
+    },
+    {
+      "name": "ambulance_pays_source_wait",
+      "passed": true,
+      "source_wait_s": 43,
+      "insertion": 53
+    },
+    {
+      "name": "ordinary_accounting_excludes_queued_ambulance",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "name": "zero_capacity_prevents_ambulance_admission_and_discharge",
+      "passed": true,
+      "discharges": [],
+      "arrival": null
+    },
+    {
+      "name": "queued_ambulance_zero_capacity_conservation",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "name": "ambulance_uses_source_pcu_capacity",
+      "passed": true,
+      "insertion": 2
+    },
+    {
+      "name": "ambulance_enters_at_position_zero",
+      "passed": true,
+      "first_entry": {
+        "t": 2,
+        "ready": 52.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "name": "positive_capacity_allows_ambulance_eventually",
+      "passed": true,
+      "discharge": [
+        {
+          "t": 53,
+          "capacity": 0.5,
+          "credit_remaining": 0.0
+        }
+      ],
+      "arrival": 103.0
+    },
+    {
+      "name": "stopline_credit_is_debited",
+      "passed": true,
+      "discharge": [
+        {
+          "t": 53,
+          "capacity": 0.5,
+          "credit_remaining": 0.0
+        }
+      ]
+    },
+    {
+      "name": "credit_and_storage_audit_positive_case",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "name": "zero_capacity_after_admission_prevents_stopline_discharge",
+      "passed": true,
+      "insertion": 2,
+      "discharges": [],
+      "arrival": null
+    },
+    {
+      "name": "zero_capacity_after_admission_conservation",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "name": "full_network_stress_0_P0",
+      "passed": true,
+      "amb_tt": 467.2025202520251,
+      "amb_source_wait": 1,
+      "violations": []
+    },
+    {
+      "name": "full_network_stress_0_P2",
+      "passed": true,
+      "amb_tt": 241.20252025202524,
+      "amb_source_wait": 1,
+      "violations": []
+    },
+    {
+      "name": "full_network_stress_0_P4",
+      "passed": true,
+      "amb_tt": 244.20252025202524,
+      "amb_source_wait": 1,
+      "violations": []
+    },
+    {
+      "name": "full_network_stress_1_P0",
+      "passed": true,
+      "amb_tt": 580.2025202520251,
+      "amb_source_wait": 3,
+      "violations": []
+    },
+    {
+      "name": "full_network_stress_1_P2",
+      "passed": true,
+      "amb_tt": 410.20252025202524,
+      "amb_source_wait": 3,
+      "violations": []
+    },
+    {
+      "name": "full_network_stress_1_P4",
+      "passed": true,
+      "amb_tt": 376.20252025202524,
+      "amb_source_wait": 3,
+      "violations": []
+    }
+  ],
+  "runs": [
+    {
+      "rep": 0,
+      "policy": "P0",
+      "amb_tt": 467.2025202520251,
+      "source_wait": 1
+    },
+    {
+      "rep": 0,
+      "policy": "P2",
+      "amb_tt": 241.20252025202524,
+      "source_wait": 1
+    },
+    {
+      "rep": 0,
+      "policy": "P4",
+      "amb_tt": 244.20252025202524,
+      "source_wait": 1
+    },
+    {
+      "rep": 1,
+      "policy": "P0",
+      "amb_tt": 580.2025202520251,
+      "source_wait": 3
+    },
+    {
+      "rep": 1,
+      "policy": "P2",
+      "amb_tt": 410.20252025202524,
+      "source_wait": 3
+    },
+    {
+      "rep": 1,
+      "policy": "P4",
+      "amb_tt": 376.20252025202524,
+      "source_wait": 3
+    }
+  ]
+}

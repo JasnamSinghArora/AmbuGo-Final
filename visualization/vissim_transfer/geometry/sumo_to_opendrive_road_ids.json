@@ -1,0 +1,3432 @@
+{
+  "-1102818908#1": {
+    "opendrive_road_id": "2750",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-1102867830#1": {
+    "opendrive_road_id": "2751",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-1102867830#5": {
+    "opendrive_road_id": "2752",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-1102867830#6": {
+    "opendrive_road_id": "2753",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-1152322469": {
+    "opendrive_road_id": "2754",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-1215089863": {
+    "opendrive_road_id": "2755",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-1215089865#0": {
+    "opendrive_road_id": "2756",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-1276357766": {
+    "opendrive_road_id": "2757",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129020042#1": {
+    "opendrive_road_id": "2758",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129020042#20": {
+    "opendrive_road_id": "2759",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129020042#28": {
+    "opendrive_road_id": "2760",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129020042#9": {
+    "opendrive_road_id": "2761",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129020053#1": {
+    "opendrive_road_id": "2762",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129020053#11": {
+    "opendrive_road_id": "2763",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129020053#13": {
+    "opendrive_road_id": "2764",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129020053#14": {
+    "opendrive_road_id": "2765",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129020053#3": {
+    "opendrive_road_id": "2766",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129020053#5": {
+    "opendrive_road_id": "2767",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129020339#0": {
+    "opendrive_road_id": "2768",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129020339#17": {
+    "opendrive_road_id": "2769",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129020339#4": {
+    "opendrive_road_id": "2770",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129020339#6": {
+    "opendrive_road_id": "2771",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129020368#0": {
+    "opendrive_road_id": "2772",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129020368#1": {
+    "opendrive_road_id": "2773",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129020368#4": {
+    "opendrive_road_id": "2774",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129020425#7": {
+    "opendrive_road_id": "2775",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129020474#0": {
+    "opendrive_road_id": "2776",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129020474#5": {
+    "opendrive_road_id": "2777",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129020474#6": {
+    "opendrive_road_id": "2778",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129020477#4": {
+    "opendrive_road_id": "2779",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129029637#0": {
+    "opendrive_road_id": "2780",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129029637#4": {
+    "opendrive_road_id": "2781",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129029704#0": {
+    "opendrive_road_id": "2782",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129029705#2": {
+    "opendrive_road_id": "2783",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129029705#3": {
+    "opendrive_road_id": "2784",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129029705#6": {
+    "opendrive_road_id": "2785",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129029774#4": {
+    "opendrive_road_id": "2786",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129029789#12": {
+    "opendrive_road_id": "2787",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129029789#13": {
+    "opendrive_road_id": "2788",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129029789#6": {
+    "opendrive_road_id": "2789",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129040918#2": {
+    "opendrive_road_id": "2790",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129040923#10": {
+    "opendrive_road_id": "2791",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129040923#8": {
+    "opendrive_road_id": "2792",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129040923#9": {
+    "opendrive_road_id": "2793",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129040925#0": {
+    "opendrive_road_id": "2794",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129040925#2": {
+    "opendrive_road_id": "2795",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129040925#4": {
+    "opendrive_road_id": "2796",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129040925#9": {
+    "opendrive_road_id": "2797",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-129041138#2": {
+    "opendrive_road_id": "2798",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-1306065343": {
+    "opendrive_road_id": "2799",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-1306065344": {
+    "opendrive_road_id": "2800",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-1316373964#1": {
+    "opendrive_road_id": "2801",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-1449576998#1": {
+    "opendrive_road_id": "2802",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-1449576998#3": {
+    "opendrive_road_id": "2803",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-322624067#1": {
+    "opendrive_road_id": "2804",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-335062421#2": {
+    "opendrive_road_id": "2805",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-335062421#23": {
+    "opendrive_road_id": "2806",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-360389723#13": {
+    "opendrive_road_id": "2807",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-386496668": {
+    "opendrive_road_id": "2808",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-393943169": {
+    "opendrive_road_id": "2809",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-490004266": {
+    "opendrive_road_id": "2810",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-490900632": {
+    "opendrive_road_id": "2811",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-490900634": {
+    "opendrive_road_id": "2812",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-490901542": {
+    "opendrive_road_id": "2813",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-490901547": {
+    "opendrive_road_id": "2814",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-502070674#0": {
+    "opendrive_road_id": "2815",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-502070674#4": {
+    "opendrive_road_id": "2816",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-690185873": {
+    "opendrive_road_id": "2817",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-737813790": {
+    "opendrive_road_id": "2818",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "-790981496#6": {
+    "opendrive_road_id": "2819",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1056612808": {
+    "opendrive_road_id": "2820",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1056614841": {
+    "opendrive_road_id": "2821",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1102818908#1": {
+    "opendrive_road_id": "2822",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1102867830#1": {
+    "opendrive_road_id": "2823",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1102867830#2": {
+    "opendrive_road_id": "2824",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1102867830#6": {
+    "opendrive_road_id": "2825",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1103097010#0": {
+    "opendrive_road_id": "2826",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1103097010#1": {
+    "opendrive_road_id": "2827",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1103097011#0": {
+    "opendrive_road_id": "2828",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1103097011#1": {
+    "opendrive_road_id": "2829",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1103117744#0": {
+    "opendrive_road_id": "2830",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1103117746": {
+    "opendrive_road_id": "2831",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1103117747": {
+    "opendrive_road_id": "2832",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1103117749#0": {
+    "opendrive_road_id": "2833",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1103363562#0": {
+    "opendrive_road_id": "2834",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1103363562#1": {
+    "opendrive_road_id": "2835",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1103370021#0": {
+    "opendrive_road_id": "2836",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1103370022#0": {
+    "opendrive_road_id": "2837",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1103370022#3": {
+    "opendrive_road_id": "2838",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1103407443": {
+    "opendrive_road_id": "2839",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1152322468#0": {
+    "opendrive_road_id": "2840",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1215089865#0": {
+    "opendrive_road_id": "2841",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1215089865#1": {
+    "opendrive_road_id": "2842",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1215818938": {
+    "opendrive_road_id": "2843",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1215818939#0": {
+    "opendrive_road_id": "2844",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1215818939#1": {
+    "opendrive_road_id": "2845",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1215818940#0": {
+    "opendrive_road_id": "2846",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1215818940#1": {
+    "opendrive_road_id": "2847",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1215818941": {
+    "opendrive_road_id": "2848",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1215818942": {
+    "opendrive_road_id": "2849",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1215818943": {
+    "opendrive_road_id": "2850",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1215818944#0": {
+    "opendrive_road_id": "2851",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1215818944#1": {
+    "opendrive_road_id": "2852",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1215820808": {
+    "opendrive_road_id": "2853",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1215822550": {
+    "opendrive_road_id": "2854",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1215822551#0": {
+    "opendrive_road_id": "2855",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1215822551#1": {
+    "opendrive_road_id": "2856",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1215822553#0": {
+    "opendrive_road_id": "2857",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1215822554#1": {
+    "opendrive_road_id": "2858",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1215822554#3": {
+    "opendrive_road_id": "2859",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1215822554#4": {
+    "opendrive_road_id": "2860",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1215822555#0": {
+    "opendrive_road_id": "2861",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1215822556#1": {
+    "opendrive_road_id": "2862",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1215822556#4": {
+    "opendrive_road_id": "2863",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1215822559#0": {
+    "opendrive_road_id": "2864",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1215822559#1": {
+    "opendrive_road_id": "2865",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1215822559#2": {
+    "opendrive_road_id": "2866",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1215822560#1": {
+    "opendrive_road_id": "2867",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1215822561": {
+    "opendrive_road_id": "2868",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1216486944": {
+    "opendrive_road_id": "2869",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1216486945#0": {
+    "opendrive_road_id": "2870",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1216496536#0": {
+    "opendrive_road_id": "2871",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1216496539#0": {
+    "opendrive_road_id": "2872",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1216496539#1": {
+    "opendrive_road_id": "2873",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1216496539#2": {
+    "opendrive_road_id": "2874",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1216496540#0": {
+    "opendrive_road_id": "2875",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1216496542": {
+    "opendrive_road_id": "2876",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1216496545#1": {
+    "opendrive_road_id": "2877",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1216496546#0": {
+    "opendrive_road_id": "2878",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1216496547": {
+    "opendrive_road_id": "2879",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1216575501": {
+    "opendrive_road_id": "2880",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1216575502#0": {
+    "opendrive_road_id": "2881",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1216575502#1": {
+    "opendrive_road_id": "2882",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1216575504#0": {
+    "opendrive_road_id": "2883",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1216575505#1": {
+    "opendrive_road_id": "2884",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1216575508#0": {
+    "opendrive_road_id": "2885",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1216830589": {
+    "opendrive_road_id": "2886",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1216830590": {
+    "opendrive_road_id": "2887",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1216839139": {
+    "opendrive_road_id": "2888",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "1216839140": {
+    "opendrive_road_id": "2889",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1216839144": {
+    "opendrive_road_id": "2890",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1216839145#0": {
+    "opendrive_road_id": "2891",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1216839145#1": {
+    "opendrive_road_id": "2892",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1216839145#2": {
+    "opendrive_road_id": "2893",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1216839146": {
+    "opendrive_road_id": "2894",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1261383925": {
+    "opendrive_road_id": "2895",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1261383926": {
+    "opendrive_road_id": "2896",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1261383927": {
+    "opendrive_road_id": "2897",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1261385437": {
+    "opendrive_road_id": "2898",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1261385438": {
+    "opendrive_road_id": "2899",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1261385439": {
+    "opendrive_road_id": "2900",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1261392082": {
+    "opendrive_road_id": "2901",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1261425882": {
+    "opendrive_road_id": "2902",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1275160902": {
+    "opendrive_road_id": "2903",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1275175176#0": {
+    "opendrive_road_id": "2904",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1275175176#1": {
+    "opendrive_road_id": "2905",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1275227715#0": {
+    "opendrive_road_id": "2906",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1275227715#1": {
+    "opendrive_road_id": "2907",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1275227715#4": {
+    "opendrive_road_id": "2908",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1275227715#5": {
+    "opendrive_road_id": "2909",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1275227715#6": {
+    "opendrive_road_id": "2910",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1276356938#0": {
+    "opendrive_road_id": "2911",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1276356938#1": {
+    "opendrive_road_id": "2912",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1276356939": {
+    "opendrive_road_id": "2913",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1276356940#0": {
+    "opendrive_road_id": "2914",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1276356940#1": {
+    "opendrive_road_id": "2915",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1276356940#4": {
+    "opendrive_road_id": "2916",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1276357766": {
+    "opendrive_road_id": "2917",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1276362417": {
+    "opendrive_road_id": "2918",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020029#0": {
+    "opendrive_road_id": "2919",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "129020029#1": {
+    "opendrive_road_id": "2920",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "129020029#2": {
+    "opendrive_road_id": "2921",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "129020029#3": {
+    "opendrive_road_id": "2922",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "129020042#1": {
+    "opendrive_road_id": "2923",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020042#10": {
+    "opendrive_road_id": "2924",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020042#2": {
+    "opendrive_road_id": "2925",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020042#21": {
+    "opendrive_road_id": "2926",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020044#0": {
+    "opendrive_road_id": "2927",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "129020053#1": {
+    "opendrive_road_id": "2928",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020053#13": {
+    "opendrive_road_id": "2929",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020053#14": {
+    "opendrive_road_id": "2930",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020053#3": {
+    "opendrive_road_id": "2931",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020053#5": {
+    "opendrive_road_id": "2932",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020053#7": {
+    "opendrive_road_id": "2933",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020194#1": {
+    "opendrive_road_id": "2934",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020217#0": {
+    "opendrive_road_id": "2935",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020217#7": {
+    "opendrive_road_id": "2936",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020339#0": {
+    "opendrive_road_id": "2937",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020339#2": {
+    "opendrive_road_id": "2938",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020339#5": {
+    "opendrive_road_id": "2939",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020339#7": {
+    "opendrive_road_id": "2940",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020368#0": {
+    "opendrive_road_id": "2941",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020368#1": {
+    "opendrive_road_id": "2942",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020368#2": {
+    "opendrive_road_id": "2943",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020425#0": {
+    "opendrive_road_id": "2944",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020472#1": {
+    "opendrive_road_id": "2945",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "129020472#10": {
+    "opendrive_road_id": "2946",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "129020472#5": {
+    "opendrive_road_id": "2947",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "129020472#6": {
+    "opendrive_road_id": "2948",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "129020472#7": {
+    "opendrive_road_id": "2949",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "129020474#0": {
+    "opendrive_road_id": "2950",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020474#2": {
+    "opendrive_road_id": "2951",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020474#6": {
+    "opendrive_road_id": "2952",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129020477#0": {
+    "opendrive_road_id": "2953",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129029637#0": {
+    "opendrive_road_id": "2954",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129029637#1": {
+    "opendrive_road_id": "2955",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129029704#0": {
+    "opendrive_road_id": "2956",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129029704#1": {
+    "opendrive_road_id": "2957",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129029705#0": {
+    "opendrive_road_id": "2958",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129029705#3": {
+    "opendrive_road_id": "2959",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129029705#4": {
+    "opendrive_road_id": "2960",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129029774#0": {
+    "opendrive_road_id": "2961",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129029789#0": {
+    "opendrive_road_id": "2962",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129029789#13": {
+    "opendrive_road_id": "2963",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129029789#7": {
+    "opendrive_road_id": "2964",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129040918#2": {
+    "opendrive_road_id": "2965",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129040923#10": {
+    "opendrive_road_id": "2966",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129040923#9": {
+    "opendrive_road_id": "2967",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129040925#0": {
+    "opendrive_road_id": "2968",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129040925#2": {
+    "opendrive_road_id": "2969",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129040925#4": {
+    "opendrive_road_id": "2970",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129040925#6": {
+    "opendrive_road_id": "2971",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129040928": {
+    "opendrive_road_id": "2972",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "129040996": {
+    "opendrive_road_id": "2973",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129041027#0": {
+    "opendrive_road_id": "2974",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129041082#0": {
+    "opendrive_road_id": "2975",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129041082#1": {
+    "opendrive_road_id": "2976",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129041084#0": {
+    "opendrive_road_id": "2977",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129041114#0": {
+    "opendrive_road_id": "2978",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129041160#0": {
+    "opendrive_road_id": "2979",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129041160#2": {
+    "opendrive_road_id": "2980",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129041165": {
+    "opendrive_road_id": "2981",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "129041191#0": {
+    "opendrive_road_id": "2982",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129041191#3": {
+    "opendrive_road_id": "2983",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129041216#0": {
+    "opendrive_road_id": "2984",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129041216#1": {
+    "opendrive_road_id": "2985",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129041216#7": {
+    "opendrive_road_id": "2986",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129041234#0": {
+    "opendrive_road_id": "2987",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129041234#1": {
+    "opendrive_road_id": "2988",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129041234#2": {
+    "opendrive_road_id": "2989",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129041242#1": {
+    "opendrive_road_id": "2990",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129041249#1": {
+    "opendrive_road_id": "2991",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129041269#0": {
+    "opendrive_road_id": "2992",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129041269#4": {
+    "opendrive_road_id": "2993",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129041281#0": {
+    "opendrive_road_id": "2994",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129041281#1": {
+    "opendrive_road_id": "2995",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129041281#2": {
+    "opendrive_road_id": "2996",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129126240#0": {
+    "opendrive_road_id": "2997",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129126240#7": {
+    "opendrive_road_id": "2998",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129126240#8": {
+    "opendrive_road_id": "2999",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129126367#1": {
+    "opendrive_road_id": "3000",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129126367#6": {
+    "opendrive_road_id": "3001",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129130264#0": {
+    "opendrive_road_id": "3002",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129130264#2": {
+    "opendrive_road_id": "3003",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129130264#4": {
+    "opendrive_road_id": "3004",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129130270#0": {
+    "opendrive_road_id": "3005",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129130272#0": {
+    "opendrive_road_id": "3006",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129130272#1": {
+    "opendrive_road_id": "3007",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129130272#2": {
+    "opendrive_road_id": "3008",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129130367": {
+    "opendrive_road_id": "3009",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129130403": {
+    "opendrive_road_id": "3010",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129130409": {
+    "opendrive_road_id": "3011",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129130434": {
+    "opendrive_road_id": "3012",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129130447": {
+    "opendrive_road_id": "3013",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129130448": {
+    "opendrive_road_id": "3014",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129130542#3": {
+    "opendrive_road_id": "3015",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129130542#5": {
+    "opendrive_road_id": "3016",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129130557": {
+    "opendrive_road_id": "3017",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "129134356#0": {
+    "opendrive_road_id": "3018",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129134356#1": {
+    "opendrive_road_id": "3019",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129134356#2": {
+    "opendrive_road_id": "3020",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129134356#3": {
+    "opendrive_road_id": "3021",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129142115#2": {
+    "opendrive_road_id": "3022",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129142168#0": {
+    "opendrive_road_id": "3023",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "129142180#1": {
+    "opendrive_road_id": "3024",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1305900787": {
+    "opendrive_road_id": "3025",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1305900788": {
+    "opendrive_road_id": "3026",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1306065343": {
+    "opendrive_road_id": "3027",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1306065344": {
+    "opendrive_road_id": "3028",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1316373963": {
+    "opendrive_road_id": "3029",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1359123100#0": {
+    "opendrive_road_id": "3030",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1359123100#1": {
+    "opendrive_road_id": "3031",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1359796923#0": {
+    "opendrive_road_id": "3032",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1359796923#1": {
+    "opendrive_road_id": "3033",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1449576998#0": {
+    "opendrive_road_id": "3034",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1449576998#3": {
+    "opendrive_road_id": "3035",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1449576999#1": {
+    "opendrive_road_id": "3036",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1449576999#2": {
+    "opendrive_road_id": "3037",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1449576999#3": {
+    "opendrive_road_id": "3038",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "1449576999#4": {
+    "opendrive_road_id": "3039",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "172380615#1": {
+    "opendrive_road_id": "3040",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "172381952": {
+    "opendrive_road_id": "3041",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "172382026": {
+    "opendrive_road_id": "3042",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "172382686#1": {
+    "opendrive_road_id": "3043",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "172382686#12": {
+    "opendrive_road_id": "3044",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "172382686#14": {
+    "opendrive_road_id": "3045",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "172382686#2": {
+    "opendrive_road_id": "3046",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "172382686#3": {
+    "opendrive_road_id": "3047",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "172382686#4": {
+    "opendrive_road_id": "3048",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "172382686#6": {
+    "opendrive_road_id": "3049",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "172382686#7": {
+    "opendrive_road_id": "3050",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "172383771#0": {
+    "opendrive_road_id": "3051",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "172383771#1": {
+    "opendrive_road_id": "3052",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "172655365#1": {
+    "opendrive_road_id": "3053",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "172656229#0": {
+    "opendrive_road_id": "3054",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "172656229#2": {
+    "opendrive_road_id": "3055",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "172658127#1": {
+    "opendrive_road_id": "3056",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "172660579#0": {
+    "opendrive_road_id": "3057",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "172660580#0": {
+    "opendrive_road_id": "3058",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "172816434#1": {
+    "opendrive_road_id": "3059",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "256539968": {
+    "opendrive_road_id": "3060",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "256541472#0": {
+    "opendrive_road_id": "3061",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "301258006": {
+    "opendrive_road_id": "3062",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "301258007": {
+    "opendrive_road_id": "3063",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "301258009": {
+    "opendrive_road_id": "3064",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "305664097#1": {
+    "opendrive_road_id": "3065",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "305664097#2": {
+    "opendrive_road_id": "3066",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "305664129#0": {
+    "opendrive_road_id": "3067",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "305664129#1": {
+    "opendrive_road_id": "3068",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "305664129#3": {
+    "opendrive_road_id": "3069",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "305664129#4": {
+    "opendrive_road_id": "3070",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "322624067#0": {
+    "opendrive_road_id": "3071",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "335061218": {
+    "opendrive_road_id": "3072",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "335061220": {
+    "opendrive_road_id": "3073",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "335061221": {
+    "opendrive_road_id": "3074",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "335061223#1": {
+    "opendrive_road_id": "3075",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "335061226": {
+    "opendrive_road_id": "3076",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "335061227": {
+    "opendrive_road_id": "3077",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "335061229#1": {
+    "opendrive_road_id": "3078",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "335061229#2": {
+    "opendrive_road_id": "3079",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "335061229#5": {
+    "opendrive_road_id": "3080",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "335061229#7": {
+    "opendrive_road_id": "3081",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "335061229#8": {
+    "opendrive_road_id": "3082",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "335062410#0": {
+    "opendrive_road_id": "3083",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "335062410#1": {
+    "opendrive_road_id": "3084",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "335062412#0": {
+    "opendrive_road_id": "3085",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "335062412#2": {
+    "opendrive_road_id": "3086",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "335062412#5": {
+    "opendrive_road_id": "3087",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "335062420#1": {
+    "opendrive_road_id": "3088",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "335062420#7": {
+    "opendrive_road_id": "3089",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "335062421#0": {
+    "opendrive_road_id": "3090",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "335062421#5": {
+    "opendrive_road_id": "3091",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "335062422#0": {
+    "opendrive_road_id": "3092",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "336606107#0": {
+    "opendrive_road_id": "3093",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "336606107#4": {
+    "opendrive_road_id": "3094",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "336606107#5": {
+    "opendrive_road_id": "3095",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "336665910#0": {
+    "opendrive_road_id": "3096",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "336665910#1": {
+    "opendrive_road_id": "3097",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "336665911#0": {
+    "opendrive_road_id": "3098",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "336665911#1": {
+    "opendrive_road_id": "3099",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "336665911#2": {
+    "opendrive_road_id": "3100",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "336665911#3": {
+    "opendrive_road_id": "3101",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "360389723#0": {
+    "opendrive_road_id": "3102",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "375252501#0": {
+    "opendrive_road_id": "3103",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "375252501#1": {
+    "opendrive_road_id": "3104",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "375252501#11": {
+    "opendrive_road_id": "3105",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "375252501#12": {
+    "opendrive_road_id": "3106",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "375252501#2": {
+    "opendrive_road_id": "3107",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "375252501#3": {
+    "opendrive_road_id": "3108",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "375252501#5": {
+    "opendrive_road_id": "3109",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "375252501#6": {
+    "opendrive_road_id": "3110",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "375252501#8": {
+    "opendrive_road_id": "3111",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "375252502#0": {
+    "opendrive_road_id": "3112",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "375252502#10": {
+    "opendrive_road_id": "3113",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "375252502#3": {
+    "opendrive_road_id": "3114",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "375252502#6": {
+    "opendrive_road_id": "3115",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "375252502#7": {
+    "opendrive_road_id": "3116",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "375252502#8": {
+    "opendrive_road_id": "3117",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "375252504#0": {
+    "opendrive_road_id": "3118",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "375252504#1": {
+    "opendrive_road_id": "3119",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "375252526": {
+    "opendrive_road_id": "3120",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "380936316#1": {
+    "opendrive_road_id": "3121",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "383448410#0": {
+    "opendrive_road_id": "3122",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "383448411#0": {
+    "opendrive_road_id": "3123",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "383448411#1": {
+    "opendrive_road_id": "3124",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "383448411#2": {
+    "opendrive_road_id": "3125",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "383450897#0": {
+    "opendrive_road_id": "3126",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "383450897#1": {
+    "opendrive_road_id": "3127",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "383450898#0": {
+    "opendrive_road_id": "3128",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "383450898#1": {
+    "opendrive_road_id": "3129",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "383450898#2": {
+    "opendrive_road_id": "3130",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "383450899": {
+    "opendrive_road_id": "3131",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "383634122": {
+    "opendrive_road_id": "3132",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "383634123": {
+    "opendrive_road_id": "3133",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "383634124": {
+    "opendrive_road_id": "3134",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "383634125": {
+    "opendrive_road_id": "3135",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "383634126#0": {
+    "opendrive_road_id": "3136",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "383634126#1": {
+    "opendrive_road_id": "3137",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "383634127": {
+    "opendrive_road_id": "3138",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "383635751#1": {
+    "opendrive_road_id": "3139",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "386348783": {
+    "opendrive_road_id": "3140",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "386348784": {
+    "opendrive_road_id": "3141",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "386496668": {
+    "opendrive_road_id": "3142",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "386496676#0": {
+    "opendrive_road_id": "3143",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "386496676#1": {
+    "opendrive_road_id": "3144",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "386496733#0": {
+    "opendrive_road_id": "3145",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "386496733#1": {
+    "opendrive_road_id": "3146",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "386496752#0": {
+    "opendrive_road_id": "3147",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "386496752#1": {
+    "opendrive_road_id": "3148",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "386680467#0": {
+    "opendrive_road_id": "3149",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "386680469#0": {
+    "opendrive_road_id": "3150",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "393943169": {
+    "opendrive_road_id": "3151",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "409302057": {
+    "opendrive_road_id": "3152",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "490004266": {
+    "opendrive_road_id": "3153",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "490011341": {
+    "opendrive_road_id": "3154",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "490899742#0": {
+    "opendrive_road_id": "3155",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "490899742#1": {
+    "opendrive_road_id": "3156",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "490899745": {
+    "opendrive_road_id": "3157",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "490900632": {
+    "opendrive_road_id": "3158",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "490900634": {
+    "opendrive_road_id": "3159",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "490901542": {
+    "opendrive_road_id": "3160",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "490901547": {
+    "opendrive_road_id": "3161",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "491263251": {
+    "opendrive_road_id": "3162",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "491263252": {
+    "opendrive_road_id": "3163",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "491263253": {
+    "opendrive_road_id": "3164",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "491263254": {
+    "opendrive_road_id": "3165",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "491268272": {
+    "opendrive_road_id": "3166",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "491268274#0": {
+    "opendrive_road_id": "3167",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "491268276#0": {
+    "opendrive_road_id": "3168",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "491268276#1": {
+    "opendrive_road_id": "3169",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "491268601#2": {
+    "opendrive_road_id": "3170",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "491268601#3": {
+    "opendrive_road_id": "3171",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "491268601#6": {
+    "opendrive_road_id": "3172",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "491268602#0": {
+    "opendrive_road_id": "3173",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "491268602#1": {
+    "opendrive_road_id": "3174",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "491268602#2": {
+    "opendrive_road_id": "3175",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "491268603#2": {
+    "opendrive_road_id": "3176",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "491268603#7": {
+    "opendrive_road_id": "3177",
+    "lane_ids": [
+      "-1",
+      "-2"
+    ],
+    "source_lane_count": 2
+  },
+  "492553492#0": {
+    "opendrive_road_id": "3178",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "492555221#1": {
+    "opendrive_road_id": "3179",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "492555222#1": {
+    "opendrive_road_id": "3180",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "492975975#0": {
+    "opendrive_road_id": "3181",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "492975975#1": {
+    "opendrive_road_id": "3182",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "502069381": {
+    "opendrive_road_id": "3183",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "502070223": {
+    "opendrive_road_id": "3184",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "502070224": {
+    "opendrive_road_id": "3185",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "502070672": {
+    "opendrive_road_id": "3186",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "502070674#0": {
+    "opendrive_road_id": "3187",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "502070674#2": {
+    "opendrive_road_id": "3188",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "576132524#0": {
+    "opendrive_road_id": "3189",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "576165780#0": {
+    "opendrive_road_id": "3190",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "576165781#0": {
+    "opendrive_road_id": "3191",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "576165781#1": {
+    "opendrive_road_id": "3192",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "576509526#4": {
+    "opendrive_road_id": "3193",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "666594568#0": {
+    "opendrive_road_id": "3194",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "666594568#2": {
+    "opendrive_road_id": "3195",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "675337623": {
+    "opendrive_road_id": "3196",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "675340296#0": {
+    "opendrive_road_id": "3197",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "675340296#1": {
+    "opendrive_road_id": "3198",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "675352599": {
+    "opendrive_road_id": "3199",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "675952797": {
+    "opendrive_road_id": "3200",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "690172828#0": {
+    "opendrive_road_id": "3201",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "690172828#1": {
+    "opendrive_road_id": "3202",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "690172828#2": {
+    "opendrive_road_id": "3203",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "690185872": {
+    "opendrive_road_id": "3204",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "690185873": {
+    "opendrive_road_id": "3205",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "734366564#0": {
+    "opendrive_road_id": "3206",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "734366565#0": {
+    "opendrive_road_id": "3207",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "734366565#1": {
+    "opendrive_road_id": "3208",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "735359355": {
+    "opendrive_road_id": "3209",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "737813783#0": {
+    "opendrive_road_id": "3210",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "737813783#1": {
+    "opendrive_road_id": "3211",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "737813784": {
+    "opendrive_road_id": "3212",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "737813787#0": {
+    "opendrive_road_id": "3213",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "737813787#1": {
+    "opendrive_road_id": "3214",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "737813787#3": {
+    "opendrive_road_id": "3215",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "737813789": {
+    "opendrive_road_id": "3216",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "737813790": {
+    "opendrive_road_id": "3217",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "755073707#1": {
+    "opendrive_road_id": "3218",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "790981496#0": {
+    "opendrive_road_id": "3219",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "978541519#0": {
+    "opendrive_road_id": "3220",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "978541519#1": {
+    "opendrive_road_id": "3221",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "978541539#0": {
+    "opendrive_road_id": "3222",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "FORTIS_RB_ARC_0": {
+    "opendrive_road_id": "3223",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "FORTIS_RB_ARC_1": {
+    "opendrive_road_id": "3224",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "FORTIS_RB_ARC_2": {
+    "opendrive_road_id": "3225",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "FORTIS_RB_ARC_3": {
+    "opendrive_road_id": "3226",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "FORTIS_RB_ARC_4": {
+    "opendrive_road_id": "3227",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  },
+  "FORTIS_RB_ARC_5": {
+    "opendrive_road_id": "3228",
+    "lane_ids": [
+      "-1"
+    ],
+    "source_lane_count": 1
+  }
+}

@@ -1,0 +1,162 @@
+[
+  {
+    "id": "R1",
+    "authors": "Hosseinzadeh, M.; Sinopoli, B.; Kolmanovsky, I.; Baruah, S.",
+    "year": 2022,
+    "title": "MPC-Based Emergency Vehicle-Centered Multi-Intersection Traffic Control",
+    "publication": "arXiv:2204.05405",
+    "url": "https://arxiv.org/html/2204.05405",
+    "access": "Primary author full HTML inspected 25 October 2026",
+    "support": "Prior emergency-centered routing and multi-intersection control; eliminates any claim that their combination alone is new. Control authority includes inlet gates; a matched comparison must acknowledge different actuation."
+  },
+  {
+    "id": "R2",
+    "authors": "Gregoire, J.; Qian, X.; Frazzoli, E.; de La Fortelle, A.; Wongpiromsarn, T.",
+    "year": 2014,
+    "title": "Capacity-aware back-pressure traffic signal control",
+    "publication": "arXiv:1309.6484v3",
+    "url": "https://arxiv.org/abs/1309.6484",
+    "access": "Primary author abstract and metadata inspected 25 October 2026",
+    "support": "Finite storage and congestion propagation motivate normalized capacity-sensitive control. Abstract-level use; no theorem transferred to the new microscopic controller."
+  },
+  {
+    "id": "R3",
+    "authors": "Varaiya, P.",
+    "year": 2013,
+    "title": "Max pressure control of a network of signalized intersections",
+    "publication": "Transportation Research Part C 36, 177-195. DOI 10.1016/j.trc.2013.08.014",
+    "url": "https://doi.org/10.1016/j.trc.2013.08.014",
+    "access": "Author publication list and original authored abstract indexed; publisher full text unavailable",
+    "support": "Classical store-and-forward max-pressure framework has explicit assumptions including unbounded point queues; its throughput theorem is not a guarantee for arbitrary finite-storage, clearance-constrained SUMO control."
+  },
+  {
+    "id": "R4",
+    "authors": "Alvarez Lopez, P.; Behrisch, M.; Bieker-Walz, L.; Erdmann, J.; Flotterod, Y.-P.; Hilbrich, R.; Lucken, L.; Rummel, J.; Wagner, P.; Wiessner, E.",
+    "year": 2018,
+    "title": "Microscopic Traffic Simulation using SUMO",
+    "publication": "2018 21st IEEE International Conference on Intelligent Transportation Systems, 2575-2582. DOI 10.1109/ITSC.2018.8569938",
+    "url": "https://elib.dlr.de/127994/1/08569938.pdf",
+    "access": "Primary conference paper hosted by DLR and official SUMO citation metadata inspected",
+    "support": "Simulator background and workflow; no inherent field fidelity or city calibration implied."
+  },
+  {
+    "id": "R5",
+    "authors": "Eclipse SUMO project",
+    "year": 2026,
+    "title": "Traffic Lights and Change Traffic Lights State",
+    "publication": "Official online documentation; accessed 25 October 2026",
+    "url": "https://eclipse.dev/sumo/docs/Simulation/Traffic_Lights.html",
+    "access": "Official control documentation inspected",
+    "support": "Direct state-setting leaves subsequent signal transitions to the control application; yellow/all-red and compatible movement checks remain application responsibilities."
+  },
+  {
+    "id": "R6",
+    "authors": "Federal Highway Administration",
+    "year": 2019,
+    "title": "Traffic Analysis Toolbox Volume III Guidelines for Applying Traffic Microsimulation Modeling Software Chapter 5 Model Calibration",
+    "publication": "FHWA-HOP-18-036",
+    "url": "https://ops.fhwa.dot.gov/publications/fhwahop18036/chapter5.htm",
+    "access": "Official calibration chapter inspected",
+    "support": "Default parameters need calibration against observed time-varying traffic conditions; software error checking does not establish predictive accuracy."
+  },
+  {
+    "id": "R7",
+    "authors": "Federal Highway Administration",
+    "year": 2019,
+    "title": "Traffic Analysis Toolbox Volume III Chapter 6 Alternatives Analysis",
+    "publication": "FHWA-HOP-18-036",
+    "url": "https://ops-dr.fhwa.dot.gov/publications/fhwahop18036/chapter6.htm",
+    "access": "Official alternatives chapter inspected",
+    "support": "Use stochastic replications and sensitivity analysis. The present paired statistical analysis is specified separately and does not blindly import every printed test formula."
+  },
+  {
+    "id": "R8",
+    "authors": "Geroliminis, N.; Daganzo, C. F.",
+    "year": 2008,
+    "title": "Existence of urban-scale macroscopic fundamental diagrams Some experimental findings",
+    "publication": "Transportation Research Part B 42(9), 759-770. DOI 10.1016/j.trb.2008.02.002",
+    "url": "https://doi.org/10.1016/j.trb.2008.02.002",
+    "access": "Author institutional abstract at Technion inspected",
+    "support": "Yokohama evidence supports useful aggregate relations under measured regional conditions; no universal city-level law is inferred."
+  },
+  {
+    "id": "R9",
+    "authors": "Loder, A.; Ambuhl, L.; Menendez, M.; Axhausen, K. W.",
+    "year": 2019,
+    "title": "Understanding traffic capacity of urban networks",
+    "publication": "Scientific Reports 9, 16283. DOI 10.1038/s41598-019-51539-5",
+    "url": "https://www.nature.com/articles/s41598-019-51539-5",
+    "access": "Primary publisher full article inspected 25 October 2026",
+    "support": "Network structure and critical traffic accumulation vary across regional networks; supports reporting spatial heterogeneity rather than treating a single congestion threshold as universal."
+  },
+  {
+    "id": "R10",
+    "authors": "Efron, B.",
+    "year": 1979,
+    "title": "Bootstrap Methods Another Look at the Jackknife",
+    "publication": "The Annals of Statistics 7(1), 1-26. DOI 10.1214/aos/1176344552",
+    "url": "https://doi.org/10.1214/aos/1176344552",
+    "access": "Original paper indexed PDF and publisher metadata checked",
+    "support": "Bootstrap foundation; seed-level resampling implementation and its approximate coverage are specified in this study."
+  },
+  {
+    "id": "R11",
+    "authors": "Holm, S.",
+    "year": 1979,
+    "title": "A Simple Sequentially Rejective Multiple Test Procedure",
+    "publication": "Scandinavian Journal of Statistics 6(2), 65-70. JSTOR 4615733",
+    "url": "https://www.jstor.org/stable/4615733",
+    "access": "Canonical original journal reference metadata checked; full-text access unavailable",
+    "support": "Step-down familywise adjustment requires valid input p-values and does not repair exchangeability or selection problems."
+  },
+  {
+    "id": "R12",
+    "authors": "Clopper, C. J.; Pearson, E. S.",
+    "year": 1934,
+    "title": "The Use of Confidence or Fiducial Limits Illustrated in the Case of the Binomial",
+    "publication": "Biometrika 26(4), 404-413. DOI 10.1093/biomet/26.4.404",
+    "url": "https://doi.org/10.1093/biomet/26.4.404",
+    "access": "Original scanned paper indexed and bibliographic metadata checked",
+    "support": "Exact binomial intervals require independent trials; several missions sharing a scenario require clustering or an episode-level event."
+  },
+  {
+    "id": "R13",
+    "authors": "Phipson, B.; Smyth, G. K.",
+    "year": 2010,
+    "title": "Permutation p-values should never be zero calculating exact p-values when permutations are randomly drawn",
+    "publication": "Statistical Applications in Genetics and Molecular Biology 9(1), Article 39. DOI 10.2202/1544-6115.1585",
+    "url": "https://arxiv.org/abs/1603.05766",
+    "access": "Primary author abstract and journal reference inspected; arXiv deposit 2016",
+    "support": "Monte Carlo permutation plus-one correction; this correction does not establish the underlying sign-exchangeability assumption."
+  },
+  {
+    "id": "R14",
+    "authors": "Zoabi, R.; Jabari, S. E.; Haddad, J.",
+    "year": 2026,
+    "title": "On the stability of decentralized max-pressure traffic signal control",
+    "publication": "Transportation Research Part C. DOI 10.1016/j.trc.2026.105764",
+    "url": "https://doi.org/10.1016/j.trc.2026.105764",
+    "access": "Primary publisher abstract and introduction inspected 25 October 2026",
+    "support": "Practical inter-green and minimum-green constraints can alter ideal max-pressure stability; no unverified detailed theorem or numerical gain imported."
+  },
+  {
+    "id": "R15",
+    "authors": "Daganzo, C. F.",
+    "year": 1994,
+    "title": "The Cell Transmission Model Network Traffic",
+    "publication": "UCB-ITS-PWP-94-12; related journal publication 1995",
+    "url": "https://escholarship.org/content/qt9pz309w7/qt9pz309w7.pdf",
+    "access": "Primary technical report previously reviewed in project source register",
+    "support": "Conservation and sending/receiving constraints are established traffic-flow foundations; they do not validate ambulance-specific microscopic behavior."
+  },
+  {
+    "id": "R16",
+    "authors": "Kanagaraj, V.; Treiber, M.",
+    "year": 2018,
+    "title": "Self-driven particle model for mixed traffic and other disordered flows",
+    "publication": "Physica A. DOI 10.1016/j.physa.2018.05.086",
+    "url": "https://arxiv.org/html/1805.05076",
+    "access": "Primary author paper previously reviewed in project source register",
+    "support": "Width-sensitive mixed-traffic interactions require lateral behavior; PCU conversion alone is not a calibrated model of Indian emergency yielding."
+  }
+]

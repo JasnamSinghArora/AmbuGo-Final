@@ -1,0 +1,99 @@
+{
+  "phase": "main",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47
+  ],
+  "loads": [
+    0.6,
+    0.8,
+    0.95
+  ],
+  "missions_per_hour": [
+    1,
+    4,
+    10
+  ],
+  "configurations": [
+    {
+      "policy": "P0",
+      "label": "P0"
+    },
+    {
+      "policy": "P1",
+      "label": "P1"
+    },
+    {
+      "policy": "P2",
+      "label": "P2"
+    },
+    {
+      "policy": "P3",
+      "label": "P3",
+      "harm_budget": 10000,
+      "epsilon": 0,
+      "action_mode": "strong",
+      "progress_guard_s": 20
+    }
+  ],
+  "common": {
+    "step": 0.5,
+    "warmup": 1800,
+    "horizon": 7200,
+    "mission_end": 5400,
+    "save_trace": true
+  },
+  "model_sha256": "471a22911a2de9773fcd839872b3ba1ec5e00412c0ecc79142503e72f41cecf2",
+  "runner_sha256": "46fcfbbef3bb981624100df8035c35254a156f41cdcbbf379f30be9174dfa1f2",
+  "locked_at_unix": 1792944159.8428822,
+  "expected_runs": 1728,
+  "inference_unit": "scenario seed; missions clustered within each episode",
+  "primary_comparison": "P3 minus P2; ambulance mean and positive spatial occupancy exposure",
+  "scope": "synthetic microscopic simulation; no field calibration"
+}

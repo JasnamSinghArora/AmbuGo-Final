@@ -1,0 +1,15 @@
+{
+  "file": "work/v9/sumo_study.py",
+  "sha256": "471a22911a2de9773fcd839872b3ba1ec5e00412c0ecc79142503e72f41cecf2",
+  "backend": "libsumo1.28.0",
+  "primary_step": 0.5,
+  "sensitivity_step": 0.25,
+  "initial_sha256": "44cedf73590afaef3bf7cf3350b78e5736e33a120309db506d111af93065de30",
+  "initial_source": "work/v9/sumo_study_initial.py",
+  "progress_guard_options": [
+    null,
+    20,
+    10,
+    5
+  ]
+}

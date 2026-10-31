@@ -1,0 +1,137 @@
+{
+  "corrected_junction_ids": [
+    "cluster_1424619016_1424619018"
+  ],
+  "correction": "Replace OSM-modeled crossroads with imagery-derived clockwise circulating lane and retained approach IDs; topology and physical simulation changed, not visual output warped.",
+  "digitized_island_center_pixel": [
+    1186.0,
+    800.0
+  ],
+  "island_center_lonlat": [
+    76.73223372656662,
+    30.696251219854325
+  ],
+  "ring_centerline_radius_m": 17.5,
+  "assumed_island_radius_m": 11.0,
+  "estimated_digitization_uncertainty_m": 2,
+  "lane_width_assumed_m": 3.2,
+  "ring_speed_assumed_mps": 5.56,
+  "source_imagery_sha256": "60cc9aa40711d3138be6ba781f0bcaaed4dce4b5ca87c68c64a57cc6e83b4bdb",
+  "date_uncertainty": "Esri source acquisition date unavailable. OSM versus imagery discrepancy may reflect different dates; not surveyed current geometry.",
+  "original_net_sha256": "a02025b3fec8db79655d1191eaf2dbba66b0d245bcbde315791805c8120530d4",
+  "corrected_net_sha256": "5a831f71fd0e8d41423ebf9253497a39c47697c905331f3b7b558370f3777773",
+  "stock_signal_no_demand_route_arrival_s": 201.0,
+  "validation_collisions": 0,
+  "closest_recorded_vehicle_front_to_island_center_m": 17.422594475902066,
+  "validation_note": "Actual corrected SUMO trajectory inspected against registered satellite image; path now circulates outside visible island. No-demand test establishes traversability only, not traffic capacity or calibrated behavior.",
+  "final_policy_geometry_audit": [
+    {
+      "policy": "P0",
+      "schedule_sha256": "574223d825fdba35922d91a00e5efa5ff0877ccd14f6a66720935679bf606c09",
+      "missions": [
+        {
+          "id": "a000",
+          "depart": 600,
+          "insertion": 600.5,
+          "arrival": 1017.5,
+          "travel_s": 417.5,
+          "censored": false
+        },
+        {
+          "id": "a001",
+          "depart": 660,
+          "insertion": 660.5,
+          "arrival": 1168.5,
+          "travel_s": 508.5,
+          "censored": false
+        },
+        {
+          "id": "a002",
+          "depart": 760,
+          "insertion": 760.5,
+          "arrival": 1276.5,
+          "travel_s": 516.5,
+          "censored": false
+        }
+      ],
+      "collision_events": 0,
+      "teleport_events": 0,
+      "minimum_all_recorded_vehicle_front_distance_from_corrected_island_center_m": 17.40020179748535,
+      "minimum_ambulance_front_distance_m": 17.40020179748535,
+      "recorded_front_points_inside_11m_island": 0
+    },
+    {
+      "policy": "P2",
+      "schedule_sha256": "574223d825fdba35922d91a00e5efa5ff0877ccd14f6a66720935679bf606c09",
+      "missions": [
+        {
+          "id": "a000",
+          "depart": 600,
+          "insertion": 600.5,
+          "arrival": 919.5,
+          "travel_s": 319.5,
+          "censored": false
+        },
+        {
+          "id": "a001",
+          "depart": 660,
+          "insertion": 660.5,
+          "arrival": 1059.5,
+          "travel_s": 399.5,
+          "censored": false
+        },
+        {
+          "id": "a002",
+          "depart": 760,
+          "insertion": 760.5,
+          "arrival": 1083.5,
+          "travel_s": 323.5,
+          "censored": false
+        }
+      ],
+      "collision_events": 0,
+      "teleport_events": 0,
+      "minimum_all_recorded_vehicle_front_distance_from_corrected_island_center_m": 17.40020179748535,
+      "minimum_ambulance_front_distance_m": 17.40020179748535,
+      "recorded_front_points_inside_11m_island": 0
+    },
+    {
+      "policy": "P3",
+      "schedule_sha256": "574223d825fdba35922d91a00e5efa5ff0877ccd14f6a66720935679bf606c09",
+      "missions": [
+        {
+          "id": "a000",
+          "depart": 600,
+          "insertion": 600.5,
+          "arrival": 922.5,
+          "travel_s": 322.5,
+          "censored": false
+        },
+        {
+          "id": "a001",
+          "depart": 660,
+          "insertion": 660.5,
+          "arrival": 1062.5,
+          "travel_s": 402.5,
+          "censored": false
+        },
+        {
+          "id": "a002",
+          "depart": 760,
+          "insertion": 760.5,
+          "arrival": 1083.5,
+          "travel_s": 323.5,
+          "censored": false
+        }
+      ],
+      "collision_events": 0,
+      "teleport_events": 0,
+      "minimum_all_recorded_vehicle_front_distance_from_corrected_island_center_m": 17.39475440979004,
+      "minimum_ambulance_front_distance_m": 17.39475440979004,
+      "recorded_front_points_inside_11m_island": 0
+    }
+  ],
+  "all_policy_schedules_match": true,
+  "all_recorded_positions_clear_corrected_island": true,
+  "final_capped_simulation_network_sha256": "bde374f42e5a34567bd053eefb0f9d39cd1702c651da2e50aae2a1346cecd917"
+}

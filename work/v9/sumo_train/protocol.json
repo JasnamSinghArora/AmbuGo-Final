@@ -1,0 +1,125 @@
+{
+  "phase": "train",
+  "seeds": [
+    5001,
+    5002,
+    5003,
+    5004,
+    5005,
+    5006
+  ],
+  "loads": [
+    0.7,
+    0.9
+  ],
+  "missions_per_hour": [
+    4
+  ],
+  "configurations": [
+    {
+      "policy": "P0",
+      "label": "P0"
+    },
+    {
+      "policy": "P2",
+      "label": "P2"
+    },
+    {
+      "policy": "P3",
+      "label": "P3_b600_e0_multi",
+      "harm_budget": 600,
+      "epsilon": 0,
+      "action_mode": "multi"
+    },
+    {
+      "policy": "P3",
+      "label": "P3_b600_e0_strong",
+      "harm_budget": 600,
+      "epsilon": 0,
+      "action_mode": "strong"
+    },
+    {
+      "policy": "P3",
+      "label": "P3_b600_e10_multi",
+      "harm_budget": 600,
+      "epsilon": 10,
+      "action_mode": "multi"
+    },
+    {
+      "policy": "P3",
+      "label": "P3_b600_e10_strong",
+      "harm_budget": 600,
+      "epsilon": 10,
+      "action_mode": "strong"
+    },
+    {
+      "policy": "P3",
+      "label": "P3_b2400_e0_multi",
+      "harm_budget": 2400,
+      "epsilon": 0,
+      "action_mode": "multi"
+    },
+    {
+      "policy": "P3",
+      "label": "P3_b2400_e0_strong",
+      "harm_budget": 2400,
+      "epsilon": 0,
+      "action_mode": "strong"
+    },
+    {
+      "policy": "P3",
+      "label": "P3_b2400_e10_multi",
+      "harm_budget": 2400,
+      "epsilon": 10,
+      "action_mode": "multi"
+    },
+    {
+      "policy": "P3",
+      "label": "P3_b2400_e10_strong",
+      "harm_budget": 2400,
+      "epsilon": 10,
+      "action_mode": "strong"
+    },
+    {
+      "policy": "P3",
+      "label": "P3_b10000_e0_multi",
+      "harm_budget": 10000,
+      "epsilon": 0,
+      "action_mode": "multi"
+    },
+    {
+      "policy": "P3",
+      "label": "P3_b10000_e0_strong",
+      "harm_budget": 10000,
+      "epsilon": 0,
+      "action_mode": "strong"
+    },
+    {
+      "policy": "P3",
+      "label": "P3_b10000_e10_multi",
+      "harm_budget": 10000,
+      "epsilon": 10,
+      "action_mode": "multi"
+    },
+    {
+      "policy": "P3",
+      "label": "P3_b10000_e10_strong",
+      "harm_budget": 10000,
+      "epsilon": 10,
+      "action_mode": "strong"
+    }
+  ],
+  "common": {
+    "step": 0.5,
+    "warmup": 1800,
+    "horizon": 7200,
+    "mission_end": 5400,
+    "save_trace": true
+  },
+  "model_sha256": "44cedf73590afaef3bf7cf3350b78e5736e33a120309db506d111af93065de30",
+  "locked_at_unix": 1792943128.526494,
+  "expected_runs": 168,
+  "inference_unit": "scenario seed; missions clustered within each episode",
+  "primary_comparison": "P3 minus P2; ambulance mean and positive spatial occupancy exposure",
+  "scope": "synthetic microscopic simulation; no field calibration"
+}

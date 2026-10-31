@@ -1,0 +1,94 @@
+# Microscopic study of joint routing and selective priority
+
+## Physical network and experimental scope
+
+We implement a microscopic extension in Eclipse SUMO 1.28.0, accessed through its in-process libsumo interface. The synthetic district contains 16 signalized junctions, eight boundary nodes and 59 directed road links. The network compiler retains physical internal junction connections, forbids turnarounds and imports link lengths, lane counts and speed limits from the declared geometry. Links are approximately 260–472 m long, have one or two lanes, and use free-flow speeds of 8.33 or 11.11 m/s. All compiled lanes have width 3.2 m. This is an independently specified microscopic experiment on shared geometry; it is not an exact reproduction of the mesoscopic demand and controller implementation.
+
+Ordinary vehicle classes are cars, motorcycles, autorickshaws, buses and goods vehicles, with probabilities 0.53, 0.30, 0.10, 0.04 and 0.03. Class-specific vehicle dimensions, minimum gaps, acceleration, deceleration and desired headways are imported from the public fixture. We retain SUMO's normal car-following and lane-changing behavior, set car-following imperfection sigma to zero, and set speed factor to one with zero speed-factor deviation. Ambulances are modeled as signal-obeying passenger-class vehicles, length 5 m, width 2 m, minimum gap 2 m and desired headway 1.3 s. Their acceleration and deceleration are 2 and 4.5 m/s². There is no ambulance speed privilege, red-light bypass, rescue-lane device or sublane filtering in this experiment. Physical pedestrians, incidents and observed city calibration are outside this microscopic implementation.
+
+Physical dynamics use 0.5 s steps; the controller updates once per second. A 0.25 s step is available for numerical sensitivity analysis. Simulations start empty, run for 7,200 s, and schedule missions during 1,800–5,400 s. The first 1,800 s is an initialization period rather than a claim of demonstrated equilibrium. Ordinary demand continues through the common observation horizon.
+
+## Nominal loading and paired scenarios
+
+Ordinary OD probabilities are fixed public inputs. Each OD pair receives up to four loopless routes within 1.35 times its minimum free-flow travel time. Route probabilities are proportional to exp(−0.05 times excess free-flow time), with times in seconds. These fixed ordinary routes determine historical assigned link flows. The assumed PCU factors are 1, 0.5, 1, 3 and 2.5 for the five classes. Let f_e denote assigned PCU flow under an origin rate of 0.1 vehicles/s, s_e the assumed link saturation flow in PCU/s, and κ a demand multiplier. For junction j with m_j approaches, define y_e=κf_e/s_e and Y_j=sum_e y_e. A Webster-inspired design uses
+
+$$L_j=25+7m_j,\qquad C_j^*=\min\{150,\max[60,(1.5L_j+5)/\max(1-Y_j,0.05),25+13m_j]\}.$$
+
+The 25 s term reserves a pedestrian service opportunity. Five seconds per approach covers amber and all-red; the extra two seconds in L_j is a design allowance for startup loss. Available green is distributed as an 8 s minimum per approach plus remaining green proportional to y_e. Green durations are then rounded to integer seconds and the executable cycle is recomputed. Bisection chooses κ such that the largest continuous-design ratio X_e=κf_e/(s_e g_e/C_j^*) equals the requested nominal load. This quantity is an ex ante PCU planning index, calculated before duration rounding. It is not measured saturation or calibrated capacity in SUMO; physical occupancy, source queues and completion rates remain separate outcomes.
+
+Minute-level demand is modulated by Z_m=0.75Z_(m−1)+ε_m, with independent normal innovations of standard deviation 0.18 and stationary initialization. The multiplier is exp[Z_m−Var(Z_m)/2], giving mean one. Conditional origin arrival rates are 0.1κ times this shared multiplier. Poisson event times are rounded upward to integer-second desired releases. Destination, class and route draws use streams separate from the demand clock. With M missions in the one-hour mission window, dispatch k is ceil[1800+(k+0.15+0.70U_k)3600/M], k=0,…,M−1. Origins are sampled uniformly from six declared boundary origins; the hospital boundary BE1 is the destination. Missions may overlap when physical trips intersect in time. M is a scheduled dose, not a Poisson mission process.
+
+SHA-256 namespaced seeds separate demand shocks, release clocks, vehicle attributes, sensors and missions. Every policy in a paired comparison receives identical ordinary releases, classes, fixed ordinary routes and ambulance mission schedules. The controller receives public geometry, historical assigned flows and nominal signal design, together with current observations; future release and mission arrays are excluded from its state.
+
+## Causal traffic observations
+
+The controller receives link vehicle counts every five seconds, with a two-second receipt delay. Added count error has probabilities 3/7 at zero and 1/7 at each of −2, −1, 1 and 2; negative reported counts are clipped to zero. Sensor availability follows a two-state process, with available-to-missing probability 0.015 and missing-to-available probability 0.25 per sampling opportunity. Missing observations leave the last received value unchanged. Identical namespaced observation draws are used across paired policies, although the underlying traffic counts respond to their own interventions. A zero-delay sensitivity assimilates observations immediately. Ambulance link and longitudinal position are assumed available exactly at the one-second decision times.
+
+Let n̂_e be the most recently received count, λ̄_e the public historical vehicle arrival rate, and t_e^ff=L_e/v_e. We use q̂_e=[n̂_e−λ̄_e t_e^ff]_+ as a transparent queue proxy. Its discharge-time proxy is d̂_e=q̂_e/max(s_e/p̄,0.1), where p̄ is mean PCU per ordinary vehicle. Counts include vehicles moving along the link, so q̂_e is neither a direct queue measurement nor an unbiased estimator. Its adequacy must be judged by realized policy outcomes.
+
+## Route and intervention selection
+
+At each ambulance link entry, the route domain contains up to four loopless continuations to BE1 within 1.5 times minimum continuation free-flow time, excluding an immediate U-turn. If necessary, the legal incumbent continuation replaces the fourth candidate. An action a=(h,l) specifies trigger look-ahead and requested green hold. The multi-action library is {(0,0),(10,20),(20,40),(30,60)} seconds; the strong-action library retains {(0,0),(30,60)}. The action library, burden threshold B and predicted-time tolerance ε are selected on development episodes, then frozen.
+
+For a candidate approach e, let w_e(τ) be nominal cyclic residual wait at predicted arrival offset τ. Forecasts begin from the actual current stage, then assume cyclic continuation without future priority or service-age overrides. Let δ_e be the earliest legal switch delay: zero during its own green; remaining minimum green plus 5 s during a conflicting green; remaining amber plus 2 s during amber; remaining all-red during clearance; or remaining 25 s pedestrian opportunity. The priority feasibility proxy requires
+
+$$[h+\widehat d_e-\delta_e]_++\widehat d_e+2\leq l.$$
+
+The two-second term is a startup allowance. This expression uses the current legal switch delay, even for downstream forecasts; it is an explicit approximation rather than a complete future controller simulation. Receiving headroom requires n̂_out<0.85K_out, using the declared aggregate link-storage count K. If the feasibility and headroom checks hold, predicted time benefit is b_e=[w_e(τ)−[δ_e−τ]_+]_+; otherwise it is zero. The no-priority action has zero benefit.
+
+For nonzero actions, estimate displaced green D_e=min(l,max[5,h+d̂_e]). For conflicting approach j, define
+
+$$\widehat C_e=\sum_{j\ne e}\left[\widehat q_j D_e+\frac{\bar\lambda_jD_e^2}{2\max(1-X_j,0.05)}\right].$$
+
+The first term represents waiting accumulated by an existing queue during a service interruption; the second borrows an isolated-queue capacity-slack mechanism. Units are vehicle-seconds. The denominator floor controls numerical growth. This is a ranking surrogate, not a bound on network harm: spillback, turn interactions, observer error and future service reallocations can invalidate its magnitudes. Selective admission requires b_e≥5 s, Ĉ_e≤B and receiving headroom.
+
+Route ETA is accumulated recursively: add remaining free-flow travel on the current link, full free-flow travel on later links, estimated queue discharge time, and nominal residual wait less admitted benefit. The route burden is the sum of admitted Ĉ_e terms. Every route–action pair is evaluated. Let T̂_min be the smallest candidate ETA. Initial selection minimizes (predicted burden, predicted ETA, route identifier, action identifier) among candidates satisfying T̂≤T̂_min+ε.
+
+A 10 s switching hysteresis then favors the incumbent route when its minimum predicted ETA exceeds the initially selected ETA by no more than 10 s. Retention is allowed only if an incumbent action remains within the original global T̂_min+ε cap; within that retained route, minimum burden is preferred. While the ambulance remains in selective mode, this preserves its finite-domain predicted-time band, although hysteresis can replace the global minimum-burden route. Neither the band nor the burden surrogate guarantees an actual near-fastest trip or globally optimal city routing.
+
+P0 uses the same observations and traffic-aware routing without priority. P1 selects routes without anticipating priority and subsequently applies aggressive preemption. P2 anticipates aggressive preemption during route selection. P3 uses the joint selective rule above. All policies retain physical receiving constraints and the same base signal controller. P1 and P2 use 30 s look-ahead and 60 s requested holds; their time-based routing also uses 10 s switching hysteresis.
+
+## Priority execution and competing missions
+
+A priority request becomes eligible when remaining-distance free-flow ETA is no greater than h+d̂_e. P3 then applies its benefit, burden and headroom gates. Once internally admitted, a bounded lease forwards the request even if its own successful green reduces the estimated benefit or changes the trigger condition. Expiry is tied to elapsed approach green, with a 120 s limit from admission while awaiting service. The request is released on link departure, inadequate observed headroom or expiry, and cannot automatically renew on that same approach. The cap limits discretionary holding; an already longer nominal green may continue under ordinary control. P1 and P2 continue aggressive requests while approaching the junction. Conflicting requests are ordered by dispatch time and ambulance identifier, so the oldest eligible mission receives the junction request. This deterministic arbitration is not a globally optimized multi-ambulance schedule.
+
+Each junction protects one incoming approach at a time. Green cannot be truncated before 8 s; amber lasts 3 s and all-red 2 s. A started 25 s pedestrian service opportunity is completed without interruption. The opportunity is an all-red reservation, not a simulated pedestrian crossing. After actual service, the cyclic pointer is synchronized to the served approach. A common guard gives precedence to an observed occupied approach, or pedestrian opportunity, whose service age reaches 150 s; the most overdue wins. This guard measures service age, not individual vehicle waiting time, and provides no unconditional 180 s wait guarantee. A longest-count alternative selects the approach with the largest observed count at discretionary stage choices; it is not max-pressure control.
+
+## Causal escalation and development selection
+
+For ambulance a observed on regular edge e at position x_a(t), define executed free-flow progress and excess elapsed time by
+
+$$P_a(t)=\sum_{f\in\mathcal E_a^{\mathrm{completed}}(t)}L_f/v_f+\max(0,x_a(t))/v_e,\qquad D_a(t)=[t-d_a-P_a(t)]_+.$$
+
+Only actually traversed regular edges receive completed-edge credit. Future route edges are excluded. Evaluation occurs at one-second observations on regular edges, not before insertion or during internal-junction traversal. Internal connectors receive no free-flow allowance; their elapsed time contributes at the next regular-edge observation. Starting elapsed time at desired dispatch includes insertion waiting when the vehicle first becomes observable.
+
+Each ambulance has its own irreversible escalation flag, initially zero. If D_a exceeds threshold γ, the flag becomes one, its own lease is cleared, and it immediately replans even within its current link. It thereafter uses P2's joint time-oriented scoring, strong (30,60) request and aggressive admission for the rest of that mission. Other ambulances retain their own modes. Arbitration, physical receiving capacity, service-age guards and clearances remain common. The threshold is a causal progress trigger, not a guarantee of γ seconds relative to P2: P2 may pre-clear earlier, subsequent traffic differs, and an executed detour also earns free-flow credit. The predicted ε band applies only before escalation.
+
+Parameter-selection grids used seeds 5001–5006, nominal loads 0.7 and 0.9 and four scheduled missions. The initial 168-run grid compared 12 unguarded selective configurations and P0/P2; none met the 20 s mean-ambulance margin against P2. A subsequent 132-run grid tested nine strong-action combinations of B∈{600,2400,10000} and γ∈{5,10,20}, with ε=0, plus P0/P2. Among configurations meeting the development margin, selection minimized mean positive spatial exposure A. The frozen configuration is B=10000 vehicle-seconds, ε=0, strong actions and γ=20 s. Its development mean difference from P2 was +17.5625 s ambulance time and −3810.875 vehicle-seconds of A. B=2400 tied on these development scores; stable label order selected B=10000. These are selection statistics, not held-out evidence.
+
+The locked main grid comprises 48 new seeds 0–47, three nominal loads {0.6,0.8,0.95}, mission counts {1,4,10} and four policies, totaling 1,728 runs. Missions within an episode remain clustered; the scenario seed is the inferential unit. No main outcome is used to modify the policy or selection criterion.
+
+## Exhaustive accounting and algorithm
+
+For ordinary vehicle i, let d_i be desired release and a_i its observed completion time, or infinity if incomplete. With W=1800 and H=7200, restricted residence is
+
+$$J=\sum_i[\min(a_i,H)-\max(d_i,W)]_+.$$
+
+At every physical step, an exhaustive ordinary-only partition contains 59 regular links, one aggregate internal-junction group and eight desired-but-uninserted origin queues. Ambulances are removed from all counts. Its population equals desired releases minus ordinary completions. Left-endpoint integration at the physical timestep is checked against the individual-residence formula. For paired policy π and P0,
+
+$$\Delta J=\Delta t\sum_{t,g}(N_g^\pi-N_g^0),\qquad A=\Delta t\sum_{t,g}[N_g^\pi-N_g^0]_+.$$
+
+Thus A≥max(ΔJ,0) on this fixed partition. A measures positive spatial accumulation differences, including moving traffic; it is not exclusively stopped queues. Both metrics are restricted to the common horizon. Neither a continuing difference nor an unfinished recovery proves a lower bound on eventual signed cost. Ambulance travel begins at desired dispatch, includes insertion waiting, and is restricted at H with nonarrival reported separately.
+
+As a secondary endpoint fixed before main execution, we retain positive individual restricted-residence burden H_ind=sum_i[R_i^π−R_i^0]_+, where R_i=[min(a_i,H)−max(d_i,W)]_+. Identical ordinary IDs pair each ordinary vehicle across policies. This metric can expose individual harm hidden by signed network totals without treating each spatial displacement as extra trip time. It also satisfies H_ind≥max(ΔJ,0). It was not used to choose the policy; A remains the tuning objective. Neither metric converts vehicle burden to passenger or clinical benefit.
+
+Algorithm
+1. Generate and freeze the policy-independent scenario; initialize signals and delayed observations.
+2. At each integer second, assimilate received samples and update active ambulance positions.
+3. On each regular-edge observation, update executed progress and irreversibly escalate that ambulance if its threshold is crossed. At entry or escalation, score its mode-specific route–action domain and install the continuation; the ε cap applies only in selective mode.
+4. Keep the selected local action between replans. Forward active selective leases before new-request trigger gates; prohibit renewal after expiry on that edge. Use aggressive requests for escalated missions, then arbitrate competing requests.
+5. Apply the common service-age guard and legal stage transitions; advance physical dynamics by two 0.5 s steps.
+6. At every physical step, audit the exhaustive census; retain every unfinished trip and mission.
+7. Integrate paired burdens and reconcile census residence with individual event records.
+
+Teleportation is disabled. Collisions, attempted teleport starts, completed signal-interval timing violations, route changes, priority requests, lease expiries and observer availability are recorded. Exceptions or physical failures are retained as explicit failures rather than successful censored trips. Conservation and timing checks establish software accounting properties; they do not establish calibrated road behavior. The executable method is frozen by SHA-256 471a22911a2de9773fcd839872b3ba1ec5e00412c0ecc79142503e72f41cecf2. Development pilots are excluded from held-out inference.

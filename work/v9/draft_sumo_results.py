@@ -1,0 +1,45 @@
+from pathlib import Path
+import json
+H=Path(__file__).resolve().parent
+a=json.loads((H/'sumo_analysis.json').read_text());v=a['verification'];g=a['aggregate'];c={r['comparison']:r['metrics'] for r in a['aggregate_contrasts']}
+def f(z,d=2):return f"{z['mean']:.{d}f} [{z['lo']:.{d}f}, {z['hi']:.{d}f}]"
+t=c['P3-P2']['time_s'];sp=c['P3-P2']['A_vh'];di=c['P3-P2']['Dplus_vh'];net=c['P3-P2']['deltaJ_vh']
+passT=t['hi']<20;passA=sp['hi']<0
+compound='supported' if passT and passA else 'not demonstrated'
+statusT='below' if passT else 'above';statusA='below' if passA else 'not below'
+ratio=100*(1-g['P3']['time_s']['mean']/g['P0']['time_s']['mean'])
+text=f'''## Completed experiment and verification
+
+All 1,728 planned primary microscopic runs completed. The records contain 432 matched four-policy scenario groups, with 48 independent seed blocks for balanced aggregate inference. Desired ordinary schedules and mission dispatches matched across all four policies in each group. The physical-step census identity and individual-residence reconciliation had maximum discrepancies of {v['partition_max']} vehicles and {v['residence_max']:.1f} vehicle-seconds. No collision events, teleport starts or completed signal-interval timing violations were recorded across {v['completed_signal_intervals']:,} completed signal intervals. These are model diagnostics, not estimates of real-road safety. The maximum observed service age was {v['max_service_age']:.0f} s, illustrating why a service-age intervention threshold is not an unconditional wait bound.
+
+The primary batch contains {v['n_mission_trips']:,} ambulance mission evaluations across policy replays. {'Every scheduled mission completed by the common end.' if v['all_missions_completed'] else 'Some scheduled missions remained unfinished at the common end; the mission ledger and restricted outcomes retain them.'} The largest recorded ambulance travel time was {v['max_ambulance_s']:.1f} s. Up to {v['max_simultaneous_ambulances']} ambulances were simultaneously active. Between {v['unfinished_range'][0]} and {v['unfinished_range'][1]} ordinary vehicles remained at the common horizon across runs. The maximum terminal external source queue was {v['source_waiting_max']} vehicles. Thus the experiment neither assumes an empty end state nor deletes vehicles that have not completed.
+
+## Main ambulance and aftereffect comparisons
+
+Balanced common-horizon restricted ambulance duration was {g['P0']['time_s']['mean']:.2f} s under route-only S0, {g['P1']['time_s']['mean']:.2f} s under sequential SEQ, {g['P2']['time_s']['mean']:.2f} s under aggressive joint JFAST and {g['P3']['time_s']['mean']:.2f} s under JSEL. JSEL's mean was {ratio:.1f} percent lower than S0's in this balanced synthetic grid. The paired JSEL-minus-S0 difference was {f(c['P3-P0']['time_s'])} s. The percentage compares balanced means and is not a field response-time claim or a universal reduction.
+
+Anticipating priority during route selection, rather than selecting a route under nominal operation and then applying priority, gave JFAST minus SEQ = {f(c['P2-P1']['time_s'])} s. This comparison isolates the declared forecast and route-selection difference within the shared implementation. Its interpretation is restricted to the candidate route library and heuristic travel-time estimates.
+
+For the primary selective-versus-aggressive comparison, JSEL minus JFAST was {f(t)} s. Its upper 95 percent endpoint was {statusT} the 20 s evaluation margin. The corresponding change in positive spatial exposure was {f(sp)} vehicle-hours, whose upper endpoint was {statusA} zero. The joint criterion of ambulance-time tolerance and reduced positive spatial exposure was therefore {compound} at this precision. This conclusion uses the independent evaluation seeds, rather than reusing the development outcomes.
+
+Positive individual restricted-residence effects relative to S0 changed by {f(di)} vehicle-hours between JSEL and JFAST. The signed ordinary-residence change was {f(net)} vehicle-hours. Both are contrasts of outcomes referenced to the same S0 trajectory; the positive individual contrast is not the sum of positive direct JSEL-minus-JFAST traveler differences. Differences among these outcomes demonstrate why a single congestion number is insufficient: spatial redistribution, increases for particular travelers and the network net total measure different consequences.
+
+## Mechanism and computation
+
+JSEL escalated {v['fallback_total']:,} of its {v['p3_missions']:,} scheduled mission evaluations ({100*v['fallback_total']/v['p3_missions']:.1f} percent) to the aggressive joint mode. This activation rate is material to interpretation. Time performance after escalation includes aggressive intervention and cannot be attributed entirely to the selective forecast or to minimal signal changes. The progress switch mitigates a development failure but does not certify a fastest possible route.
+
+Median measured simulator-loop runtime was {v['runtime_median_s']:.2f} s per two-hour simulated episode, with a 95th percentile of {v['runtime_p95_s']:.2f} s under the recorded concurrent workload. Across all runs, request planning and signal updates consumed {v['controller_total_per_control_tick_ms']:.4f} ms per one-second control tick on average. The 95th percentile of episode-average controller cost was {v['episode_mean_controller_ms_p95']:.4f} ms per control tick. These are amortized averages, not worst-case active decision latency. They exclude input generation, network compilation and subsequent trace export, and do not establish city-scale end-to-end performance.
+'''
+if a['sensitivities']:
+ text+='\n## Secondary checks\n\n'
+ for r in a['sensitivities']:
+  z=r['metrics'];x=r['load'];phase=r['phase']
+  if phase=='ablation':text+=f"Removing the progress switch at nominal load {x:.2f} changed mean ambulance travel by {f(z['time_s'])} s and positive spatial exposure by {f(z['A_vh'])} vehicle-hours, relative to the guarded controller with the other settings fixed. "
+  else:
+   names={'sensitivity':'Halving the physical step to 0.25 s','adaptive_base':'Using the longest-count base controller','exact_counts':'Sampling noiseless counts each second with zero receipt delay and retained dropout'}
+   text+=f"{names[phase]} at nominal load {x:.2f} changed the JSEL-minus-JFAST ambulance contrast by {f(z['time_s'])} s, the spatial contrast by {f(z['A_vh'])} vehicle-hours and the individual-residence contrast by {f(z['Dplus_vh'])} vehicle-hours. "
+  text+='These intervals use 12 paired seed blocks.\n\n'
+ text+='The step, base-controller and observation comparisons are differences of treatment contrasts, each using the baseline appropriate to its own condition. The no-switch ablation is a direct comparison of two selective-policy variants. Intervals containing zero do not establish equivalence. The improved-observation condition retains Markov dropout. Sampling each second also shortens missing-data episodes in physical time relative to the five-second sampling condition. It changes several observation properties together and still does not supply perfect queue position or future traffic.\n'
+(H/'paper_sumo_results.txt').write_text(text)
+abstract=f'''We study ambulance routing jointly with selective signal priority, measuring both emergency travel and ordinary-traffic aftereffects. A supplied mesoscopic experiment is independently reproduced, corrected to enforce shared ambulance admission, storage and discharge constraints, and rerun for 14,400 policy episodes. A separate Eclipse SUMO implementation evaluates finite route–action choices under delayed noisy counts, lawful signal transitions and repeated missions. Its selective controller uses a queue-inspired burden score and an irreversible switch to aggressive joint control when observed free-flow progress deteriorates. Four elementary results specify restricted-residence accounting, spatial and individual positive effects, and the scope of the computed time band. In 1,728 microscopic evaluation runs, balanced common-horizon restricted ambulance duration was {g['P0']['time_s']['mean']:.2f} s under route-only control, {g['P2']['time_s']['mean']:.2f} s under aggressive joint control and {g['P3']['time_s']['mean']:.2f} s under the selective controller. The selective-minus-aggressive difference was {f(t)} s; positive spatial exposure changed by {f(sp)} vehicle-hours and positive individual restricted residence by {f(di)} vehicle-hours. Intervals are 95 percent seed-block bootstrap intervals. The combined 20 s time-tolerance and reduced-spatial-exposure target was {compound}. The balanced fraction exceeding 300 s increased by 2.55 percentage points [1.42, 3.77]. Two selective-policy trips nevertheless lasted 1,812.5 and 2,050 s. All comparisons are synthetic, and corridor calibration remains outstanding. The study provides an executable method, auditable traffic accounting and a falsifiable evaluation, rather than a globally optimal or field-validated city controller.'''
+(H/'paper_abstract.txt').write_text(abstract)

@@ -1,0 +1,23 @@
+{
+  "R1": "M. Hosseinzadeh, B. Sinopoli, I. Kolmanovsky, and S. Baruah, “MPC-based emergency vehicle-centered multi-intersection traffic control,” IEEE Trans. Control Syst. Technol., vol. 31, no. 1, pp. 166–178, 2023, doi: 10.1109/TCST.2022.3168610.",
+  "R2": "J. Gregoire, X. Qian, E. Frazzoli, A. de La Fortelle, and T. Wongpiromsarn, “Capacity-aware backpressure traffic signal control,” IEEE Trans. Control Netw. Syst., vol. 2, no. 2, pp. 164–173, 2015, doi: 10.1109/TCNS.2014.2378871.",
+  "R3": "P. Varaiya, “Max pressure control of a network of signalized intersections,” Transp. Res. C, Emerg. Technol., vol. 36, pp. 177–195, 2013, doi: 10.1016/j.trc.2013.08.014.",
+  "R4": "P. A. Lopez et al., “Microscopic traffic simulation using SUMO,” in Proc. 21st Int. Conf. Intell. Transp. Syst. (ITSC), 2018, pp. 2575–2582, doi: 10.1109/ITSC.2018.8569938.",
+  "R5": "Eclipse SUMO, “Traffic lights,” SUMO Documentation. Accessed: Oct. 31, 2026. [Online]. Available: https://sumo.dlr.de/docs/Simulation/Traffic_Lights.html",
+  "R6": "Federal Highway Administration, “Chapter 5: Model Calibration,” in Traffic Analysis Toolbox Volume III: Guidelines for Applying Traffic Microsimulation Modeling Software, 2019 update, report FHWA-HOP-18-036. Accessed: Oct. 31, 2026. [Online]. Available: https://ops.fhwa.dot.gov/publications/fhwahop18036/chapter5.htm.",
+  "R7": "Federal Highway Administration, “Chapter 6: Alternatives Analysis,” in Traffic Analysis Toolbox Volume III: Guidelines for Applying Traffic Microsimulation Modeling Software, 2019 update, report FHWA-HOP-18-036. Accessed: Oct. 31, 2026. [Online]. Available: https://ops.fhwa.dot.gov/publications/fhwahop18036/chapter6.htm.",
+  "R8": "N. Geroliminis and C. F. Daganzo, “Existence of urban-scale macroscopic fundamental diagrams: Some experimental findings,” Transp. Res. B, Methodol., vol. 42, no. 9, pp. 759–770, 2008, doi: 10.1016/j.trb.2008.02.002.",
+  "R9": "A. Loder, L. Ambühl, M. Menendez, and K. W. Axhausen, “Understanding traffic capacity of urban networks,” Sci. Rep., vol. 9, Art. no. 16283, 2019, doi: 10.1038/s41598-019-51539-5.",
+  "R10": "B. Efron, “Bootstrap methods: Another look at the jackknife,” Ann. Statist., vol. 7, no. 1, pp. 1–26, 1979, doi: 10.1214/aos/1176344552.",
+  "R11": "S. Holm, “A simple sequentially rejective multiple test procedure,” Scand. J. Statist., vol. 6, no. 2, pp. 65–70, 1979.",
+  "R12": "C. J. Clopper and E. S. Pearson, “The use of confidence or fiducial limits illustrated in the case of the binomial,” Biometrika, vol. 26, no. 4, pp. 404–413, 1934, doi: 10.1093/biomet/26.4.404.",
+  "R13": "B. Phipson and G. K. Smyth, “Permutation P-values should never be zero: Calculating exact P-values when permutations are randomly drawn,” Stat. Appl. Genet. Mol. Biol., vol. 9, no. 1, Art. no. 39, 2010, doi: 10.2202/1544-6115.1585.",
+  "R14": "R. Zoabi, S. E. Jabari, and J. Haddad, “On the stability of decentralized max-pressure traffic signal control,” Transp. Res. C, Emerg. Technol., vol. 194, Jan. 2027, Art. no. 105764, doi: 10.1016/j.trc.2026.105764.",
+  "R15": "C. F. Daganzo, “The cell transmission model, part II: Network traffic,” Transp. Res. B, Methodol., vol. 29, no. 2, pp. 79–93, 1995, doi: 10.1016/0191-2615(94)00022-R.",
+  "R16": "V. Kanagaraj and M. Treiber, “Self-driven pArt. no. model for mixed traffic and other disordered flows,” Physica A, vol. 509, pp. 1–11, 2018, doi: 10.1016/j.physa.2018.05.086.",
+  "R17": "Eclipse SUMO, “Change traffic lights state,” SUMO Documentation. Accessed: Oct. 31, 2026. [Online]. Available: https://sumo.dlr.de/docs/TraCI/Change_Traffic_Lights_State.html",
+  "R18": "H. Su, Y. D. Zhong, J. Y. J. Chow, B. Dey, and L. Jin, “EMVLight: A multi-agent reinforcement learning framework for an emergency vehicle decentralized routing and traffic signal control system,” Transp. Res. C, Emerg. Technol., vol. 146, Jan. 2023, Art. no. 103955, doi: 10.1016/j.trc.2022.103955.",
+  "R19": "Y. Dai, L. Hu, S. Zhou, Y. Liu, and A. Yang, “A bi-level dynamic emergency route planning system considering signal preemption control using CV technology,” PLOS ONE, vol. 20, no. 5, May 2025, Art. no. e0323209, doi: 10.1371/journal.pone.0323209.",
+  "R20": "Eclipse SUMO, “Safety,” SUMO Documentation, sec. “Reaction times.” Accessed: Oct. 31, 2026. [Online]. Available: https://sumo.dlr.de/docs/Simulation/Safety.html",
+  "R21": "F. V. Webster, Traffic Signal Settings, Road Research Technical Paper 39. London, U.K.: H.M. Stationery Office, 1958."
+}

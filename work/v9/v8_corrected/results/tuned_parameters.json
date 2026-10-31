@@ -1,0 +1,100 @@
+{
+  "tuned": {
+    "P1": {
+      "H": 30
+    },
+    "P2": {
+      "H": 30
+    },
+    "P3": {
+      "margin": 10
+    }
+  },
+  "table": [
+    {
+      "family": "P1",
+      "candidate": "P1_H20",
+      "mean_amb_tt": 329.5,
+      "mean_d_delay_vh": 0.531,
+      "within_1se_of_best": true,
+      "selected": false
+    },
+    {
+      "family": "P1",
+      "candidate": "P1_H30",
+      "mean_amb_tt": 329.7,
+      "mean_d_delay_vh": 0.343,
+      "within_1se_of_best": true,
+      "selected": true
+    },
+    {
+      "family": "P1",
+      "candidate": "P1_H60",
+      "mean_amb_tt": 350.31,
+      "mean_d_delay_vh": 1.559,
+      "within_1se_of_best": false,
+      "selected": false
+    },
+    {
+      "family": "P2",
+      "candidate": "P2_H20",
+      "mean_amb_tt": 272.18,
+      "mean_d_delay_vh": 0.401,
+      "within_1se_of_best": false,
+      "selected": false
+    },
+    {
+      "family": "P2",
+      "candidate": "P2_H30",
+      "mean_amb_tt": 267.67,
+      "mean_d_delay_vh": 0.599,
+      "within_1se_of_best": true,
+      "selected": true
+    },
+    {
+      "family": "P2",
+      "candidate": "P2_H60",
+      "mean_amb_tt": 315.88,
+      "mean_d_delay_vh": 2.418,
+      "within_1se_of_best": false,
+      "selected": false
+    },
+    {
+      "family": "P3",
+      "candidate": "P3_m0",
+      "mean_amb_tt": 270.16,
+      "mean_d_delay_vh": 0.457,
+      "within_1se_of_best": false,
+      "selected": false
+    },
+    {
+      "family": "P3",
+      "candidate": "P3_m10",
+      "mean_amb_tt": 263.12,
+      "mean_d_delay_vh": 0.829,
+      "within_1se_of_best": true,
+      "selected": true
+    },
+    {
+      "family": "P3",
+      "candidate": "P3_m20",
+      "mean_amb_tt": 272.08,
+      "mean_d_delay_vh": 1.259,
+      "within_1se_of_best": false,
+      "selected": false
+    },
+    {
+      "family": "P3",
+      "candidate": "P3_m30",
+      "mean_amb_tt": 286.52,
+      "mean_d_delay_vh": 1.705,
+      "within_1se_of_best": false,
+      "selected": false
+    }
+  ],
+  "training_reps": [
+    5000,
+    5039
+  ],
+  "rule": "min mean ambulance time; ties within 1 paired SE broken by min mean ordinary delay"
+}

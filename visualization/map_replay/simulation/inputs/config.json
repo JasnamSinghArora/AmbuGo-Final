@@ -1,0 +1,19 @@
+{
+  "destination_edge": "129041216#1",
+  "ambulance_origin_edge": "335061226",
+  "horizon": 1800,
+  "arrival_rate": 0.22570212765957443,
+  "seed": 19,
+  "dispatches": [
+    600,
+    660,
+    760
+  ],
+  "urban_speed_cap_mps": 13.89,
+  "goal": "Fortis Hospital mapped road approach; not emergency department doorway",
+  "source_net": "inputs/mohali_urban.net.xml",
+  "speed_assumption": "50km/h upper cap on all imported lanes, retaining any lower modeled speed; not surveyed speeds",
+  "nominal_max_X_target": 0.85,
+  "demand_design": "After preserving an overloaded pilot and a zero-demand physical check, scale synthetic Poisson arrivals to nominal max X=0.85 using fixed ordinary-route pool and modeled green/service capacities; not field calibration or performance tuning.",
+  "geometry_correction": "Six imagery-digitized clockwise circulating arcs around the Fortis-area roundabout. Physical network corrected; no trajectory warping. See provenance/roundabout_patch.json."
+}

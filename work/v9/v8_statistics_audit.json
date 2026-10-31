@@ -1,0 +1,75 @@
+{
+  "audit_date": "2026-10-25",
+  "scope": "read-only CSV and statistics audit; traffic reproduction performed separately",
+  "raw_rows": 14400,
+  "cells": 72,
+  "replications_per_cell": 200,
+  "seeds": [
+    0,
+    199
+  ],
+  "duplicate_cell_rep_keys": 0,
+  "matching_dispatch_origin_incident_within_pairs": true,
+  "finite_ambulance_outcomes": true,
+  "maximum_ambulance_time_s": 861.2025202520254,
+  "stored_gridlock_count": 0,
+  "signed_paired_residence_identity_max_abs_error_vh": 5.384581669432009e-14,
+  "independently_recomputed_main_table_rows": 72,
+  "independently_recomputed_contrast_rows": 48,
+  "max_rounding_errors": {
+    "amb_mean": 2.0252025365152804e-05,
+    "wait_mean": 0.0,
+    "bootstrap_all_coordinates": 5.000000001587068e-05,
+    "Holm": 4.969251537423076e-05,
+    "policy_contrast_coordinates": 0.0005000000000023874
+  },
+  "exact_tail_count_match": true,
+  "max_Clopper_Pearson_interval_rounding_error": 4.952352186260445e-05,
+  "auxiliary_raw_row_counts": {
+    "tuning_runs.csv": 1760,
+    "eval_runs.csv": 14400,
+    "placebo_runs.csv": 450,
+    "voi_runs.csv": 2400
+  },
+  "descriptive_scaling_fits_six_means": {
+    "inverse_zero_intercept": {
+      "parameters": [
+        0.0761299625246549
+      ],
+      "sse": 0.15981744683559534,
+      "r2": 0.9047964277096043
+    },
+    "linear": {
+      "parameters": [
+        -2.7294630174291994,
+        4.111924836601314
+      ],
+      "sse": 0.24151800406711485,
+      "r2": 0.8561272425826638
+    },
+    "quadratic": {
+      "parameters": [
+        6.541463416666785,
+        -20.469310000000288,
+        15.889011111111289
+      ],
+      "sse": 0.02185246656319424,
+      "r2": 0.9869824420214104
+    },
+    "inverse_with_intercept": {
+      "parameters": [
+        -0.11865828223198512,
+        0.0857349643053268
+      ],
+      "sse": 0.12947508725828283,
+      "r2": 0.9228714319139417
+    }
+  },
+  "scaling_warning": "Unweighted in-sample fit on six selected means; no universal law is established. Quadratic has extra parameter and is not declared the true law.",
+  "files_sha256": {
+    "eval_runs.csv": "5ddc12990846e7133c85799e9003cc6d6c9301a28303cab29aa939b096d09795",
+    "tables/main_results.csv": "0b390092216caddb4d95b397189e17db4438f121300df69e3bb3fda7dcedae00",
+    "tables/policy_contrasts.csv": "a295dd746e5d240fddbe2cd0e740cb11e26ba43acd602e9d102fd82e36b77ac1",
+    "tables/tail_risk.csv": "db633aa181d66aa14f165038bdbcca0734876ced28006510905381c5eac200e0"
+  }
+}

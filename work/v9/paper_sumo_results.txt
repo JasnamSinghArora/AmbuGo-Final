@@ -1,0 +1,41 @@
+## Completed experiment and verification
+
+All 1,728 planned primary microscopic runs completed. The records contain 432 matched four-policy scenario groups, with 48 independent seed blocks for balanced aggregate inference. Desired ordinary schedules and mission dispatches matched across all four policies in each group. The physical-step census identity and individual-residence reconciliation had maximum discrepancies of 0 vehicles and 0.0 vehicle-seconds. No collision events, teleport starts or completed signal-interval timing violations were recorded across 19,299,062 completed signal intervals. These are model diagnostics, not estimates of real-road safety. The maximum observed service age was 258 s, illustrating why a service-age intervention threshold is not an unconditional wait bound.
+
+The primary batch contains 8,640 ambulance mission evaluations across policy replays. Some scheduled missions remained unfinished at the common end; the mission ledger and restricted outcomes retain them. The largest recorded ambulance travel time was 3738.5 s. Up to 4 ambulances were simultaneously active. Between 82 and 852 ordinary vehicles remained at the common horizon across runs. The maximum terminal external source queue was 49 vehicles. Thus the experiment neither assumes an empty end state nor deletes vehicles that have not completed.
+
+## Main ambulance and aftereffect comparisons
+
+Balanced common-horizon restricted ambulance duration was 401.57 s under route-only S0, 214.68 s under sequential SEQ, 211.19 s under aggressive joint JFAST and 222.29 s under JSEL. JSEL's mean was 44.6 percent lower than S0's in this balanced synthetic grid. The paired JSEL-minus-S0 difference was -179.28 [-189.46, -169.57] s. The percentage compares balanced means and is not a field response-time claim or a universal reduction.
+
+Anticipating priority during route selection, rather than selecting a route under nominal operation and then applying priority, gave JFAST minus SEQ = -3.49 [-4.87, -1.97] s. This comparison isolates the declared forecast and route-selection difference within the shared implementation. Its interpretation is restricted to the candidate route library and heuristic travel-time estimates.
+
+For the primary selective-versus-aggressive comparison, JSEL minus JFAST was 11.10 [9.47, 12.94] s. Its upper 95 percent endpoint was below the 20 s evaluation margin. The corresponding change in positive spatial exposure was -3.84 [-4.73, -2.95] vehicle-hours, whose upper endpoint was below zero. The joint criterion of ambulance-time tolerance and reduced positive spatial exposure was therefore supported at this precision. This conclusion uses the independent evaluation seeds, rather than reusing the development outcomes.
+
+Positive individual restricted-residence effects relative to S0 changed by -1.64 [-2.14, -1.16] vehicle-hours between JSEL and JFAST. The signed ordinary-residence change was -1.26 [-1.94, -0.63] vehicle-hours. Both are contrasts of outcomes referenced to the same S0 trajectory; the positive individual contrast is not the sum of positive direct JSEL-minus-JFAST traveler differences. Differences among these outcomes demonstrate why a single congestion number is insufficient: spatial redistribution, increases for particular travelers and the network net total measure different consequences.
+
+## Mechanism and computation
+
+JSEL escalated 1,114 of its 2,160 scheduled mission evaluations (51.6 percent) to the aggressive joint mode. This activation rate is material to interpretation. Time performance after escalation includes aggressive intervention and cannot be attributed entirely to the selective forecast or to minimal signal changes. The progress switch mitigates a development failure but does not certify a fastest possible route.
+
+Median measured simulator-loop runtime was 4.82 s per two-hour simulated episode, with a 95th percentile of 7.54 s under the recorded concurrent workload. Across all runs, request planning and signal updates consumed 0.0308 ms per one-second control tick on average. The 95th percentile of episode-average controller cost was 0.0423 ms per control tick. These are amortized averages, not worst-case active decision latency. They exclude input generation, network compilation and subsequent trace export, and do not establish city-scale end-to-end performance.
+
+## Secondary checks
+
+Halving the physical step to 0.25 s at nominal load 0.60 changed the JSEL-minus-JFAST ambulance contrast by 0.30 [-0.06, 0.74] s, the spatial contrast by -0.25 [-2.30, 1.41] vehicle-hours and the individual-residence contrast by -0.03 [-0.67, 0.48] vehicle-hours. These intervals use 12 paired seed blocks.
+
+Halving the physical step to 0.25 s at nominal load 0.95 changed the JSEL-minus-JFAST ambulance contrast by -23.27 [-79.12, 7.76] s, the spatial contrast by -1.45 [-7.12, 5.10] vehicle-hours and the individual-residence contrast by -2.68 [-7.02, 0.36] vehicle-hours. These intervals use 12 paired seed blocks.
+
+Removing the progress switch at nominal load 0.60 changed mean ambulance travel by 4.32 [0.65, 8.92] s and positive spatial exposure by -0.43 [-0.92, 0.01] vehicle-hours, relative to the guarded controller with the other settings fixed. These intervals use 12 paired seed blocks.
+
+Removing the progress switch at nominal load 0.95 changed mean ambulance travel by 38.82 [23.64, 55.36] s and positive spatial exposure by -17.65 [-49.90, 0.28] vehicle-hours, relative to the guarded controller with the other settings fixed. These intervals use 12 paired seed blocks.
+
+Using the longest-count base controller at nominal load 0.60 changed the JSEL-minus-JFAST ambulance contrast by -2.70 [-7.46, 2.05] s, the spatial contrast by 1.35 [-2.57, 5.34] vehicle-hours and the individual-residence contrast by -0.18 [-1.72, 1.40] vehicle-hours. These intervals use 12 paired seed blocks.
+
+Using the longest-count base controller at nominal load 0.95 changed the JSEL-minus-JFAST ambulance contrast by -8.07 [-31.39, 10.28] s, the spatial contrast by 10.19 [-0.21, 22.84] vehicle-hours and the individual-residence contrast by 3.69 [-3.73, 13.46] vehicle-hours. These intervals use 12 paired seed blocks.
+
+Sampling noiseless counts each second with zero receipt delay and retained dropout at nominal load 0.60 changed the JSEL-minus-JFAST ambulance contrast by 4.25 [1.83, 6.81] s, the spatial contrast by -0.92 [-4.58, 2.23] vehicle-hours and the individual-residence contrast by 0.14 [-0.85, 1.19] vehicle-hours. These intervals use 12 paired seed blocks.
+
+Sampling noiseless counts each second with zero receipt delay and retained dropout at nominal load 0.95 changed the JSEL-minus-JFAST ambulance contrast by -38.10 [-128.70, 12.08] s, the spatial contrast by -18.21 [-56.57, 2.88] vehicle-hours and the individual-residence contrast by -16.77 [-51.56, 2.50] vehicle-hours. These intervals use 12 paired seed blocks.
+
+The step, base-controller and observation comparisons are differences of treatment contrasts, each using the baseline appropriate to its own condition. The no-switch ablation is a direct comparison of two selective-policy variants. Intervals containing zero do not establish equivalence. The improved-observation condition retains Markov dropout. Sampling each second also shortens missing-data episodes in physical time relative to the five-second sampling condition. It changes several observation properties together and still does not supply perfect queue position or future traffic.

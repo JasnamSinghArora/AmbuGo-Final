@@ -1,0 +1,6 @@
+provenance,class_id,probability,pcu,length_m,yield_weight
+synthetic_design_not_measured,car,0.53,1.0,4.5,0.6
+synthetic_design_not_measured,motorcycle,0.3,0.5,2.1,1.0
+synthetic_design_not_measured,autorickshaw,0.1,1.0,2.8,0.8
+synthetic_design_not_measured,bus,0.04,3.0,11.5,0.2
+synthetic_design_not_measured,goods,0.03,2.5,7.0,0.2

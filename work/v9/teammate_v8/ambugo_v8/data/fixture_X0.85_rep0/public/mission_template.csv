@@ -1,0 +1,2 @@
+provenance,destination,origins,dispatch_window_s,speed_privilege,red_bypass
+synthetic_design_not_measured,BE1,BW1|BW2|BN1|BN2|BS1|BS2,1800-2100,False,False

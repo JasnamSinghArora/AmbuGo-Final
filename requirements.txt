@@ -1,0 +1,12 @@
+# Versions used for the synthetic traffic and statistical study.
+# Install with: python3 -m pip install --target work/v9/vendor -r requirements.txt
+# Python 3.12 and platform-compatible wheels are recommended.
+eclipse-sumo==1.28.0
+libsumo==1.28.0
+traci==1.28.0
+sumolib==1.28.0
+sumo-data==1.28.0
+numpy==2.5.4
+scipy==1.18.1
+matplotlib==3.11.2
+pandas==2.2.3

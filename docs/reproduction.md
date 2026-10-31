@@ -4,13 +4,9 @@ The Git repository contains source code, input fixtures, experiment protocols,
 scalar run records, statistical summaries, figures, and the final paper. These
 files support analysis regeneration without rerunning the traffic simulations.
 
-The full research archive is the
-[`AmbuGo_First_Draft_Reproducibility_v9.zip` release asset](https://github.com/JasnamSinghArora/AmbuGo-Final/releases/download/v1.0.0/AmbuGo_First_Draft_Reproducibility_v9.zip)
-on [release v1.0.0](https://github.com/JasnamSinghArora/AmbuGo-Final/releases/tag/v1.0.0).
-It also retains per-run population traces, ordinary-vehicle event files,
-archived scenario inputs, the file manifest, and the portable path index.
-The archive keeps its original package name and historical paper sources;
-the current manuscript and its builder are in this repository's `paper/` folder.
+The current manuscript and its builder are in `paper/`. Per-run population
+traces and ordinary-vehicle event files can be regenerated with the simulation
+commands below.
 
 There are 1,728 primary microscopic policy runs, 264 microscopic secondary runs,
 and 14,400 mechanically corrected mesoscopic policy runs. Development records
@@ -20,10 +16,9 @@ calibration dataset.
 
 ## Install the runtime
 
-Run commands from the repository root, or from the full archive's extracted
-root when working with its retained traces. Preserve the relative `work/` and
-`outputs/` layout. Python 3.12 and platform-compatible SUMO wheels are recommended.
-The commands below use a POSIX shell.
+Run commands from the repository root. Preserve the relative `work/` and
+`outputs/` layout. Python 3.12 and platform-compatible SUMO wheels are
+recommended. The commands below use a POSIX shell.
 
 ```sh
 python3.12 -m venv .venv
@@ -37,7 +32,7 @@ export MPLCONFIGDIR="$PWD/work/v9/mpl_cache"
 The target installation is required: the frozen source expects `sumo` and
 `netconvert` under `work/v9/vendor/sumo/bin/`. Installing only into the virtual
 environment's ordinary site-packages does not populate these paths. The
-repository and archive exclude runtime binaries. Availability of compatible
+repository excludes runtime binaries. Availability of compatible
 wheels must be checked for the intended platform.
 
 ## Regenerate analyses from the records in Git
@@ -59,7 +54,7 @@ rerun the comparative traffic study. The microscopic analysis resamples whole
 seed blocks; multiple missions and conditions within a seed are not treated
 as independent replicates.
 
-Regeneration writes output files. Use a separate checkout or extraction to
+Regeneration writes output files. Use a separate checkout to
 preserve the supplied outputs unchanged. Runtime measurements and numerical
 details can vary across machines and dependency versions.
 
@@ -92,42 +87,9 @@ The supplied final PDF can be read without an authoring environment.
 `work/v9/build_paper.py` builds the historical v9 draft; it does not build the
 current paper.
 
-## Download, verify, and extract the full archive
-
-Download the ZIP from release v1.0.0. The verifier uses only the Python standard
-library and checks every manifested file's SHA-256 and byte count. For example,
-with the ZIP in the current directory:
-
-```sh
-python3 verify_zip.py AmbuGo_First_Draft_Reproducibility_v9.zip --extract archive-extraction
-cd archive-extraction/AmbuGo_First_Draft_Reproducibility_v9
-python3 verify_zip.py --directory .
-```
-
-The extraction destination must be new or empty. The directory-verification
-command applies to the extracted archive, which contains `MANIFEST.json`,
-not to the smaller Git checkout. Verify the archive before running analyses
-that overwrite its outputs.
-
-Raw records retain original absolute trace paths. Use
-`PORTABLE_PATH_INDEX.json` to find the corresponding archive-relative files.
-The active `work/v9/scenarios/` cache is deliberately absent because cached
-scenario JSON contains absolute route paths. Let the generator create a local
-cache; do not copy archived scenario JSON into the active cache unchanged.
-
-After installing dependencies inside the extracted archive, an optional short
-numerical smoke check is available:
-
-```sh
-python verify_zip.py --directory . --smoke
-```
-
-This is a 180-second software and path check. It is not another effectiveness
-experiment, and an ambulance need not finish within that horizon.
-
 ## Rerun the microscopic evaluations
 
-Use a separate checkout or extraction for expensive reruns. Keep the archived
+Use a separate checkout for expensive reruns. Keep the included
 `selected_policy.json`; do not retune before reproducing the evaluation.
 
 ```sh
@@ -168,6 +130,42 @@ contains 14,400 policy runs and retains the original parameter choices.
 Run original and corrected models in separate processes because both use
 the Python package name `ambugo`. Their policy keys also differ in meaning
 from identically numbered microscopic policies.
+
+## Optional: verify a separately supplied local archive
+
+If a full research archive is supplied separately, verify it before running
+analyses that overwrite its outputs. The verifier uses only the Python standard
+library and checks every manifested file's SHA-256 and byte count. For the
+historical `AmbuGo_First_Draft_Reproducibility_v9.zip` package, with the ZIP in
+the current directory:
+
+```sh
+python3 verify_zip.py AmbuGo_First_Draft_Reproducibility_v9.zip --extract archive-extraction
+cd archive-extraction/AmbuGo_First_Draft_Reproducibility_v9
+python3 verify_zip.py --directory .
+```
+
+The extraction destination must be new or empty. The directory-verification
+command applies to the extracted archive, which contains `MANIFEST.json`,
+not to the Git checkout. The historical archive retains per-run traces,
+ordinary-vehicle event files, archived scenario inputs, and earlier paper
+sources. Use this repository's `paper/` folder for the current manuscript.
+
+Raw records retain original absolute trace paths. The archive's
+`PORTABLE_PATH_INDEX.json` maps them to archive-relative files. Its active
+`work/v9/scenarios/` cache is deliberately absent because cached scenario JSON
+contains absolute route paths. Let the generator create a local cache; do not
+copy archived scenario JSON into the active cache unchanged.
+
+Install dependencies from the extracted archive root using the runtime commands
+above. An optional short numerical smoke check is then available:
+
+```sh
+python verify_zip.py --directory . --smoke
+```
+
+This is a 180-second software and path check. It is not another effectiveness
+experiment, and an ambulance need not finish within that horizon.
 
 For the optional development replay and the historical archive-build procedure,
 see [`work/v9/README_reproducibility.txt`](../work/v9/README_reproducibility.txt).

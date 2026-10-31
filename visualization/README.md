@@ -3,60 +3,52 @@
 | Folder | Contents |
 | --- | --- |
 | `map_replay/` | Source for the 20-second map and graph animations, frozen replay data, and the optional SUMO reproduction workflow. |
-| `simultaneous/` | Source for combining recorded graphs with either the supplied planning film or the synchronized map replay. |
+| `simultaneous/` | Source for combining recorded graphs with a locally supplied planning film or synchronized map replay. |
 | `vissim_transfer/` | OpenDRIVE geometry, source network and scenario data, a boundary-reference repair script, and native Vissim integration instructions. |
 
-The repository includes source and numeric inputs. Videos, map-background images and preview images are supplied in the complete release archives. Use an extracted archive as a standalone package to reproduce the films; the Git-only map renderer does not have its required background images. Graph rendering and the SUMO workflow do not require those images.
+The repository includes source, numeric replays and recorded results. Videos, map-background images, preview images and complete media archives are not published. Graph rendering, graph-data regeneration and the SUMO workflow run from the included inputs without map images. The map and simultaneous-film renderers require additional local assets.
 
-## Download complete packages
+## Regenerate graph data and render locally
 
-Run these commands from the repository root. They use the GitHub CLI and Python 3.12, and extract the packages into a sibling directory outside the Git checkout.
-
-```sh
-mkdir -p ../AmbuGo-downloads
-gh release download v1.0.0 --repo JasnamSinghArora/AmbuGo-Final \
-  --pattern 'AmbuGo_20s_Reproducible.zip' \
-  --pattern 'AmbuGo_Simultaneous.zip' \
-  --pattern 'AmbuGo_Vissim_Transfer.zip' \
-  --dir ../AmbuGo-downloads
-cd ../AmbuGo-downloads
-python3.12 -m zipfile -e AmbuGo_20s_Reproducible.zip .
-python3.12 -m zipfile -e AmbuGo_Simultaneous.zip .
-python3.12 -m zipfile -e AmbuGo_Vissim_Transfer.zip .
-```
-
-Alternatively, download the ZIPs from the [v1.0.0 release](https://github.com/JasnamSinghArora/AmbuGo-Final/releases/tag/v1.0.0) and extract them, preserving their folder structures. The original MP4s can be watched without installing Python.
-
-## Reproduce the films
-
-Continue from `AmbuGo-downloads/`. These macOS/Linux commands create a separate environment. Windows equivalents are in the extracted package's `README.txt`.
+Run these macOS/Linux commands from the repository root with Python 3.12. Generated files are written to a sibling directory outside the Git checkout.
 
 ```sh
 python3.12 -m venv .venv
-.venv/bin/python -m pip install -r AmbuGo_20s_Reproducible/requirements.txt
-.venv/bin/python -m pip install -r AmbuGo_Simultaneous/requirements.txt
+.venv/bin/python -m pip install -r visualization/map_replay/requirements.txt
 
-# Validate the complete map package and its supplied videos.
-.venv/bin/python AmbuGo_20s_Reproducible/reproduce.py verify \
-  --videos AmbuGo_20s_Reproducible/reference
+# Rebuild the plotted series from the included P0/P3 trajectory arrays
+# and compare them with the included reference series.
+.venv/bin/python visualization/map_replay/reproduce.py data \
+  --output ../AmbuGo-local-renders
 
-# Rebuild both 20-second films into the package's generated/ folder.
-.venv/bin/python AmbuGo_20s_Reproducible/reproduce.py all
-
-# Rebuild the synchronized side-by-side film in its package folder.
-.venv/bin/python AmbuGo_Simultaneous/reproduce.py --version synchronized
-
-# Optionally rebuild the edit containing the supplied planning film.
-.venv/bin/python AmbuGo_Simultaneous/reproduce.py --version teammate
+# Render the graph from those rebuilt series.
+.venv/bin/python visualization/map_replay/src/graph_animation.py \
+  --data ../AmbuGo-local-renders/progression_data_rebuilt.json \
+  --output-dir ../AmbuGo-local-renders
 ```
 
-The simultaneous renderer overwrites its existing composite outputs; its input films are preserved. The renderers use NumPy, Pillow, Matplotlib and imageio-ffmpeg. Initial installation needs internet access; rendering uses local assets. Font and encoder differences can change output pixels or bytes across machines.
+Add `--preview-only` to the graph command to create still previews instead of a video. These outputs remain local. On Windows, use `py -3.12 -m venv .venv` and `.venv\Scripts\python.exe` in place of `.venv/bin/python`.
 
-To rerun the recorded traffic episodes, install `AmbuGo_20s_Reproducible/simulation/requirements.txt` and follow that folder's `README.txt`. It uses the pinned SUMO/libsumo 1.28.0 environment and checks the rerun against the frozen trajectories. This is separate from replaying the supplied data.
+The renderers use NumPy, Pillow, Matplotlib and imageio-ffmpeg. Initial installation needs internet access; rendering uses local data. Font and encoder differences can change output pixels or bytes across machines.
+
+To rerun the recorded traffic episodes, install `visualization/map_replay/simulation/requirements.txt` and follow that folder's `README.txt`. It uses the pinned SUMO/libsumo 1.28.0 environment and checks the rerun against the frozen trajectories. This is separate from replaying the supplied data.
+
+## Optional rendering with locally held assets
+
+If you already have a complete local `AmbuGo_20s_Reproducible` package, keep it outside the checkout with its folder structure intact. From that package's root, install its `requirements.txt` in a Python 3.12 environment, then run:
+
+```sh
+python reproduce.py verify --videos reference
+python reproduce.py all
+```
+
+Here `python` means the activated environment's interpreter. These commands require that package's map captures, reference media and manifest; they are not commands for the incomplete-media Git directory.
+
+For a locally held complete `AmbuGo_Simultaneous` package, install its `requirements.txt` and run `python reproduce.py --version synchronized` or `python reproduce.py --version teammate` from its root. The synchronized edit requires `inputs/01_Google_Maps_Journey.mp4`; the planning-film edit requires `inputs/AmbuGo_v9_Plan.mp4`. Neither input is published here. The compositor overwrites its composite outputs while preserving its input films. The included `README.txt` files describe those original complete local packages; their media references do not indicate public availability.
 
 ## Interpretation and third-party content
 
-The 20-second synchronized map and graphs represent one recorded synthetic-traffic episode. The longer planning film and its accompanying graphs represent different examples with independent clocks and different priority-budget settings. Those graphs do not measure the maneuvers shown in the planning film. The compositor source is included; the supplied planning film's original animation project is not included.
+The 20-second synchronized map and graphs represent one recorded synthetic-traffic episode. The longer planning film and its accompanying graphs represent different examples with independent clocks and different priority-budget settings. Those graphs do not measure the maneuvers shown in the planning film. The compositor source is included; the planning film and its original animation project are not included.
 
 The Vissim package is preparation only. It contains no completed native Vissim project or tested Vissim controller, and no Vissim execution or cross-simulator equivalence is claimed. Use its `README.txt` and `PTV_REQUIREMENTS_AND_INTEGRATION.txt` for the remaining native integration work.
 

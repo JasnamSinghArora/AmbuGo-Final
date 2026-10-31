@@ -4,7 +4,7 @@ Joint ambulance routing and selective traffic signal priority, evaluated in a sy
 
 The controller scores route–priority combinations, keeps candidates within a predicted travel-time allowance, and selects the one with the lowest estimated traffic burden. Signal changes respect minimum greens and clearance intervals. An ambulance that falls behind its free-flow progress switches to aggressive priority.
 
-[Read the paper](paper/AmbuGo_Audited_Research_Paper.pdf) · [Reproduce the study](docs/reproduction.md) · [Animation source](visualization/README.md) · [Data and video downloads](https://github.com/JasnamSinghArora/AmbuGo-Final/releases/tag/v1.0.0)
+[Read the paper](paper/AmbuGo_Audited_Research_Paper.pdf) · [Reproduce the study](docs/reproduction.md) · [Animation source](visualization/README.md)
 
 ## Results
 
@@ -35,7 +35,7 @@ These are synthetic results. JSEL escalated to aggressive control in 51.6% of mi
 
 The study's original relative paths are retained because the frozen implementation resolves its fixtures and SUMO binaries through them. Source files that produced the reported experiments are unchanged. Their hashes are checked before analysis.
 
-Raw scalar records and mesoscopic CSVs are in Git. The full population traces, vehicle event files, scenario archive and video assets are attached to the [release](https://github.com/JasnamSinghArora/AmbuGo-Final/releases/tag/v1.0.0), keeping the checkout smaller. The research archive includes the earlier draft; `paper/` contains the final audited manuscript.
+Raw scalar records, mesoscopic CSVs and numeric replay inputs are in Git. Large population traces, the complete scenario archive, videos and map-background images are not published here. The experiment runners can regenerate traffic outputs; film rendering also requires the separately supplied media assets. `paper/` contains the final audited manuscript.
 
 ## Quick checks
 

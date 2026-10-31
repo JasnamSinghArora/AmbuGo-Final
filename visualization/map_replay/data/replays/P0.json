@@ -1,0 +1,5224 @@
+{
+  "policy": "P0",
+  "seed": 19,
+  "provenance": "Real OSM road geometry; hypothetical uncalibrated traffic, signal timing, and ambulance missions. Frozen v9 controller classes reused with allowed-turn route adaptation.",
+  "configuration": {
+    "step": 0.5,
+    "warmup": 300,
+    "horizon": 1800,
+    "mission_end": 5400,
+    "epsilon": 0.0,
+    "harm_budget": 10000.0,
+    "headroom": 0.85,
+    "trigger": 30.0,
+    "hold": 60.0,
+    "sensor_period": 5,
+    "sensor_delay": 2,
+    "sensor_noise": true,
+    "base": "fixed",
+    "action_mode": "strong",
+    "progress_guard_s": 20.0,
+    "save_trace": true
+  },
+  "scenario_config": {
+    "destination_edge": "129041216#1",
+    "ambulance_origin_edge": "335061226",
+    "horizon": 1800,
+    "arrival_rate": 0.22570212765957443,
+    "seed": 19,
+    "dispatches": [
+      600,
+      660,
+      760
+    ],
+    "urban_speed_cap_mps": 13.89,
+    "goal": "Fortis Hospital mapped road approach; not emergency department doorway",
+    "source_net": "/Users/jasnamsingharora/Documents/Codex/2026-10-22/p/work/punjab/geo/mohali_corrected.net.xml",
+    "speed_assumption": "50km/h upper cap on all imported lanes, retaining any lower modeled speed; not surveyed speeds",
+    "nominal_max_X_target": 0.85,
+    "demand_design": "After preserving an overloaded pilot and a zero-demand physical check, scale synthetic Poisson arrivals to nominal max X=0.85 using fixed ordinary-route pool and modeled green/service capacities; not field calibration or performance tuning.",
+    "geometry_correction": "Six physical clockwise circulating arcs around the Fortis-area roundabout, imagery-digitized because the rawOSMsourcecutthroughtheisland; see geo/roundabout_patch/patch_provenance.json. No trajectorywarping."
+  },
+  "missions": [
+    {
+      "id": "a000",
+      "depart": 600,
+      "insertion": 600.5,
+      "arrival": 1017.5,
+      "travel_s": 417.5,
+      "censored": false
+    },
+    {
+      "id": "a001",
+      "depart": 660,
+      "insertion": 660.5,
+      "arrival": 1168.5,
+      "travel_s": 508.5,
+      "censored": false
+    },
+    {
+      "id": "a002",
+      "depart": 760,
+      "insertion": 760.5,
+      "arrival": 1276.5,
+      "travel_s": 516.5,
+      "censored": false
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "v000000",
+      "type": "motorcycle",
+      "depart": 5.5
+    },
+    {
+      "id": "v000001",
+      "type": "car",
+      "depart": 6.0
+    },
+    {
+      "id": "v000002",
+      "type": "car",
+      "depart": 31.5
+    },
+    {
+      "id": "v000003",
+      "type": "car",
+      "depart": 35.5
+    },
+    {
+      "id": "v000004",
+      "type": "car",
+      "depart": 37.0
+    },
+    {
+      "id": "v000005",
+      "type": "motorcycle",
+      "depart": 43.5
+    },
+    {
+      "id": "v000006",
+      "type": "car",
+      "depart": 47.5
+    },
+    {
+      "id": "v000007",
+      "type": "car",
+      "depart": 58.5
+    },
+    {
+      "id": "v000008",
+      "type": "car",
+      "depart": 61.0
+    },
+    {
+      "id": "v000009",
+      "type": "car",
+      "depart": 63.0
+    },
+    {
+      "id": "v000010",
+      "type": "motorcycle",
+      "depart": 65.5
+    },
+    {
+      "id": "v000011",
+      "type": "car",
+      "depart": 70.5
+    },
+    {
+      "id": "v000012",
+      "type": "motorcycle",
+      "depart": 78.5
+    },
+    {
+      "id": "v000013",
+      "type": "car",
+      "depart": 79.5
+    },
+    {
+      "id": "v000014",
+      "type": "car",
+      "depart": 80.0
+    },
+    {
+      "id": "v000015",
+      "type": "car",
+      "depart": 80.5
+    },
+    {
+      "id": "v000016",
+      "type": "car",
+      "depart": 84.0
+    },
+    {
+      "id": "v000017",
+      "type": "car",
+      "depart": 94.5
+    },
+    {
+      "id": "v000018",
+      "type": "car",
+      "depart": 97.5
+    },
+    {
+      "id": "v000019",
+      "type": "car",
+      "depart": 100.0
+    },
+    {
+      "id": "v000020",
+      "type": "car",
+      "depart": 110.0
+    },
+    {
+      "id": "v000021",
+      "type": "car",
+      "depart": 112.5
+    },
+    {
+      "id": "v000022",
+      "type": "car",
+      "depart": 118.0
+    },
+    {
+      "id": "v000023",
+      "type": "car",
+      "depart": 121.0
+    },
+    {
+      "id": "v000024",
+      "type": "car",
+      "depart": 126.5
+    },
+    {
+      "id": "v000025",
+      "type": "motorcycle",
+      "depart": 128.5
+    },
+    {
+      "id": "v000026",
+      "type": "car",
+      "depart": 129.5
+    },
+    {
+      "id": "v000027",
+      "type": "car",
+      "depart": 130.0
+    },
+    {
+      "id": "v000028",
+      "type": "goods",
+      "depart": 132.5
+    },
+    {
+      "id": "v000029",
+      "type": "car",
+      "depart": 135.0
+    },
+    {
+      "id": "v000030",
+      "type": "car",
+      "depart": 135.5
+    },
+    {
+      "id": "v000031",
+      "type": "car",
+      "depart": 143.5
+    },
+    {
+      "id": "v000032",
+      "type": "car",
+      "depart": 153.0
+    },
+    {
+      "id": "v000033",
+      "type": "bus",
+      "depart": 155.5
+    },
+    {
+      "id": "v000034",
+      "type": "car",
+      "depart": 155.5
+    },
+    {
+      "id": "v000035",
+      "type": "car",
+      "depart": 157.0
+    },
+    {
+      "id": "v000036",
+      "type": "car",
+      "depart": 160.5
+    },
+    {
+      "id": "v000037",
+      "type": "car",
+      "depart": 161.5
+    },
+    {
+      "id": "v000038",
+      "type": "car",
+      "depart": 162.0
+    },
+    {
+      "id": "v000039",
+      "type": "car",
+      "depart": 162.0
+    },
+    {
+      "id": "v000040",
+      "type": "car",
+      "depart": 168.5
+    },
+    {
+      "id": "v000041",
+      "type": "motorcycle",
+      "depart": 175.5
+    },
+    {
+      "id": "v000042",
+      "type": "car",
+      "depart": 185.0
+    },
+    {
+      "id": "v000043",
+      "type": "car",
+      "depart": 189.5
+    },
+    {
+      "id": "v000044",
+      "type": "car",
+      "depart": 194.0
+    },
+    {
+      "id": "v000045",
+      "type": "motorcycle",
+      "depart": 206.5
+    },
+    {
+      "id": "v000046",
+      "type": "car",
+      "depart": 207.0
+    },
+    {
+      "id": "v000047",
+      "type": "motorcycle",
+      "depart": 210.5
+    },
+    {
+      "id": "v000048",
+      "type": "car",
+      "depart": 216.0
+    },
+    {
+      "id": "v000049",
+      "type": "car",
+      "depart": 217.5
+    },
+    {
+      "id": "v000050",
+      "type": "car",
+      "depart": 226.5
+    },
+    {
+      "id": "v000051",
+      "type": "car",
+      "depart": 227.0
+    },
+    {
+      "id": "v000052",
+      "type": "car",
+      "depart": 229.5
+    },
+    {
+      "id": "v000053",
+      "type": "car",
+      "depart": 230.0
+    },
+    {
+      "id": "v000054",
+      "type": "car",
+      "depart": 234.0
+    },
+    {
+      "id": "v000055",
+      "type": "car",
+      "depart": 235.0
+    },
+    {
+      "id": "v000056",
+      "type": "goods",
+      "depart": 237.5
+    },
+    {
+      "id": "v000057",
+      "type": "car",
+      "depart": 240.0
+    },
+    {
+      "id": "v000058",
+      "type": "car",
+      "depart": 245.5
+    },
+    {
+      "id": "v000059",
+      "type": "car",
+      "depart": 249.5
+    },
+    {
+      "id": "v000060",
+      "type": "car",
+      "depart": 250.5
+    },
+    {
+      "id": "v000061",
+      "type": "motorcycle",
+      "depart": 256.0
+    },
+    {
+      "id": "v000062",
+      "type": "car",
+      "depart": 257.0
+    },
+    {
+      "id": "v000063",
+      "type": "car",
+      "depart": 261.0
+    },
+    {
+      "id": "v000064",
+      "type": "car",
+      "depart": 266.5
+    },
+    {
+      "id": "v000065",
+      "type": "car",
+      "depart": 270.0
+    },
+    {
+      "id": "v000066",
+      "type": "car",
+      "depart": 275.0
+    },
+    {
+      "id": "v000067",
+      "type": "car",
+      "depart": 278.0
+    },
+    {
+      "id": "v000068",
+      "type": "car",
+      "depart": 280.5
+    },
+    {
+      "id": "v000069",
+      "type": "car",
+      "depart": 289.0
+    },
+    {
+      "id": "v000070",
+      "type": "car",
+      "depart": 293.0
+    },
+    {
+      "id": "v000071",
+      "type": "car",
+      "depart": 296.5
+    },
+    {
+      "id": "v000072",
+      "type": "car",
+      "depart": 296.5
+    },
+    {
+      "id": "v000073",
+      "type": "car",
+      "depart": 297.5
+    },
+    {
+      "id": "v000074",
+      "type": "car",
+      "depart": 298.0
+    },
+    {
+      "id": "v000075",
+      "type": "car",
+      "depart": 299.0
+    },
+    {
+      "id": "v000076",
+      "type": "car",
+      "depart": 301.5
+    },
+    {
+      "id": "v000077",
+      "type": "motorcycle",
+      "depart": 302.0
+    },
+    {
+      "id": "v000078",
+      "type": "car",
+      "depart": 306.0
+    },
+    {
+      "id": "v000079",
+      "type": "motorcycle",
+      "depart": 312.0
+    },
+    {
+      "id": "v000080",
+      "type": "car",
+      "depart": 313.0
+    },
+    {
+      "id": "v000081",
+      "type": "car",
+      "depart": 316.5
+    },
+    {
+      "id": "v000082",
+      "type": "car",
+      "depart": 319.0
+    },
+    {
+      "id": "v000083",
+      "type": "motorcycle",
+      "depart": 320.0
+    },
+    {
+      "id": "v000084",
+      "type": "goods",
+      "depart": 324.0
+    },
+    {
+      "id": "v000085",
+      "type": "car",
+      "depart": 343.0
+    },
+    {
+      "id": "v000086",
+      "type": "car",
+      "depart": 349.5
+    },
+    {
+      "id": "v000087",
+      "type": "car",
+      "depart": 350.0
+    },
+    {
+      "id": "v000088",
+      "type": "car",
+      "depart": 356.5
+    },
+    {
+      "id": "v000089",
+      "type": "car",
+      "depart": 356.5
+    },
+    {
+      "id": "v000090",
+      "type": "car",
+      "depart": 362.0
+    },
+    {
+      "id": "v000091",
+      "type": "car",
+      "depart": 363.5
+    },
+    {
+      "id": "v000092",
+      "type": "car",
+      "depart": 363.5
+    },
+    {
+      "id": "v000093",
+      "type": "car",
+      "depart": 364.0
+    },
+    {
+      "id": "v000094",
+      "type": "car",
+      "depart": 365.5
+    },
+    {
+      "id": "v000095",
+      "type": "car",
+      "depart": 369.0
+    },
+    {
+      "id": "v000096",
+      "type": "car",
+      "depart": 370.0
+    },
+    {
+      "id": "v000097",
+      "type": "car",
+      "depart": 376.0
+    },
+    {
+      "id": "v000098",
+      "type": "car",
+      "depart": 377.0
+    },
+    {
+      "id": "v000099",
+      "type": "car",
+      "depart": 377.5
+    },
+    {
+      "id": "v000100",
+      "type": "car",
+      "depart": 378.5
+    },
+    {
+      "id": "v000101",
+      "type": "car",
+      "depart": 379.5
+    },
+    {
+      "id": "v000102",
+      "type": "car",
+      "depart": 385.0
+    },
+    {
+      "id": "v000103",
+      "type": "car",
+      "depart": 386.0
+    },
+    {
+      "id": "v000104",
+      "type": "car",
+      "depart": 389.5
+    },
+    {
+      "id": "v000105",
+      "type": "goods",
+      "depart": 393.0
+    },
+    {
+      "id": "v000106",
+      "type": "car",
+      "depart": 395.5
+    },
+    {
+      "id": "v000107",
+      "type": "car",
+      "depart": 398.5
+    },
+    {
+      "id": "v000108",
+      "type": "bus",
+      "depart": 412.0
+    },
+    {
+      "id": "v000109",
+      "type": "motorcycle",
+      "depart": 417.0
+    },
+    {
+      "id": "v000110",
+      "type": "car",
+      "depart": 419.5
+    },
+    {
+      "id": "v000111",
+      "type": "car",
+      "depart": 429.5
+    },
+    {
+      "id": "v000112",
+      "type": "bus",
+      "depart": 432.0
+    },
+    {
+      "id": "v000113",
+      "type": "car",
+      "depart": 436.5
+    },
+    {
+      "id": "v000114",
+      "type": "motorcycle",
+      "depart": 437.5
+    },
+    {
+      "id": "v000115",
+      "type": "bus",
+      "depart": 441.5
+    },
+    {
+      "id": "v000116",
+      "type": "car",
+      "depart": 452.0
+    },
+    {
+      "id": "v000117",
+      "type": "car",
+      "depart": 453.5
+    },
+    {
+      "id": "v000118",
+      "type": "bus",
+      "depart": 467.5
+    },
+    {
+      "id": "v000119",
+      "type": "motorcycle",
+      "depart": 467.5
+    },
+    {
+      "id": "v000120",
+      "type": "motorcycle",
+      "depart": 468.5
+    },
+    {
+      "id": "v000121",
+      "type": "motorcycle",
+      "depart": 474.5
+    },
+    {
+      "id": "v000122",
+      "type": "car",
+      "depart": 475.5
+    },
+    {
+      "id": "v000123",
+      "type": "car",
+      "depart": 476.0
+    },
+    {
+      "id": "v000124",
+      "type": "goods",
+      "depart": 476.0
+    },
+    {
+      "id": "v000125",
+      "type": "car",
+      "depart": 488.5
+    },
+    {
+      "id": "v000126",
+      "type": "car",
+      "depart": 491.0
+    },
+    {
+      "id": "v000127",
+      "type": "car",
+      "depart": 492.0
+    },
+    {
+      "id": "v000128",
+      "type": "car",
+      "depart": 493.5
+    },
+    {
+      "id": "v000129",
+      "type": "bus",
+      "depart": 511.0
+    },
+    {
+      "id": "v000130",
+      "type": "motorcycle",
+      "depart": 516.0
+    },
+    {
+      "id": "v000131",
+      "type": "car",
+      "depart": 522.0
+    },
+    {
+      "id": "v000132",
+      "type": "car",
+      "depart": 522.0
+    },
+    {
+      "id": "v000133",
+      "type": "car",
+      "depart": 522.5
+    },
+    {
+      "id": "v000134",
+      "type": "car",
+      "depart": 524.0
+    },
+    {
+      "id": "v000135",
+      "type": "car",
+      "depart": 529.0
+    },
+    {
+      "id": "v000136",
+      "type": "motorcycle",
+      "depart": 531.5
+    },
+    {
+      "id": "v000137",
+      "type": "goods",
+      "depart": 531.5
+    },
+    {
+      "id": "v000138",
+      "type": "car",
+      "depart": 538.5
+    },
+    {
+      "id": "v000139",
+      "type": "car",
+      "depart": 539.5
+    },
+    {
+      "id": "v000140",
+      "type": "car",
+      "depart": 542.5
+    },
+    {
+      "id": "v000141",
+      "type": "bus",
+      "depart": 544.5
+    },
+    {
+      "id": "v000142",
+      "type": "car",
+      "depart": 544.5
+    },
+    {
+      "id": "v000143",
+      "type": "bus",
+      "depart": 549.0
+    },
+    {
+      "id": "v000144",
+      "type": "bus",
+      "depart": 549.5
+    },
+    {
+      "id": "v000145",
+      "type": "car",
+      "depart": 552.5
+    },
+    {
+      "id": "v000146",
+      "type": "car",
+      "depart": 556.5
+    },
+    {
+      "id": "v000147",
+      "type": "motorcycle",
+      "depart": 560.0
+    },
+    {
+      "id": "v000148",
+      "type": "car",
+      "depart": 567.5
+    },
+    {
+      "id": "v000149",
+      "type": "car",
+      "depart": 581.5
+    },
+    {
+      "id": "v000150",
+      "type": "car",
+      "depart": 589.0
+    },
+    {
+      "id": "v000151",
+      "type": "car",
+      "depart": 596.5
+    },
+    {
+      "id": "v000152",
+      "type": "car",
+      "depart": 603.5
+    },
+    {
+      "id": "v000153",
+      "type": "motorcycle",
+      "depart": 613.0
+    },
+    {
+      "id": "v000154",
+      "type": "car",
+      "depart": 614.5
+    },
+    {
+      "id": "v000155",
+      "type": "motorcycle",
+      "depart": 616.5
+    },
+    {
+      "id": "v000156",
+      "type": "car",
+      "depart": 626.0
+    },
+    {
+      "id": "v000157",
+      "type": "car",
+      "depart": 626.5
+    },
+    {
+      "id": "v000158",
+      "type": "car",
+      "depart": 628.0
+    },
+    {
+      "id": "v000159",
+      "type": "car",
+      "depart": 633.5
+    },
+    {
+      "id": "v000160",
+      "type": "car",
+      "depart": 634.0
+    },
+    {
+      "id": "v000161",
+      "type": "motorcycle",
+      "depart": 637.0
+    },
+    {
+      "id": "v000162",
+      "type": "motorcycle",
+      "depart": 639.5
+    },
+    {
+      "id": "v000163",
+      "type": "car",
+      "depart": 640.5
+    },
+    {
+      "id": "v000164",
+      "type": "car",
+      "depart": 643.5
+    },
+    {
+      "id": "v000165",
+      "type": "car",
+      "depart": 645.5
+    },
+    {
+      "id": "v000166",
+      "type": "car",
+      "depart": 650.5
+    },
+    {
+      "id": "v000167",
+      "type": "motorcycle",
+      "depart": 654.5
+    },
+    {
+      "id": "v000168",
+      "type": "car",
+      "depart": 664.5
+    },
+    {
+      "id": "v000169",
+      "type": "motorcycle",
+      "depart": 667.0
+    },
+    {
+      "id": "v000170",
+      "type": "motorcycle",
+      "depart": 671.0
+    },
+    {
+      "id": "v000171",
+      "type": "car",
+      "depart": 672.5
+    },
+    {
+      "id": "v000172",
+      "type": "car",
+      "depart": 679.0
+    },
+    {
+      "id": "v000173",
+      "type": "motorcycle",
+      "depart": 680.0
+    },
+    {
+      "id": "v000174",
+      "type": "car",
+      "depart": 683.0
+    },
+    {
+      "id": "v000175",
+      "type": "car",
+      "depart": 692.0
+    },
+    {
+      "id": "v000176",
+      "type": "goods",
+      "depart": 695.0
+    },
+    {
+      "id": "v000177",
+      "type": "car",
+      "depart": 698.0
+    },
+    {
+      "id": "v000178",
+      "type": "car",
+      "depart": 699.0
+    },
+    {
+      "id": "v000179",
+      "type": "goods",
+      "depart": 705.5
+    },
+    {
+      "id": "v000180",
+      "type": "car",
+      "depart": 717.5
+    },
+    {
+      "id": "v000181",
+      "type": "car",
+      "depart": 734.5
+    },
+    {
+      "id": "v000182",
+      "type": "car",
+      "depart": 746.5
+    },
+    {
+      "id": "v000183",
+      "type": "car",
+      "depart": 752.0
+    },
+    {
+      "id": "v000184",
+      "type": "bus",
+      "depart": 764.5
+    },
+    {
+      "id": "v000185",
+      "type": "car",
+      "depart": 765.5
+    },
+    {
+      "id": "v000186",
+      "type": "goods",
+      "depart": 768.0
+    },
+    {
+      "id": "v000187",
+      "type": "car",
+      "depart": 771.0
+    },
+    {
+      "id": "v000188",
+      "type": "goods",
+      "depart": 774.0
+    },
+    {
+      "id": "v000189",
+      "type": "bus",
+      "depart": 775.0
+    },
+    {
+      "id": "v000190",
+      "type": "car",
+      "depart": 779.5
+    },
+    {
+      "id": "v000191",
+      "type": "car",
+      "depart": 789.0
+    },
+    {
+      "id": "v000192",
+      "type": "car",
+      "depart": 799.0
+    },
+    {
+      "id": "v000193",
+      "type": "car",
+      "depart": 801.5
+    },
+    {
+      "id": "v000194",
+      "type": "motorcycle",
+      "depart": 809.5
+    },
+    {
+      "id": "v000195",
+      "type": "car",
+      "depart": 816.5
+    },
+    {
+      "id": "v000196",
+      "type": "bus",
+      "depart": 817.0
+    },
+    {
+      "id": "v000197",
+      "type": "goods",
+      "depart": 820.0
+    },
+    {
+      "id": "v000198",
+      "type": "car",
+      "depart": 822.5
+    },
+    {
+      "id": "v000199",
+      "type": "car",
+      "depart": 823.0
+    },
+    {
+      "id": "v000200",
+      "type": "car",
+      "depart": 826.0
+    },
+    {
+      "id": "v000201",
+      "type": "car",
+      "depart": 827.0
+    },
+    {
+      "id": "v000202",
+      "type": "car",
+      "depart": 834.0
+    },
+    {
+      "id": "v000203",
+      "type": "car",
+      "depart": 835.5
+    },
+    {
+      "id": "v000204",
+      "type": "motorcycle",
+      "depart": 837.5
+    },
+    {
+      "id": "v000205",
+      "type": "car",
+      "depart": 840.5
+    },
+    {
+      "id": "v000206",
+      "type": "car",
+      "depart": 849.0
+    },
+    {
+      "id": "v000207",
+      "type": "car",
+      "depart": 849.5
+    },
+    {
+      "id": "v000208",
+      "type": "car",
+      "depart": 859.5
+    },
+    {
+      "id": "v000209",
+      "type": "motorcycle",
+      "depart": 860.0
+    },
+    {
+      "id": "v000210",
+      "type": "car",
+      "depart": 862.0
+    },
+    {
+      "id": "v000211",
+      "type": "goods",
+      "depart": 863.0
+    },
+    {
+      "id": "v000212",
+      "type": "car",
+      "depart": 866.5
+    },
+    {
+      "id": "v000213",
+      "type": "bus",
+      "depart": 870.0
+    },
+    {
+      "id": "v000214",
+      "type": "car",
+      "depart": 870.5
+    },
+    {
+      "id": "v000215",
+      "type": "car",
+      "depart": 870.5
+    },
+    {
+      "id": "v000216",
+      "type": "car",
+      "depart": 871.5
+    },
+    {
+      "id": "v000217",
+      "type": "car",
+      "depart": 875.5
+    },
+    {
+      "id": "v000218",
+      "type": "car",
+      "depart": 883.5
+    },
+    {
+      "id": "v000219",
+      "type": "bus",
+      "depart": 889.0
+    },
+    {
+      "id": "v000220",
+      "type": "car",
+      "depart": 890.0
+    },
+    {
+      "id": "v000221",
+      "type": "goods",
+      "depart": 891.5
+    },
+    {
+      "id": "v000222",
+      "type": "car",
+      "depart": 895.0
+    },
+    {
+      "id": "v000223",
+      "type": "car",
+      "depart": 905.5
+    },
+    {
+      "id": "v000224",
+      "type": "car",
+      "depart": 918.0
+    },
+    {
+      "id": "v000225",
+      "type": "car",
+      "depart": 918.5
+    },
+    {
+      "id": "v000226",
+      "type": "car",
+      "depart": 938.0
+    },
+    {
+      "id": "v000227",
+      "type": "car",
+      "depart": 942.0
+    },
+    {
+      "id": "v000228",
+      "type": "car",
+      "depart": 946.0
+    },
+    {
+      "id": "v000229",
+      "type": "motorcycle",
+      "depart": 947.0
+    },
+    {
+      "id": "v000230",
+      "type": "motorcycle",
+      "depart": 950.0
+    },
+    {
+      "id": "v000231",
+      "type": "motorcycle",
+      "depart": 956.0
+    },
+    {
+      "id": "v000232",
+      "type": "bus",
+      "depart": 958.5
+    },
+    {
+      "id": "v000233",
+      "type": "bus",
+      "depart": 961.5
+    },
+    {
+      "id": "v000234",
+      "type": "bus",
+      "depart": 966.5
+    },
+    {
+      "id": "v000235",
+      "type": "car",
+      "depart": 969.5
+    },
+    {
+      "id": "v000236",
+      "type": "car",
+      "depart": 976.5
+    },
+    {
+      "id": "v000237",
+      "type": "car",
+      "depart": 977.5
+    },
+    {
+      "id": "v000238",
+      "type": "car",
+      "depart": 979.5
+    },
+    {
+      "id": "v000239",
+      "type": "car",
+      "depart": 980.5
+    },
+    {
+      "id": "v000240",
+      "type": "car",
+      "depart": 985.0
+    },
+    {
+      "id": "v000241",
+      "type": "bus",
+      "depart": 991.5
+    },
+    {
+      "id": "v000242",
+      "type": "car",
+      "depart": 999.5
+    },
+    {
+      "id": "v000243",
+      "type": "car",
+      "depart": 1007.0
+    },
+    {
+      "id": "v000244",
+      "type": "car",
+      "depart": 1012.5
+    },
+    {
+      "id": "v000245",
+      "type": "car",
+      "depart": 1019.0
+    },
+    {
+      "id": "v000246",
+      "type": "car",
+      "depart": 1023.0
+    },
+    {
+      "id": "v000247",
+      "type": "bus",
+      "depart": 1032.0
+    },
+    {
+      "id": "v000248",
+      "type": "car",
+      "depart": 1034.0
+    },
+    {
+      "id": "v000249",
+      "type": "car",
+      "depart": 1042.5
+    },
+    {
+      "id": "v000250",
+      "type": "car",
+      "depart": 1044.5
+    },
+    {
+      "id": "v000251",
+      "type": "car",
+      "depart": 1045.5
+    },
+    {
+      "id": "v000252",
+      "type": "car",
+      "depart": 1052.0
+    },
+    {
+      "id": "v000253",
+      "type": "car",
+      "depart": 1053.5
+    },
+    {
+      "id": "v000254",
+      "type": "car",
+      "depart": 1058.5
+    },
+    {
+      "id": "v000255",
+      "type": "car",
+      "depart": 1061.0
+    },
+    {
+      "id": "v000256",
+      "type": "motorcycle",
+      "depart": 1069.5
+    },
+    {
+      "id": "v000257",
+      "type": "car",
+      "depart": 1071.0
+    },
+    {
+      "id": "v000258",
+      "type": "car",
+      "depart": 1081.0
+    },
+    {
+      "id": "v000259",
+      "type": "car",
+      "depart": 1084.5
+    },
+    {
+      "id": "v000260",
+      "type": "car",
+      "depart": 1089.0
+    },
+    {
+      "id": "v000261",
+      "type": "car",
+      "depart": 1112.5
+    },
+    {
+      "id": "v000262",
+      "type": "car",
+      "depart": 1117.0
+    },
+    {
+      "id": "v000263",
+      "type": "car",
+      "depart": 1136.5
+    },
+    {
+      "id": "v000264",
+      "type": "car",
+      "depart": 1151.0
+    },
+    {
+      "id": "v000265",
+      "type": "car",
+      "depart": 1155.0
+    },
+    {
+      "id": "v000266",
+      "type": "car",
+      "depart": 1158.0
+    },
+    {
+      "id": "v000267",
+      "type": "car",
+      "depart": 1162.5
+    },
+    {
+      "id": "v000268",
+      "type": "goods",
+      "depart": 1164.5
+    },
+    {
+      "id": "v000269",
+      "type": "car",
+      "depart": 1167.0
+    },
+    {
+      "id": "v000270",
+      "type": "car",
+      "depart": 1168.0
+    },
+    {
+      "id": "v000271",
+      "type": "car",
+      "depart": 1169.5
+    },
+    {
+      "id": "v000272",
+      "type": "car",
+      "depart": 1171.0
+    },
+    {
+      "id": "v000273",
+      "type": "motorcycle",
+      "depart": 1176.5
+    },
+    {
+      "id": "v000274",
+      "type": "car",
+      "depart": 1179.5
+    },
+    {
+      "id": "v000275",
+      "type": "car",
+      "depart": 1181.5
+    },
+    {
+      "id": "v000276",
+      "type": "car",
+      "depart": 1191.5
+    },
+    {
+      "id": "v000277",
+      "type": "car",
+      "depart": 1196.5
+    },
+    {
+      "id": "v000278",
+      "type": "bus",
+      "depart": 1197.5
+    },
+    {
+      "id": "v000279",
+      "type": "car",
+      "depart": 1198.5
+    },
+    {
+      "id": "v000280",
+      "type": "goods",
+      "depart": 1205.0
+    },
+    {
+      "id": "v000281",
+      "type": "car",
+      "depart": 1207.0
+    },
+    {
+      "id": "v000282",
+      "type": "car",
+      "depart": 1209.0
+    },
+    {
+      "id": "v000283",
+      "type": "car",
+      "depart": 1214.5
+    },
+    {
+      "id": "v000284",
+      "type": "bus",
+      "depart": 1215.0
+    },
+    {
+      "id": "v000285",
+      "type": "car",
+      "depart": 1216.0
+    },
+    {
+      "id": "v000286",
+      "type": "goods",
+      "depart": 1230.5
+    },
+    {
+      "id": "v000287",
+      "type": "car",
+      "depart": 1234.5
+    },
+    {
+      "id": "v000288",
+      "type": "car",
+      "depart": 1235.0
+    },
+    {
+      "id": "v000289",
+      "type": "car",
+      "depart": 1236.5
+    },
+    {
+      "id": "v000290",
+      "type": "motorcycle",
+      "depart": 1239.0
+    },
+    {
+      "id": "v000291",
+      "type": "bus",
+      "depart": 1241.5
+    },
+    {
+      "id": "v000292",
+      "type": "car",
+      "depart": 1246.0
+    },
+    {
+      "id": "v000293",
+      "type": "car",
+      "depart": 1246.0
+    },
+    {
+      "id": "v000294",
+      "type": "car",
+      "depart": 1247.5
+    },
+    {
+      "id": "v000295",
+      "type": "car",
+      "depart": 1250.0
+    },
+    {
+      "id": "v000296",
+      "type": "car",
+      "depart": 1262.0
+    },
+    {
+      "id": "v000297",
+      "type": "motorcycle",
+      "depart": 1262.0
+    },
+    {
+      "id": "v000298",
+      "type": "goods",
+      "depart": 1263.0
+    },
+    {
+      "id": "v000299",
+      "type": "motorcycle",
+      "depart": 1263.0
+    },
+    {
+      "id": "v000300",
+      "type": "car",
+      "depart": 1266.0
+    },
+    {
+      "id": "v000301",
+      "type": "car",
+      "depart": 1267.5
+    },
+    {
+      "id": "v000302",
+      "type": "motorcycle",
+      "depart": 1270.0
+    },
+    {
+      "id": "v000303",
+      "type": "car",
+      "depart": 1272.0
+    },
+    {
+      "id": "v000304",
+      "type": "car",
+      "depart": 1273.0
+    },
+    {
+      "id": "v000305",
+      "type": "car",
+      "depart": 1274.0
+    },
+    {
+      "id": "v000306",
+      "type": "car",
+      "depart": 1285.5
+    },
+    {
+      "id": "v000307",
+      "type": "car",
+      "depart": 1286.0
+    },
+    {
+      "id": "v000308",
+      "type": "car",
+      "depart": 1290.5
+    },
+    {
+      "id": "v000309",
+      "type": "car",
+      "depart": 1297.0
+    },
+    {
+      "id": "v000310",
+      "type": "car",
+      "depart": 1300.5
+    },
+    {
+      "id": "v000311",
+      "type": "car",
+      "depart": 1303.5
+    },
+    {
+      "id": "v000312",
+      "type": "goods",
+      "depart": 1305.0
+    },
+    {
+      "id": "v000313",
+      "type": "car",
+      "depart": 1307.5
+    },
+    {
+      "id": "v000314",
+      "type": "car",
+      "depart": 1315.5
+    },
+    {
+      "id": "v000315",
+      "type": "car",
+      "depart": 1318.0
+    },
+    {
+      "id": "v000316",
+      "type": "car",
+      "depart": 1321.0
+    },
+    {
+      "id": "v000317",
+      "type": "car",
+      "depart": 1321.5
+    },
+    {
+      "id": "v000318",
+      "type": "car",
+      "depart": 1330.0
+    },
+    {
+      "id": "v000319",
+      "type": "car",
+      "depart": 1333.5
+    },
+    {
+      "id": "v000320",
+      "type": "car",
+      "depart": 1335.0
+    },
+    {
+      "id": "v000321",
+      "type": "car",
+      "depart": 1343.0
+    },
+    {
+      "id": "v000322",
+      "type": "car",
+      "depart": 1348.0
+    },
+    {
+      "id": "v000323",
+      "type": "car",
+      "depart": 1349.5
+    },
+    {
+      "id": "v000324",
+      "type": "car",
+      "depart": 1354.5
+    },
+    {
+      "id": "v000325",
+      "type": "car",
+      "depart": 1357.5
+    },
+    {
+      "id": "v000326",
+      "type": "bus",
+      "depart": 1359.5
+    },
+    {
+      "id": "v000327",
+      "type": "car",
+      "depart": 1362.0
+    },
+    {
+      "id": "v000328",
+      "type": "car",
+      "depart": 1362.0
+    },
+    {
+      "id": "v000329",
+      "type": "car",
+      "depart": 1368.5
+    },
+    {
+      "id": "v000330",
+      "type": "car",
+      "depart": 1372.5
+    },
+    {
+      "id": "v000331",
+      "type": "motorcycle",
+      "depart": 1379.5
+    },
+    {
+      "id": "v000332",
+      "type": "car",
+      "depart": 1383.0
+    },
+    {
+      "id": "v000333",
+      "type": "car",
+      "depart": 1386.0
+    },
+    {
+      "id": "v000334",
+      "type": "motorcycle",
+      "depart": 1390.0
+    },
+    {
+      "id": "v000335",
+      "type": "car",
+      "depart": 1395.5
+    },
+    {
+      "id": "v000336",
+      "type": "car",
+      "depart": 1406.0
+    },
+    {
+      "id": "v000337",
+      "type": "car",
+      "depart": 1407.5
+    },
+    {
+      "id": "v000338",
+      "type": "motorcycle",
+      "depart": 1408.5
+    },
+    {
+      "id": "v000339",
+      "type": "car",
+      "depart": 1416.0
+    },
+    {
+      "id": "v000340",
+      "type": "car",
+      "depart": 1421.5
+    },
+    {
+      "id": "v000341",
+      "type": "car",
+      "depart": 1428.5
+    },
+    {
+      "id": "v000342",
+      "type": "car",
+      "depart": 1429.0
+    },
+    {
+      "id": "v000343",
+      "type": "car",
+      "depart": 1430.0
+    },
+    {
+      "id": "v000344",
+      "type": "car",
+      "depart": 1435.5
+    },
+    {
+      "id": "v000345",
+      "type": "car",
+      "depart": 1438.5
+    },
+    {
+      "id": "v000346",
+      "type": "car",
+      "depart": 1439.0
+    },
+    {
+      "id": "v000347",
+      "type": "car",
+      "depart": 1442.5
+    },
+    {
+      "id": "v000348",
+      "type": "motorcycle",
+      "depart": 1450.0
+    },
+    {
+      "id": "v000349",
+      "type": "car",
+      "depart": 1455.5
+    },
+    {
+      "id": "v000350",
+      "type": "motorcycle",
+      "depart": 1458.0
+    },
+    {
+      "id": "v000351",
+      "type": "car",
+      "depart": 1461.0
+    },
+    {
+      "id": "v000352",
+      "type": "goods",
+      "depart": 1466.0
+    },
+    {
+      "id": "v000353",
+      "type": "car",
+      "depart": 1468.5
+    },
+    {
+      "id": "v000354",
+      "type": "car",
+      "depart": 1470.5
+    },
+    {
+      "id": "v000355",
+      "type": "car",
+      "depart": 1471.0
+    },
+    {
+      "id": "v000356",
+      "type": "car",
+      "depart": 1492.5
+    },
+    {
+      "id": "v000357",
+      "type": "car",
+      "depart": 1506.0
+    },
+    {
+      "id": "v000358",
+      "type": "bus",
+      "depart": 1525.5
+    },
+    {
+      "id": "v000359",
+      "type": "car",
+      "depart": 1525.5
+    },
+    {
+      "id": "v000360",
+      "type": "car",
+      "depart": 1526.0
+    },
+    {
+      "id": "v000361",
+      "type": "car",
+      "depart": 1529.5
+    },
+    {
+      "id": "v000362",
+      "type": "car",
+      "depart": 1535.0
+    },
+    {
+      "id": "v000363",
+      "type": "car",
+      "depart": 1552.0
+    },
+    {
+      "id": "v000364",
+      "type": "car",
+      "depart": 1554.0
+    },
+    {
+      "id": "v000365",
+      "type": "car",
+      "depart": 1560.5
+    },
+    {
+      "id": "v000366",
+      "type": "car",
+      "depart": 1567.5
+    },
+    {
+      "id": "v000367",
+      "type": "car",
+      "depart": 1577.5
+    },
+    {
+      "id": "v000368",
+      "type": "car",
+      "depart": 1582.5
+    },
+    {
+      "id": "v000369",
+      "type": "car",
+      "depart": 1585.0
+    },
+    {
+      "id": "v000370",
+      "type": "car",
+      "depart": 1606.5
+    },
+    {
+      "id": "v000371",
+      "type": "car",
+      "depart": 1611.5
+    },
+    {
+      "id": "v000372",
+      "type": "car",
+      "depart": 1612.5
+    },
+    {
+      "id": "v000373",
+      "type": "car",
+      "depart": 1616.0
+    },
+    {
+      "id": "v000374",
+      "type": "car",
+      "depart": 1616.5
+    },
+    {
+      "id": "v000375",
+      "type": "car",
+      "depart": 1617.0
+    },
+    {
+      "id": "v000376",
+      "type": "car",
+      "depart": 1621.5
+    },
+    {
+      "id": "v000377",
+      "type": "car",
+      "depart": 1623.0
+    },
+    {
+      "id": "v000378",
+      "type": "car",
+      "depart": 1627.5
+    },
+    {
+      "id": "v000379",
+      "type": "car",
+      "depart": 1628.0
+    },
+    {
+      "id": "v000380",
+      "type": "car",
+      "depart": 1631.0
+    },
+    {
+      "id": "v000381",
+      "type": "goods",
+      "depart": 1644.5
+    },
+    {
+      "id": "v000382",
+      "type": "motorcycle",
+      "depart": 1650.0
+    },
+    {
+      "id": "v000383",
+      "type": "car",
+      "depart": 1652.0
+    },
+    {
+      "id": "v000384",
+      "type": "car",
+      "depart": 1671.5
+    },
+    {
+      "id": "v000385",
+      "type": "car",
+      "depart": 1677.0
+    },
+    {
+      "id": "v000386",
+      "type": "bus",
+      "depart": 1679.5
+    },
+    {
+      "id": "v000387",
+      "type": "motorcycle",
+      "depart": 1686.0
+    },
+    {
+      "id": "v000388",
+      "type": "motorcycle",
+      "depart": 1694.5
+    },
+    {
+      "id": "v000389",
+      "type": "car",
+      "depart": 1694.5
+    },
+    {
+      "id": "v000390",
+      "type": "car",
+      "depart": 1695.5
+    },
+    {
+      "id": "v000391",
+      "type": "car",
+      "depart": 1703.0
+    },
+    {
+      "id": "v000392",
+      "type": "car",
+      "depart": 1706.0
+    },
+    {
+      "id": "v000393",
+      "type": "car",
+      "depart": 1709.0
+    },
+    {
+      "id": "v000394",
+      "type": "car",
+      "depart": 1710.0
+    },
+    {
+      "id": "v000395",
+      "type": "car",
+      "depart": 1713.5
+    },
+    {
+      "id": "v000396",
+      "type": "bus",
+      "depart": 1728.0
+    },
+    {
+      "id": "v000397",
+      "type": "car",
+      "depart": 1729.5
+    },
+    {
+      "id": "v000398",
+      "type": "car",
+      "depart": 1744.5
+    },
+    {
+      "id": "v000399",
+      "type": "motorcycle",
+      "depart": 1748.0
+    },
+    {
+      "id": "v000400",
+      "type": "car",
+      "depart": 1754.0
+    },
+    {
+      "id": "v000401",
+      "type": "car",
+      "depart": 1762.5
+    },
+    {
+      "id": "v000402",
+      "type": "car",
+      "depart": 1764.5
+    },
+    {
+      "id": "v000403",
+      "type": "car",
+      "depart": 1769.0
+    },
+    {
+      "id": "v000404",
+      "type": "car",
+      "depart": 1782.5
+    },
+    {
+      "id": "v000405",
+      "type": "car",
+      "depart": 1782.5
+    },
+    {
+      "id": "v000406",
+      "type": "car",
+      "depart": 1786.0
+    },
+    {
+      "id": "v000407",
+      "type": "car",
+      "depart": 1795.0
+    },
+    {
+      "id": "v000408",
+      "type": "car",
+      "depart": 1796.0
+    },
+    {
+      "id": "v000409",
+      "type": "motorcycle",
+      "depart": 1796.5
+    },
+    {
+      "id": "v000410",
+      "type": "car",
+      "depart": 1798.0
+    },
+    {
+      "id": "a000",
+      "type": "ambulance",
+      "depart": 600
+    },
+    {
+      "id": "a001",
+      "type": "ambulance",
+      "depart": 660
+    },
+    {
+      "id": "a002",
+      "type": "ambulance",
+      "depart": 760
+    }
+  ],
+  "edge_ids": [
+    "-1102818908#1",
+    "-1102867830#1",
+    "-1102867830#5",
+    "-1102867830#6",
+    "-1152322469",
+    "-1215089863",
+    "-1215089865#0",
+    "-1276357766",
+    "-129020042#1",
+    "-129020042#20",
+    "-129020042#28",
+    "-129020042#9",
+    "-129020053#1",
+    "-129020053#11",
+    "-129020053#13",
+    "-129020053#14",
+    "-129020053#3",
+    "-129020053#5",
+    "-129020339#0",
+    "-129020339#17",
+    "-129020339#4",
+    "-129020339#6",
+    "-129020368#0",
+    "-129020368#1",
+    "-129020368#4",
+    "-129020425#7",
+    "-129020474#0",
+    "-129020474#5",
+    "-129020474#6",
+    "-129020477#4",
+    "-129029637#0",
+    "-129029637#4",
+    "-129029704#0",
+    "-129029705#2",
+    "-129029705#3",
+    "-129029705#6",
+    "-129029774#4",
+    "-129029789#12",
+    "-129029789#13",
+    "-129029789#6",
+    "-129040918#2",
+    "-129040923#10",
+    "-129040923#8",
+    "-129040923#9",
+    "-129040925#0",
+    "-129040925#2",
+    "-129040925#4",
+    "-129040925#9",
+    "-129041138#2",
+    "-1306065343",
+    "-1306065344",
+    "-1316373964#1",
+    "-1449576998#1",
+    "-1449576998#3",
+    "-322624067#1",
+    "-335062421#2",
+    "-335062421#23",
+    "-360389723#13",
+    "-386496668",
+    "-393943169",
+    "-490004266",
+    "-490900632",
+    "-490900634",
+    "-490901542",
+    "-490901547",
+    "-502070674#0",
+    "-502070674#4",
+    "-690185873",
+    "-737813790",
+    "-790981496#6",
+    "1056612808",
+    "1056614841",
+    "1102818908#1",
+    "1102867830#1",
+    "1102867830#2",
+    "1102867830#6",
+    "1103097010#0",
+    "1103097010#1",
+    "1103097011#0",
+    "1103097011#1",
+    "1103117744#0",
+    "1103117746",
+    "1103117747",
+    "1103117749#0",
+    "1103363562#0",
+    "1103363562#1",
+    "1103370021#0",
+    "1103370022#0",
+    "1103370022#3",
+    "1103407443",
+    "1152322468#0",
+    "1215089865#0",
+    "1215089865#1",
+    "1215818938",
+    "1215818939#0",
+    "1215818939#1",
+    "1215818940#0",
+    "1215818940#1",
+    "1215818941",
+    "1215818942",
+    "1215818943",
+    "1215818944#0",
+    "1215818944#1",
+    "1215820808",
+    "1215822550",
+    "1215822551#0",
+    "1215822551#1",
+    "1215822553#0",
+    "1215822554#1",
+    "1215822554#3",
+    "1215822554#4",
+    "1215822555#0",
+    "1215822556#1",
+    "1215822556#4",
+    "1215822559#0",
+    "1215822559#1",
+    "1215822559#2",
+    "1215822560#1",
+    "1215822561",
+    "1216486944",
+    "1216486945#0",
+    "1216496536#0",
+    "1216496539#0",
+    "1216496539#1",
+    "1216496539#2",
+    "1216496540#0",
+    "1216496542",
+    "1216496545#1",
+    "1216496546#0",
+    "1216496547",
+    "1216575501",
+    "1216575502#0",
+    "1216575502#1",
+    "1216575504#0",
+    "1216575505#1",
+    "1216575508#0",
+    "1216830589",
+    "1216830590",
+    "1216839139",
+    "1216839140",
+    "1216839144",
+    "1216839145#0",
+    "1216839145#1",
+    "1216839145#2",
+    "1216839146",
+    "1261383925",
+    "1261383926",
+    "1261383927",
+    "1261385437",
+    "1261385438",
+    "1261385439",
+    "1261392082",
+    "1261425882",
+    "1275160902",
+    "1275175176#0",
+    "1275175176#1",
+    "1275227715#0",
+    "1275227715#1",
+    "1275227715#4",
+    "1275227715#5",
+    "1275227715#6",
+    "1276356938#0",
+    "1276356938#1",
+    "1276356939",
+    "1276356940#0",
+    "1276356940#1",
+    "1276356940#4",
+    "1276357766",
+    "1276362417",
+    "129020029#0",
+    "129020029#1",
+    "129020029#2",
+    "129020029#3",
+    "129020042#1",
+    "129020042#10",
+    "129020042#2",
+    "129020042#21",
+    "129020044#0",
+    "129020053#1",
+    "129020053#13",
+    "129020053#14",
+    "129020053#3",
+    "129020053#5",
+    "129020053#7",
+    "129020194#1",
+    "129020217#0",
+    "129020217#7",
+    "129020339#0",
+    "129020339#2",
+    "129020339#5",
+    "129020339#7",
+    "129020368#0",
+    "129020368#1",
+    "129020368#2",
+    "129020425#0",
+    "129020472#1",
+    "129020472#10",
+    "129020472#5",
+    "129020472#6",
+    "129020472#7",
+    "129020474#0",
+    "129020474#2",
+    "129020474#6",
+    "129020477#0",
+    "129029637#0",
+    "129029637#1",
+    "129029704#0",
+    "129029704#1",
+    "129029705#0",
+    "129029705#3",
+    "129029705#4",
+    "129029774#0",
+    "129029789#0",
+    "129029789#13",
+    "129029789#7",
+    "129040918#2",
+    "129040923#10",
+    "129040923#9",
+    "129040925#0",
+    "129040925#2",
+    "129040925#4",
+    "129040925#6",
+    "129040928",
+    "129040996",
+    "129041027#0",
+    "129041082#0",
+    "129041082#1",
+    "129041084#0",
+    "129041114#0",
+    "129041160#0",
+    "129041160#2",
+    "129041165",
+    "129041191#0",
+    "129041191#3",
+    "129041216#0",
+    "129041216#1",
+    "129041216#7",
+    "129041234#0",
+    "129041234#1",
+    "129041234#2",
+    "129041242#1",
+    "129041249#1",
+    "129041269#0",
+    "129041269#4",
+    "129041281#0",
+    "129041281#1",
+    "129041281#2",
+    "129126240#0",
+    "129126240#7",
+    "129126240#8",
+    "129126367#1",
+    "129126367#6",
+    "129130264#0",
+    "129130264#2",
+    "129130264#4",
+    "129130270#0",
+    "129130272#0",
+    "129130272#1",
+    "129130272#2",
+    "129130367",
+    "129130403",
+    "129130409",
+    "129130434",
+    "129130447",
+    "129130448",
+    "129130542#3",
+    "129130542#5",
+    "129130557",
+    "129134356#0",
+    "129134356#1",
+    "129134356#2",
+    "129134356#3",
+    "129142115#2",
+    "129142168#0",
+    "129142180#1",
+    "1305900787",
+    "1305900788",
+    "1306065343",
+    "1306065344",
+    "1316373963",
+    "1359123100#0",
+    "1359123100#1",
+    "1359796923#0",
+    "1359796923#1",
+    "1449576998#0",
+    "1449576998#3",
+    "1449576999#1",
+    "1449576999#2",
+    "1449576999#3",
+    "1449576999#4",
+    "172380615#1",
+    "172381952",
+    "172382026",
+    "172382686#1",
+    "172382686#12",
+    "172382686#14",
+    "172382686#2",
+    "172382686#3",
+    "172382686#4",
+    "172382686#6",
+    "172382686#7",
+    "172383771#0",
+    "172383771#1",
+    "172655365#1",
+    "172656229#0",
+    "172656229#2",
+    "172658127#1",
+    "172660579#0",
+    "172660580#0",
+    "172816434#1",
+    "256539968",
+    "256541472#0",
+    "301258006",
+    "301258007",
+    "301258009",
+    "305664097#1",
+    "305664097#2",
+    "305664129#0",
+    "305664129#1",
+    "305664129#3",
+    "305664129#4",
+    "322624067#0",
+    "335061218",
+    "335061220",
+    "335061221",
+    "335061223#1",
+    "335061226",
+    "335061227",
+    "335061229#1",
+    "335061229#2",
+    "335061229#5",
+    "335061229#7",
+    "335061229#8",
+    "335062410#0",
+    "335062410#1",
+    "335062412#0",
+    "335062412#2",
+    "335062412#5",
+    "335062420#1",
+    "335062420#7",
+    "335062421#0",
+    "335062421#5",
+    "335062422#0",
+    "336606107#0",
+    "336606107#4",
+    "336606107#5",
+    "336665910#0",
+    "336665910#1",
+    "336665911#0",
+    "336665911#1",
+    "336665911#2",
+    "336665911#3",
+    "360389723#0",
+    "375252501#0",
+    "375252501#1",
+    "375252501#11",
+    "375252501#12",
+    "375252501#2",
+    "375252501#3",
+    "375252501#5",
+    "375252501#6",
+    "375252501#8",
+    "375252502#0",
+    "375252502#10",
+    "375252502#3",
+    "375252502#6",
+    "375252502#7",
+    "375252502#8",
+    "375252504#0",
+    "375252504#1",
+    "375252526",
+    "380936316#1",
+    "383448410#0",
+    "383448411#0",
+    "383448411#1",
+    "383448411#2",
+    "383450897#0",
+    "383450897#1",
+    "383450898#0",
+    "383450898#1",
+    "383450898#2",
+    "383450899",
+    "383634122",
+    "383634123",
+    "383634124",
+    "383634125",
+    "383634126#0",
+    "383634126#1",
+    "383634127",
+    "383635751#1",
+    "386348783",
+    "386348784",
+    "386496668",
+    "386496676#0",
+    "386496676#1",
+    "386496733#0",
+    "386496733#1",
+    "386496752#0",
+    "386496752#1",
+    "386680467#0",
+    "386680469#0",
+    "393943169",
+    "409302057",
+    "490004266",
+    "490011341",
+    "490899742#0",
+    "490899742#1",
+    "490899745",
+    "490900632",
+    "490900634",
+    "490901542",
+    "490901547",
+    "491263251",
+    "491263252",
+    "491263253",
+    "491263254",
+    "491268272",
+    "491268274#0",
+    "491268276#0",
+    "491268276#1",
+    "491268601#2",
+    "491268601#3",
+    "491268601#6",
+    "491268602#0",
+    "491268602#1",
+    "491268602#2",
+    "491268603#2",
+    "491268603#7",
+    "492553492#0",
+    "492555221#1",
+    "492555222#1",
+    "492975975#0",
+    "492975975#1",
+    "502069381",
+    "502070223",
+    "502070224",
+    "502070672",
+    "502070674#0",
+    "502070674#2",
+    "576132524#0",
+    "576165780#0",
+    "576165781#0",
+    "576165781#1",
+    "576509526#4",
+    "666594568#0",
+    "666594568#2",
+    "675337623",
+    "675340296#0",
+    "675340296#1",
+    "675352599",
+    "675952797",
+    "690172828#0",
+    "690172828#1",
+    "690172828#2",
+    "690185872",
+    "690185873",
+    "734366564#0",
+    "734366565#0",
+    "734366565#1",
+    "735359355",
+    "737813783#0",
+    "737813783#1",
+    "737813784",
+    "737813787#0",
+    "737813787#1",
+    "737813787#3",
+    "737813789",
+    "737813790",
+    "755073707#1",
+    "790981496#0",
+    "978541519#0",
+    "978541519#1",
+    "978541539#0",
+    "FORTIS_RB_ARC_0",
+    "FORTIS_RB_ARC_1",
+    "FORTIS_RB_ARC_2",
+    "FORTIS_RB_ARC_3",
+    "FORTIS_RB_ARC_4",
+    "FORTIS_RB_ARC_5"
+  ],
+  "junction_ids": [
+    "1424396544",
+    "3867217322",
+    "cluster_1424395831_1832906027_1835405429_3842301654",
+    "cluster_1424396192_1832757091_3421866939_3437214512",
+    "cluster_1832908936_1832908937_3421891080_3437207796_#2more",
+    "joinedS_1424619181_3867217324_3867217356_cluster_10097211237_1424619180",
+    "joinedS_6499448630_cluster_1424351293_1424351307_1424351309_1424351313_#3more"
+  ],
+  "routes": [
+    [
+      "335061226",
+      "335061218",
+      "172382686#6",
+      "172382686#7",
+      "129126367#1",
+      "129126367#6",
+      "129126240#0",
+      "129126240#7",
+      "129126240#8",
+      "1216496542",
+      "1215818941",
+      "1215822550",
+      "1215822559#0",
+      "1215822559#1",
+      "1215822559#2",
+      "1276356939",
+      "-1449576998#3",
+      "-1449576998#1",
+      "1449576999#3",
+      "1449576999#4",
+      "1449576999#1",
+      "-129040925#9",
+      "FORTIS_RB_ARC_3",
+      "FORTIS_RB_ARC_4",
+      "FORTIS_RB_ARC_5",
+      "FORTIS_RB_ARC_0",
+      "129041216#0",
+      "129041216#1"
+    ]
+  ],
+  "ambulance_ids": [
+    "a000",
+    "a001",
+    "a002"
+  ],
+  "plans": [
+    {
+      "t": 601,
+      "ambulance": "a000",
+      "edge": "335061226",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 637,
+      "ambulance": "a000",
+      "edge": "335061218",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 645,
+      "ambulance": "a000",
+      "edge": "172382686#6",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 648,
+      "ambulance": "a000",
+      "edge": "172382686#7",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 661,
+      "ambulance": "a001",
+      "edge": "335061226",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 692,
+      "ambulance": "a000",
+      "edge": "129126367#1",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 749,
+      "ambulance": "a000",
+      "edge": "129126367#6",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 752,
+      "ambulance": "a000",
+      "edge": "129126240#0",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 755,
+      "ambulance": "a001",
+      "edge": "335061218",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 761,
+      "ambulance": "a002",
+      "edge": "335061226",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 764,
+      "ambulance": "a001",
+      "edge": "172382686#6",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 767,
+      "ambulance": "a001",
+      "edge": "172382686#7",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 785,
+      "ambulance": "a002",
+      "edge": "335061218",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 811,
+      "ambulance": "a001",
+      "edge": "129126367#1",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 812,
+      "ambulance": "a000",
+      "edge": "129126240#7",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 834,
+      "ambulance": "a000",
+      "edge": "1215822559#0",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 868,
+      "ambulance": "a001",
+      "edge": "129126367#6",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 871,
+      "ambulance": "a001",
+      "edge": "129126240#0",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 876,
+      "ambulance": "a002",
+      "edge": "172382686#6",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 880,
+      "ambulance": "a002",
+      "edge": "172382686#7",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 923,
+      "ambulance": "a002",
+      "edge": "129126367#1",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 929,
+      "ambulance": "a000",
+      "edge": "1215822559#1",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 931,
+      "ambulance": "a001",
+      "edge": "129126240#7",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 932,
+      "ambulance": "a000",
+      "edge": "1215822559#2",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 934,
+      "ambulance": "a000",
+      "edge": "1276356939",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 935,
+      "ambulance": "a000",
+      "edge": "-1449576998#3",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 942,
+      "ambulance": "a000",
+      "edge": "-1449576998#1",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 954,
+      "ambulance": "a000",
+      "edge": "1449576999#3",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 955,
+      "ambulance": "a000",
+      "edge": "1449576999#4",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 956,
+      "ambulance": "a000",
+      "edge": "1449576999#1",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 958,
+      "ambulance": "a000",
+      "edge": "-129040925#9",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 959,
+      "ambulance": "a001",
+      "edge": "1215822559#0",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 980,
+      "ambulance": "a002",
+      "edge": "129126367#6",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 983,
+      "ambulance": "a000",
+      "edge": "FORTIS_RB_ARC_3",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 983,
+      "ambulance": "a002",
+      "edge": "129126240#0",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 989,
+      "ambulance": "a000",
+      "edge": "FORTIS_RB_ARC_5",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 993,
+      "ambulance": "a000",
+      "edge": "FORTIS_RB_ARC_0",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 996,
+      "ambulance": "a000",
+      "edge": "129041216#1",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1043,
+      "ambulance": "a002",
+      "edge": "129126240#7",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1054,
+      "ambulance": "a001",
+      "edge": "1215822559#1",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1081,
+      "ambulance": "a001",
+      "edge": "1215822559#2",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1084,
+      "ambulance": "a002",
+      "edge": "1215822559#0",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1086,
+      "ambulance": "a001",
+      "edge": "-1449576998#3",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1093,
+      "ambulance": "a001",
+      "edge": "-1449576998#1",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1106,
+      "ambulance": "a001",
+      "edge": "1449576999#4",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1107,
+      "ambulance": "a001",
+      "edge": "1449576999#1",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1109,
+      "ambulance": "a001",
+      "edge": "-129040925#9",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1134,
+      "ambulance": "a001",
+      "edge": "FORTIS_RB_ARC_3",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1140,
+      "ambulance": "a001",
+      "edge": "FORTIS_RB_ARC_5",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1144,
+      "ambulance": "a001",
+      "edge": "FORTIS_RB_ARC_0",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1147,
+      "ambulance": "a001",
+      "edge": "129041216#1",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1179,
+      "ambulance": "a002",
+      "edge": "1215822559#1",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1189,
+      "ambulance": "a002",
+      "edge": "1215822559#2",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1194,
+      "ambulance": "a002",
+      "edge": "-1449576998#3",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1201,
+      "ambulance": "a002",
+      "edge": "-1449576998#1",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1214,
+      "ambulance": "a002",
+      "edge": "1449576999#4",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1215,
+      "ambulance": "a002",
+      "edge": "1449576999#1",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1217,
+      "ambulance": "a002",
+      "edge": "-129040925#9",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1242,
+      "ambulance": "a002",
+      "edge": "FORTIS_RB_ARC_3",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1248,
+      "ambulance": "a002",
+      "edge": "FORTIS_RB_ARC_5",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1252,
+      "ambulance": "a002",
+      "edge": "FORTIS_RB_ARC_0",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 1255,
+      "ambulance": "a002",
+      "edge": "129041216#1",
+      "mode": "P0",
+      "route": [
+        "335061226",
+        "335061218",
+        "172382686#6",
+        "172382686#7",
+        "129126367#1",
+        "129126367#6",
+        "129126240#0",
+        "129126240#7",
+        "129126240#8",
+        "1216496542",
+        "1215818941",
+        "1215822550",
+        "1215822559#0",
+        "1215822559#1",
+        "1215822559#2",
+        "1276356939",
+        "-1449576998#3",
+        "-1449576998#1",
+        "1449576999#3",
+        "1449576999#4",
+        "1449576999#1",
+        "-129040925#9",
+        "FORTIS_RB_ARC_3",
+        "FORTIS_RB_ARC_4",
+        "FORTIS_RB_ARC_5",
+        "FORTIS_RB_ARC_0",
+        "129041216#0",
+        "129041216#1"
+      ],
+      "changed": false,
+      "action": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "progress_guard_log": [],
+  "route_changes": 0,
+  "priority_phase_admissions": 0,
+  "signal_timing_violations": 0,
+  "collision_events": 0,
+  "teleport_events": 0,
+  "net_sha256": "bde374f42e5a34567bd053eefb0f9d39cd1702c651da2e50aae2a1346cecd917",
+  "adapter_sha256": "42de52ac4026b61f6e70d0c0a29b7110f01854db29e1738297df0cc15c758f5a",
+  "schedule_sha256": "574223d825fdba35922d91a00e5efa5ff0877ccd14f6a66720935679bf606c09",
+  "frozen_controller_sha256": "471a22911a2de9773fcd839872b3ba1ec5e00412c0ecc79142503e72f41cecf2",
+  "runtime_s": 2.2709052562713623,
+  "ordinary_completed": 337,
+  "ordinary_scheduled": 411
+}

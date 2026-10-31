@@ -13,6 +13,8 @@ mpl_cache/
 vendor/
 downloads/
 replays/
+!visualization/map_replay/data/replays/
+!visualization/map_replay/data/replays/**
 generated/
 reruns/
 work/v9/scenarios/
